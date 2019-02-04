@@ -199,19 +199,19 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Entidades\Entidades.csproj">
+    <ProjectReference Include="..\..\JJTeam\Entidades\Entidades.csproj">
       <Project>{B0D7EF4F-6A0F-4073-8C79-58413C2011F8}</Project>
       <Name>Entidades</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Gestoras\Gestoras.csproj">
+    <ProjectReference Include="..\..\JJTeam\Gestoras\Gestoras.csproj">
       <Project>{E2044DDD-F84D-4823-91D1-4C55C82800B0}</Project>
       <Name>Gestoras</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Interfaces\Interfaces.csproj">
+    <ProjectReference Include="..\..\JJTeam\Interfaces\Interfaces.csproj">
       <Project>{EE8E2C44-ACE8-409C-B7E9-62CC07B82409}</Project>
       <Name>Interfaces</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Tools\Tools.csproj">
+    <ProjectReference Include="..\..\JJTeam\Tools\Tools.csproj">
       <Project>{e1d33784-6fde-472b-af14-7087e88dffe2}</Project>
       <Name>Tools</Name>
     </ProjectReference>

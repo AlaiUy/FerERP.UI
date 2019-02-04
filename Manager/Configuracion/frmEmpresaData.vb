@@ -1,5 +1,6 @@
 ﻿Imports System.IO
 Imports JJ.Entidades
+Imports JJ.Gestoras
 
 Public Class frmEmpresaData
     Private Sub btnBuscarLogo_Click(sender As Object, e As EventArgs) Handles btnBuscarLogo.Click
@@ -22,5 +23,12 @@ Public Class frmEmpresaData
         Em.Direccion = txtDireccion.Text
         Em.Ciudad = txtCiudad.Text
         Em.Pais = txtPais.Text
+        Dim imageConverter As New ImageConverter()
+        Em.Imagen = DirectCast(imageConverter.ConvertTo(LogoBox.Image, GetType(Byte())), Byte())
+        Try
+            GesPersonas.getInstance().AddEmpresa(Em)
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
     End Sub
 End Class
