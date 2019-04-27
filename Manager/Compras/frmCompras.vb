@@ -1,7 +1,11 @@
 ﻿Imports JJ.Entidades
 Imports JJ.Gestoras
+Imports JJ.Interfaces.Observer
 
 Public Class frmCompras
+    Implements IObservable
+    Private _Obs As IList(Of IObserver)
+
     Private Articulos As List(Of Object)
     Private _ImpBruto As Decimal = 0
     Private _ImpIva As Decimal = 0
@@ -146,5 +150,24 @@ Public Class frmCompras
 
     End Sub
 
+    Public Sub Register(xObserver As IObserver) Implements IObservable.Register
+        If IsNothing(_Obs) Then
+            _Obs = New List(Of IObserver)
+        End If
+        _Obs.Add(xObserver)
+    End Sub
 
+    Public Sub UnRegister(xObserver As IObserver) Implements IObservable.UnRegister
+        For Each O As IObserver In _Obs
+            If (O.Equals(xObserver)) Then
+                _Obs.Remove(O)
+            End If
+        Next
+    End Sub
+
+    Public Sub notifyObservers() Implements IObservable.notifyObservers
+        For Each O As IObserver In _Obs
+            O.Update(Me)
+        Next
+    End Sub
 End Class

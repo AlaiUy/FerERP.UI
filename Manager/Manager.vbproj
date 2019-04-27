@@ -6,7 +6,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{50F78F34-6348-492E-A983-EB11E9C1325B}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <StartupObject>Manager.frmMain</StartupObject>
+    <StartupObject>Manager.Start</StartupObject>
     <RootNamespace>Manager</RootNamespace>
     <AssemblyName>Manager</AssemblyName>
     <FileAlignment>512</FileAlignment>
@@ -99,6 +99,18 @@
     <Compile Include="Articulos\MARCAS\frmNuevaMarca.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Auxiliares\frmPanelNumerico.Designer.vb">
+      <DependentUpon>frmPanelNumerico.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Auxiliares\frmPanelNumerico.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cajas\frmNuevaCaja.Designer.vb">
+      <DependentUpon>frmNuevaCaja.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Cajas\frmNuevaCaja.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Compras\frmCompras.Designer.vb">
       <DependentUpon>frmCompras.vb</DependentUpon>
     </Compile>
@@ -112,6 +124,12 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ControlChecks.vb" />
+    <Compile Include="Cuentas\frmNuevaCuenta.Designer.vb">
+      <DependentUpon>frmNuevaCuenta.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Cuentas\frmNuevaCuenta.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Desing.vb" />
     <Compile Include="frmMain.Designer.vb">
       <DependentUpon>frmMain.vb</DependentUpon>
@@ -119,6 +137,7 @@
     <Compile Include="frmMain.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Funciones.vb" />
     <Compile Include="JJRecursos.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -139,6 +158,24 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="Personas\frmDatosFactura.Designer.vb">
+      <DependentUpon>frmDatosFactura.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Personas\frmDatosFactura.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Personas\frmFiltrosClientesContado.Designer.vb">
+      <DependentUpon>frmFiltrosClientesContado.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Personas\frmFiltrosClientesContado.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Personas\Persona\frmNuevaPersona.Designer.vb">
+      <DependentUpon>frmNuevaPersona.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Personas\Persona\frmNuevaPersona.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Personas\Proveedores\frmNuevoProveedor.Designer.vb">
       <DependentUpon>frmNuevoProveedor.vb</DependentUpon>
     </Compile>
@@ -146,6 +183,25 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Start.vb" />
+    <Compile Include="UESPERA.vb" />
+    <Compile Include="Vendedores\frmVendedores.Designer.vb">
+      <DependentUpon>frmVendedores.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Vendedores\frmVendedores.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventas\frmNuevaVenta.Designer.vb">
+      <DependentUpon>frmNuevaVenta.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ventas\frmNuevaVenta.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventas\frmSeleccionTipoVenta.Designer.vb">
+      <DependentUpon>frmSeleccionTipoVenta.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ventas\frmSeleccionTipoVenta.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Articulos\DEPARTAMENTOS\frmDepartamentoNuevo.resx">
@@ -163,11 +219,20 @@
     <EmbeddedResource Include="Articulos\MARCAS\frmNuevaMarca.resx">
       <DependentUpon>frmNuevaMarca.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Auxiliares\frmPanelNumerico.resx">
+      <DependentUpon>frmPanelNumerico.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cajas\frmNuevaCaja.resx">
+      <DependentUpon>frmNuevaCaja.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Compras\frmCompras.resx">
       <DependentUpon>frmCompras.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Configuracion\frmEmpresaData.resx">
       <DependentUpon>frmEmpresaData.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cuentas\frmNuevaCuenta.resx">
+      <DependentUpon>frmNuevaCuenta.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.vb</DependentUpon>
@@ -183,8 +248,26 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="Personas\frmDatosFactura.resx">
+      <DependentUpon>frmDatosFactura.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Personas\frmFiltrosClientesContado.resx">
+      <DependentUpon>frmFiltrosClientesContado.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Personas\Persona\frmNuevaPersona.resx">
+      <DependentUpon>frmNuevaPersona.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Personas\Proveedores\frmNuevoProveedor.resx">
       <DependentUpon>frmNuevoProveedor.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vendedores\frmVendedores.resx">
+      <DependentUpon>frmVendedores.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventas\frmNuevaVenta.resx">
+      <DependentUpon>frmNuevaVenta.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventas\frmSeleccionTipoVenta.resx">
+      <DependentUpon>frmSeleccionTipoVenta.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -233,6 +316,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Documentos\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -27,23 +27,26 @@ Partial Class frmMain
         Me.ToolStripDropDownButton1 = New System.Windows.Forms.ToolStripDropDownButton()
         Me.btnMenuSalir = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
+        Me.ToolStripDropDownButton2 = New System.Windows.Forms.ToolStripDropDownButton()
+        Me.AgregarPersonaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.AgregarArticuloToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.DocumentosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CompraToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.VentaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
+        Me.ToolStripDropDownButton3 = New System.Windows.Forms.ToolStripDropDownButton()
         Me.ToolStripSeparator3 = New System.Windows.Forms.ToolStripSeparator()
+        Me.ToolStripDropDownButton4 = New System.Windows.Forms.ToolStripDropDownButton()
+        Me.ToolsConfig = New System.Windows.Forms.ToolStripDropDownButton()
+        Me.ConfiguracionToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.DatosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.FicherosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PnContenedor = New System.Windows.Forms.Panel()
         Me.PanelBienvenida = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.btnAgregarPersona = New System.Windows.Forms.Button()
         Me.btnNuevoArticulo = New System.Windows.Forms.Button()
-        Me.ToolStripDropDownButton2 = New System.Windows.Forms.ToolStripDropDownButton()
-        Me.AgregarPersonaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.AgregarArticuloToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ToolStripDropDownButton3 = New System.Windows.Forms.ToolStripDropDownButton()
-        Me.ToolStripDropDownButton4 = New System.Windows.Forms.ToolStripDropDownButton()
-        Me.ToolsConfig = New System.Windows.Forms.ToolStripDropDownButton()
-        Me.ConfiguracionToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.DatosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.FicherosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStrip1.SuspendLayout()
         Me.PnContenedor.SuspendLayout()
         Me.PanelBienvenida.SuspendLayout()
@@ -84,15 +87,103 @@ Partial Class frmMain
         Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
         Me.ToolStripSeparator1.Size = New System.Drawing.Size(6, 25)
         '
+        'ToolStripDropDownButton2
+        '
+        Me.ToolStripDropDownButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text
+        Me.ToolStripDropDownButton2.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AgregarPersonaToolStripMenuItem, Me.AgregarArticuloToolStripMenuItem, Me.DocumentosToolStripMenuItem})
+        Me.ToolStripDropDownButton2.Image = CType(resources.GetObject("ToolStripDropDownButton2.Image"), System.Drawing.Image)
+        Me.ToolStripDropDownButton2.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.ToolStripDropDownButton2.Name = "ToolStripDropDownButton2"
+        Me.ToolStripDropDownButton2.Size = New System.Drawing.Size(54, 22)
+        Me.ToolStripDropDownButton2.Text = "Tareas"
+        '
+        'AgregarPersonaToolStripMenuItem
+        '
+        Me.AgregarPersonaToolStripMenuItem.Name = "AgregarPersonaToolStripMenuItem"
+        Me.AgregarPersonaToolStripMenuItem.Size = New System.Drawing.Size(161, 22)
+        Me.AgregarPersonaToolStripMenuItem.Text = "Agregar persona"
+        '
+        'AgregarArticuloToolStripMenuItem
+        '
+        Me.AgregarArticuloToolStripMenuItem.Name = "AgregarArticuloToolStripMenuItem"
+        Me.AgregarArticuloToolStripMenuItem.Size = New System.Drawing.Size(161, 22)
+        Me.AgregarArticuloToolStripMenuItem.Text = "Agregar articulo"
+        '
+        'DocumentosToolStripMenuItem
+        '
+        Me.DocumentosToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CompraToolStripMenuItem, Me.VentaToolStripMenuItem})
+        Me.DocumentosToolStripMenuItem.Name = "DocumentosToolStripMenuItem"
+        Me.DocumentosToolStripMenuItem.Size = New System.Drawing.Size(161, 22)
+        Me.DocumentosToolStripMenuItem.Text = "Documentos"
+        '
+        'CompraToolStripMenuItem
+        '
+        Me.CompraToolStripMenuItem.Name = "CompraToolStripMenuItem"
+        Me.CompraToolStripMenuItem.Size = New System.Drawing.Size(117, 22)
+        Me.CompraToolStripMenuItem.Text = "Compra"
+        '
+        'VentaToolStripMenuItem
+        '
+        Me.VentaToolStripMenuItem.Name = "VentaToolStripMenuItem"
+        Me.VentaToolStripMenuItem.Size = New System.Drawing.Size(117, 22)
+        Me.VentaToolStripMenuItem.Text = "VentaCuenta"
+        '
         'ToolStripSeparator2
         '
         Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
         Me.ToolStripSeparator2.Size = New System.Drawing.Size(6, 25)
         '
+        'ToolStripDropDownButton3
+        '
+        Me.ToolStripDropDownButton3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text
+        Me.ToolStripDropDownButton3.Image = CType(resources.GetObject("ToolStripDropDownButton3.Image"), System.Drawing.Image)
+        Me.ToolStripDropDownButton3.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.ToolStripDropDownButton3.Name = "ToolStripDropDownButton3"
+        Me.ToolStripDropDownButton3.Size = New System.Drawing.Size(49, 22)
+        Me.ToolStripDropDownButton3.Text = "Tools"
+        '
         'ToolStripSeparator3
         '
         Me.ToolStripSeparator3.Name = "ToolStripSeparator3"
         Me.ToolStripSeparator3.Size = New System.Drawing.Size(6, 25)
+        '
+        'ToolStripDropDownButton4
+        '
+        Me.ToolStripDropDownButton4.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text
+        Me.ToolStripDropDownButton4.Image = CType(resources.GetObject("ToolStripDropDownButton4.Image"), System.Drawing.Image)
+        Me.ToolStripDropDownButton4.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.ToolStripDropDownButton4.Name = "ToolStripDropDownButton4"
+        Me.ToolStripDropDownButton4.Size = New System.Drawing.Size(45, 22)
+        Me.ToolStripDropDownButton4.Text = "Help"
+        '
+        'ToolsConfig
+        '
+        Me.ToolsConfig.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text
+        Me.ToolsConfig.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ConfiguracionToolStripMenuItem})
+        Me.ToolsConfig.Image = CType(resources.GetObject("ToolsConfig.Image"), System.Drawing.Image)
+        Me.ToolsConfig.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.ToolsConfig.Name = "ToolsConfig"
+        Me.ToolsConfig.Size = New System.Drawing.Size(56, 22)
+        Me.ToolsConfig.Text = "Config"
+        '
+        'ConfiguracionToolStripMenuItem
+        '
+        Me.ConfiguracionToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DatosToolStripMenuItem, Me.FicherosToolStripMenuItem})
+        Me.ConfiguracionToolStripMenuItem.Name = "ConfiguracionToolStripMenuItem"
+        Me.ConfiguracionToolStripMenuItem.Size = New System.Drawing.Size(119, 22)
+        Me.ConfiguracionToolStripMenuItem.Text = "Empresa"
+        '
+        'DatosToolStripMenuItem
+        '
+        Me.DatosToolStripMenuItem.Name = "DatosToolStripMenuItem"
+        Me.DatosToolStripMenuItem.Size = New System.Drawing.Size(118, 22)
+        Me.DatosToolStripMenuItem.Text = "Datos"
+        '
+        'FicherosToolStripMenuItem
+        '
+        Me.FicherosToolStripMenuItem.Name = "FicherosToolStripMenuItem"
+        Me.FicherosToolStripMenuItem.Size = New System.Drawing.Size(118, 22)
+        Me.FicherosToolStripMenuItem.Text = "Ficheros"
         '
         'PnContenedor
         '
@@ -168,75 +259,6 @@ Partial Class frmMain
         Me.btnNuevoArticulo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.btnNuevoArticulo.UseVisualStyleBackColor = False
         '
-        'ToolStripDropDownButton2
-        '
-        Me.ToolStripDropDownButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text
-        Me.ToolStripDropDownButton2.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AgregarPersonaToolStripMenuItem, Me.AgregarArticuloToolStripMenuItem})
-        Me.ToolStripDropDownButton2.Image = CType(resources.GetObject("ToolStripDropDownButton2.Image"), System.Drawing.Image)
-        Me.ToolStripDropDownButton2.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.ToolStripDropDownButton2.Name = "ToolStripDropDownButton2"
-        Me.ToolStripDropDownButton2.Size = New System.Drawing.Size(54, 22)
-        Me.ToolStripDropDownButton2.Text = "Tareas"
-        '
-        'AgregarPersonaToolStripMenuItem
-        '
-        Me.AgregarPersonaToolStripMenuItem.Name = "AgregarPersonaToolStripMenuItem"
-        Me.AgregarPersonaToolStripMenuItem.Size = New System.Drawing.Size(161, 22)
-        Me.AgregarPersonaToolStripMenuItem.Text = "Agregar persona"
-        '
-        'AgregarArticuloToolStripMenuItem
-        '
-        Me.AgregarArticuloToolStripMenuItem.Name = "AgregarArticuloToolStripMenuItem"
-        Me.AgregarArticuloToolStripMenuItem.Size = New System.Drawing.Size(161, 22)
-        Me.AgregarArticuloToolStripMenuItem.Text = "Agregar articulo"
-        '
-        'ToolStripDropDownButton3
-        '
-        Me.ToolStripDropDownButton3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text
-        Me.ToolStripDropDownButton3.Image = CType(resources.GetObject("ToolStripDropDownButton3.Image"), System.Drawing.Image)
-        Me.ToolStripDropDownButton3.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.ToolStripDropDownButton3.Name = "ToolStripDropDownButton3"
-        Me.ToolStripDropDownButton3.Size = New System.Drawing.Size(49, 22)
-        Me.ToolStripDropDownButton3.Text = "Tools"
-        '
-        'ToolStripDropDownButton4
-        '
-        Me.ToolStripDropDownButton4.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text
-        Me.ToolStripDropDownButton4.Image = CType(resources.GetObject("ToolStripDropDownButton4.Image"), System.Drawing.Image)
-        Me.ToolStripDropDownButton4.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.ToolStripDropDownButton4.Name = "ToolStripDropDownButton4"
-        Me.ToolStripDropDownButton4.Size = New System.Drawing.Size(45, 22)
-        Me.ToolStripDropDownButton4.Text = "Help"
-        '
-        'ToolsConfig
-        '
-        Me.ToolsConfig.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text
-        Me.ToolsConfig.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ConfiguracionToolStripMenuItem})
-        Me.ToolsConfig.Image = CType(resources.GetObject("ToolsConfig.Image"), System.Drawing.Image)
-        Me.ToolsConfig.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.ToolsConfig.Name = "ToolsConfig"
-        Me.ToolsConfig.Size = New System.Drawing.Size(56, 22)
-        Me.ToolsConfig.Text = "Config"
-        '
-        'ConfiguracionToolStripMenuItem
-        '
-        Me.ConfiguracionToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DatosToolStripMenuItem, Me.FicherosToolStripMenuItem})
-        Me.ConfiguracionToolStripMenuItem.Name = "ConfiguracionToolStripMenuItem"
-        Me.ConfiguracionToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
-        Me.ConfiguracionToolStripMenuItem.Text = "Empresa"
-        '
-        'DatosToolStripMenuItem
-        '
-        Me.DatosToolStripMenuItem.Name = "DatosToolStripMenuItem"
-        Me.DatosToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
-        Me.DatosToolStripMenuItem.Text = "Datos"
-        '
-        'FicherosToolStripMenuItem
-        '
-        Me.FicherosToolStripMenuItem.Name = "FicherosToolStripMenuItem"
-        Me.FicherosToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
-        Me.FicherosToolStripMenuItem.Text = "Ficheros"
-        '
         'frmMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -280,4 +302,7 @@ Partial Class frmMain
     Friend WithEvents ConfiguracionToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents DatosToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents FicherosToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents DocumentosToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents CompraToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents VentaToolStripMenuItem As ToolStripMenuItem
 End Class

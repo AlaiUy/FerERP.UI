@@ -22,6 +22,7 @@ Public Class frmMain
 
     Private Sub AgregarArticuloToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AgregarArticuloToolStripMenuItem.Click
         Dim frm As Form = New frmNuevoArticulo()
+        frm.Name = "Articulos"
         TryCast(frm, frmNuevoArticulo).Register(Me)
         CargarFormulario(frm)
 
@@ -33,12 +34,17 @@ Public Class frmMain
 
     Private Sub CargarFormulario(ByVal xFormulario As Form)
         If IsNothing(Tab) Then
-            PanelBienvenida.Dispose()
+            PanelBienvenida.Hide()
             Tab = New TabControl()
+            AddHandler Tab.KeyDown, AddressOf Tab_KeyPress
             PnContenedor.Controls.Add(Tab)
             Tab.Dock = DockStyle.Fill
+        Else
+            If Tab.TabPages.Count = 0 Then
+                PanelBienvenida.Hide()
+            End If
         End If
-        Dim TP As TabPage = New TabPage("Articulos")
+        Dim TP As TabPage = New TabPage(xFormulario.Name)
         Dim Panel As Panel = New Panel()
         With xFormulario
             .TopLevel = False
@@ -62,6 +68,22 @@ Public Class frmMain
         xFormulario.Show()
     End Sub
 
+    Private Sub Tab_KeyPress(ByVal sender As Object, ByVal e As System.EventArgs)
+        Dim Key As System.Windows.Forms.KeyEventArgs = e
+        If Key.KeyCode = Keys.Escape Then
+            If Not IsNothing(Tab) Then
+
+                If Tab.TabCount = 1 Then
+                    Tab.Dispose()
+                    Tab = Nothing
+                    PanelBienvenida.Show()
+                Else
+                    Tab.TabPages.Remove(Tab.SelectedTab)
+                End If
+            End If
+        End If
+    End Sub
+
     Public Overloads Sub Update(Obj As Object) Implements IObserver.Update
         If (TypeOf Obj Is Form) Then
             If Not IsNothing(Tab) Then
@@ -71,6 +93,8 @@ Public Class frmMain
                         Tab.Dispose()
                         Tab = Nothing
                     End If
+                Else
+                    Tab.TabPages.Remove(Tab.SelectedTab)
                 End If
             End If
         End If
@@ -86,12 +110,27 @@ Public Class frmMain
         End If
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs)
-
-    End Sub
 
     Private Sub DatosToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DatosToolStripMenuItem.Click
         Dim Form As Form = New frmEmpresaData()
         Form.ShowDialog()
+    End Sub
+
+    Private Sub CompraToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CompraToolStripMenuItem.Click
+        Dim frm As Form = New frmCompras()
+        frm.Name = "Nueva compra"
+        TryCast(frm, frmCompras).Register(Me)
+        CargarFormulario(frm)
+    End Sub
+
+    Private Sub btnAgregarPersona_Click(sender As Object, e As EventArgs) Handles btnAgregarPersona.Click
+
+    End Sub
+
+    Private Sub AgregarPersonaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AgregarPersonaToolStripMenuItem.Click
+        Dim frm As Form = New frmNuevaPersona()
+        frm.Name = "Ingresar Persona"
+        TryCast(frm, frmNuevaPersona).Register(Me)
+        CargarFormulario(frm)
     End Sub
 End Class

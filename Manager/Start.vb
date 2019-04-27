@@ -4,7 +4,7 @@
         Try
             Application.SetCompatibleTextRenderingDefault(False)
             Application.EnableVisualStyles()
-            Dim main As Form = New frmMain()
+            Dim main As Form = New frmNuevaVenta()
             main.ShowDialog()
             'If (Login.DialogResult = DialogResult.OK) Then
             '    Dim MainForm As Form = New Main()

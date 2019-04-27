@@ -23,10 +23,13 @@ Partial Class frmArticulos
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.PanelContainer = New System.Windows.Forms.Panel()
-        Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.PanelContainer.SuspendLayout()
+        Me.Panel3.SuspendLayout()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'PanelContainer
@@ -40,13 +43,14 @@ Partial Class frmArticulos
         Me.PanelContainer.Size = New System.Drawing.Size(1020, 764)
         Me.PanelContainer.TabIndex = 0
         '
-        'Panel1
+        'Panel3
         '
-        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Panel1.Location = New System.Drawing.Point(0, 0)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(1020, 53)
-        Me.Panel1.TabIndex = 0
+        Me.Panel3.Controls.Add(Me.DataGridView1)
+        Me.Panel3.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Panel3.Location = New System.Drawing.Point(0, 53)
+        Me.Panel3.Name = "Panel3"
+        Me.Panel3.Size = New System.Drawing.Size(1020, 676)
+        Me.Panel3.TabIndex = 0
         '
         'Panel2
         '
@@ -56,13 +60,22 @@ Partial Class frmArticulos
         Me.Panel2.Size = New System.Drawing.Size(1020, 35)
         Me.Panel2.TabIndex = 1
         '
-        'Panel3
+        'Panel1
         '
-        Me.Panel3.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Panel3.Location = New System.Drawing.Point(0, 53)
-        Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(1020, 676)
-        Me.Panel3.TabIndex = 0
+        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Panel1.Location = New System.Drawing.Point(0, 0)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(1020, 53)
+        Me.Panel1.TabIndex = 0
+        '
+        'DataGridView1
+        '
+        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.DataGridView1.Location = New System.Drawing.Point(0, 0)
+        Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.Size = New System.Drawing.Size(1020, 676)
+        Me.DataGridView1.TabIndex = 0
         '
         'frmArticulos
         '
@@ -71,11 +84,16 @@ Partial Class frmArticulos
         Me.ClientSize = New System.Drawing.Size(1024, 768)
         Me.Controls.Add(Me.PanelContainer)
         Me.DoubleBuffered = True
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
         Me.KeyPreview = True
         Me.Name = "frmArticulos"
-        Me.Text = "frmArticulos"
+        Me.ShowIcon = False
+        Me.ShowInTaskbar = False
+        Me.Text = "Busqueda de articulos"
+        Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.PanelContainer.ResumeLayout(False)
+        Me.Panel3.ResumeLayout(False)
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -84,4 +102,5 @@ Partial Class frmArticulos
     Friend WithEvents Panel3 As Panel
     Friend WithEvents Panel2 As Panel
     Friend WithEvents Panel1 As Panel
+    Friend WithEvents DataGridView1 As DataGridView
 End Class
