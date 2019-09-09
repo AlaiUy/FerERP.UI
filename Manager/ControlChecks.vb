@@ -1,14 +1,22 @@
 ﻿Imports System.Globalization
 
 Module ControlChecks
-    Public Function BackTextBox(ByVal xCorrecto) As Color
+    Public Function BackTextBox(ByVal xCorrecto As Boolean) As Color
         If xCorrecto Then
             Return Color.LightGreen
         End If
         Return Color.IndianRed
     End Function
 
-    Public Function ValidarImportes(ByRef xIngreso As Char, ByVal xTextoIngresado As String, ByVal xLenSelecionado As Integer, ByVal xLenStart As Integer)
+    Public Sub SetRegion()
+        Dim G As Globalization.CultureInfo
+        G = New System.Globalization.CultureInfo("es-UY")
+        G.NumberFormat.CurrencyDecimalSeparator = ","
+        G.NumberFormat.NumberDecimalSeparator = "."
+        System.Threading.Thread.CurrentThread.CurrentCulture = G
+    End Sub
+
+    Public Function ValidarImportes(ByRef xIngreso As Char, ByVal xTextoIngresado As String, ByVal xLenSelecionado As Integer, ByVal xLenStart As Integer) As Boolean
         Dim Separador As Char = Threading.Thread.CurrentThread.CurrentCulture.NumberFormat.NumberDecimalSeparator.Chars(0)
         Dim PosicionSeparador As Integer = 0
 
@@ -62,14 +70,16 @@ Module ControlChecks
     Public Function FormatearImporte(ByVal xImporte As Decimal) As String
         Dim Importe As String
         If xImporte < 10 Then
-            Importe = String.Format(CultureInfo.CreateSpecificCulture("es-ES"), "{0:0.00}", xImporte)
+            Importe = Format(xImporte, "#,##0.00")
+            'Importe = String.Format(CultureInfo.CreateSpecificCulture("es-ES"), "{0:0.00}", xImporte)
         Else
-            Importe = String.Format(CultureInfo.CreateSpecificCulture("es-ES"), "{0:0.00}", xImporte)
+            'Importe = String.Format(CultureInfo.CreateSpecificCulture("es-ES"), "{#,0.}", xImporte)
+            Importe = Format(xImporte, "#,##0.00")
         End If
         Return Importe
     End Function
 
-    Public Function ValidarImportes(ByRef xIngreso As Char, ByVal xTextoIngresado As String, ByVal xLenSelecionado As Integer, ByVal xLenStart As Integer, ByVal xPrecision As Byte)
+    Public Function ValidarImportes(ByRef xIngreso As Char, ByVal xTextoIngresado As String, ByVal xLenSelecionado As Integer, ByVal xLenStart As Integer, ByVal xPrecision As Byte) As Boolean
         Dim Separador As Char = Threading.Thread.CurrentThread.CurrentCulture.NumberFormat.NumberDecimalSeparator.Chars(0)
         Dim PosicionSeparador As Integer = 0
 

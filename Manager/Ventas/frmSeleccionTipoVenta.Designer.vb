@@ -30,6 +30,7 @@ Partial Class frmSeleccionTipoVenta
         '
         'FlowLayoutPanel1
         '
+        Me.FlowLayoutPanel1.BackColor = System.Drawing.SystemColors.GradientActiveCaption
         Me.FlowLayoutPanel1.Controls.Add(Me.btnContado)
         Me.FlowLayoutPanel1.Controls.Add(Me.Button2)
         Me.FlowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill
@@ -40,21 +41,26 @@ Partial Class frmSeleccionTipoVenta
         '
         'btnContado
         '
+        Me.btnContado.BackColor = System.Drawing.Color.White
+        Me.btnContado.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnContado.Location = New System.Drawing.Point(3, 3)
         Me.btnContado.Name = "btnContado"
-        Me.btnContado.Size = New System.Drawing.Size(75, 69)
+        Me.btnContado.Size = New System.Drawing.Size(85, 69)
         Me.btnContado.TabIndex = 0
         Me.btnContado.Text = "CONTADO"
-        Me.btnContado.UseVisualStyleBackColor = True
+        Me.btnContado.UseVisualStyleBackColor = False
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(84, 3)
+        Me.Button2.BackColor = System.Drawing.Color.White
+        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button2.Location = New System.Drawing.Point(94, 3)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(75, 69)
+        Me.Button2.Size = New System.Drawing.Size(91, 69)
         Me.Button2.TabIndex = 1
         Me.Button2.Text = "CREDITO"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.Button2.UseVisualStyleBackColor = False
+        Me.Button2.Visible = False
         '
         'frmSeleccionTipoVenta
         '

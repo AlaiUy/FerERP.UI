@@ -1,8 +1,45 @@
 ﻿Imports JJ.Entidades
 Imports JJ.Gestoras
+Imports JJ.Interfaces.Observer
 
 Public Class frmNuevoProveedor
+    Implements IObservable
+    Private _Obs As IList(Of IObserver)
     Private Lista As IList(Of Object) = New List(Of Object)
+
+    Public Sub New()
+        ' Esta llamada es exigida por el diseñador.
+        InitializeComponent()
+        ' Agregue cualquier inicialización después de la llamada a InitializeComponent().
+    End Sub
+
+
+
+    Public Sub notifyObservers() Implements IObservable.notifyObservers
+        For Each O As IObserver In _Obs
+            O.Update(Me)
+        Next
+    End Sub
+
+    Public Sub Register(xObserver As IObserver) Implements IObservable.Register
+        If IsNothing(_Obs) Then
+            _Obs = New List(Of IObserver)
+        End If
+        _Obs.Add(xObserver)
+    End Sub
+
+    Public Sub UnRegister(xObserver As IObserver) Implements IObservable.UnRegister
+        For Each O As IObserver In _Obs
+            If (O.Equals(xObserver)) Then
+                _Obs.Remove(O)
+            End If
+        Next
+    End Sub
+
+    Private Sub PopularForm()
+        Lista = GesPersonas.getInstance().getCategoriasProveedor()
+        cbCategoria.DataSource = Lista
+    End Sub
 
     Private Sub frmNuevoProveedor_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Try
@@ -24,7 +61,7 @@ Public Class frmNuevoProveedor
     End Sub
 
     Private Sub txtNombre_Leave(sender As Object, e As EventArgs) Handles txtNombre.Leave
-        TryCast(sender, TextBox).BackColor = BackTextBox(Tools.Texto.isLarge(TryCast(sender, TextBox).Text, 1, 20))
+        TryCast(sender, TextBox).BackColor = BackTextBox(Tools.Texto.isLarge(TryCast(sender, TextBox).Text, 1, 50))
 
     End Sub
 
@@ -100,5 +137,19 @@ Public Class frmNuevoProveedor
         Catch ex As Exception
             MsgBox(ex.Message)
         End Try
+    End Sub
+
+    Private Sub btnAddCategory_Click(sender As Object, e As EventArgs) Handles btnAddCategory.Click
+        Dim AddCat As frmNuevaCategoriaProveedor = New frmNuevaCategoriaProveedor()
+        AddCat.ShowDialog()
+        PopularForm()
+    End Sub
+
+    Private Sub Panel2_Paint(sender As Object, e As PaintEventArgs) Handles Panel2.Paint
+
+    End Sub
+
+    Private Sub Panel3_Paint(sender As Object, e As PaintEventArgs) Handles Panel3.Paint
+
     End Sub
 End Class

@@ -79,4 +79,8 @@ Public Class frmFiltrosClientesContado
         End Try
 
     End Sub
+
+    Private Sub DGV_CLIENTES_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DGV_CLIENTES.CellContentClick
+
+    End Sub
 End Class

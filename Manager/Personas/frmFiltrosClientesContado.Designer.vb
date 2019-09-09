@@ -26,9 +26,9 @@ Partial Class frmFiltrosClientesContado
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.DGV_CLIENTES = New System.Windows.Forms.DataGridView()
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.Label2 = New System.Windows.Forms.Label()
         Me.txtDato = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         Me.Panel3.SuspendLayout()
         CType(Me.DGV_CLIENTES, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -85,6 +85,16 @@ Partial Class frmFiltrosClientesContado
         Me.Panel2.Size = New System.Drawing.Size(859, 38)
         Me.Panel2.TabIndex = 1
         '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(333, 9)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(197, 16)
+        Me.Label2.TabIndex = 2
+        Me.Label2.Text = "Toca F2 para quitar los filtros"
+        '
         'txtDato
         '
         Me.txtDato.Location = New System.Drawing.Point(92, 6)
@@ -101,20 +111,9 @@ Partial Class frmFiltrosClientesContado
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Buscar por:"
         '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(333, 9)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(197, 16)
-        Me.Label2.TabIndex = 2
-        Me.Label2.Text = "Toca F2 para quitar los filtros"
-        '
         'frmFiltrosClientesContado
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 16.0!)
-        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None
         Me.ClientSize = New System.Drawing.Size(859, 322)
         Me.Controls.Add(Me.Panel1)
         Me.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))

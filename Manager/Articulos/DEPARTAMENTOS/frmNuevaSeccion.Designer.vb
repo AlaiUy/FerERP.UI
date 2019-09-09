@@ -97,8 +97,7 @@ Partial Class frmNuevaSeccion
         '
         'frmNuevaSeccion
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 16.0!)
-        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(370, 157)
         Me.Controls.Add(Me.Panel1)

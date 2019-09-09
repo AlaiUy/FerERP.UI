@@ -23,22 +23,17 @@ Partial Class frmNuevaVenta
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Panel6 = New System.Windows.Forms.Panel()
         Me.Panel9 = New System.Windows.Forms.Panel()
-        Me.DgItemsView = New System.Windows.Forms.DataGridView()
+        Me.dgItemsView = New System.Windows.Forms.DataGridView()
         Me.Panel7 = New System.Windows.Forms.Panel()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.btnGuardarEspera = New System.Windows.Forms.Button()
         Me.btnNuevaVenta = New System.Windows.Forms.Button()
         Me.Panel5 = New System.Windows.Forms.Panel()
-        Me.btnDescuentoTotal = New System.Windows.Forms.Button()
-        Me.btnDescuentoLineal = New System.Windows.Forms.Button()
         Me.btnBorrarLinea = New System.Windows.Forms.Button()
         Me.btnCantidad = New System.Windows.Forms.Button()
         Me.Panel8 = New System.Windows.Forms.Panel()
@@ -53,17 +48,10 @@ Partial Class frmNuevaVenta
         Me.LnkSearchItem = New System.Windows.Forms.LinkLabel()
         Me.txtCodArticulo = New System.Windows.Forms.TextBox()
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
-        Me.CODIGO = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.NOMBRE = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.CANTIDAD = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.IMPORTE = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DESCUENTO = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.TOTAL = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.LINEA = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Panel1.SuspendLayout()
         Me.Panel6.SuspendLayout()
         Me.Panel9.SuspendLayout()
-        CType(Me.DgItemsView, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.dgItemsView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel7.SuspendLayout()
         Me.Panel5.SuspendLayout()
         Me.Panel8.SuspendLayout()
@@ -81,7 +69,7 @@ Partial Class frmNuevaVenta
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(993, 490)
+        Me.Panel1.Size = New System.Drawing.Size(1008, 730)
         Me.Panel1.TabIndex = 0
         '
         'Panel6
@@ -92,132 +80,176 @@ Partial Class frmNuevaVenta
         Me.Panel6.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel6.Location = New System.Drawing.Point(0, 66)
         Me.Panel6.Name = "Panel6"
-        Me.Panel6.Size = New System.Drawing.Size(993, 358)
+        Me.Panel6.Size = New System.Drawing.Size(1008, 598)
         Me.Panel6.TabIndex = 6
         '
         'Panel9
         '
-        Me.Panel9.Controls.Add(Me.DgItemsView)
+        Me.Panel9.Controls.Add(Me.dgItemsView)
         Me.Panel9.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel9.Location = New System.Drawing.Point(0, 0)
         Me.Panel9.Name = "Panel9"
-        Me.Panel9.Size = New System.Drawing.Size(905, 358)
+        Me.Panel9.Size = New System.Drawing.Size(886, 598)
         Me.Panel9.TabIndex = 10
         '
-        'DgItemsView
+        'dgItemsView
         '
-        Me.DgItemsView.AllowUserToAddRows = False
-        Me.DgItemsView.AllowUserToDeleteRows = False
-        Me.DgItemsView.AllowUserToResizeRows = False
-        Me.DgItemsView.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.DgItemsView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None
-        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DgItemsView.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
-        Me.DgItemsView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DgItemsView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.CODIGO, Me.NOMBRE, Me.CANTIDAD, Me.IMPORTE, Me.DESCUENTO, Me.TOTAL, Me.LINEA})
-        DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle7.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.DgItemsView.DefaultCellStyle = DataGridViewCellStyle7
-        Me.DgItemsView.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.DgItemsView.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically
-        Me.DgItemsView.EnableHeadersVisualStyles = False
-        Me.DgItemsView.Location = New System.Drawing.Point(0, 0)
-        Me.DgItemsView.MultiSelect = False
-        Me.DgItemsView.Name = "DgItemsView"
-        Me.DgItemsView.RowHeadersVisible = False
-        Me.DgItemsView.ShowCellErrors = False
-        Me.DgItemsView.ShowCellToolTips = False
-        Me.DgItemsView.ShowEditingIcon = False
-        Me.DgItemsView.ShowRowErrors = False
-        Me.DgItemsView.Size = New System.Drawing.Size(905, 358)
-        Me.DgItemsView.TabIndex = 9
+        Me.dgItemsView.AllowUserToAddRows = False
+        Me.dgItemsView.AllowUserToDeleteRows = False
+        Me.dgItemsView.AllowUserToResizeRows = False
+        Me.dgItemsView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCellsExceptHeader
+        Me.dgItemsView.BackgroundColor = System.Drawing.Color.White
+        Me.dgItemsView.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.dgItemsView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
+        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.GradientActiveCaption
+        DataGridViewCellStyle5.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgItemsView.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle5
+        Me.dgItemsView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle6.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle6.Padding = New System.Windows.Forms.Padding(5)
+        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.Transparent
+        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgItemsView.DefaultCellStyle = DataGridViewCellStyle6
+        Me.dgItemsView.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.dgItemsView.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter
+        Me.dgItemsView.EnableHeadersVisualStyles = False
+        Me.dgItemsView.Location = New System.Drawing.Point(0, 0)
+        Me.dgItemsView.MultiSelect = False
+        Me.dgItemsView.Name = "dgItemsView"
+        Me.dgItemsView.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken
+        Me.dgItemsView.RowHeadersVisible = False
+        Me.dgItemsView.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.Transparent
+        Me.dgItemsView.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.dgItemsView.RowTemplate.Height = 30
+        Me.dgItemsView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.dgItemsView.Size = New System.Drawing.Size(886, 598)
+        Me.dgItemsView.TabIndex = 3
         '
         'Panel7
         '
+        Me.Panel7.BackColor = System.Drawing.SystemColors.GradientActiveCaption
+        Me.Panel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel7.Controls.Add(Me.Button1)
+        Me.Panel7.Controls.Add(Me.btnGuardarEspera)
         Me.Panel7.Controls.Add(Me.btnNuevaVenta)
         Me.Panel7.Dock = System.Windows.Forms.DockStyle.Right
-        Me.Panel7.Location = New System.Drawing.Point(905, 0)
+        Me.Panel7.Location = New System.Drawing.Point(886, 0)
         Me.Panel7.Name = "Panel7"
-        Me.Panel7.Size = New System.Drawing.Size(88, 358)
+        Me.Panel7.Size = New System.Drawing.Size(122, 598)
         Me.Panel7.TabIndex = 9
+        '
+        'Button1
+        '
+        Me.Button1.BackColor = System.Drawing.Color.Transparent
+        Me.Button1.FlatAppearance.BorderColor = System.Drawing.Color.Gray
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button1.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.Image = Global.Manager.My.Resources.JJRecursos.contract
+        Me.Button1.ImageAlign = System.Drawing.ContentAlignment.TopCenter
+        Me.Button1.Location = New System.Drawing.Point(5, 75)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(109, 63)
+        Me.Button1.TabIndex = 8
+        Me.Button1.Text = "Presupuesto"
+        Me.Button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.Button1.UseVisualStyleBackColor = False
+        Me.Button1.Visible = False
+        '
+        'btnGuardarEspera
+        '
+        Me.btnGuardarEspera.BackColor = System.Drawing.Color.Transparent
+        Me.btnGuardarEspera.FlatAppearance.BorderColor = System.Drawing.Color.Gray
+        Me.btnGuardarEspera.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnGuardarEspera.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnGuardarEspera.Image = Global.Manager.My.Resources.JJRecursos.pending
+        Me.btnGuardarEspera.ImageAlign = System.Drawing.ContentAlignment.TopCenter
+        Me.btnGuardarEspera.Location = New System.Drawing.Point(5, 144)
+        Me.btnGuardarEspera.Name = "btnGuardarEspera"
+        Me.btnGuardarEspera.Size = New System.Drawing.Size(109, 61)
+        Me.btnGuardarEspera.TabIndex = 7
+        Me.btnGuardarEspera.Text = "Guardar"
+        Me.btnGuardarEspera.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.btnGuardarEspera.UseVisualStyleBackColor = False
+        Me.btnGuardarEspera.Visible = False
         '
         'btnNuevaVenta
         '
-        Me.btnNuevaVenta.BackColor = System.Drawing.SystemColors.Control
-        Me.btnNuevaVenta.Location = New System.Drawing.Point(6, 9)
+        Me.btnNuevaVenta.BackColor = System.Drawing.Color.Transparent
+        Me.btnNuevaVenta.FlatAppearance.BorderColor = System.Drawing.Color.Gray
+        Me.btnNuevaVenta.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnNuevaVenta.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnNuevaVenta.Image = Global.Manager.My.Resources.JJRecursos.stopwatch
+        Me.btnNuevaVenta.ImageAlign = System.Drawing.ContentAlignment.TopCenter
+        Me.btnNuevaVenta.Location = New System.Drawing.Point(5, 5)
         Me.btnNuevaVenta.Name = "btnNuevaVenta"
-        Me.btnNuevaVenta.Size = New System.Drawing.Size(75, 52)
+        Me.btnNuevaVenta.Size = New System.Drawing.Size(109, 64)
         Me.btnNuevaVenta.TabIndex = 4
-        Me.btnNuevaVenta.Text = "DEJAR EN ESPERA"
+        Me.btnNuevaVenta.Text = "Espera"
+        Me.btnNuevaVenta.TextAlign = System.Drawing.ContentAlignment.BottomCenter
         Me.btnNuevaVenta.UseVisualStyleBackColor = False
+        Me.btnNuevaVenta.Visible = False
         '
         'Panel5
         '
-        Me.Panel5.Controls.Add(Me.btnDescuentoTotal)
-        Me.Panel5.Controls.Add(Me.btnDescuentoLineal)
+        Me.Panel5.BackColor = System.Drawing.SystemColors.GradientActiveCaption
+        Me.Panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Panel5.Controls.Add(Me.btnBorrarLinea)
         Me.Panel5.Controls.Add(Me.btnCantidad)
         Me.Panel5.Controls.Add(Me.Panel8)
         Me.Panel5.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.Panel5.Location = New System.Drawing.Point(0, 424)
+        Me.Panel5.Location = New System.Drawing.Point(0, 664)
         Me.Panel5.Name = "Panel5"
-        Me.Panel5.Size = New System.Drawing.Size(993, 66)
+        Me.Panel5.Size = New System.Drawing.Size(1008, 66)
         Me.Panel5.TabIndex = 5
-        '
-        'btnDescuentoTotal
-        '
-        Me.btnDescuentoTotal.Location = New System.Drawing.Point(255, 6)
-        Me.btnDescuentoTotal.Name = "btnDescuentoTotal"
-        Me.btnDescuentoTotal.Size = New System.Drawing.Size(75, 42)
-        Me.btnDescuentoTotal.TabIndex = 12
-        Me.btnDescuentoTotal.Text = "Descuento Total"
-        Me.btnDescuentoTotal.UseVisualStyleBackColor = True
-        '
-        'btnDescuentoLineal
-        '
-        Me.btnDescuentoLineal.Location = New System.Drawing.Point(174, 6)
-        Me.btnDescuentoLineal.Name = "btnDescuentoLineal"
-        Me.btnDescuentoLineal.Size = New System.Drawing.Size(75, 42)
-        Me.btnDescuentoLineal.TabIndex = 11
-        Me.btnDescuentoLineal.Text = "Descuento Lineal"
-        Me.btnDescuentoLineal.UseVisualStyleBackColor = True
         '
         'btnBorrarLinea
         '
-        Me.btnBorrarLinea.Location = New System.Drawing.Point(93, 6)
+        Me.btnBorrarLinea.BackColor = System.Drawing.Color.Transparent
+        Me.btnBorrarLinea.FlatAppearance.BorderColor = System.Drawing.Color.Gray
+        Me.btnBorrarLinea.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnBorrarLinea.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnBorrarLinea.Image = Global.Manager.My.Resources.JJRecursos.eraser
+        Me.btnBorrarLinea.ImageAlign = System.Drawing.ContentAlignment.TopCenter
+        Me.btnBorrarLinea.Location = New System.Drawing.Point(136, 3)
         Me.btnBorrarLinea.Name = "btnBorrarLinea"
-        Me.btnBorrarLinea.Size = New System.Drawing.Size(75, 42)
-        Me.btnBorrarLinea.TabIndex = 10
+        Me.btnBorrarLinea.Size = New System.Drawing.Size(119, 59)
+        Me.btnBorrarLinea.TabIndex = 11
         Me.btnBorrarLinea.Text = "Borrar Linea"
-        Me.btnBorrarLinea.UseVisualStyleBackColor = True
+        Me.btnBorrarLinea.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.btnBorrarLinea.UseVisualStyleBackColor = False
         '
         'btnCantidad
         '
-        Me.btnCantidad.Location = New System.Drawing.Point(12, 6)
+        Me.btnCantidad.BackColor = System.Drawing.Color.Transparent
+        Me.btnCantidad.FlatAppearance.BorderColor = System.Drawing.Color.Gray
+        Me.btnCantidad.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnCantidad.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnCantidad.Image = Global.Manager.My.Resources.JJRecursos.countdown
+        Me.btnCantidad.ImageAlign = System.Drawing.ContentAlignment.TopCenter
+        Me.btnCantidad.Location = New System.Drawing.Point(11, 3)
         Me.btnCantidad.Name = "btnCantidad"
-        Me.btnCantidad.Size = New System.Drawing.Size(75, 42)
+        Me.btnCantidad.Size = New System.Drawing.Size(119, 59)
         Me.btnCantidad.TabIndex = 9
-        Me.btnCantidad.Text = "Cambiar Cantidad"
-        Me.btnCantidad.UseVisualStyleBackColor = True
+        Me.btnCantidad.Text = "Cantidad"
+        Me.btnCantidad.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.btnCantidad.UseVisualStyleBackColor = False
         '
         'Panel8
         '
         Me.Panel8.Controls.Add(Me.GroupBox1)
         Me.Panel8.Dock = System.Windows.Forms.DockStyle.Right
-        Me.Panel8.Location = New System.Drawing.Point(653, 0)
+        Me.Panel8.Location = New System.Drawing.Point(666, 0)
         Me.Panel8.Name = "Panel8"
-        Me.Panel8.Size = New System.Drawing.Size(340, 66)
+        Me.Panel8.Size = New System.Drawing.Size(340, 64)
         Me.Panel8.TabIndex = 1
         '
         'GroupBox1
@@ -253,6 +285,8 @@ Partial Class frmNuevaVenta
         '
         'Panel2
         '
+        Me.Panel2.BackColor = System.Drawing.Color.White
+        Me.Panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Panel2.Controls.Add(Me.lblVendedor)
         Me.Panel2.Controls.Add(Me.Panel4)
         Me.Panel2.Controls.Add(Me.Panel3)
@@ -260,7 +294,7 @@ Partial Class frmNuevaVenta
         Me.Panel2.Font = New System.Drawing.Font("Tahoma", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Panel2.Location = New System.Drawing.Point(0, 0)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(993, 66)
+        Me.Panel2.Size = New System.Drawing.Size(1008, 66)
         Me.Panel2.TabIndex = 0
         '
         'lblVendedor
@@ -274,9 +308,9 @@ Partial Class frmNuevaVenta
         'Panel4
         '
         Me.Panel4.Dock = System.Windows.Forms.DockStyle.Right
-        Me.Panel4.Location = New System.Drawing.Point(564, 0)
+        Me.Panel4.Location = New System.Drawing.Point(577, 0)
         Me.Panel4.Name = "Panel4"
-        Me.Panel4.Size = New System.Drawing.Size(429, 66)
+        Me.Panel4.Size = New System.Drawing.Size(429, 64)
         Me.Panel4.TabIndex = 3
         '
         'Panel3
@@ -287,7 +321,7 @@ Partial Class frmNuevaVenta
         Me.Panel3.Dock = System.Windows.Forms.DockStyle.Left
         Me.Panel3.Location = New System.Drawing.Point(0, 0)
         Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(281, 66)
+        Me.Panel3.Size = New System.Drawing.Size(281, 64)
         Me.Panel3.TabIndex = 1
         '
         'txtCantidad
@@ -320,58 +354,10 @@ Partial Class frmNuevaVenta
         Me.txtCodArticulo.Size = New System.Drawing.Size(196, 23)
         Me.txtCodArticulo.TabIndex = 4
         '
-        'CODIGO
-        '
-        Me.CODIGO.HeaderText = "CODIGO"
-        Me.CODIGO.Name = "CODIGO"
-        '
-        'NOMBRE
-        '
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.NOMBRE.DefaultCellStyle = DataGridViewCellStyle2
-        Me.NOMBRE.HeaderText = "NOMBRE"
-        Me.NOMBRE.Name = "NOMBRE"
-        '
-        'CANTIDAD
-        '
-        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        Me.CANTIDAD.DefaultCellStyle = DataGridViewCellStyle3
-        Me.CANTIDAD.HeaderText = "CANTIDAD"
-        Me.CANTIDAD.Name = "CANTIDAD"
-        '
-        'IMPORTE
-        '
-        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        Me.IMPORTE.DefaultCellStyle = DataGridViewCellStyle4
-        Me.IMPORTE.HeaderText = "IMPORTE"
-        Me.IMPORTE.Name = "IMPORTE"
-        '
-        'DESCUENTO
-        '
-        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.DESCUENTO.DefaultCellStyle = DataGridViewCellStyle5
-        Me.DESCUENTO.HeaderText = "DESCUENTO"
-        Me.DESCUENTO.Name = "DESCUENTO"
-        '
-        'TOTAL
-        '
-        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        Me.TOTAL.DefaultCellStyle = DataGridViewCellStyle6
-        Me.TOTAL.HeaderText = "TOTAL"
-        Me.TOTAL.Name = "TOTAL"
-        '
-        'LINEA
-        '
-        Me.LINEA.HeaderText = "LINEA"
-        Me.LINEA.Name = "LINEA"
-        Me.LINEA.Visible = False
-        '
         'frmNuevaVenta
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
-        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(993, 490)
+        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None
+        Me.ClientSize = New System.Drawing.Size(1008, 730)
         Me.Controls.Add(Me.Panel1)
         Me.Name = "frmNuevaVenta"
         Me.Text = "frmNuevaVenta"
@@ -379,7 +365,7 @@ Partial Class frmNuevaVenta
         Me.Panel1.ResumeLayout(False)
         Me.Panel6.ResumeLayout(False)
         Me.Panel9.ResumeLayout(False)
-        CType(Me.DgItemsView, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dgItemsView, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel7.ResumeLayout(False)
         Me.Panel5.ResumeLayout(False)
         Me.Panel8.ResumeLayout(False)
@@ -395,7 +381,6 @@ Partial Class frmNuevaVenta
 
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Panel6 As Panel
-    Friend WithEvents DgItemsView As DataGridView
     Friend WithEvents Panel5 As Panel
     Friend WithEvents Panel2 As Panel
     Friend WithEvents Panel4 As Panel
@@ -408,19 +393,13 @@ Partial Class frmNuevaVenta
     Friend WithEvents txtImporte As TextBox
     Friend WithEvents Label1 As Label
     Friend WithEvents txtCantidad As TextBox
-    Friend WithEvents btnDescuentoTotal As Button
-    Friend WithEvents btnDescuentoLineal As Button
-    Friend WithEvents btnBorrarLinea As Button
-    Friend WithEvents btnCantidad As Button
     Friend WithEvents Panel7 As Panel
     Friend WithEvents Panel9 As Panel
     Friend WithEvents btnNuevaVenta As Button
     Friend WithEvents lblVendedor As Label
-    Friend WithEvents CODIGO As DataGridViewTextBoxColumn
-    Friend WithEvents NOMBRE As DataGridViewTextBoxColumn
-    Friend WithEvents CANTIDAD As DataGridViewTextBoxColumn
-    Friend WithEvents IMPORTE As DataGridViewTextBoxColumn
-    Friend WithEvents DESCUENTO As DataGridViewTextBoxColumn
-    Friend WithEvents TOTAL As DataGridViewTextBoxColumn
-    Friend WithEvents LINEA As DataGridViewTextBoxColumn
+    Friend WithEvents dgItemsView As DataGridView
+    Friend WithEvents btnGuardarEspera As Button
+    Friend WithEvents Button1 As Button
+    Friend WithEvents btnCantidad As Button
+    Friend WithEvents btnBorrarLinea As Button
 End Class

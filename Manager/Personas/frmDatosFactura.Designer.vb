@@ -25,8 +25,9 @@ Partial Class frmDatosFactura
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.btnContinuar = New System.Windows.Forms.Button()
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.grp_DatosCuenta = New System.Windows.Forms.GroupBox()
         Me.grp_personales = New System.Windows.Forms.GroupBox()
+        Me.Panel_Datos = New System.Windows.Forms.Panel()
         Me.txtTelefono = New System.Windows.Forms.TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.txtDireccion = New System.Windows.Forms.TextBox()
@@ -38,16 +39,22 @@ Partial Class frmDatosFactura
         Me.brnFiltro = New System.Windows.Forms.Button()
         Me.txtIdCliente = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.txtDirEnvio = New System.Windows.Forms.TextBox()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.txtAdenda = New System.Windows.Forms.TextBox()
+        Me.Label7 = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
+        Me.grp_DatosCuenta.SuspendLayout()
         Me.grp_personales.SuspendLayout()
+        Me.Panel_Datos.SuspendLayout()
         Me.SuspendLayout()
         '
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.White
         Me.Panel1.Controls.Add(Me.Panel2)
-        Me.Panel1.Controls.Add(Me.GroupBox1)
+        Me.Panel1.Controls.Add(Me.grp_DatosCuenta)
         Me.Panel1.Controls.Add(Me.grp_personales)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
@@ -75,30 +82,25 @@ Partial Class frmDatosFactura
         Me.btnContinuar.Text = "Continuar"
         Me.btnContinuar.UseVisualStyleBackColor = True
         '
-        'GroupBox1
+        'grp_DatosCuenta
         '
-        Me.GroupBox1.Location = New System.Drawing.Point(12, 260)
-        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.GroupBox1.Size = New System.Drawing.Size(652, 160)
-        Me.GroupBox1.TabIndex = 1
-        Me.GroupBox1.TabStop = False
-        Me.GroupBox1.Text = "  Datos personales  "
+        Me.grp_DatosCuenta.Controls.Add(Me.txtAdenda)
+        Me.grp_DatosCuenta.Controls.Add(Me.Label7)
+        Me.grp_DatosCuenta.Controls.Add(Me.txtDirEnvio)
+        Me.grp_DatosCuenta.Controls.Add(Me.Label4)
+        Me.grp_DatosCuenta.Location = New System.Drawing.Point(12, 260)
+        Me.grp_DatosCuenta.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.grp_DatosCuenta.Name = "grp_DatosCuenta"
+        Me.grp_DatosCuenta.Padding = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.grp_DatosCuenta.Size = New System.Drawing.Size(652, 160)
+        Me.grp_DatosCuenta.TabIndex = 1
+        Me.grp_DatosCuenta.TabStop = False
+        Me.grp_DatosCuenta.Text = "--------- Datos de envio ----------"
+        Me.grp_DatosCuenta.Visible = False
         '
         'grp_personales
         '
-        Me.grp_personales.Controls.Add(Me.txtTelefono)
-        Me.grp_personales.Controls.Add(Me.Label6)
-        Me.grp_personales.Controls.Add(Me.txtDireccion)
-        Me.grp_personales.Controls.Add(Me.Label5)
-        Me.grp_personales.Controls.Add(Me.txtDocumento)
-        Me.grp_personales.Controls.Add(Me.Label3)
-        Me.grp_personales.Controls.Add(Me.txtNombre)
-        Me.grp_personales.Controls.Add(Me.Label2)
-        Me.grp_personales.Controls.Add(Me.brnFiltro)
-        Me.grp_personales.Controls.Add(Me.txtIdCliente)
-        Me.grp_personales.Controls.Add(Me.Label1)
+        Me.grp_personales.Controls.Add(Me.Panel_Datos)
         Me.grp_personales.Location = New System.Drawing.Point(12, 11)
         Me.grp_personales.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.grp_personales.Name = "grp_personales"
@@ -108,104 +110,174 @@ Partial Class frmDatosFactura
         Me.grp_personales.TabStop = False
         Me.grp_personales.Text = "  Datos personales  "
         '
+        'Panel_Datos
+        '
+        Me.Panel_Datos.BackColor = System.Drawing.SystemColors.ButtonShadow
+        Me.Panel_Datos.Controls.Add(Me.txtTelefono)
+        Me.Panel_Datos.Controls.Add(Me.Label6)
+        Me.Panel_Datos.Controls.Add(Me.txtDireccion)
+        Me.Panel_Datos.Controls.Add(Me.Label5)
+        Me.Panel_Datos.Controls.Add(Me.txtDocumento)
+        Me.Panel_Datos.Controls.Add(Me.Label3)
+        Me.Panel_Datos.Controls.Add(Me.txtNombre)
+        Me.Panel_Datos.Controls.Add(Me.Label2)
+        Me.Panel_Datos.Controls.Add(Me.brnFiltro)
+        Me.Panel_Datos.Controls.Add(Me.txtIdCliente)
+        Me.Panel_Datos.Controls.Add(Me.Label1)
+        Me.Panel_Datos.Location = New System.Drawing.Point(64, 23)
+        Me.Panel_Datos.Name = "Panel_Datos"
+        Me.Panel_Datos.Size = New System.Drawing.Size(525, 211)
+        Me.Panel_Datos.TabIndex = 0
+        '
         'txtTelefono
         '
-        Me.txtTelefono.Location = New System.Drawing.Point(129, 152)
+        Me.txtTelefono.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtTelefono.Location = New System.Drawing.Point(120, 168)
         Me.txtTelefono.Name = "txtTelefono"
-        Me.txtTelefono.Size = New System.Drawing.Size(137, 23)
-        Me.txtTelefono.TabIndex = 12
+        Me.txtTelefono.Size = New System.Drawing.Size(223, 27)
+        Me.txtTelefono.TabIndex = 23
         '
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(27, 155)
+        Me.Label6.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.Location = New System.Drawing.Point(27, 171)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(63, 16)
-        Me.Label6.TabIndex = 11
+        Me.Label6.Size = New System.Drawing.Size(87, 19)
+        Me.Label6.TabIndex = 22
         Me.Label6.Text = "Telefono:"
         Me.Label6.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
         'txtDireccion
         '
-        Me.txtDireccion.Location = New System.Drawing.Point(129, 123)
+        Me.txtDireccion.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtDireccion.Location = New System.Drawing.Point(120, 132)
         Me.txtDireccion.Name = "txtDireccion"
-        Me.txtDireccion.Size = New System.Drawing.Size(137, 23)
-        Me.txtDireccion.TabIndex = 10
+        Me.txtDireccion.Size = New System.Drawing.Size(223, 27)
+        Me.txtDireccion.TabIndex = 21
         '
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(25, 126)
+        Me.Label5.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Location = New System.Drawing.Point(24, 135)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(65, 16)
-        Me.Label5.TabIndex = 9
+        Me.Label5.Size = New System.Drawing.Size(90, 19)
+        Me.Label5.TabIndex = 20
         Me.Label5.Text = "Direccion:"
         Me.Label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
         'txtDocumento
         '
-        Me.txtDocumento.Location = New System.Drawing.Point(129, 93)
+        Me.txtDocumento.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtDocumento.Location = New System.Drawing.Point(120, 96)
         Me.txtDocumento.Name = "txtDocumento"
-        Me.txtDocumento.Size = New System.Drawing.Size(137, 23)
-        Me.txtDocumento.TabIndex = 6
+        Me.txtDocumento.Size = New System.Drawing.Size(223, 27)
+        Me.txtDocumento.TabIndex = 19
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(24, 96)
+        Me.Label3.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(22, 99)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(66, 16)
-        Me.Label3.TabIndex = 5
+        Me.Label3.Size = New System.Drawing.Size(92, 19)
+        Me.Label3.TabIndex = 18
         Me.Label3.Text = "C.I / RUT:"
         Me.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
         'txtNombre
         '
-        Me.txtNombre.Location = New System.Drawing.Point(129, 64)
+        Me.txtNombre.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtNombre.Location = New System.Drawing.Point(120, 57)
         Me.txtNombre.Name = "txtNombre"
-        Me.txtNombre.Size = New System.Drawing.Size(137, 23)
-        Me.txtNombre.TabIndex = 4
+        Me.txtNombre.Size = New System.Drawing.Size(223, 27)
+        Me.txtNombre.TabIndex = 17
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(32, 67)
+        Me.Label2.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(35, 60)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(58, 16)
-        Me.Label2.TabIndex = 3
+        Me.Label2.Size = New System.Drawing.Size(79, 19)
+        Me.Label2.TabIndex = 16
         Me.Label2.Text = "Nombre:"
         Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
         'brnFiltro
         '
-        Me.brnFiltro.Location = New System.Drawing.Point(272, 24)
+        Me.brnFiltro.BackColor = System.Drawing.Color.White
+        Me.brnFiltro.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.brnFiltro.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.brnFiltro.Location = New System.Drawing.Point(349, 16)
         Me.brnFiltro.Name = "brnFiltro"
-        Me.brnFiltro.Size = New System.Drawing.Size(75, 23)
-        Me.brnFiltro.TabIndex = 2
+        Me.brnFiltro.Size = New System.Drawing.Size(75, 27)
+        Me.brnFiltro.TabIndex = 15
         Me.brnFiltro.Text = "Buscar"
-        Me.brnFiltro.UseVisualStyleBackColor = True
+        Me.brnFiltro.UseVisualStyleBackColor = False
         '
         'txtIdCliente
         '
-        Me.txtIdCliente.Location = New System.Drawing.Point(129, 24)
+        Me.txtIdCliente.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtIdCliente.Location = New System.Drawing.Point(120, 16)
         Me.txtIdCliente.Name = "txtIdCliente"
-        Me.txtIdCliente.Size = New System.Drawing.Size(137, 23)
-        Me.txtIdCliente.TabIndex = 1
+        Me.txtIdCliente.Size = New System.Drawing.Size(223, 27)
+        Me.txtIdCliente.TabIndex = 14
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(27, 31)
+        Me.Label1.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(41, 19)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(52, 16)
-        Me.Label1.TabIndex = 0
+        Me.Label1.Size = New System.Drawing.Size(73, 19)
+        Me.Label1.TabIndex = 13
         Me.Label1.Text = "Cliente:"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
+        'txtDirEnvio
+        '
+        Me.txtDirEnvio.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtDirEnvio.Location = New System.Drawing.Point(219, 28)
+        Me.txtDirEnvio.Name = "txtDirEnvio"
+        Me.txtDirEnvio.Size = New System.Drawing.Size(345, 27)
+        Me.txtDirEnvio.TabIndex = 25
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Location = New System.Drawing.Point(49, 31)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(164, 19)
+        Me.Label4.TabIndex = 24
+        Me.Label4.Text = "Direccion de envio:"
+        Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'txtAdenda
+        '
+        Me.txtAdenda.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtAdenda.Location = New System.Drawing.Point(219, 67)
+        Me.txtAdenda.Multiline = True
+        Me.txtAdenda.Name = "txtAdenda"
+        Me.txtAdenda.Size = New System.Drawing.Size(345, 81)
+        Me.txtAdenda.TabIndex = 27
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.Location = New System.Drawing.Point(136, 75)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(77, 19)
+        Me.Label7.TabIndex = 26
+        Me.Label7.Text = "Adenda:"
+        Me.Label7.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
         'frmDatosFactura
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 16.0!)
-        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None
         Me.ClientSize = New System.Drawing.Size(677, 473)
         Me.Controls.Add(Me.Panel1)
         Me.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -216,16 +288,23 @@ Partial Class frmDatosFactura
         Me.Text = "frmDatosFactura"
         Me.Panel1.ResumeLayout(False)
         Me.Panel2.ResumeLayout(False)
+        Me.grp_DatosCuenta.ResumeLayout(False)
+        Me.grp_DatosCuenta.PerformLayout()
         Me.grp_personales.ResumeLayout(False)
-        Me.grp_personales.PerformLayout()
+        Me.Panel_Datos.ResumeLayout(False)
+        Me.Panel_Datos.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
 
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Panel2 As Panel
-    Friend WithEvents GroupBox1 As GroupBox
+    Friend WithEvents grp_DatosCuenta As GroupBox
     Friend WithEvents grp_personales As GroupBox
+    Friend WithEvents btnContinuar As Button
+    Friend WithEvents Panel_Datos As Panel
+    Friend WithEvents txtTelefono As TextBox
+    Friend WithEvents Label6 As Label
     Friend WithEvents txtDireccion As TextBox
     Friend WithEvents Label5 As Label
     Friend WithEvents txtDocumento As TextBox
@@ -235,7 +314,8 @@ Partial Class frmDatosFactura
     Friend WithEvents brnFiltro As Button
     Friend WithEvents txtIdCliente As TextBox
     Friend WithEvents Label1 As Label
-    Friend WithEvents txtTelefono As TextBox
-    Friend WithEvents Label6 As Label
-    Friend WithEvents btnContinuar As Button
+    Friend WithEvents txtAdenda As TextBox
+    Friend WithEvents Label7 As Label
+    Friend WithEvents txtDirEnvio As TextBox
+    Friend WithEvents Label4 As Label
 End Class

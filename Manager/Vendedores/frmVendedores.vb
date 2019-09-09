@@ -28,7 +28,7 @@ Public Class frmVendedores
     Private Sub Popular()
         For Each O As Object In _Vendedores
             Dim B As Button = New Button()
-            B.Size = New Size(100, 100)
+            B.Size = New Size(200, 100)
             B.Text = TryCast(O, Vendedor).Codigo & vbLf & TryCast(O, Vendedor).Nombre
             B.Font = New Font("ARIAL", 15)
             B.TextAlign = ContentAlignment.MiddleCenter
@@ -68,5 +68,9 @@ Public Class frmVendedores
             Dim Ve As Vendedor = GesVendedores.getInstance().getVendedorByID(_Codvendedor)
             Ob.Update(Ve)
         Next
+    End Sub
+
+    Private Sub FlowPanel_Paint(sender As Object, e As PaintEventArgs) Handles FlowPanel.Paint
+
     End Sub
 End Class

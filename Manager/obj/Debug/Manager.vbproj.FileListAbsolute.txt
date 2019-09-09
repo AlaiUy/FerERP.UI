@@ -1,40 +1,37 @@
-C:\Users\alai\Source\Repos\FerERP.UI\Manager\bin\Debug\Manager.exe
-C:\Users\alai\Source\Repos\FerERP.UI\Manager\bin\Debug\Manager.pdb
-C:\Users\alai\Source\Repos\FerERP.UI\Manager\bin\Debug\Manager.xml
-C:\Users\alai\Source\Repos\FerERP.UI\Manager\bin\Debug\Entidades.dll
-C:\Users\alai\Source\Repos\FerERP.UI\Manager\bin\Debug\Gestoras.dll
-C:\Users\alai\Source\Repos\FerERP.UI\Manager\bin\Debug\Interfaces.dll
-C:\Users\alai\Source\Repos\FerERP.UI\Manager\bin\Debug\Tools.dll
-C:\Users\alai\Source\Repos\FerERP.UI\Manager\bin\Debug\FabricaMapper.dll
-C:\Users\alai\Source\Repos\FerERP.UI\Manager\bin\Debug\Mappers.dll
-C:\Users\alai\Source\Repos\FerERP.UI\Manager\bin\Debug\Entidades.pdb
-C:\Users\alai\Source\Repos\FerERP.UI\Manager\bin\Debug\Gestoras.pdb
-C:\Users\alai\Source\Repos\FerERP.UI\Manager\bin\Debug\Interfaces.pdb
-C:\Users\alai\Source\Repos\FerERP.UI\Manager\bin\Debug\Tools.pdb
-C:\Users\alai\Source\Repos\FerERP.UI\Manager\bin\Debug\FabricaMapper.pdb
-C:\Users\alai\Source\Repos\FerERP.UI\Manager\bin\Debug\Mappers.pdb
+C:\Users\alai\Desktop\Soft\Desarrollo\Debug\JO Manager.exe.config
+C:\Users\alai\Desktop\Soft\Desarrollo\Debug\JO Manager.exe
+C:\Users\alai\Desktop\Soft\Desarrollo\Debug\JO Manager.pdb
+C:\Users\alai\Desktop\Soft\Desarrollo\Debug\JO Manager.xml
 C:\Users\alai\Source\Repos\FerERP.UI\Manager\obj\Debug\Manager.vbprojResolveAssemblyReference.cache
 C:\Users\alai\Source\Repos\FerERP.UI\Manager\obj\Debug\Manager.frmDepartamentoNuevo.resources
 C:\Users\alai\Source\Repos\FerERP.UI\Manager\obj\Debug\Manager.frmNuevaSeccion.resources
 C:\Users\alai\Source\Repos\FerERP.UI\Manager\obj\Debug\Manager.frmArticulos.resources
 C:\Users\alai\Source\Repos\FerERP.UI\Manager\obj\Debug\Manager.frmNuevoArticulo.resources
+C:\Users\alai\Source\Repos\FerERP.UI\Manager\obj\Debug\Manager.frmPrintPrices.resources
+C:\Users\alai\Source\Repos\FerERP.UI\Manager\obj\Debug\Manager.frmUpdateArticulos.resources
 C:\Users\alai\Source\Repos\FerERP.UI\Manager\obj\Debug\Manager.frmNuevaMarca.resources
 C:\Users\alai\Source\Repos\FerERP.UI\Manager\obj\Debug\Manager.frmPanelNumerico.resources
 C:\Users\alai\Source\Repos\FerERP.UI\Manager\obj\Debug\Manager.frmNuevaCaja.resources
 C:\Users\alai\Source\Repos\FerERP.UI\Manager\obj\Debug\Manager.frmCompras.resources
 C:\Users\alai\Source\Repos\FerERP.UI\Manager\obj\Debug\Manager.frmEmpresaData.resources
 C:\Users\alai\Source\Repos\FerERP.UI\Manager\obj\Debug\Manager.frmNuevaCuenta.resources
+C:\Users\alai\Source\Repos\FerERP.UI\Manager\obj\Debug\Manager.frmCotizaciones.resources
 C:\Users\alai\Source\Repos\FerERP.UI\Manager\obj\Debug\Manager.frmMain.resources
 C:\Users\alai\Source\Repos\FerERP.UI\Manager\obj\Debug\Manager.JJRecursos.resources
+C:\Users\alai\Source\Repos\FerERP.UI\Manager\obj\Debug\Manager.frmListadoArticulos.resources
 C:\Users\alai\Source\Repos\FerERP.UI\Manager\obj\Debug\Manager.Resources.resources
 C:\Users\alai\Source\Repos\FerERP.UI\Manager\obj\Debug\Manager.frmDatosFactura.resources
 C:\Users\alai\Source\Repos\FerERP.UI\Manager\obj\Debug\Manager.frmFiltrosClientesContado.resources
 C:\Users\alai\Source\Repos\FerERP.UI\Manager\obj\Debug\Manager.frmNuevaPersona.resources
+C:\Users\alai\Source\Repos\FerERP.UI\Manager\obj\Debug\Manager.frmListaProveedores.resources
+C:\Users\alai\Source\Repos\FerERP.UI\Manager\obj\Debug\Manager.frmNuevaCategoriaProveedor.resources
 C:\Users\alai\Source\Repos\FerERP.UI\Manager\obj\Debug\Manager.frmNuevoProveedor.resources
+C:\Users\alai\Source\Repos\FerERP.UI\Manager\obj\Debug\Manager.frmOpcionesPresupuesto.resources
 C:\Users\alai\Source\Repos\FerERP.UI\Manager\obj\Debug\Manager.frmVendedores.resources
 C:\Users\alai\Source\Repos\FerERP.UI\Manager\obj\Debug\Manager.frmNuevaVenta.resources
 C:\Users\alai\Source\Repos\FerERP.UI\Manager\obj\Debug\Manager.frmSeleccionTipoVenta.resources
 C:\Users\alai\Source\Repos\FerERP.UI\Manager\obj\Debug\Manager.vbproj.GenerateResource.Cache
-C:\Users\alai\Source\Repos\FerERP.UI\Manager\obj\Debug\Manager.exe
-C:\Users\alai\Source\Repos\FerERP.UI\Manager\obj\Debug\Manager.xml
-C:\Users\alai\Source\Repos\FerERP.UI\Manager\obj\Debug\Manager.pdb
+C:\Users\alai\Source\Repos\FerERP.UI\Manager\obj\Debug\JO Manager.exe
+C:\Users\alai\Source\Repos\FerERP.UI\Manager\obj\Debug\JO Manager.xml
+C:\Users\alai\Source\Repos\FerERP.UI\Manager\obj\Debug\JO Manager.pdb
+C:\Users\alai\Source\Repos\FerERP.UI\Manager\obj\Debug\Manager.frmUpProveedor.resources

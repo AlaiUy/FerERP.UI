@@ -1,13 +1,16 @@
 ﻿Imports JJ.Entidades
+Imports JJ.Gestoras
 
 Public Class UESPERA
     Private _Lineas As List(Of Esperalin)
     Private _Adenda As String = String.Empty
     Private _CodMoneda As Integer = 1
     Private _Codvendedor As Integer
-    Public Sub New()
+    Private _cotizacion As Decimal = 1
+    Public Sub New(ByVal xcotizacion As Decimal)
         _Lineas = New List(Of Esperalin)
         _Adenda = ""
+        _cotizacion = xcotizacion
     End Sub
 
     Public Property Lineas As List(Of Esperalin)
@@ -46,8 +49,10 @@ Public Class UESPERA
         End Set
     End Property
 
+
+
     Public Sub AgregarLinea(ByVal xLinea As Esperalin)
-        If (xLinea.PrecioTotalConDescuento < 0) Then
+        If (xLinea.TotalConDescuento() < 0) Then
             MsgBox("No se puede agregar un importe negativo")
             Return
         End If
@@ -58,7 +63,7 @@ Public Class UESPERA
         End If
 
         For Each espLin As Esperalin In Lineas
-            If (espLin.ObjArticulo.CodArticulo = xLinea.ObjArticulo.CodArticulo) Then
+            If (espLin.Articulo.CodArticulo = xLinea.Articulo.CodArticulo) Then
                 If espLin.Descripcion.Equals(xLinea.Descripcion) Then
                     espLin.Cantidad += xLinea.Cantidad
                     Return
@@ -79,8 +84,8 @@ Public Class UESPERA
 
     Friend Function getArticuloByCodigo(codigo As Integer) As Articulo
         For Each L As Esperalin In Lineas
-            If L.ObjArticulo.CodArticulo = codigo Then
-                Return L.ObjArticulo
+            If L.Articulo.CodArticulo = codigo Then
+                Return L.Articulo
             End If
         Next
         Return Nothing
@@ -141,5 +146,61 @@ Public Class UESPERA
 
         _Lineas.Find(Function(Linea As Esperalin) Linea.NumLinea = xLinea).Descuento = xDescuento
         Return True
+    End Function
+
+    Public Function MostrarTabla() As DataTable
+
+        Dim T As New DataTable("VENTA")
+        Dim COLCODIGO As DataColumn = New DataColumn("CODIGO", Type.GetType("System.String"))
+        Dim COLLINEA As DataColumn = New DataColumn("LINEA", Type.GetType("System.String"))
+        Dim COLREFERENCIA As DataColumn = New DataColumn("REFERENCIA", Type.GetType("System.String"))
+        Dim COLNOMBRE As DataColumn = New DataColumn("NOMBRE", Type.GetType("System.String"))
+        Dim COLCANTIDAD As DataColumn = New DataColumn("CANTIDAD", Type.GetType("System.String"))
+        Dim COLPRECIO As DataColumn = New DataColumn("PRECIO", Type.GetType("System.String"))
+        Dim COLDESCUENTO As DataColumn = New DataColumn("DESCUENTO", Type.GetType("System.String"))
+        Dim COLFINAL As DataColumn = New DataColumn("FINAL", Type.GetType("System.String"))
+
+        T.Columns.Add(COLCODIGO)
+        T.Columns.Add(COLLINEA)
+        T.Columns.Add(COLREFERENCIA)
+        T.Columns.Add(COLNOMBRE)
+        T.Columns.Add(COLCANTIDAD)
+        T.Columns.Add(COLPRECIO)
+        T.Columns.Add(COLDESCUENTO)
+        T.Columns.Add(COLFINAL)
+
+        For Each Lin As Esperalin In _Lineas
+            Dim Row As DataRow = T.NewRow()
+            If Lin.Articulo.CodMoneda = 2 Then
+                Row.Item("PRECIO") = FormatearImporte(Lin.Articulo.PrecioIva * _cotizacion)
+                Row.Item("FINAL") = FormatearImporte(Lin.TotalConDescuento * _cotizacion)
+            Else
+                Row.Item("PRECIO") = FormatearImporte(Lin.Articulo.PrecioIva)
+                Row.Item("FINAL") = FormatearImporte(Lin.TotalConDescuento)
+            End If
+            Row.Item("CODIGO") = Lin.Articulo.CodArticulo
+            Row.Item("LINEA") = Lin.NumLinea
+            Row.Item("REFERENCIA") = Lin.Articulo.Referencia.Trim()
+            Row.Item("NOMBRE") = Lin.Articulo.Nombre.Trim()
+            Row.Item("CANTIDAD") = FormatearImporte(Lin.Cantidad)
+            Row.Item("DESCUENTO") = FormatearImporte(Lin.Descuento)
+
+            T.Rows.Add(Row)
+        Next
+        Return T
+    End Function
+
+    Public Function Total() As Decimal
+        Dim zTotal As Decimal = 0
+        For Each L As Esperalin In _Lineas
+            If L.Articulo.CodMoneda = 2 Then
+                Dim xPre As Decimal = L.TotalConDescuento()
+                zTotal += xPre * _cotizacion
+            Else
+                zTotal += L.TotalConDescuento
+            End If
+
+        Next
+        Return zTotal
     End Function
 End Class

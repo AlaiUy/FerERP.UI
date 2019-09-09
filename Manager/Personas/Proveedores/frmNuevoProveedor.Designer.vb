@@ -24,8 +24,10 @@ Partial Class frmNuevoProveedor
     Private Sub InitializeComponent()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Panel4 = New System.Windows.Forms.Panel()
+        Me.Panel5 = New System.Windows.Forms.Panel()
         Me.btnSave = New System.Windows.Forms.Button()
         Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.btnAddCategory = New System.Windows.Forms.Button()
         Me.cbCategoria = New System.Windows.Forms.ComboBox()
         Me.lblCategoria = New System.Windows.Forms.Label()
         Me.txtEmail = New System.Windows.Forms.TextBox()
@@ -49,6 +51,7 @@ Partial Class frmNuevoProveedor
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         Me.Panel4.SuspendLayout()
+        Me.Panel5.SuspendLayout()
         Me.Panel3.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.Panel2.SuspendLayout()
@@ -71,25 +74,35 @@ Partial Class frmNuevoProveedor
         'Panel4
         '
         Me.Panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel4.Controls.Add(Me.btnSave)
+        Me.Panel4.Controls.Add(Me.Panel5)
         Me.Panel4.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.Panel4.Location = New System.Drawing.Point(0, 349)
         Me.Panel4.Name = "Panel4"
         Me.Panel4.Size = New System.Drawing.Size(675, 41)
         Me.Panel4.TabIndex = 2
         '
+        'Panel5
+        '
+        Me.Panel5.Controls.Add(Me.btnSave)
+        Me.Panel5.Dock = System.Windows.Forms.DockStyle.Right
+        Me.Panel5.Location = New System.Drawing.Point(579, 0)
+        Me.Panel5.Name = "Panel5"
+        Me.Panel5.Size = New System.Drawing.Size(94, 39)
+        Me.Panel5.TabIndex = 0
+        '
         'btnSave
         '
-        Me.btnSave.Location = New System.Drawing.Point(586, 9)
+        Me.btnSave.Location = New System.Drawing.Point(9, 8)
         Me.btnSave.Name = "btnSave"
         Me.btnSave.Size = New System.Drawing.Size(75, 23)
-        Me.btnSave.TabIndex = 0
-        Me.btnSave.Text = "Save"
+        Me.btnSave.TabIndex = 2
+        Me.btnSave.Text = "Guardar"
         Me.btnSave.UseVisualStyleBackColor = True
         '
         'Panel3
         '
         Me.Panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel3.Controls.Add(Me.btnAddCategory)
         Me.Panel3.Controls.Add(Me.cbCategoria)
         Me.Panel3.Controls.Add(Me.lblCategoria)
         Me.Panel3.Controls.Add(Me.txtEmail)
@@ -111,6 +124,16 @@ Partial Class frmNuevoProveedor
         Me.Panel3.Name = "Panel3"
         Me.Panel3.Size = New System.Drawing.Size(675, 358)
         Me.Panel3.TabIndex = 1
+        '
+        'btnAddCategory
+        '
+        Me.btnAddCategory.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnAddCategory.Location = New System.Drawing.Point(312, 246)
+        Me.btnAddCategory.Name = "btnAddCategory"
+        Me.btnAddCategory.Size = New System.Drawing.Size(22, 23)
+        Me.btnAddCategory.TabIndex = 53
+        Me.btnAddCategory.Text = "+"
+        Me.btnAddCategory.UseVisualStyleBackColor = True
         '
         'cbCategoria
         '
@@ -325,6 +348,7 @@ Partial Class frmNuevoProveedor
         Me.Text = "frmNuevoProveedor"
         Me.Panel1.ResumeLayout(False)
         Me.Panel4.ResumeLayout(False)
+        Me.Panel5.ResumeLayout(False)
         Me.Panel3.ResumeLayout(False)
         Me.Panel3.PerformLayout()
         Me.GroupBox1.ResumeLayout(False)
@@ -337,7 +361,6 @@ Partial Class frmNuevoProveedor
 
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Panel4 As Panel
-    Friend WithEvents btnSave As Button
     Friend WithEvents Panel3 As Panel
     Friend WithEvents cbCategoria As ComboBox
     Friend WithEvents lblCategoria As Label
@@ -360,4 +383,7 @@ Partial Class frmNuevoProveedor
     Friend WithEvents lblNombre As Label
     Friend WithEvents Panel2 As Panel
     Friend WithEvents Label1 As Label
+    Friend WithEvents btnAddCategory As Button
+    Friend WithEvents Panel5 As Panel
+    Friend WithEvents btnSave As Button
 End Class

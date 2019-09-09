@@ -8,9 +8,8 @@ Public Class frmMain
 
     Dim Tab As TabControl = Nothing
 
-    Private Sub btnNuevoArticulo_Click(sender As Object, e As EventArgs)
-        Dim frm As Form = New frmNuevoArticulo()
-        frm.Show()
+    Private Sub btnNuevoArticulo_Click(sender As Object, e As EventArgs) Handles lblNuevoArticulo.Click
+        btnAgregarArticulo.PerformClick()
     End Sub
 
 
@@ -20,15 +19,10 @@ Public Class frmMain
         End If
     End Sub
 
-    Private Sub AgregarArticuloToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AgregarArticuloToolStripMenuItem.Click
-        Dim frm As Form = New frmNuevoArticulo()
-        frm.Name = "Articulos"
-        TryCast(frm, frmNuevoArticulo).Register(Me)
-        CargarFormulario(frm)
-
-    End Sub
 
     Private Sub frmMain_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Me.Location = Screen.PrimaryScreen.WorkingArea.Location
+        Me.Size = New Size(Screen.PrimaryScreen.WorkingArea.Size.Width, Screen.PrimaryScreen.WorkingArea.Size.Height)
         PopularForm()
     End Sub
 
@@ -101,12 +95,31 @@ Public Class frmMain
     End Sub
 
     Private Sub PopularForm()
-        If xClaveAdmin = True Then
-            ToolsConfig.Visible = True
-            ToolsConfig.Enabled = True
-        Else
-            ToolsConfig.Visible = False
-            ToolsConfig.Enabled = False
+        MaximizeBox = False
+        btnFicArticulos.Visible = LeerIni.LeerDato("MODULOS", "ARTICULOS", 0, ".\config.ini")
+        lblNuevoArticulo.Visible = LeerIni.LeerDato("MODULOS", "ARTICULOS", 0, ".\config.ini")
+
+        btnFichero.Visible = LeerIni.LeerDato("MODULOS", "FICHEROS", 0, ".\config.ini")
+        lblAgregarProveedor.Visible = btnFichero.Visible
+        lblAgregarPersona.Visible = btnFichero.Visible
+
+        btnCompras.Visible = LeerIni.LeerDato("MODULOS", "COMPRAS", 0, ".\config.ini")
+
+        ToolsConfig.Visible = LeerIni.LeerDato("MODULOS", "CONFIGURACION", 0, ".\config.ini")
+
+        btnInformes.Visible = LeerIni.LeerDato("MODULOS", "INFORMES", 0, ".\config.ini")
+
+        If LeerIni.LeerDato("MODULOS", "GUIA", 0, ".\config.ini") = 0 Then
+            Try
+                For Each Guia As Object In ToolsMain.Items
+                    If TypeOf Guia Is ToolStripSeparator Then
+                        Guia.Visible = False
+                    End If
+                Next
+            Catch ex As Exception
+                MsgBox(ex.Message)
+            End Try
+
         End If
     End Sub
 
@@ -116,21 +129,92 @@ Public Class frmMain
         Form.ShowDialog()
     End Sub
 
-    Private Sub CompraToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CompraToolStripMenuItem.Click
+    Private Sub CompraToolStripMenuItem_Click(sender As Object, e As EventArgs)
         Dim frm As Form = New frmCompras()
         frm.Name = "Nueva compra"
         TryCast(frm, frmCompras).Register(Me)
         CargarFormulario(frm)
     End Sub
 
-    Private Sub btnAgregarPersona_Click(sender As Object, e As EventArgs) Handles btnAgregarPersona.Click
-
+    Private Sub btnAgregarPersona_Click(sender As Object, e As EventArgs) Handles lblAgregarPersona.Click
+        AgregarPersonaToolStripMenuItem.PerformClick()
     End Sub
 
     Private Sub AgregarPersonaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AgregarPersonaToolStripMenuItem.Click
         Dim frm As Form = New frmNuevaPersona()
         frm.Name = "Ingresar Persona"
         TryCast(frm, frmNuevaPersona).Register(Me)
+        CargarFormulario(frm)
+    End Sub
+
+    Private Sub NuevaCompraToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles NuevaCompraToolStripMenuItem.Click
+        Try
+            Dim frm As Form = New frmCompras()
+            frm.Name = "Nueva Compra"
+            TryCast(frm, frmCompras).Register(Me)
+            CargarFormulario(frm)
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
+
+
+    End Sub
+
+
+
+    Private Sub btnAgregarArticulo_Click(sender As Object, e As EventArgs) Handles btnAgregarArticulo.Click
+        Dim frm As Form = New frmNuevoArticulo()
+        frm.Name = "Articulos"
+        TryCast(frm, frmNuevoArticulo).Register(Me)
+        CargarFormulario(frm)
+    End Sub
+
+    Private Sub ModificarArticuloToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ModificarArticuloToolStripMenuItem.Click
+        Dim frm As Form = New frmUpdateArticulos()
+        frm.Name = "Modificar un articulo"
+        TryCast(frm, frmUpdateArticulos).Register(Me)
+        CargarFormulario(frm)
+    End Sub
+
+    Private Sub NuevaVentaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles NuevaVentaToolStripMenuItem.Click
+        Dim frm As Form = New frmNuevaVenta()
+        frm.Name = "Nueva Venta"
+        TryCast(frm, frmNuevaVenta).Register(Me)
+        CargarFormulario(frm)
+    End Sub
+
+    Private Sub lblAgregarProveedor_Click(sender As Object, e As EventArgs) Handles lblAgregarProveedor.Click
+        btnAgregarProveedor.PerformClick()
+    End Sub
+
+    Private Sub ImprimirPreciosToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ImprimirPreciosToolStripMenuItem.Click
+        Dim Form As Form = New frmPrintPrices()
+        Form.ShowDialog()
+    End Sub
+
+    Private Sub ArticulosToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ArticulosToolStripMenuItem.Click
+        Dim Form As Form = New frmListadoArticulos()
+        Form.ShowDialog()
+    End Sub
+
+    Private Sub CotizacionToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CotizacionToolStripMenuItem.Click
+        Dim fr As frmCotizaciones = New frmCotizaciones()
+        fr.Show()
+    End Sub
+
+
+
+    Private Sub ModificarProveedorToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ModificarProveedorToolStripMenuItem.Click
+        Dim frm As Form = New frmUpProveedor()
+        frm.Name = "Modificar un proveedor"
+        TryCast(frm, frmUpProveedor).Register(Me)
+        CargarFormulario(frm)
+    End Sub
+
+    Private Sub btnAgregarProveedor_Click(sender As Object, e As EventArgs) Handles btnAgregarProveedor.Click
+        Dim frm As Form = New frmNuevoProveedor()
+        frm.Name = "Ingresar Proveedor"
+        TryCast(frm, frmNuevoProveedor).Register(Me)
         CargarFormulario(frm)
     End Sub
 End Class

@@ -23,55 +23,68 @@ Partial Class frmMain
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmMain))
-        Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
+        Me.ToolsMain = New System.Windows.Forms.ToolStrip()
         Me.ToolStripDropDownButton1 = New System.Windows.Forms.ToolStripDropDownButton()
         Me.btnMenuSalir = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
-        Me.ToolStripDropDownButton2 = New System.Windows.Forms.ToolStripDropDownButton()
+        Me.GUIA1 = New System.Windows.Forms.ToolStripSeparator()
+        Me.btnFichero = New System.Windows.Forms.ToolStripDropDownButton()
         Me.AgregarPersonaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.AgregarArticuloToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.DocumentosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.CompraToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.VentaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ToolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
+        Me.CotizacionToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ProveedoresToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.btnAgregarProveedor = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ModificarProveedorToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.GUIA2 = New System.Windows.Forms.ToolStripSeparator()
+        Me.btnCompras = New System.Windows.Forms.ToolStripDropDownButton()
+        Me.NuevaCompraToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.GUIA3 = New System.Windows.Forms.ToolStripSeparator()
         Me.ToolStripDropDownButton3 = New System.Windows.Forms.ToolStripDropDownButton()
-        Me.ToolStripSeparator3 = New System.Windows.Forms.ToolStripSeparator()
-        Me.ToolStripDropDownButton4 = New System.Windows.Forms.ToolStripDropDownButton()
+        Me.NuevaVentaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.GUIA4 = New System.Windows.Forms.ToolStripSeparator()
+        Me.btnFicArticulos = New System.Windows.Forms.ToolStripDropDownButton()
+        Me.btnAgregarArticulo = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ModificarArticuloToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ImprimirPreciosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.GUIA5 = New System.Windows.Forms.ToolStripSeparator()
         Me.ToolsConfig = New System.Windows.Forms.ToolStripDropDownButton()
         Me.ConfiguracionToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DatosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.FicherosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.GUIA7 = New System.Windows.Forms.ToolStripSeparator()
+        Me.btnInformes = New System.Windows.Forms.ToolStripDropDownButton()
+        Me.ArticulosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PnContenedor = New System.Windows.Forms.Panel()
         Me.PanelBienvenida = New System.Windows.Forms.Panel()
+        Me.lblAgregarProveedor = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.btnAgregarPersona = New System.Windows.Forms.Button()
-        Me.btnNuevoArticulo = New System.Windows.Forms.Button()
-        Me.ToolStrip1.SuspendLayout()
+        Me.lblAgregarPersona = New System.Windows.Forms.Button()
+        Me.lblNuevoArticulo = New System.Windows.Forms.Button()
+        Me.ToolsMain.SuspendLayout()
         Me.PnContenedor.SuspendLayout()
         Me.PanelBienvenida.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'ToolStrip1
+        'ToolsMain
         '
-        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripDropDownButton1, Me.ToolStripSeparator1, Me.ToolStripDropDownButton2, Me.ToolStripSeparator2, Me.ToolStripDropDownButton3, Me.ToolStripSeparator3, Me.ToolStripDropDownButton4, Me.ToolsConfig})
-        Me.ToolStrip1.Location = New System.Drawing.Point(0, 0)
-        Me.ToolStrip1.Name = "ToolStrip1"
-        Me.ToolStrip1.Size = New System.Drawing.Size(1008, 25)
-        Me.ToolStrip1.TabIndex = 1
-        Me.ToolStrip1.Text = "ToolStrip1"
+        Me.ToolsMain.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ToolsMain.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripDropDownButton1, Me.GUIA1, Me.btnFichero, Me.GUIA2, Me.btnCompras, Me.GUIA3, Me.ToolStripDropDownButton3, Me.GUIA4, Me.btnFicArticulos, Me.GUIA5, Me.ToolsConfig, Me.GUIA7, Me.btnInformes})
+        Me.ToolsMain.Location = New System.Drawing.Point(0, 0)
+        Me.ToolsMain.Name = "ToolsMain"
+        Me.ToolsMain.Size = New System.Drawing.Size(1008, 25)
+        Me.ToolsMain.TabIndex = 1
+        Me.ToolsMain.Text = "ToolStrip1"
         '
         'ToolStripDropDownButton1
         '
         Me.ToolStripDropDownButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text
         Me.ToolStripDropDownButton1.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btnMenuSalir})
-        Me.ToolStripDropDownButton1.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ToolStripDropDownButton1.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ToolStripDropDownButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.ToolStripDropDownButton1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.ToolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.ToolStripDropDownButton1.Name = "ToolStripDropDownButton1"
-        Me.ToolStripDropDownButton1.Size = New System.Drawing.Size(60, 22)
+        Me.ToolStripDropDownButton1.Size = New System.Drawing.Size(71, 22)
         Me.ToolStripDropDownButton1.Text = "Archivo"
         Me.ToolStripDropDownButton1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.ToolStripDropDownButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
@@ -79,82 +92,134 @@ Partial Class frmMain
         'btnMenuSalir
         '
         Me.btnMenuSalir.Name = "btnMenuSalir"
-        Me.btnMenuSalir.Size = New System.Drawing.Size(95, 22)
+        Me.btnMenuSalir.Size = New System.Drawing.Size(104, 22)
         Me.btnMenuSalir.Text = "Salir"
         '
-        'ToolStripSeparator1
+        'GUIA1
         '
-        Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
-        Me.ToolStripSeparator1.Size = New System.Drawing.Size(6, 25)
+        Me.GUIA1.Name = "GUIA1"
+        Me.GUIA1.Size = New System.Drawing.Size(6, 25)
         '
-        'ToolStripDropDownButton2
+        'btnFichero
         '
-        Me.ToolStripDropDownButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text
-        Me.ToolStripDropDownButton2.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AgregarPersonaToolStripMenuItem, Me.AgregarArticuloToolStripMenuItem, Me.DocumentosToolStripMenuItem})
-        Me.ToolStripDropDownButton2.Image = CType(resources.GetObject("ToolStripDropDownButton2.Image"), System.Drawing.Image)
-        Me.ToolStripDropDownButton2.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.ToolStripDropDownButton2.Name = "ToolStripDropDownButton2"
-        Me.ToolStripDropDownButton2.Size = New System.Drawing.Size(54, 22)
-        Me.ToolStripDropDownButton2.Text = "Tareas"
+        Me.btnFichero.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text
+        Me.btnFichero.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AgregarPersonaToolStripMenuItem, Me.CotizacionToolStripMenuItem, Me.ProveedoresToolStripMenuItem})
+        Me.btnFichero.Image = CType(resources.GetObject("btnFichero.Image"), System.Drawing.Image)
+        Me.btnFichero.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.btnFichero.Name = "btnFichero"
+        Me.btnFichero.Size = New System.Drawing.Size(74, 22)
+        Me.btnFichero.Text = "Ficheros"
         '
         'AgregarPersonaToolStripMenuItem
         '
         Me.AgregarPersonaToolStripMenuItem.Name = "AgregarPersonaToolStripMenuItem"
-        Me.AgregarPersonaToolStripMenuItem.Size = New System.Drawing.Size(161, 22)
+        Me.AgregarPersonaToolStripMenuItem.Size = New System.Drawing.Size(187, 22)
         Me.AgregarPersonaToolStripMenuItem.Text = "Agregar persona"
         '
-        'AgregarArticuloToolStripMenuItem
+        'CotizacionToolStripMenuItem
         '
-        Me.AgregarArticuloToolStripMenuItem.Name = "AgregarArticuloToolStripMenuItem"
-        Me.AgregarArticuloToolStripMenuItem.Size = New System.Drawing.Size(161, 22)
-        Me.AgregarArticuloToolStripMenuItem.Text = "Agregar articulo"
+        Me.CotizacionToolStripMenuItem.Name = "CotizacionToolStripMenuItem"
+        Me.CotizacionToolStripMenuItem.Size = New System.Drawing.Size(187, 22)
+        Me.CotizacionToolStripMenuItem.Text = "Cotizacion"
         '
-        'DocumentosToolStripMenuItem
+        'ProveedoresToolStripMenuItem
         '
-        Me.DocumentosToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CompraToolStripMenuItem, Me.VentaToolStripMenuItem})
-        Me.DocumentosToolStripMenuItem.Name = "DocumentosToolStripMenuItem"
-        Me.DocumentosToolStripMenuItem.Size = New System.Drawing.Size(161, 22)
-        Me.DocumentosToolStripMenuItem.Text = "Documentos"
+        Me.ProveedoresToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btnAgregarProveedor, Me.ModificarProveedorToolStripMenuItem})
+        Me.ProveedoresToolStripMenuItem.Name = "ProveedoresToolStripMenuItem"
+        Me.ProveedoresToolStripMenuItem.Size = New System.Drawing.Size(187, 22)
+        Me.ProveedoresToolStripMenuItem.Text = "Proveedores"
         '
-        'CompraToolStripMenuItem
+        'btnAgregarProveedor
         '
-        Me.CompraToolStripMenuItem.Name = "CompraToolStripMenuItem"
-        Me.CompraToolStripMenuItem.Size = New System.Drawing.Size(117, 22)
-        Me.CompraToolStripMenuItem.Text = "Compra"
+        Me.btnAgregarProveedor.Name = "btnAgregarProveedor"
+        Me.btnAgregarProveedor.Size = New System.Drawing.Size(207, 22)
+        Me.btnAgregarProveedor.Text = "Agregar Proveedor"
         '
-        'VentaToolStripMenuItem
+        'ModificarProveedorToolStripMenuItem
         '
-        Me.VentaToolStripMenuItem.Name = "VentaToolStripMenuItem"
-        Me.VentaToolStripMenuItem.Size = New System.Drawing.Size(117, 22)
-        Me.VentaToolStripMenuItem.Text = "VentaCuenta"
+        Me.ModificarProveedorToolStripMenuItem.Name = "ModificarProveedorToolStripMenuItem"
+        Me.ModificarProveedorToolStripMenuItem.Size = New System.Drawing.Size(207, 22)
+        Me.ModificarProveedorToolStripMenuItem.Text = "Modificar Proveedor"
         '
-        'ToolStripSeparator2
+        'GUIA2
         '
-        Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
-        Me.ToolStripSeparator2.Size = New System.Drawing.Size(6, 25)
+        Me.GUIA2.Name = "GUIA2"
+        Me.GUIA2.Size = New System.Drawing.Size(6, 25)
+        '
+        'btnCompras
+        '
+        Me.btnCompras.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text
+        Me.btnCompras.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NuevaCompraToolStripMenuItem})
+        Me.btnCompras.Image = CType(resources.GetObject("btnCompras.Image"), System.Drawing.Image)
+        Me.btnCompras.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.btnCompras.Name = "btnCompras"
+        Me.btnCompras.Size = New System.Drawing.Size(77, 22)
+        Me.btnCompras.Text = "Compras"
+        '
+        'NuevaCompraToolStripMenuItem
+        '
+        Me.NuevaCompraToolStripMenuItem.Name = "NuevaCompraToolStripMenuItem"
+        Me.NuevaCompraToolStripMenuItem.Size = New System.Drawing.Size(168, 22)
+        Me.NuevaCompraToolStripMenuItem.Text = "Nueva compra"
+        '
+        'GUIA3
+        '
+        Me.GUIA3.Name = "GUIA3"
+        Me.GUIA3.Size = New System.Drawing.Size(6, 25)
         '
         'ToolStripDropDownButton3
         '
         Me.ToolStripDropDownButton3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text
+        Me.ToolStripDropDownButton3.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NuevaVentaToolStripMenuItem})
         Me.ToolStripDropDownButton3.Image = CType(resources.GetObject("ToolStripDropDownButton3.Image"), System.Drawing.Image)
         Me.ToolStripDropDownButton3.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.ToolStripDropDownButton3.Name = "ToolStripDropDownButton3"
-        Me.ToolStripDropDownButton3.Size = New System.Drawing.Size(49, 22)
-        Me.ToolStripDropDownButton3.Text = "Tools"
+        Me.ToolStripDropDownButton3.Size = New System.Drawing.Size(60, 22)
+        Me.ToolStripDropDownButton3.Text = "Venta"
         '
-        'ToolStripSeparator3
+        'NuevaVentaToolStripMenuItem
         '
-        Me.ToolStripSeparator3.Name = "ToolStripSeparator3"
-        Me.ToolStripSeparator3.Size = New System.Drawing.Size(6, 25)
+        Me.NuevaVentaToolStripMenuItem.Name = "NuevaVentaToolStripMenuItem"
+        Me.NuevaVentaToolStripMenuItem.Size = New System.Drawing.Size(158, 22)
+        Me.NuevaVentaToolStripMenuItem.Text = "Nueva venta"
         '
-        'ToolStripDropDownButton4
+        'GUIA4
         '
-        Me.ToolStripDropDownButton4.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text
-        Me.ToolStripDropDownButton4.Image = CType(resources.GetObject("ToolStripDropDownButton4.Image"), System.Drawing.Image)
-        Me.ToolStripDropDownButton4.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.ToolStripDropDownButton4.Name = "ToolStripDropDownButton4"
-        Me.ToolStripDropDownButton4.Size = New System.Drawing.Size(45, 22)
-        Me.ToolStripDropDownButton4.Text = "Help"
+        Me.GUIA4.Name = "GUIA4"
+        Me.GUIA4.Size = New System.Drawing.Size(6, 25)
+        '
+        'btnFicArticulos
+        '
+        Me.btnFicArticulos.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text
+        Me.btnFicArticulos.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btnAgregarArticulo, Me.ModificarArticuloToolStripMenuItem, Me.ImprimirPreciosToolStripMenuItem})
+        Me.btnFicArticulos.Image = CType(resources.GetObject("btnFicArticulos.Image"), System.Drawing.Image)
+        Me.btnFicArticulos.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.btnFicArticulos.Name = "btnFicArticulos"
+        Me.btnFicArticulos.Size = New System.Drawing.Size(79, 22)
+        Me.btnFicArticulos.Text = "Articulos"
+        '
+        'btnAgregarArticulo
+        '
+        Me.btnAgregarArticulo.Name = "btnAgregarArticulo"
+        Me.btnAgregarArticulo.Size = New System.Drawing.Size(190, 22)
+        Me.btnAgregarArticulo.Text = "Agregar Articulo"
+        '
+        'ModificarArticuloToolStripMenuItem
+        '
+        Me.ModificarArticuloToolStripMenuItem.Name = "ModificarArticuloToolStripMenuItem"
+        Me.ModificarArticuloToolStripMenuItem.Size = New System.Drawing.Size(190, 22)
+        Me.ModificarArticuloToolStripMenuItem.Text = "Modificar Articulo"
+        '
+        'ImprimirPreciosToolStripMenuItem
+        '
+        Me.ImprimirPreciosToolStripMenuItem.Name = "ImprimirPreciosToolStripMenuItem"
+        Me.ImprimirPreciosToolStripMenuItem.Size = New System.Drawing.Size(190, 22)
+        Me.ImprimirPreciosToolStripMenuItem.Text = "Imprimir Precios"
+        '
+        'GUIA5
+        '
+        Me.GUIA5.Name = "GUIA5"
+        Me.GUIA5.Size = New System.Drawing.Size(6, 25)
         '
         'ToolsConfig
         '
@@ -163,27 +228,48 @@ Partial Class frmMain
         Me.ToolsConfig.Image = CType(resources.GetObject("ToolsConfig.Image"), System.Drawing.Image)
         Me.ToolsConfig.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.ToolsConfig.Name = "ToolsConfig"
-        Me.ToolsConfig.Size = New System.Drawing.Size(56, 22)
+        Me.ToolsConfig.Size = New System.Drawing.Size(61, 22)
         Me.ToolsConfig.Text = "Config"
         '
         'ConfiguracionToolStripMenuItem
         '
         Me.ConfiguracionToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DatosToolStripMenuItem, Me.FicherosToolStripMenuItem})
         Me.ConfiguracionToolStripMenuItem.Name = "ConfiguracionToolStripMenuItem"
-        Me.ConfiguracionToolStripMenuItem.Size = New System.Drawing.Size(119, 22)
+        Me.ConfiguracionToolStripMenuItem.Size = New System.Drawing.Size(131, 22)
         Me.ConfiguracionToolStripMenuItem.Text = "Empresa"
         '
         'DatosToolStripMenuItem
         '
         Me.DatosToolStripMenuItem.Name = "DatosToolStripMenuItem"
-        Me.DatosToolStripMenuItem.Size = New System.Drawing.Size(118, 22)
+        Me.DatosToolStripMenuItem.Size = New System.Drawing.Size(129, 22)
         Me.DatosToolStripMenuItem.Text = "Datos"
         '
         'FicherosToolStripMenuItem
         '
         Me.FicherosToolStripMenuItem.Name = "FicherosToolStripMenuItem"
-        Me.FicherosToolStripMenuItem.Size = New System.Drawing.Size(118, 22)
+        Me.FicherosToolStripMenuItem.Size = New System.Drawing.Size(129, 22)
         Me.FicherosToolStripMenuItem.Text = "Ficheros"
+        '
+        'GUIA7
+        '
+        Me.GUIA7.Name = "GUIA7"
+        Me.GUIA7.Size = New System.Drawing.Size(6, 25)
+        '
+        'btnInformes
+        '
+        Me.btnInformes.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text
+        Me.btnInformes.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ArticulosToolStripMenuItem})
+        Me.btnInformes.Image = CType(resources.GetObject("btnInformes.Image"), System.Drawing.Image)
+        Me.btnInformes.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.btnInformes.Name = "btnInformes"
+        Me.btnInformes.Size = New System.Drawing.Size(79, 22)
+        Me.btnInformes.Text = "Informes"
+        '
+        'ArticulosToolStripMenuItem
+        '
+        Me.ArticulosToolStripMenuItem.Name = "ArticulosToolStripMenuItem"
+        Me.ArticulosToolStripMenuItem.Size = New System.Drawing.Size(134, 22)
+        Me.ArticulosToolStripMenuItem.Text = "Articulos"
         '
         'PnContenedor
         '
@@ -191,88 +277,115 @@ Partial Class frmMain
         Me.PnContenedor.Dock = System.Windows.Forms.DockStyle.Fill
         Me.PnContenedor.Location = New System.Drawing.Point(0, 25)
         Me.PnContenedor.Name = "PnContenedor"
-        Me.PnContenedor.Size = New System.Drawing.Size(1008, 390)
+        Me.PnContenedor.Size = New System.Drawing.Size(1008, 705)
         Me.PnContenedor.TabIndex = 2
         '
         'PanelBienvenida
         '
+        Me.PanelBienvenida.BackgroundImage = Global.Manager.My.Resources.JJRecursos.Fondo
+        Me.PanelBienvenida.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PanelBienvenida.Controls.Add(Me.lblAgregarProveedor)
         Me.PanelBienvenida.Controls.Add(Me.Label1)
         Me.PanelBienvenida.Controls.Add(Me.PictureBox1)
-        Me.PanelBienvenida.Controls.Add(Me.btnAgregarPersona)
-        Me.PanelBienvenida.Controls.Add(Me.btnNuevoArticulo)
+        Me.PanelBienvenida.Controls.Add(Me.lblAgregarPersona)
+        Me.PanelBienvenida.Controls.Add(Me.lblNuevoArticulo)
         Me.PanelBienvenida.Dock = System.Windows.Forms.DockStyle.Fill
         Me.PanelBienvenida.Location = New System.Drawing.Point(0, 0)
         Me.PanelBienvenida.Name = "PanelBienvenida"
-        Me.PanelBienvenida.Size = New System.Drawing.Size(1008, 390)
+        Me.PanelBienvenida.Size = New System.Drawing.Size(1008, 705)
         Me.PanelBienvenida.TabIndex = 7
+        '
+        'lblAgregarProveedor
+        '
+        Me.lblAgregarProveedor.BackColor = System.Drawing.Color.Transparent
+        Me.lblAgregarProveedor.FlatAppearance.BorderSize = 0
+        Me.lblAgregarProveedor.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.lblAgregarProveedor.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblAgregarProveedor.ForeColor = System.Drawing.Color.White
+        Me.lblAgregarProveedor.Image = Global.Manager.My.Resources.JJRecursos.man
+        Me.lblAgregarProveedor.ImageAlign = System.Drawing.ContentAlignment.TopCenter
+        Me.lblAgregarProveedor.Location = New System.Drawing.Point(129, 269)
+        Me.lblAgregarProveedor.Name = "lblAgregarProveedor"
+        Me.lblAgregarProveedor.Size = New System.Drawing.Size(186, 37)
+        Me.lblAgregarProveedor.TabIndex = 12
+        Me.lblAgregarProveedor.Text = "Agregar Proveedor"
+        Me.lblAgregarProveedor.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.lblAgregarProveedor.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.lblAgregarProveedor.UseVisualStyleBackColor = False
         '
         'Label1
         '
         Me.Label1.AutoSize = True
+        Me.Label1.BackColor = System.Drawing.Color.Transparent
         Me.Label1.Font = New System.Drawing.Font("Tahoma", 18.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.Color.SteelBlue
+        Me.Label1.ForeColor = System.Drawing.Color.White
         Me.Label1.Location = New System.Drawing.Point(124, 56)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(407, 29)
+        Me.Label1.Size = New System.Drawing.Size(341, 29)
         Me.Label1.TabIndex = 11
-        Me.Label1.Text = "JJTeam Soluciones Informaticas."
+        Me.Label1.Text = "JJ Soluciones Informaticas."
         '
         'PictureBox1
         '
-        Me.PictureBox1.Image = Global.Manager.My.Resources.JJRecursos.placeholder__1_
-        Me.PictureBox1.Location = New System.Drawing.Point(46, 36)
+        Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox1.Image = Global.Manager.My.Resources.JJRecursos.JOLOGO1
+        Me.PictureBox1.Location = New System.Drawing.Point(45, 44)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(63, 75)
+        Me.PictureBox1.Size = New System.Drawing.Size(70, 60)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox1.TabIndex = 10
         Me.PictureBox1.TabStop = False
         '
-        'btnAgregarPersona
+        'lblAgregarPersona
         '
-        Me.btnAgregarPersona.BackColor = System.Drawing.Color.Transparent
-        Me.btnAgregarPersona.FlatAppearance.BorderSize = 0
-        Me.btnAgregarPersona.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnAgregarPersona.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnAgregarPersona.Image = Global.Manager.My.Resources.JJRecursos.man
-        Me.btnAgregarPersona.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.btnAgregarPersona.Location = New System.Drawing.Point(129, 203)
-        Me.btnAgregarPersona.Name = "btnAgregarPersona"
-        Me.btnAgregarPersona.Size = New System.Drawing.Size(186, 37)
-        Me.btnAgregarPersona.TabIndex = 4
-        Me.btnAgregarPersona.Text = "Agregar Persona"
-        Me.btnAgregarPersona.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btnAgregarPersona.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.btnAgregarPersona.UseVisualStyleBackColor = False
+        Me.lblAgregarPersona.BackColor = System.Drawing.Color.Transparent
+        Me.lblAgregarPersona.FlatAppearance.BorderSize = 0
+        Me.lblAgregarPersona.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.lblAgregarPersona.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblAgregarPersona.ForeColor = System.Drawing.Color.White
+        Me.lblAgregarPersona.Image = Global.Manager.My.Resources.JJRecursos.man
+        Me.lblAgregarPersona.ImageAlign = System.Drawing.ContentAlignment.TopCenter
+        Me.lblAgregarPersona.Location = New System.Drawing.Point(129, 203)
+        Me.lblAgregarPersona.Name = "lblAgregarPersona"
+        Me.lblAgregarPersona.Size = New System.Drawing.Size(186, 37)
+        Me.lblAgregarPersona.TabIndex = 4
+        Me.lblAgregarPersona.Text = "Agregar Persona"
+        Me.lblAgregarPersona.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.lblAgregarPersona.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.lblAgregarPersona.UseVisualStyleBackColor = False
         '
-        'btnNuevoArticulo
+        'lblNuevoArticulo
         '
-        Me.btnNuevoArticulo.FlatAppearance.BorderSize = 0
-        Me.btnNuevoArticulo.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnNuevoArticulo.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnNuevoArticulo.Image = Global.Manager.My.Resources.JJRecursos.Tools
-        Me.btnNuevoArticulo.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.btnNuevoArticulo.Location = New System.Drawing.Point(129, 135)
-        Me.btnNuevoArticulo.Name = "btnNuevoArticulo"
-        Me.btnNuevoArticulo.Size = New System.Drawing.Size(186, 37)
-        Me.btnNuevoArticulo.TabIndex = 1
-        Me.btnNuevoArticulo.Text = "Agregar Articulos"
-        Me.btnNuevoArticulo.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btnNuevoArticulo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.btnNuevoArticulo.UseVisualStyleBackColor = False
+        Me.lblNuevoArticulo.BackColor = System.Drawing.Color.Transparent
+        Me.lblNuevoArticulo.FlatAppearance.BorderSize = 0
+        Me.lblNuevoArticulo.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.lblNuevoArticulo.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblNuevoArticulo.ForeColor = System.Drawing.Color.White
+        Me.lblNuevoArticulo.Image = Global.Manager.My.Resources.JJRecursos.Tools
+        Me.lblNuevoArticulo.ImageAlign = System.Drawing.ContentAlignment.TopCenter
+        Me.lblNuevoArticulo.Location = New System.Drawing.Point(129, 135)
+        Me.lblNuevoArticulo.Name = "lblNuevoArticulo"
+        Me.lblNuevoArticulo.Size = New System.Drawing.Size(186, 37)
+        Me.lblNuevoArticulo.TabIndex = 1
+        Me.lblNuevoArticulo.Text = "Agregar Articulos"
+        Me.lblNuevoArticulo.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.lblNuevoArticulo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.lblNuevoArticulo.UseVisualStyleBackColor = False
         '
         'frmMain
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
-        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None
+        Me.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(1008, 415)
+        Me.ClientSize = New System.Drawing.Size(1008, 730)
         Me.Controls.Add(Me.PnContenedor)
-        Me.Controls.Add(Me.ToolStrip1)
+        Me.Controls.Add(Me.ToolsMain)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.MaximizeBox = False
         Me.Name = "frmMain"
-        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Menu principal"
-        Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
-        Me.ToolStrip1.ResumeLayout(False)
-        Me.ToolStrip1.PerformLayout()
+        Me.ToolsMain.ResumeLayout(False)
+        Me.ToolsMain.PerformLayout()
         Me.PnContenedor.ResumeLayout(False)
         Me.PanelBienvenida.ResumeLayout(False)
         Me.PanelBienvenida.PerformLayout()
@@ -281,28 +394,40 @@ Partial Class frmMain
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents ToolStrip1 As ToolStrip
+    Friend WithEvents ToolsMain As ToolStrip
     Friend WithEvents ToolStripDropDownButton1 As ToolStripDropDownButton
     Friend WithEvents btnMenuSalir As ToolStripMenuItem
-    Friend WithEvents ToolStripSeparator1 As ToolStripSeparator
-    Friend WithEvents ToolStripDropDownButton2 As ToolStripDropDownButton
-    Friend WithEvents ToolStripSeparator2 As ToolStripSeparator
-    Friend WithEvents ToolStripDropDownButton3 As ToolStripDropDownButton
-    Friend WithEvents ToolStripSeparator3 As ToolStripSeparator
-    Friend WithEvents ToolStripDropDownButton4 As ToolStripDropDownButton
+    Friend WithEvents GUIA1 As ToolStripSeparator
+    Friend WithEvents btnFichero As ToolStripDropDownButton
+    Friend WithEvents GUIA3 As ToolStripSeparator
+    Friend WithEvents GUIA4 As ToolStripSeparator
     Friend WithEvents AgregarPersonaToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents AgregarArticuloToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents PnContenedor As Panel
     Friend WithEvents PanelBienvenida As Panel
-    Friend WithEvents btnAgregarPersona As Button
-    Friend WithEvents btnNuevoArticulo As Button
+    Friend WithEvents lblAgregarPersona As Button
+    Friend WithEvents lblNuevoArticulo As Button
     Friend WithEvents Label1 As Label
-    Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents ToolsConfig As ToolStripDropDownButton
     Friend WithEvents ConfiguracionToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents DatosToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents FicherosToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents DocumentosToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents CompraToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents VentaToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents GUIA2 As ToolStripSeparator
+    Friend WithEvents btnCompras As ToolStripDropDownButton
+    Friend WithEvents NuevaCompraToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents GUIA7 As ToolStripSeparator
+    Friend WithEvents GUIA5 As ToolStripSeparator
+    Friend WithEvents btnFicArticulos As ToolStripDropDownButton
+    Friend WithEvents btnAgregarArticulo As ToolStripMenuItem
+    Friend WithEvents ModificarArticuloToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ToolStripDropDownButton3 As ToolStripDropDownButton
+    Friend WithEvents NuevaVentaToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents lblAgregarProveedor As Button
+    Friend WithEvents ImprimirPreciosToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents btnInformes As ToolStripDropDownButton
+    Friend WithEvents ArticulosToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents CotizacionToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ProveedoresToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents btnAgregarProveedor As ToolStripMenuItem
+    Friend WithEvents ModificarProveedorToolStripMenuItem As ToolStripMenuItem
 End Class

@@ -20,6 +20,15 @@ Public Class frmDatosFactura
 
     End Sub
 
+    Private Sub DiseñoForm()
+        centrar(Panel_Datos, grp_personales)
+    End Sub
+
+    Private Sub centrar(ObjectWich As Object, ObjectWhere As GroupBox)
+        ObjectWich.Left = (ObjectWhere.Width - ObjectWich.Width) / 2
+        ObjectWich.Top = (ObjectWhere.Height - ObjectWich.Height) / 2
+    End Sub
+
     Private Sub brnFiltro_Click(sender As Object, e As EventArgs) Handles brnFiltro.Click
         If txtIdCliente.Text.Trim.Length > 1 Then
             If IsNumeric(txtIdCliente.Text) Then
@@ -75,10 +84,12 @@ Public Class frmDatosFactura
                     End If
                     Dim EsperaC As New EsperaContado(Now)
                     EsperaC.Codclientecontado = TryCast(Cliente, ClienteContado).Codigo
-                    EsperaC.Adenda = Espera.Adenda
+                    EsperaC.Adenda = txtAdenda.Text
                     EsperaC.AgregarLineas(Espera.Lineas)
                     EsperaC.Codvendedor = Espera.Codvendedor
                     EsperaC.NombreCLiente = TryCast(Cliente, ClienteContado).Nombre
+                    EsperaC.Estado = 0
+                    EsperaC.DirEnvio = txtDirEnvio.Text
                     GesDocumentos.getInstance().AddEspera(EsperaC)
                 Catch ex As Exception
                     MsgBox(ex.Message)
@@ -90,9 +101,13 @@ Public Class frmDatosFactura
 
     End Sub
 
-    Private Sub txtIdCliente_TextChanged(sender As Object, e As EventArgs) Handles txtIdCliente.TextChanged
+    Private Sub txtIdCliente_TextChanged(sender As Object, e As EventArgs)
 
     End Sub
 
-
+    Private Sub txtIdCliente_KeyDown(sender As Object, e As KeyEventArgs) Handles txtIdCliente.KeyDown
+        If e.KeyCode = Keys.Enter Then
+            brnFiltro.PerformClick()
+        End If
+    End Sub
 End Class
