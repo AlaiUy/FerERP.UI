@@ -22,9 +22,7 @@ Public Class frmPrintPrices
             MsgBox("No existe el Articulo")
             Return
         End If
-
         _Articulos.Add(objArticulo)
-
 
         Me.GridArticulos.DataSource = MostrarTabla()
     End Sub

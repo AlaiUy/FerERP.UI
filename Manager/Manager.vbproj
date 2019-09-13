@@ -370,28 +370,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\JJTeam\Entidades\Entidades.csproj">
-      <Project>{B0D7EF4F-6A0F-4073-8C79-58413C2011F8}</Project>
-      <Name>Entidades</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\JJTeam\Gestoras\Gestoras.csproj">
-      <Project>{E2044DDD-F84D-4823-91D1-4C55C82800B0}</Project>
-      <Name>Gestoras</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\JJTeam\Interfaces\Interfaces.csproj">
-      <Project>{EE8E2C44-ACE8-409C-B7E9-62CC07B82409}</Project>
-      <Name>Interfaces</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\JJTeam\Reportes\Reportes.csproj">
-      <Project>{794A1B68-0DF5-4140-A845-F5E55438E4A0}</Project>
-      <Name>Reportes</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\JJTeam\Tools\Tools.csproj">
-      <Project>{e1d33784-6fde-472b-af14-7087e88dffe2}</Project>
-      <Name>Tools</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\Persona.png" />
   </ItemGroup>
   <ItemGroup>
@@ -466,6 +444,28 @@
     <None Include="Resources\Fondo.jpg" />
     <None Include="Resources\JOLOGO.jpg" />
     <None Include="Resources\Logo 2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\JJTeam\Entidades\Entidades.csproj">
+      <Project>{b0d7ef4f-6a0f-4073-8c79-58413c2011f8}</Project>
+      <Name>Entidades</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\JJTeam\Gestoras\Gestoras.csproj">
+      <Project>{e2044ddd-f84d-4823-91d1-4c55c82800b0}</Project>
+      <Name>Gestoras</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\JJTeam\Interfaces\Interfaces.csproj">
+      <Project>{ee8e2c44-ace8-409c-b7e9-62cc07b82409}</Project>
+      <Name>Interfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\JJTeam\Reportes\Reportes.csproj">
+      <Project>{794a1b68-0df5-4140-a845-f5e55438e4a0}</Project>
+      <Name>Reportes</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\JJTeam\Tools\Tools.csproj">
+      <Project>{e1d33784-6fde-472b-af14-7087e88dffe2}</Project>
+      <Name>Tools</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -38,6 +38,10 @@ C:\Users\alai\Source\Repos\FerERP.UI\Manager\bin\Release\FabricaMapper.pdb
 C:\Users\alai\Source\Repos\FerERP.UI\Manager\bin\Release\SpreadsheetLight.xml
 C:\Users\alai\Source\Repos\FerERP.UI\Manager\bin\Release\DocumentFormat.OpenXml.xml
 C:\Users\alai\Source\Repos\FerERP.UI\Manager\bin\Release\Mappers.pdb
+C:\Users\alai\Desktop\Soft\Desarrollo\Release\JO Manager.exe.config
+C:\Users\alai\Desktop\Soft\Desarrollo\Release\JO Manager.exe
+C:\Users\alai\Desktop\Soft\Desarrollo\Release\JO Manager.pdb
+C:\Users\alai\Desktop\Soft\Desarrollo\Release\JO Manager.xml
 C:\Users\alai\Source\Repos\FerERP.UI\Manager\obj\Release\Manager.vbprojResolveAssemblyReference.cache
 C:\Users\alai\Source\Repos\FerERP.UI\Manager\obj\Release\Manager.frmDepartamentoNuevo.resources
 C:\Users\alai\Source\Repos\FerERP.UI\Manager\obj\Release\Manager.frmNuevaSeccion.resources
@@ -51,6 +55,7 @@ C:\Users\alai\Source\Repos\FerERP.UI\Manager\obj\Release\Manager.frmNuevaCaja.re
 C:\Users\alai\Source\Repos\FerERP.UI\Manager\obj\Release\Manager.frmCompras.resources
 C:\Users\alai\Source\Repos\FerERP.UI\Manager\obj\Release\Manager.frmEmpresaData.resources
 C:\Users\alai\Source\Repos\FerERP.UI\Manager\obj\Release\Manager.frmNuevaCuenta.resources
+C:\Users\alai\Source\Repos\FerERP.UI\Manager\obj\Release\Manager.frmCotizaciones.resources
 C:\Users\alai\Source\Repos\FerERP.UI\Manager\obj\Release\Manager.frmMain.resources
 C:\Users\alai\Source\Repos\FerERP.UI\Manager\obj\Release\Manager.JJRecursos.resources
 C:\Users\alai\Source\Repos\FerERP.UI\Manager\obj\Release\Manager.frmListadoArticulos.resources
@@ -61,6 +66,7 @@ C:\Users\alai\Source\Repos\FerERP.UI\Manager\obj\Release\Manager.frmNuevaPersona
 C:\Users\alai\Source\Repos\FerERP.UI\Manager\obj\Release\Manager.frmListaProveedores.resources
 C:\Users\alai\Source\Repos\FerERP.UI\Manager\obj\Release\Manager.frmNuevaCategoriaProveedor.resources
 C:\Users\alai\Source\Repos\FerERP.UI\Manager\obj\Release\Manager.frmNuevoProveedor.resources
+C:\Users\alai\Source\Repos\FerERP.UI\Manager\obj\Release\Manager.frmUpProveedor.resources
 C:\Users\alai\Source\Repos\FerERP.UI\Manager\obj\Release\Manager.frmOpcionesPresupuesto.resources
 C:\Users\alai\Source\Repos\FerERP.UI\Manager\obj\Release\Manager.frmVendedores.resources
 C:\Users\alai\Source\Repos\FerERP.UI\Manager\obj\Release\Manager.frmNuevaVenta.resources
@@ -69,9 +75,3 @@ C:\Users\alai\Source\Repos\FerERP.UI\Manager\obj\Release\Manager.vbproj.Generate
 C:\Users\alai\Source\Repos\FerERP.UI\Manager\obj\Release\JO Manager.exe
 C:\Users\alai\Source\Repos\FerERP.UI\Manager\obj\Release\JO Manager.xml
 C:\Users\alai\Source\Repos\FerERP.UI\Manager\obj\Release\JO Manager.pdb
-C:\Users\alai\Desktop\Soft\Desarrollo\Release\JO Manager.exe.config
-C:\Users\alai\Desktop\Soft\Desarrollo\Release\JO Manager.exe
-C:\Users\alai\Desktop\Soft\Desarrollo\Release\JO Manager.pdb
-C:\Users\alai\Desktop\Soft\Desarrollo\Release\JO Manager.xml
-C:\Users\alai\Source\Repos\FerERP.UI\Manager\obj\Release\Manager.frmCotizaciones.resources
-C:\Users\alai\Source\Repos\FerERP.UI\Manager\obj\Release\Manager.frmUpProveedor.resources

@@ -1,11 +1,16 @@
 ﻿Imports JJ.Entidades
 Imports JJ.Gestoras
+Imports JJ.Interfaces.Observer
 
 Public Class frmDatosFactura
+    Implements IObservable
+
     Private Esp As Type
     Private Cliente As Object = Nothing
     Private BanderaAddCC As Boolean = False
     Private Espera As UESPERA
+    Private Observadores As List(Of IObserver)
+
     Public Sub New(ByVal xTipo As Type, ByVal xEspera As UESPERA)
 
         ' Esta llamada es exigida por el diseñador.
@@ -32,21 +37,10 @@ Public Class frmDatosFactura
     Private Sub brnFiltro_Click(sender As Object, e As EventArgs) Handles brnFiltro.Click
         If txtIdCliente.Text.Trim.Length > 1 Then
             If IsNumeric(txtIdCliente.Text) Then
-                Cliente = GesPersonas.getInstance().getClienteContadoByID(Convert.ToInt32(txtIdCliente.Text))
+                Cliente = GesPersonas.getInstance().getClienteContadoByID(txtIdCliente.Text)
             End If
         End If
-        If IsNothing(Cliente) Then
-            Dim frmFormFiltro As Form
-            Select Case Esp.Name
-                Case "EsperaContado"
-                    frmFormFiltro = New frmFiltrosClientesContado()
-                    frmFormFiltro.ShowDialog()
-                    If frmFormFiltro.DialogResult = DialogResult.OK Then
-                        Cliente = TryCast(frmFormFiltro, frmFiltrosClientesContado).Cliente
-                    End If
-                Case "EsperaCuenta"
-            End Select
-        End If
+
         Popular()
     End Sub
 
@@ -80,7 +74,7 @@ Public Class frmDatosFactura
                 End If
                 Try
                     If BanderaAddCC Then
-                        GesPersonas.getInstance().addClienteContado(TryCast(Cliente, ClienteContado))
+                        Cliente = GesPersonas.getInstance().addClienteContado(TryCast(Cliente, ClienteContado))
                     End If
                     Dim EsperaC As New EsperaContado(Now)
                     EsperaC.Codclientecontado = TryCast(Cliente, ClienteContado).Codigo
@@ -91,14 +85,25 @@ Public Class frmDatosFactura
                     EsperaC.Estado = 0
                     EsperaC.DirEnvio = txtDirEnvio.Text
                     GesDocumentos.getInstance().AddEspera(EsperaC)
+                    notifyObservers()
+                    Me.Close()
                 Catch ex As Exception
                     MsgBox(ex.Message)
+                    ClearData()
                 End Try
             Case "EsperaCuenta"
         End Select
 
 
 
+    End Sub
+
+    Private Sub ClearData()
+        Cliente = Nothing
+        txtDocumento.Clear()
+        txtNombre.Clear()
+        txtDireccion.Clear()
+        txtTelefono.Clear()
     End Sub
 
     Private Sub txtIdCliente_TextChanged(sender As Object, e As EventArgs)
@@ -109,5 +114,43 @@ Public Class frmDatosFactura
         If e.KeyCode = Keys.Enter Then
             brnFiltro.PerformClick()
         End If
+    End Sub
+
+    Private Sub Label1_Click(sender As Object, e As EventArgs) Handles Label1.Click
+        Dim frmFormFiltro As Form
+        Select Case Esp.Name
+            Case "EsperaContado"
+                frmFormFiltro = New frmFiltrosClientesContado()
+                frmFormFiltro.ShowDialog()
+                If frmFormFiltro.DialogResult = DialogResult.OK Then
+                    Cliente = TryCast(frmFormFiltro, frmFiltrosClientesContado).Cliente
+
+                    Popular()
+                End If
+            Case "EsperaCuenta"
+        End Select
+    End Sub
+
+    Public Sub Register(xObserver As IObserver) Implements IObservable.Register
+        If IsNothing(xObserver) Then
+            Return
+        End If
+        If IsNothing(Observadores) Then
+            Observadores = New List(Of IObserver)
+        End If
+        Observadores.Add(xObserver)
+    End Sub
+
+    Public Sub UnRegister(xObserver As IObserver) Implements IObservable.UnRegister
+        If IsNothing(xObserver) Then Return
+        If IsNothing(Observadores) Then Return
+        Observadores.Remove(xObserver)
+    End Sub
+
+    Public Sub notifyObservers() Implements IObservable.notifyObservers
+
+        For Each Obs As IObserver In Observadores
+            Obs.Update("VENTA")
+        Next
     End Sub
 End Class

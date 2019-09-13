@@ -8,6 +8,7 @@ Public Class frmUpProveedor
     Private objProveedor As Proveedor = Nothing
     Private _fProveedores As frmListaProveedores = Nothing
     Private Observadores As List(Of IObserver) = New List(Of IObserver)
+    Private Lista As IList(Of Object) = New List(Of Object)
 
     Private Sub frmUpProveedor_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         centrar(lbltitle, Panel2)
@@ -15,8 +16,6 @@ Public Class frmUpProveedor
 
     Private Function BuscarIndex(ByVal Combo As ComboBox) As Integer
         Dim Index As Integer = 0
-
-
         For Each C As CatProveedor In Combo.Items
 
             If C.Codigo = objProveedor.Categoria Then
@@ -65,7 +64,6 @@ Public Class frmUpProveedor
         txtRut.Text = objProveedor.Rut
         txtRz.Text = objProveedor.Rz
         txtTelefono.Text = objProveedor.Telefono
-        objProveedor.Categoria = TryCast(cbCategoria.SelectedItem, CatProveedor).Codigo
         cbCategoria.SelectedIndex = BuscarIndex(cbCategoria)
     End Sub
 
@@ -93,5 +91,16 @@ Public Class frmUpProveedor
         For Each O As IObserver In Observadores
             O.Update(Me)
         Next
+    End Sub
+
+    Private Sub btnAddCategory_Click(sender As Object, e As EventArgs) Handles btnAddCategory.Click
+        Dim AddCat As frmNuevaCategoriaProveedor = New frmNuevaCategoriaProveedor()
+        AddCat.ShowDialog()
+        PopularForm()
+    End Sub
+
+    Private Sub PopularForm()
+        Lista = GesPersonas.getInstance().getCategoriasProveedor()
+        cbCategoria.DataSource = Lista
     End Sub
 End Class

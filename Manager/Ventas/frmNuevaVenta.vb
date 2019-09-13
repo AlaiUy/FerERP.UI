@@ -252,6 +252,15 @@ Public Class frmNuevaVenta
         If TypeOf Obj Is Articulo Then
             AgregarLinea(DirectCast(Obj, Articulo), frmListArticulos.Cantidad)
         End If
+
+        If TypeOf Obj Is String Then
+            If DirectCast(Obj, String).ToString() = "VENTA" Then
+                esp = New UESPERA(GesPrecios.getInstance().getCotizacion(2))
+                esp.Codvendedor = _Vendedor.Codigo
+                PopularGrilla()
+            End If
+        End If
+
     End Sub
 
     Public Sub Register(xObserver As IObserver) Implements IObservable.Register
@@ -280,8 +289,7 @@ Public Class frmNuevaVenta
     End Sub
 
     Private Sub btnNuevaVenta_Click(sender As Object, e As EventArgs) Handles btnNuevaVenta.Click
-
-        Dim frmTipoVenta As Form = New frmSeleccionTipoVenta(esp)
+        Dim frmTipoVenta As Form = New frmSeleccionTipoVenta(esp, Me)
         frmTipoVenta.ShowDialog()
     End Sub
 

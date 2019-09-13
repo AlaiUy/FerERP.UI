@@ -26,6 +26,10 @@ Partial Class frmDatosFactura
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.btnContinuar = New System.Windows.Forms.Button()
         Me.grp_DatosCuenta = New System.Windows.Forms.GroupBox()
+        Me.txtAdenda = New System.Windows.Forms.TextBox()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.txtDirEnvio = New System.Windows.Forms.TextBox()
+        Me.Label4 = New System.Windows.Forms.Label()
         Me.grp_personales = New System.Windows.Forms.GroupBox()
         Me.Panel_Datos = New System.Windows.Forms.Panel()
         Me.txtTelefono = New System.Windows.Forms.TextBox()
@@ -39,10 +43,6 @@ Partial Class frmDatosFactura
         Me.brnFiltro = New System.Windows.Forms.Button()
         Me.txtIdCliente = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.txtDirEnvio = New System.Windows.Forms.TextBox()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.txtAdenda = New System.Windows.Forms.TextBox()
-        Me.Label7 = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.grp_DatosCuenta.SuspendLayout()
@@ -96,7 +96,45 @@ Partial Class frmDatosFactura
         Me.grp_DatosCuenta.TabIndex = 1
         Me.grp_DatosCuenta.TabStop = False
         Me.grp_DatosCuenta.Text = "--------- Datos de envio ----------"
-        Me.grp_DatosCuenta.Visible = False
+        '
+        'txtAdenda
+        '
+        Me.txtAdenda.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtAdenda.Location = New System.Drawing.Point(219, 67)
+        Me.txtAdenda.Multiline = True
+        Me.txtAdenda.Name = "txtAdenda"
+        Me.txtAdenda.Size = New System.Drawing.Size(345, 81)
+        Me.txtAdenda.TabIndex = 27
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.Location = New System.Drawing.Point(136, 75)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(77, 19)
+        Me.Label7.TabIndex = 26
+        Me.Label7.Text = "Adenda:"
+        Me.Label7.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'txtDirEnvio
+        '
+        Me.txtDirEnvio.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtDirEnvio.Location = New System.Drawing.Point(219, 28)
+        Me.txtDirEnvio.Name = "txtDirEnvio"
+        Me.txtDirEnvio.Size = New System.Drawing.Size(345, 27)
+        Me.txtDirEnvio.TabIndex = 25
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Location = New System.Drawing.Point(49, 31)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(164, 19)
+        Me.Label4.TabIndex = 24
+        Me.Label4.Text = "Direccion de envio:"
+        Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
         'grp_personales
         '
@@ -210,7 +248,7 @@ Partial Class frmDatosFactura
         Me.brnFiltro.BackColor = System.Drawing.Color.White
         Me.brnFiltro.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.brnFiltro.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.brnFiltro.Location = New System.Drawing.Point(349, 16)
+        Me.brnFiltro.Location = New System.Drawing.Point(364, 16)
         Me.brnFiltro.Name = "brnFiltro"
         Me.brnFiltro.Size = New System.Drawing.Size(75, 27)
         Me.brnFiltro.TabIndex = 15
@@ -229,51 +267,13 @@ Partial Class frmDatosFactura
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.Color.Blue
         Me.Label1.Location = New System.Drawing.Point(41, 19)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(73, 19)
         Me.Label1.TabIndex = 13
         Me.Label1.Text = "Cliente:"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        '
-        'txtDirEnvio
-        '
-        Me.txtDirEnvio.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtDirEnvio.Location = New System.Drawing.Point(219, 28)
-        Me.txtDirEnvio.Name = "txtDirEnvio"
-        Me.txtDirEnvio.Size = New System.Drawing.Size(345, 27)
-        Me.txtDirEnvio.TabIndex = 25
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(49, 31)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(164, 19)
-        Me.Label4.TabIndex = 24
-        Me.Label4.Text = "Direccion de envio:"
-        Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        '
-        'txtAdenda
-        '
-        Me.txtAdenda.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtAdenda.Location = New System.Drawing.Point(219, 67)
-        Me.txtAdenda.Multiline = True
-        Me.txtAdenda.Name = "txtAdenda"
-        Me.txtAdenda.Size = New System.Drawing.Size(345, 81)
-        Me.txtAdenda.TabIndex = 27
-        '
-        'Label7
-        '
-        Me.Label7.AutoSize = True
-        Me.Label7.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(136, 75)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(77, 19)
-        Me.Label7.TabIndex = 26
-        Me.Label7.Text = "Adenda:"
-        Me.Label7.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
         'frmDatosFactura
         '
