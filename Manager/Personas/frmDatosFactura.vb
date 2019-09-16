@@ -37,7 +37,7 @@ Public Class frmDatosFactura
     Private Sub brnFiltro_Click(sender As Object, e As EventArgs) Handles brnFiltro.Click
         If txtIdCliente.Text.Trim.Length > 1 Then
             If IsNumeric(txtIdCliente.Text) Then
-                Cliente = GesPersonas.getInstance().getClienteContadoByID(txtIdCliente.Text)
+                Cliente = GesPersonas.getInstance().getClienteContadoByDoc(txtIdCliente.Text)
             End If
         End If
 
@@ -48,7 +48,7 @@ Public Class frmDatosFactura
         If Not IsNothing(Cliente) Then
             If TypeOf Cliente Is ClienteContado Then
                 txtDireccion.Text = TryCast(Cliente, ClienteContado).Direccion
-                txtIdCliente.Text = TryCast(Cliente, ClienteContado).Codigo
+                txtIdCliente.Text = TryCast(Cliente, ClienteContado).Documento
                 txtNombre.Text = TryCast(Cliente, ClienteContado).Nombre
                 txtDocumento.Text = TryCast(Cliente, ClienteContado).Documento
                 txtTelefono.Text = TryCast(Cliente, ClienteContado).Telefono
@@ -104,6 +104,13 @@ Public Class frmDatosFactura
         txtNombre.Clear()
         txtDireccion.Clear()
         txtTelefono.Clear()
+        txtIdCliente.Clear()
+        txtDocumento.ReadOnly = False
+        txtDireccion.ReadOnly = False
+        txtIdCliente.ReadOnly = False
+        txtNombre.ReadOnly = False
+        txtDocumento.ReadOnly = False
+        txtTelefono.ReadOnly = False
     End Sub
 
     Private Sub txtIdCliente_TextChanged(sender As Object, e As EventArgs)
@@ -152,5 +159,24 @@ Public Class frmDatosFactura
         For Each Obs As IObserver In Observadores
             Obs.Update("VENTA")
         Next
+    End Sub
+
+    Private Sub txtIdCliente_TextChanged_1(sender As Object, e As EventArgs) Handles txtIdCliente.TextChanged
+
+    End Sub
+
+    Private Sub txtIdCliente_LostFocus(sender As Object, e As EventArgs) Handles txtIdCliente.LostFocus
+        If txtIdCliente.Text.Length > 0 Then
+            brnFiltro.PerformClick()
+            If IsNothing(Cliente) Then
+                txtDocumento.Text = txtIdCliente.Text
+                txtNombre.Focus()
+            End If
+        End If
+    End Sub
+
+    Private Sub btnClear_Click(sender As Object, e As EventArgs) Handles btnClear.Click
+        ClearData()
+
     End Sub
 End Class

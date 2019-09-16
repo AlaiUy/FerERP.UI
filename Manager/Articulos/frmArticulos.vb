@@ -16,6 +16,7 @@ Public Class frmArticulos
     Private mActiva As String = "CODIGO" ' Nombre columna activa
     Private mFiltro As String = ""
     Private xDescuento As Decimal = GesEmpresa.getInstance().Empresa.DescuentoContado
+    Private ColorContado As Color = Color.FromArgb(192, 255, 192)
 
     Public Sub New(ByVal xObserver As IObserver)
 
@@ -92,19 +93,25 @@ Public Class frmArticulos
                     Case "PRECIO"
                         C.Width += 43
                         SumaAnchos += C.Width
+                        C.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight
                     Case "CONTADO"
                         C.Width += 43
                         SumaAnchos += C.Width
+                        C.DefaultCellStyle.BackColor = ColorContado
+                        C.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight
                 End Select
 
             End If
         Next
         With dgArticulos
+
             For Each ObjCol As DataGridViewColumn In .Columns
                 ObjCol.SortMode = DataGridViewColumnSortMode.Programmatic
             Next
             .Columns(mIndex).DefaultCellStyle.BackColor = Color.Beige
+
         End With
+
 
         Dim Resto As Decimal = dgArticulos.Width - SumaAnchos
 
@@ -176,8 +183,21 @@ Public Class frmArticulos
     Private Sub dgArticulos_ColumnHeaderMouseClick(sender As Object, e As DataGridViewCellMouseEventArgs) Handles dgArticulos.ColumnHeaderMouseClick
         mFiltro = ""
         mActiva = (sender.Columns(e.ColumnIndex).Name)
+        For Each C As DataGridViewColumn In dgArticulos.Columns
+            If C.Visible Then
+                Select Case C.Name
+                    Case "CONTADO"
+                        C.DefaultCellStyle.BackColor = ColorContado
+
+                    Case Else
+                        C.DefaultCellStyle.BackColor = Color.White
+
+
+                End Select
+
+            End If
+        Next
         With sender
-            .Columns(mIndex).DefaultCellStyle.BackColor = Color.White
             .Columns(e.ColumnIndex).DefaultCellStyle.BackColor = Color.Beige
         End With
         mIndex = e.ColumnIndex

@@ -217,4 +217,9 @@ Public Class frmMain
         TryCast(frm, frmNuevoProveedor).Register(Me)
         CargarFormulario(frm)
     End Sub
+
+    Private Sub VentasToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles VentasToolStripMenuItem.Click
+        Dim Form As Form = New frmListadoVentas()
+        Form.ShowDialog()
+    End Sub
 End Class

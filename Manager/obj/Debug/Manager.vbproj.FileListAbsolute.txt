@@ -35,3 +35,5 @@ C:\Users\alai\Source\Repos\FerERP.UI\Manager\obj\Debug\JO Manager.exe
 C:\Users\alai\Source\Repos\FerERP.UI\Manager\obj\Debug\JO Manager.xml
 C:\Users\alai\Source\Repos\FerERP.UI\Manager\obj\Debug\JO Manager.pdb
 C:\Users\alai\Source\Repos\FerERP.UI\Manager\obj\Debug\Manager.frmUpProveedor.resources
+C:\Users\alai\Source\Repos\FerERP.UI\Manager\obj\Debug\Manager.frmEspera.resources
+C:\Users\alai\Source\Repos\FerERP.UI\Manager\obj\Debug\Manager.frmListadoVentas.resources

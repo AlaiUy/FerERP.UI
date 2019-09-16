@@ -59,6 +59,7 @@ Partial Class frmMain
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.lblAgregarPersona = New System.Windows.Forms.Button()
         Me.lblNuevoArticulo = New System.Windows.Forms.Button()
+        Me.VentasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolsMain.SuspendLayout()
         Me.PnContenedor.SuspendLayout()
         Me.PanelBienvenida.SuspendLayout()
@@ -258,7 +259,7 @@ Partial Class frmMain
         'btnInformes
         '
         Me.btnInformes.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text
-        Me.btnInformes.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ArticulosToolStripMenuItem})
+        Me.btnInformes.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ArticulosToolStripMenuItem, Me.VentasToolStripMenuItem})
         Me.btnInformes.Image = CType(resources.GetObject("btnInformes.Image"), System.Drawing.Image)
         Me.btnInformes.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.btnInformes.Name = "btnInformes"
@@ -268,7 +269,7 @@ Partial Class frmMain
         'ArticulosToolStripMenuItem
         '
         Me.ArticulosToolStripMenuItem.Name = "ArticulosToolStripMenuItem"
-        Me.ArticulosToolStripMenuItem.Size = New System.Drawing.Size(134, 22)
+        Me.ArticulosToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.ArticulosToolStripMenuItem.Text = "Articulos"
         '
         'PnContenedor
@@ -372,6 +373,12 @@ Partial Class frmMain
         Me.lblNuevoArticulo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.lblNuevoArticulo.UseVisualStyleBackColor = False
         '
+        'VentasToolStripMenuItem
+        '
+        Me.VentasToolStripMenuItem.Name = "VentasToolStripMenuItem"
+        Me.VentasToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.VentasToolStripMenuItem.Text = "Ventas"
+        '
         'frmMain
         '
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None
@@ -430,4 +437,5 @@ Partial Class frmMain
     Friend WithEvents ProveedoresToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents btnAgregarProveedor As ToolStripMenuItem
     Friend WithEvents ModificarProveedorToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents VentasToolStripMenuItem As ToolStripMenuItem
 End Class

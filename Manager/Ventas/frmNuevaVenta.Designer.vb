@@ -30,7 +30,7 @@ Partial Class frmNuevaVenta
         Me.Panel9 = New System.Windows.Forms.Panel()
         Me.dgItemsView = New System.Windows.Forms.DataGridView()
         Me.Panel7 = New System.Windows.Forms.Panel()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.btnPresupuesto = New System.Windows.Forms.Button()
         Me.btnGuardarEspera = New System.Windows.Forms.Button()
         Me.btnNuevaVenta = New System.Windows.Forms.Button()
         Me.Panel5 = New System.Windows.Forms.Panel()
@@ -38,6 +38,8 @@ Partial Class frmNuevaVenta
         Me.btnCantidad = New System.Windows.Forms.Button()
         Me.Panel8 = New System.Windows.Forms.Panel()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.txtImporteGral = New System.Windows.Forms.TextBox()
+        Me.Label2 = New System.Windows.Forms.Label()
         Me.txtImporte = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel2 = New System.Windows.Forms.Panel()
@@ -138,7 +140,7 @@ Partial Class frmNuevaVenta
         '
         Me.Panel7.BackColor = System.Drawing.SystemColors.GradientActiveCaption
         Me.Panel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel7.Controls.Add(Me.Button1)
+        Me.Panel7.Controls.Add(Me.btnPresupuesto)
         Me.Panel7.Controls.Add(Me.btnGuardarEspera)
         Me.Panel7.Controls.Add(Me.btnNuevaVenta)
         Me.Panel7.Dock = System.Windows.Forms.DockStyle.Right
@@ -147,22 +149,21 @@ Partial Class frmNuevaVenta
         Me.Panel7.Size = New System.Drawing.Size(122, 598)
         Me.Panel7.TabIndex = 9
         '
-        'Button1
+        'btnPresupuesto
         '
-        Me.Button1.BackColor = System.Drawing.Color.Transparent
-        Me.Button1.FlatAppearance.BorderColor = System.Drawing.Color.Gray
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Image = Global.Manager.My.Resources.JJRecursos.contract
-        Me.Button1.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.Button1.Location = New System.Drawing.Point(5, 75)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(109, 63)
-        Me.Button1.TabIndex = 8
-        Me.Button1.Text = "Presupuesto"
-        Me.Button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.Button1.UseVisualStyleBackColor = False
-        Me.Button1.Visible = False
+        Me.btnPresupuesto.BackColor = System.Drawing.Color.Transparent
+        Me.btnPresupuesto.FlatAppearance.BorderColor = System.Drawing.Color.Gray
+        Me.btnPresupuesto.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnPresupuesto.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnPresupuesto.Image = Global.Manager.My.Resources.JJRecursos.contract
+        Me.btnPresupuesto.ImageAlign = System.Drawing.ContentAlignment.TopCenter
+        Me.btnPresupuesto.Location = New System.Drawing.Point(5, 154)
+        Me.btnPresupuesto.Name = "btnPresupuesto"
+        Me.btnPresupuesto.Size = New System.Drawing.Size(109, 63)
+        Me.btnPresupuesto.TabIndex = 8
+        Me.btnPresupuesto.Text = "Presupuesto"
+        Me.btnPresupuesto.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.btnPresupuesto.UseVisualStyleBackColor = False
         '
         'btnGuardarEspera
         '
@@ -172,14 +173,13 @@ Partial Class frmNuevaVenta
         Me.btnGuardarEspera.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnGuardarEspera.Image = Global.Manager.My.Resources.JJRecursos.pending
         Me.btnGuardarEspera.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.btnGuardarEspera.Location = New System.Drawing.Point(5, 144)
+        Me.btnGuardarEspera.Location = New System.Drawing.Point(5, 75)
         Me.btnGuardarEspera.Name = "btnGuardarEspera"
-        Me.btnGuardarEspera.Size = New System.Drawing.Size(109, 61)
+        Me.btnGuardarEspera.Size = New System.Drawing.Size(109, 73)
         Me.btnGuardarEspera.TabIndex = 7
-        Me.btnGuardarEspera.Text = "Guardar"
+        Me.btnGuardarEspera.Text = "Recuperar Espera"
         Me.btnGuardarEspera.TextAlign = System.Drawing.ContentAlignment.BottomCenter
         Me.btnGuardarEspera.UseVisualStyleBackColor = False
-        Me.btnGuardarEspera.Visible = False
         '
         'btnNuevaVenta
         '
@@ -253,18 +253,42 @@ Partial Class frmNuevaVenta
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.txtImporteGral)
+        Me.GroupBox1.Controls.Add(Me.Label2)
         Me.GroupBox1.Controls.Add(Me.txtImporte)
         Me.GroupBox1.Controls.Add(Me.Label1)
-        Me.GroupBox1.Location = New System.Drawing.Point(6, 4)
+        Me.GroupBox1.Location = New System.Drawing.Point(6, -1)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(323, 58)
+        Me.GroupBox1.Size = New System.Drawing.Size(323, 63)
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
+        '
+        'txtImporteGral
+        '
+        Me.txtImporteGral.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtImporteGral.Location = New System.Drawing.Point(147, 37)
+        Me.txtImporteGral.Name = "txtImporteGral"
+        Me.txtImporteGral.ReadOnly = True
+        Me.txtImporteGral.Size = New System.Drawing.Size(170, 23)
+        Me.txtImporteGral.TabIndex = 3
+        Me.txtImporteGral.Text = "0,00"
+        Me.txtImporteGral.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(6, 40)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(118, 16)
+        Me.Label2.TabIndex = 2
+        Me.Label2.Text = "Importe general:"
+        Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
         'txtImporte
         '
         Me.txtImporte.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtImporte.Location = New System.Drawing.Point(147, 18)
+        Me.txtImporte.Location = New System.Drawing.Point(147, 11)
         Me.txtImporte.Name = "txtImporte"
         Me.txtImporte.ReadOnly = True
         Me.txtImporte.Size = New System.Drawing.Size(170, 23)
@@ -274,12 +298,13 @@ Partial Class frmNuevaVenta
         '
         'Label1
         '
+        Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(6, 11)
+        Me.Label1.Location = New System.Drawing.Point(6, 14)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(135, 37)
+        Me.Label1.Size = New System.Drawing.Size(122, 16)
         Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Importe a facturar:"
+        Me.Label1.Text = "Importe contado:"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
         'Panel2
@@ -398,7 +423,9 @@ Partial Class frmNuevaVenta
     Friend WithEvents lblVendedor As Label
     Friend WithEvents dgItemsView As DataGridView
     Friend WithEvents btnGuardarEspera As Button
-    Friend WithEvents Button1 As Button
+    Friend WithEvents btnPresupuesto As Button
     Friend WithEvents btnCantidad As Button
     Friend WithEvents btnBorrarLinea As Button
+    Friend WithEvents txtImporteGral As TextBox
+    Friend WithEvents Label2 As Label
 End Class

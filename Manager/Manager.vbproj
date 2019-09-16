@@ -182,6 +182,12 @@
     <Compile Include="Listados\frmListadoArticulos.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Listados\frmListadoVentas.Designer.vb">
+      <DependentUpon>frmListadoVentas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Listados\frmListadoVentas.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -253,6 +259,12 @@
     <Compile Include="Vendedores\frmVendedores.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Ventas\frmEspera.Designer.vb">
+      <DependentUpon>frmEspera.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ventas\frmEspera.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Ventas\frmNuevaVenta.Designer.vb">
       <DependentUpon>frmNuevaVenta.vb</DependentUpon>
     </Compile>
@@ -317,6 +329,9 @@
     <EmbeddedResource Include="Listados\frmListadoArticulos.resx">
       <DependentUpon>frmListadoArticulos.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Listados\frmListadoVentas.resx">
+      <DependentUpon>frmListadoVentas.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
@@ -349,6 +364,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Vendedores\frmVendedores.resx">
       <DependentUpon>frmVendedores.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventas\frmEspera.resx">
+      <DependentUpon>frmEspera.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Ventas\frmNuevaVenta.resx">
       <DependentUpon>frmNuevaVenta.vb</DependentUpon>

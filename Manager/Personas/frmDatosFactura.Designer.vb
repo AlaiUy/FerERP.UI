@@ -32,6 +32,7 @@ Partial Class frmDatosFactura
         Me.Label4 = New System.Windows.Forms.Label()
         Me.grp_personales = New System.Windows.Forms.GroupBox()
         Me.Panel_Datos = New System.Windows.Forms.Panel()
+        Me.btnClear = New System.Windows.Forms.Button()
         Me.txtTelefono = New System.Windows.Forms.TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.txtDireccion = New System.Windows.Forms.TextBox()
@@ -75,6 +76,7 @@ Partial Class frmDatosFactura
         '
         'btnContinuar
         '
+        Me.btnContinuar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnContinuar.Location = New System.Drawing.Point(589, 3)
         Me.btnContinuar.Name = "btnContinuar"
         Me.btnContinuar.Size = New System.Drawing.Size(75, 40)
@@ -151,6 +153,7 @@ Partial Class frmDatosFactura
         'Panel_Datos
         '
         Me.Panel_Datos.BackColor = System.Drawing.SystemColors.ButtonShadow
+        Me.Panel_Datos.Controls.Add(Me.btnClear)
         Me.Panel_Datos.Controls.Add(Me.txtTelefono)
         Me.Panel_Datos.Controls.Add(Me.Label6)
         Me.Panel_Datos.Controls.Add(Me.txtDireccion)
@@ -166,6 +169,18 @@ Partial Class frmDatosFactura
         Me.Panel_Datos.Name = "Panel_Datos"
         Me.Panel_Datos.Size = New System.Drawing.Size(525, 211)
         Me.Panel_Datos.TabIndex = 0
+        '
+        'btnClear
+        '
+        Me.btnClear.BackColor = System.Drawing.Color.White
+        Me.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnClear.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnClear.Location = New System.Drawing.Point(349, 167)
+        Me.btnClear.Name = "btnClear"
+        Me.btnClear.Size = New System.Drawing.Size(121, 26)
+        Me.btnClear.TabIndex = 24
+        Me.btnClear.Text = "Borrar Datos"
+        Me.btnClear.UseVisualStyleBackColor = False
         '
         'txtTelefono
         '
@@ -248,9 +263,9 @@ Partial Class frmDatosFactura
         Me.brnFiltro.BackColor = System.Drawing.Color.White
         Me.brnFiltro.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.brnFiltro.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.brnFiltro.Location = New System.Drawing.Point(364, 16)
+        Me.brnFiltro.Location = New System.Drawing.Point(349, 16)
         Me.brnFiltro.Name = "brnFiltro"
-        Me.brnFiltro.Size = New System.Drawing.Size(75, 27)
+        Me.brnFiltro.Size = New System.Drawing.Size(75, 26)
         Me.brnFiltro.TabIndex = 15
         Me.brnFiltro.Text = "Buscar"
         Me.brnFiltro.UseVisualStyleBackColor = False
@@ -318,4 +333,5 @@ Partial Class frmDatosFactura
     Friend WithEvents Label7 As Label
     Friend WithEvents txtDirEnvio As TextBox
     Friend WithEvents Label4 As Label
+    Friend WithEvents btnClear As Button
 End Class

@@ -59,6 +59,7 @@ C:\Users\alai\Source\Repos\FerERP.UI\Manager\obj\Release\Manager.frmCotizaciones
 C:\Users\alai\Source\Repos\FerERP.UI\Manager\obj\Release\Manager.frmMain.resources
 C:\Users\alai\Source\Repos\FerERP.UI\Manager\obj\Release\Manager.JJRecursos.resources
 C:\Users\alai\Source\Repos\FerERP.UI\Manager\obj\Release\Manager.frmListadoArticulos.resources
+C:\Users\alai\Source\Repos\FerERP.UI\Manager\obj\Release\Manager.frmListadoVentas.resources
 C:\Users\alai\Source\Repos\FerERP.UI\Manager\obj\Release\Manager.Resources.resources
 C:\Users\alai\Source\Repos\FerERP.UI\Manager\obj\Release\Manager.frmDatosFactura.resources
 C:\Users\alai\Source\Repos\FerERP.UI\Manager\obj\Release\Manager.frmFiltrosClientesContado.resources
@@ -69,6 +70,7 @@ C:\Users\alai\Source\Repos\FerERP.UI\Manager\obj\Release\Manager.frmNuevoProveed
 C:\Users\alai\Source\Repos\FerERP.UI\Manager\obj\Release\Manager.frmUpProveedor.resources
 C:\Users\alai\Source\Repos\FerERP.UI\Manager\obj\Release\Manager.frmOpcionesPresupuesto.resources
 C:\Users\alai\Source\Repos\FerERP.UI\Manager\obj\Release\Manager.frmVendedores.resources
+C:\Users\alai\Source\Repos\FerERP.UI\Manager\obj\Release\Manager.frmEspera.resources
 C:\Users\alai\Source\Repos\FerERP.UI\Manager\obj\Release\Manager.frmNuevaVenta.resources
 C:\Users\alai\Source\Repos\FerERP.UI\Manager\obj\Release\Manager.frmSeleccionTipoVenta.resources
 C:\Users\alai\Source\Repos\FerERP.UI\Manager\obj\Release\Manager.vbproj.GenerateResource.Cache

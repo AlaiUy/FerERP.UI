@@ -2,6 +2,7 @@
 Imports JJ.Entidades
 Imports JJ.Gestoras
 Imports JJ.Interfaces.Observer
+Imports JJ.Reportes
 
 Public Class frmNuevaVenta
     Implements IObservable, IObserver
@@ -28,6 +29,7 @@ Public Class frmNuevaVenta
 
     Private Sub FormatearForm()
         txtImporte.BackColor = Color.White
+        txtImporteGral.BackColor = Color.White
         txtCantidad.BackColor = Color.White
         If Not IsNothing(_Vendedor) Then
             lblVendedor.Text = _Vendedor.Nombre
@@ -43,6 +45,7 @@ Public Class frmNuevaVenta
             End If
             dgItemsView.DataSource = esp.MostrarTabla()
             txtImporte.Text = FormatearImporte(esp.Total())
+            txtImporteGral.Text = FormatearImporte(esp.Total() * (1 + (GesEmpresa.getInstance().Empresa.DescuentoContado / 100)))
         End If
 
         Dim EstiloIzquierda As DataGridViewCellStyle = New DataGridViewCellStyle()
@@ -150,18 +153,18 @@ Public Class frmNuevaVenta
     Private Sub DgItemsView_CellMouseEnter(sender As Object, e As DataGridViewCellEventArgs)
         If ((e.RowIndex < 0) OrElse (e.ColumnIndex < 0)) Then Return
 
-        If DgItemsView.Columns(e.ColumnIndex).Name = "NOMBRE" Then
-            Dim codigo As Integer = Me.DgItemsView.Item("CODIGO", e.RowIndex).Value
+        If dgItemsView.Columns(e.ColumnIndex).Name = "NOMBRE" Then
+            Dim codigo As Integer = Me.dgItemsView.Item("CODIGO", e.RowIndex).Value
             Try
                 Art = esp.getArticuloByCodigo(codigo)
-                Dim column As DataGridViewColumn = DgItemsView.Columns(e.ColumnIndex)
-                Dim row As DataGridViewRow = DgItemsView.Rows(e.RowIndex)
+                Dim column As DataGridViewColumn = dgItemsView.Columns(e.ColumnIndex)
+                Dim row As DataGridViewRow = dgItemsView.Rows(e.RowIndex)
                 Dim value As Object = row.Cells(column.Name).Value
 
                 Dim OtrosDatos As String = String.Format("Descipcion: {0}{1}{2}", Art.Descripcion, Environment.NewLine, Art.Referencia)
                 ToolTip1.Active = True
                 ToolTip1.ShowAlways = True
-                ToolTip1.SetToolTip(DgItemsView, OtrosDatos)
+                ToolTip1.SetToolTip(dgItemsView, OtrosDatos)
             Catch ex As Exception
 
             End Try
@@ -289,31 +292,34 @@ Public Class frmNuevaVenta
     End Sub
 
     Private Sub btnNuevaVenta_Click(sender As Object, e As EventArgs) Handles btnNuevaVenta.Click
+        If esp.Lineas.Count < 1 Then
+            MsgBox("No se puede guardar una venta sin lineas", vbOKOnly, "Atencion!")
+            Return
+        End If
         Dim frmTipoVenta As Form = New frmSeleccionTipoVenta(esp, Me)
         frmTipoVenta.ShowDialog()
     End Sub
 
     Private Sub btnGuardarEspera_Click(sender As Object, e As EventArgs) Handles btnGuardarEspera.Click
-        If IsNothing(esp) Then
-            Return
+        Dim Perder As Boolean = True
+        If esp.Lineas.Count > 0 Then
+            If MsgBox("Desea perder las lineas escritas hasta el momento", vbOKCancel, "Atencion!") = MsgBoxResult.Cancel Then
+                Perder = False
+            End If
         End If
 
-        If esp.Lineas.Count < 1 Then
-            MsgBox("La venta no tiene ninguna linea")
-            Return
+        If Perder Then
+            Dim frmE As New frmEspera
+            frmE.ShowDialog()
+            If frmE.DialogResult = DialogResult.OK Then
+                esp = New UESPERA(GesPrecios.getInstance().getCotizacion(2))
+                esp.Adenda = frmE.objEspera.Adenda
+                esp.AgregarLineas(frmE.objEspera.Lineas)
+                esp.CodMoneda = 1
+                esp.Codvendedor = _Vendedor.Codigo
+                PopularGrilla()
+            End If
         End If
-
-        If esp.Total() <= 0 Then
-            MsgBox("El importe de la venta no es valido")
-            Return
-        End If
-
-        Dim EsperaC As New EsperaContado(Now)
-        EsperaC.Adenda = esp.Adenda
-        EsperaC.AgregarLineas(esp.Lineas)
-        EsperaC.Codvendedor = esp.Codvendedor
-        EsperaC.Estado = -1
-        GesDocumentos.getInstance().AddEspera(EsperaC)
     End Sub
 
 
@@ -366,5 +372,30 @@ Public Class frmNuevaVenta
 
     Private Sub txtImporte_TextChanged(sender As Object, e As EventArgs) Handles txtImporte.TextChanged
 
+    End Sub
+
+    Private Sub btnPresupuesto_Click(sender As Object, e As EventArgs) Handles btnPresupuesto.Click
+        If esp.Lineas.Count > 0 Then
+            Dim frm As frmOpcionesPresupuesto = New frmOpcionesPresupuesto(esp)
+            frm.ShowDialog()
+        End If
+    End Sub
+
+    Private Sub txtImporteGral_TextChanged(sender As Object, e As EventArgs) Handles txtImporteGral.TextChanged
+
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs)
+        Try
+            Dim VC As VentaContado = New VentaContado(New ClienteContado("47953076", "jose", "hola", "12"), Today, "we", "we", 1, 1, 1, 37, 0, 1)
+            VC.AgregarLinea(New VentaLin(1, New Articulo("2323", "qweqwe", 1, New Iva(1, "2323", 1), 1, 1, 1), "wadasd", 1, 0))
+            VC.AgregarLinea(New VentaLin(1, New Articulo("2323", "qweqwe", 1, New Iva(1, "2323", 1), 1, 1, 1), "wadasd", 1, 0))
+            VC.AgregarLinea(New VentaLin(1, New Articulo("2323", "qweqwe", 1, New Iva(1, "2323", 1), 1, 1, 1), "wadasd", 1, 0))
+            VC.AgregarLinea(New VentaLin(1, New Articulo("2323", "qweqwe", 1, New Iva(1, "2323", 1), 1, 1, 1), "wadasd", 1, 0))
+            VC.AgregarLinea(New VentaLin(1, New Articulo("2323", "qweqwe", 1, New Iva(1, "2323", 1), 1, 1, 1), "wadasd", 1, 0))
+            GestionReporte.FacturaContado(VC, 123)
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
     End Sub
 End Class
