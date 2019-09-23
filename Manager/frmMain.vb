@@ -24,6 +24,7 @@ Public Class frmMain
         Me.Location = Screen.PrimaryScreen.WorkingArea.Location
         Me.Size = New Size(Screen.PrimaryScreen.WorkingArea.Size.Width, Screen.PrimaryScreen.WorkingArea.Size.Height)
         PopularForm()
+
     End Sub
 
     Private Sub CargarFormulario(ByVal xFormulario As Form)

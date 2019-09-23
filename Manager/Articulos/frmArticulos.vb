@@ -129,7 +129,9 @@ Public Class frmArticulos
             _Articulo = GesArticulos.getInstance().getArticuloById(xCod)
             _Cantidad = Convert.ToDecimal(txtCantidad.Text)
             txtCantidad.Text = 1
+            Me.Hide()
             notifyObservers(_Articulo)
+
         Catch ex As Exception
             MsgBox(ex.Message)
         End Try

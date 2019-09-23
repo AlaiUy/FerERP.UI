@@ -36,7 +36,7 @@ Public Class frmPrintPrices
 
         For Each A As Articulo In _Articulos
             Dim Row As DataRow = tTable.NewRow()
-            Row.Item("REFERENCIA") = A.Referencia
+            Row.Item("REFERENCIA") = "COD: " & A.Referencia
             If A.CodMoneda = 1 Then
                 Row.Item("PRECIO") = "$" + " " + Math.Ceiling(A.PrecioIva()).ToString()
             End If

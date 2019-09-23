@@ -125,13 +125,15 @@ Public Class frmNuevaVenta
         While (IsNothing(_Vendedor))
             FormatearForm()
             seleccionadVendedor()
-
         End While
-
         esp.Codvendedor = _Vendedor.Codigo
     End Sub
 
     Private Sub LnkSearchClient_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles LnkSearchItem.LinkClicked
+        If Not IsNothing(frmListArticulos) Then
+            frmListArticulos.Show()
+            Return
+        End If
         frmListArticulos = New frmArticulos(Me)
         frmListArticulos.Show()
     End Sub
@@ -385,17 +387,9 @@ Public Class frmNuevaVenta
 
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs)
-        Try
-            Dim VC As VentaContado = New VentaContado(New ClienteContado("47953076", "jose", "hola", "12"), Today, "we", "we", 1, 1, 1, 37, 0, 1)
-            VC.AgregarLinea(New VentaLin(1, New Articulo("2323", "qweqwe", 1, New Iva(1, "2323", 1), 1, 1, 1), "wadasd", 1, 0))
-            VC.AgregarLinea(New VentaLin(1, New Articulo("2323", "qweqwe", 1, New Iva(1, "2323", 1), 1, 1, 1), "wadasd", 1, 0))
-            VC.AgregarLinea(New VentaLin(1, New Articulo("2323", "qweqwe", 1, New Iva(1, "2323", 1), 1, 1, 1), "wadasd", 1, 0))
-            VC.AgregarLinea(New VentaLin(1, New Articulo("2323", "qweqwe", 1, New Iva(1, "2323", 1), 1, 1, 1), "wadasd", 1, 0))
-            VC.AgregarLinea(New VentaLin(1, New Articulo("2323", "qweqwe", 1, New Iva(1, "2323", 1), 1, 1, 1), "wadasd", 1, 0))
-            GestionReporte.FacturaContado(VC, 123)
-        Catch ex As Exception
-            MsgBox(ex.Message)
-        End Try
+    Private Sub dgItemsView_ColumnHeaderMouseClick(sender As Object, e As DataGridViewCellMouseEventArgs) Handles dgItemsView.ColumnHeaderMouseClick
+        If e.ColumnIndex = dgItemsView.Columns("CANTIDAD").Index Then
+            btnCantidad.PerformClick()
+        End If
     End Sub
 End Class
