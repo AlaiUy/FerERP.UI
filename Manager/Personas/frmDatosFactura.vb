@@ -81,7 +81,11 @@ Public Class frmDatosFactura
                     EsperaC.Adenda = txtAdenda.Text
                     EsperaC.AgregarLineas(Espera.Lineas)
                     EsperaC.Codvendedor = Espera.Codvendedor
-                    EsperaC.NombreCLiente = TryCast(Cliente, ClienteContado).Nombre
+                    If (TryCast(Cliente, ClienteContado).Codigo) = 1 Then
+                        EsperaC.NombreCLiente = txtNombre.Text
+                    Else
+                        EsperaC.NombreCLiente = TryCast(Cliente, ClienteContado).Nombre
+                    End If
                     EsperaC.Estado = 0
                     EsperaC.DirEnvio = txtDirEnvio.Text
                     GesDocumentos.getInstance().AddEspera(EsperaC)

@@ -264,6 +264,11 @@ Public Class frmNuevaVenta
                 esp.Codvendedor = _Vendedor.Codigo
                 PopularGrilla()
             End If
+            If DirectCast(Obj, String).ToString() = "CERRAR" Then
+                frmListArticulos.Close()
+                frmListArticulos.Dispose()
+                frmListArticulos = Nothing
+            End If
         End If
 
     End Sub
@@ -391,5 +396,65 @@ Public Class frmNuevaVenta
         If e.ColumnIndex = dgItemsView.Columns("CANTIDAD").Index Then
             btnCantidad.PerformClick()
         End If
+
+        If e.ColumnIndex = dgItemsView.Columns("DESCUENTO").Index Then
+            AsignarDescuentoLineal()
+        End If
+    End Sub
+
+
+    Private Sub AsignarDescuentoLineal()
+        If dgItemsView.Rows.Count < 1 Then
+            Return
+        End If
+
+        Dim xCantidad As Decimal
+        Dim frmNumber As frmPanelNumerico = New frmPanelNumerico()
+        frmNumber.ShowDialog()
+        Try
+            If frmNumber.DialogResult = DialogResult.OK Then
+                xCantidad = frmNumber.Numero
+            End If
+            If (dgItemsView.CurrentRow Is Nothing) Then
+                esp.AsignarDescuento(0, 1)
+            Else
+                esp.AsignarDescuento(xCantidad, dgItemsView.Item("LINEA", dgItemsView.CurrentRow.Index).Value)
+            End If
+            PopularGrilla()
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
+
+    End Sub
+
+    Private Sub dgItemsView_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgItemsView.CellContentClick
+
+    End Sub
+
+    Private Sub dgItemsView_CellPainting(sender As Object, e As DataGridViewCellPaintingEventArgs) Handles dgItemsView.CellPainting
+
+        ''192, 192, 255
+        'Try
+        '    If e.RowIndex > -1 Then
+        '        e.Graphics.DrawLine(Pens.Black, e.CellBounds.Left, e.CellBounds.Top, e.CellBounds.Width, e.CellBounds.Top)
+
+        '    End If
+
+        '    ' e.Graphics.DrawLine(Pens.Black, e.CellBounds.Left, e.CellBounds.Bottom, e.CellBounds.Width, e.CellBounds.Bottom)
+
+
+
+        'Catch ex As Exception
+
+        'End Try
+
+
+
+
+
+        ' e.Graphics.DrawLine(Pens.Black,e.CellBounds.Left, e.CellBounds.Bottom - 1, e.CellBounds.Right, e.CellBounds.Bottom - 1)
+
+        ' e.Handled = True
+
     End Sub
 End Class

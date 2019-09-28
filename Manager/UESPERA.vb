@@ -93,6 +93,7 @@ Public Class UESPERA
 
 
 
+
     Friend Function CambiarCantidad(ByVal xCantidad As Decimal, ByVal xLinea As Integer) As Boolean
         For Each L As Esperalin In _Lineas
             If L.NumLinea = xLinea Then

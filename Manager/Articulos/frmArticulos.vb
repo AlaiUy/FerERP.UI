@@ -119,12 +119,16 @@ Public Class frmArticulos
     End Sub
 
     Private Sub dgArticulos_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgArticulos.CellDoubleClick
-        If e.RowIndex = -1 Then
+        SeleccionarArticulo(e.RowIndex)
+    End Sub
+
+    Private Sub SeleccionarArticulo(ByVal xIndex As Integer)
+        If xIndex = -1 Then
             Return
         End If
         Dim xCod As String
         Dim xIndexColumn As Integer = dgArticulos.Columns("CODIGO").Index
-        xCod = dgArticulos.Item(xIndexColumn, e.RowIndex).Value
+        xCod = dgArticulos.Item(xIndexColumn, xIndex).Value
         Try
             _Articulo = GesArticulos.getInstance().getArticuloById(xCod)
             _Cantidad = Convert.ToDecimal(txtCantidad.Text)
@@ -177,8 +181,32 @@ Public Class frmArticulos
                 End If
                 txtReferencia.Text = String.Empty
             End If
+        ElseIf (txtReferencia.Text.Length > 2) Then
+            Me.dgArticulos.CurrentCell = dgArticulos.Item(1, posicionarvalor(txtReferencia.Text, txtReferencia.Text.Length))
+
         End If
     End Sub
+
+    Private Function posicionarvalor(ByVal Dato As String, ByVal xLetras As Integer) As Integer
+
+        Dim indice As Integer = 0
+        Try
+            For Each dr As DataGridViewRow In dgArticulos.Rows
+                Dim Texto As String = dr.Cells("nombre").Value.ToString()
+                If Texto.Length >= xLetras Then
+                    If Texto.Substring(0, xLetras) = Dato Then
+                        dr.Selected = True
+                        indice = dr.Index
+                        Return indice
+                    End If
+                End If
+            Next
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
+
+        Return 1
+    End Function
 
 
 
@@ -207,7 +235,8 @@ Public Class frmArticulos
         If txtReferencia.Text.Length > 1 Then
             Try
 
-                _ListaFiltrada = (From Cliente In _TablaArticulos.AsEnumerable()
+
+                _ListaFiltrada = (From Cliente In _ListaFiltrada.AsEnumerable()
                                   Where Cliente(mActiva).Contains(txtReferencia.Text.ToUpper())
                                   Select Cliente).CopyToDataTable()
                 dgArticulos.DataSource = _ListaFiltrada
@@ -221,18 +250,35 @@ Public Class frmArticulos
 
     Private Sub dgArticulos_KeyDown(sender As Object, e As KeyEventArgs) Handles dgArticulos.KeyDown
         If e.KeyCode = Keys.Enter Then
-            Dim xCod As String
-            Dim xIndexColumn As Integer = dgArticulos.Columns("CODIGO").Index
-            xCod = dgArticulos.Item(xIndexColumn, dgArticulos.CurrentRow.Index).Value
-            Try
-                _Articulo = GesArticulos.getInstance().getArticuloById(xCod)
-                _Cantidad = Convert.ToDecimal(txtCantidad.Text)
-                txtCantidad.Text = 1
-                notifyObservers(_Articulo)
-            Catch ex As Exception
-                MsgBox(ex.Message)
-            End Try
+            SeleccionarArticulo(dgArticulos.CurrentRow.Index)
+            'Dim xCod As String
+            'Dim xIndexColumn As Integer = dgArticulos.Columns("CODIGO").Index
+            'xCod = dgArticulos.Item(xIndexColumn, dgArticulos.CurrentRow.Index).Value
+            'Try
+            '    _Articulo = GesArticulos.getInstance().getArticuloById(xCod)
+            '    _Cantidad = Convert.ToDecimal(txtCantidad.Text)
+            '    txtCantidad.Text = 1
+            '    notifyObservers(_Articulo)
+            'Catch ex As Exception
+            '    MsgBox(ex.Message)
+            'End Try
+
         End If
 
+        If e.KeyCode = Keys.Escape Then
+            notifyObservers("CERRAR")
+        End If
+
+    End Sub
+
+    Private Sub txtReferencia_KeyDown(sender As Object, e As KeyEventArgs) Handles txtReferencia.KeyDown
+        If e.KeyCode = Keys.Down Or e.KeyCode = Keys.Up Then
+            dgArticulos.Focus()
+        End If
+
+        If e.KeyCode = Keys.Back And txtReferencia.Text.Length <= 2 Then
+            Me.dgArticulos.CurrentCell = dgArticulos.Item(1, 1)
+
+        End If
     End Sub
 End Class
