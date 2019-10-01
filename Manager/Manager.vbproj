@@ -100,6 +100,18 @@
     <Compile Include="Articulos\frmArticulos.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="MaterialDesing\frmAddArticulo_Material.Designer.vb">
+      <DependentUpon>frmAddArticulo_Material.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MaterialDesing\frmAddArticulo_Material.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MaterialDesing\frmArticulos_Material.Designer.vb">
+      <DependentUpon>frmArticulos_Material.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MaterialDesing\frmArticulos_Material.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Articulos\frmNuevoArticulo.Designer.vb">
       <DependentUpon>frmNuevoArticulo.vb</DependentUpon>
     </Compile>
@@ -186,6 +198,30 @@
       <DependentUpon>frmListadoVentas.vb</DependentUpon>
     </Compile>
     <Compile Include="Listados\frmListadoVentas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MaterialDesing\frmMain_Material.Designer.vb">
+      <DependentUpon>frmMain_Material.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MaterialDesing\frmMain_Material.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MaterialDesing\frmOpcionesPresupuestos_Material.Designer.vb">
+      <DependentUpon>frmOpcionesPresupuestos_Material.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MaterialDesing\frmOpcionesPresupuestos_Material.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MaterialDesing\frmSuccess.Designer.vb">
+      <DependentUpon>frmSuccess.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MaterialDesing\frmSuccess.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MaterialDesing\frmUpArticulo_Material.Designer.vb">
+      <DependentUpon>frmUpArticulo_Material.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MaterialDesing\frmUpArticulo_Material.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -288,6 +324,12 @@
     <EmbeddedResource Include="Articulos\frmArticulos.resx">
       <DependentUpon>frmArticulos.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MaterialDesing\frmAddArticulo_Material.resx">
+      <DependentUpon>frmAddArticulo_Material.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MaterialDesing\frmArticulos_Material.resx">
+      <DependentUpon>frmArticulos_Material.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Articulos\frmNuevoArticulo.resx">
       <DependentUpon>frmNuevoArticulo.vb</DependentUpon>
     </EmbeddedResource>
@@ -331,6 +373,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Listados\frmListadoVentas.resx">
       <DependentUpon>frmListadoVentas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MaterialDesing\frmMain_Material.resx">
+      <DependentUpon>frmMain_Material.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MaterialDesing\frmOpcionesPresupuestos_Material.resx">
+      <DependentUpon>frmOpcionesPresupuestos_Material.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MaterialDesing\frmSuccess.resx">
+      <DependentUpon>frmSuccess.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MaterialDesing\frmUpArticulo_Material.resx">
+      <DependentUpon>frmUpArticulo_Material.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
@@ -457,6 +511,15 @@
   <ItemGroup>
     <Content Include="Logo-2.ico" />
     <Content Include="logo.ico" />
+    <None Include="Material_Img\Iconos\icons8-imprimir-32.png" />
+    <None Include="Material_Img\Iconos\icons8-comprobado-96.png" />
+    <None Include="Material_Img\Iconos\icons8-reemplazar-32.png" />
+    <None Include="Material_Img\Iconos\icons8-guardar-cerrar-32.png" />
+    <None Include="Resources\Logo.png" />
+    <None Include="Resources\JOLOGO1.png" />
+    <None Include="Material_Img\Iconos\icons8-cerrar-ventana-32.png" />
+    <None Include="Material_Img\Iconos\icons8-búsqueda-32.png" />
+    <None Include="Material_Img\Formularios\Caja de busqueda.png" />
     <None Include="Resources\printer.png" />
     <None Include="Resources\JOLOGO.png" />
     <None Include="Resources\Fondo.jpg" />

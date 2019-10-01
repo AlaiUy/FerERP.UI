@@ -12,11 +12,14 @@ Public Class frmNuevaVenta
     Private Art As Articulo
     Private ListLineas As List(Of Linea) = New List(Of Linea)
     Private esp As UESPERA = New UESPERA(GesPrecios.getInstance().getCotizacion(2))
-    Private frmListArticulos As frmArticulos = Nothing
+    Private frmListArticulos As Form = Nothing
+    Dim Diseño As Integer = 0
+
 
     Public Sub New()
         ' Esta llamada es exigida por el diseñador.
         InitializeComponent()
+        Diseño = LeerIni.LeerDato("INTERFAZ", "MATERIAL", 0, ".\config.ini")
         ' Agregue cualquier inicialización después de la llamada a InitializeComponent().
     End Sub
 
@@ -24,6 +27,7 @@ Public Class frmNuevaVenta
         ' Esta llamada es exigida por el diseñador.
         InitializeComponent()
         _Vendedor = xVendedor
+        Diseño = LeerIni.LeerDato("INTERFAZ", "MATERIAL", 0, ".\config.ini")
         ' Agregue cualquier inicialización después de la llamada a InitializeComponent().
     End Sub
 
@@ -130,12 +134,22 @@ Public Class frmNuevaVenta
     End Sub
 
     Private Sub LnkSearchClient_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles LnkSearchItem.LinkClicked
-        If Not IsNothing(frmListArticulos) Then
-            frmListArticulos.Show()
-            Return
-        End If
-        frmListArticulos = New frmArticulos(Me)
-        frmListArticulos.Show()
+        Try
+            If Not IsNothing(frmListArticulos) Then
+                frmListArticulos.Show()
+                Return
+            End If
+            If Diseño = 0 Then
+                frmListArticulos = New frmArticulos(Me)
+                frmListArticulos.Show()
+            Else
+                frmListArticulos = New frmArticulos_Material(Me)
+                frmListArticulos.Show()
+            End If
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
+
     End Sub
 
     Private Sub btnFacturar_Click(sender As Object, e As EventArgs)
@@ -255,7 +269,11 @@ Public Class frmNuevaVenta
         End If
 
         If TypeOf Obj Is Articulo Then
-            AgregarLinea(DirectCast(Obj, Articulo), frmListArticulos.Cantidad)
+            If Diseño = 0 Then
+                AgregarLinea(DirectCast(Obj, Articulo), TryCast(frmListArticulos, frmArticulos).Cantidad)
+            Else
+                AgregarLinea(DirectCast(Obj, Articulo), TryCast(frmListArticulos, frmArticulos_Material).Cantidad)
+            End If
         End If
 
         If TypeOf Obj Is String Then
@@ -307,27 +325,7 @@ Public Class frmNuevaVenta
         frmTipoVenta.ShowDialog()
     End Sub
 
-    Private Sub btnGuardarEspera_Click(sender As Object, e As EventArgs) Handles btnGuardarEspera.Click
-        Dim Perder As Boolean = True
-        If esp.Lineas.Count > 0 Then
-            If MsgBox("Desea perder las lineas escritas hasta el momento", vbOKCancel, "Atencion!") = MsgBoxResult.Cancel Then
-                Perder = False
-            End If
-        End If
 
-        If Perder Then
-            Dim frmE As New frmEspera
-            frmE.ShowDialog()
-            If frmE.DialogResult = DialogResult.OK Then
-                esp = New UESPERA(GesPrecios.getInstance().getCotizacion(2))
-                esp.Adenda = frmE.objEspera.Adenda
-                esp.AgregarLineas(frmE.objEspera.Lineas)
-                esp.CodMoneda = 1
-                esp.Codvendedor = _Vendedor.Codigo
-                PopularGrilla()
-            End If
-        End If
-    End Sub
 
 
     Private Sub btnCantidad_Click(sender As Object, e As EventArgs) Handles btnCantidad.Click
@@ -383,8 +381,14 @@ Public Class frmNuevaVenta
 
     Private Sub btnPresupuesto_Click(sender As Object, e As EventArgs) Handles btnPresupuesto.Click
         If esp.Lineas.Count > 0 Then
-            Dim frm As frmOpcionesPresupuesto = New frmOpcionesPresupuesto(esp)
+            Dim frm As frmOpcionesPresupuestos_Material = New frmOpcionesPresupuestos_Material(esp)
             frm.ShowDialog()
+            If frm.DialogResult = DialogResult.OK Then
+                esp = New UESPERA(GesPrecios.getInstance().getCotizacion(2))
+                esp.CodMoneda = 1
+                esp.Codvendedor = _Vendedor.Codigo
+                PopularGrilla()
+            End If
         End If
     End Sub
 
@@ -456,5 +460,27 @@ Public Class frmNuevaVenta
 
         ' e.Handled = True
 
+    End Sub
+
+    Private Sub btnRecuperarEspera_Click(sender As Object, e As EventArgs) Handles btnRecuperarEspera.Click
+        Dim Perder As Boolean = True
+        If esp.Lineas.Count > 0 Then
+            If MsgBox("Desea perder las lineas escritas hasta el momento", vbOKCancel, "Atencion!") = MsgBoxResult.Cancel Then
+                Perder = False
+            End If
+        End If
+
+        If Perder Then
+            Dim frmE As New frmEspera
+            frmE.ShowDialog()
+            If frmE.DialogResult = DialogResult.OK Then
+                esp = New UESPERA(GesPrecios.getInstance().getCotizacion(2))
+                esp.Adenda = frmE.objEspera.Adenda
+                esp.AgregarLineas(frmE.objEspera.Lineas)
+                esp.CodMoneda = 1
+                esp.Codvendedor = _Vendedor.Codigo
+                PopularGrilla()
+            End If
+        End If
     End Sub
 End Class

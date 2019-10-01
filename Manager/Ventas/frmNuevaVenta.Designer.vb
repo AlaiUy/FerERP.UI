@@ -31,7 +31,7 @@ Partial Class frmNuevaVenta
         Me.dgItemsView = New System.Windows.Forms.DataGridView()
         Me.Panel7 = New System.Windows.Forms.Panel()
         Me.btnPresupuesto = New System.Windows.Forms.Button()
-        Me.btnGuardarEspera = New System.Windows.Forms.Button()
+        Me.btnRecuperarEspera = New System.Windows.Forms.Button()
         Me.btnNuevaVenta = New System.Windows.Forms.Button()
         Me.Panel5 = New System.Windows.Forms.Panel()
         Me.btnBorrarLinea = New System.Windows.Forms.Button()
@@ -102,7 +102,7 @@ Partial Class frmNuevaVenta
         Me.dgItemsView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCellsExceptHeader
         Me.dgItemsView.BackgroundColor = System.Drawing.Color.White
         Me.dgItemsView.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.dgItemsView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None
+        Me.dgItemsView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.RaisedHorizontal
         Me.dgItemsView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
         DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
         DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.GradientActiveCaption
@@ -142,7 +142,7 @@ Partial Class frmNuevaVenta
         Me.Panel7.BackColor = System.Drawing.SystemColors.GradientActiveCaption
         Me.Panel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Panel7.Controls.Add(Me.btnPresupuesto)
-        Me.Panel7.Controls.Add(Me.btnGuardarEspera)
+        Me.Panel7.Controls.Add(Me.btnRecuperarEspera)
         Me.Panel7.Controls.Add(Me.btnNuevaVenta)
         Me.Panel7.Dock = System.Windows.Forms.DockStyle.Right
         Me.Panel7.Location = New System.Drawing.Point(886, 0)
@@ -166,21 +166,21 @@ Partial Class frmNuevaVenta
         Me.btnPresupuesto.TextAlign = System.Drawing.ContentAlignment.BottomCenter
         Me.btnPresupuesto.UseVisualStyleBackColor = False
         '
-        'btnGuardarEspera
+        'btnRecuperarEspera
         '
-        Me.btnGuardarEspera.BackColor = System.Drawing.Color.Transparent
-        Me.btnGuardarEspera.FlatAppearance.BorderColor = System.Drawing.Color.Gray
-        Me.btnGuardarEspera.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnGuardarEspera.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnGuardarEspera.Image = Global.Manager.My.Resources.JJRecursos.pending
-        Me.btnGuardarEspera.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.btnGuardarEspera.Location = New System.Drawing.Point(5, 75)
-        Me.btnGuardarEspera.Name = "btnGuardarEspera"
-        Me.btnGuardarEspera.Size = New System.Drawing.Size(109, 73)
-        Me.btnGuardarEspera.TabIndex = 7
-        Me.btnGuardarEspera.Text = "Recuperar Espera"
-        Me.btnGuardarEspera.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.btnGuardarEspera.UseVisualStyleBackColor = False
+        Me.btnRecuperarEspera.BackColor = System.Drawing.Color.Transparent
+        Me.btnRecuperarEspera.FlatAppearance.BorderColor = System.Drawing.Color.Gray
+        Me.btnRecuperarEspera.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnRecuperarEspera.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnRecuperarEspera.Image = Global.Manager.My.Resources.JJRecursos.pending
+        Me.btnRecuperarEspera.ImageAlign = System.Drawing.ContentAlignment.TopCenter
+        Me.btnRecuperarEspera.Location = New System.Drawing.Point(5, 75)
+        Me.btnRecuperarEspera.Name = "btnRecuperarEspera"
+        Me.btnRecuperarEspera.Size = New System.Drawing.Size(109, 73)
+        Me.btnRecuperarEspera.TabIndex = 7
+        Me.btnRecuperarEspera.Text = "Recuperar Espera"
+        Me.btnRecuperarEspera.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.btnRecuperarEspera.UseVisualStyleBackColor = False
         '
         'btnNuevaVenta
         '
@@ -423,7 +423,7 @@ Partial Class frmNuevaVenta
     Friend WithEvents btnNuevaVenta As Button
     Friend WithEvents lblVendedor As Label
     Friend WithEvents dgItemsView As DataGridView
-    Friend WithEvents btnGuardarEspera As Button
+    Friend WithEvents btnRecuperarEspera As Button
     Friend WithEvents btnPresupuesto As Button
     Friend WithEvents btnCantidad As Button
     Friend WithEvents btnBorrarLinea As Button

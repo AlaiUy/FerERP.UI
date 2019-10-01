@@ -24,13 +24,13 @@ Partial Class frmOpcionesPresupuesto
     Private Sub InitializeComponent()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.txtPago = New System.Windows.Forms.TextBox()
-        Me.txtDto = New System.Windows.Forms.TextBox()
-        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.txtDias = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.txtDto = New System.Windows.Forms.TextBox()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.txtPago = New System.Windows.Forms.TextBox()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
@@ -41,7 +41,7 @@ Partial Class frmOpcionesPresupuesto
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(257, 200)
+        Me.Panel1.Size = New System.Drawing.Size(265, 202)
         Me.Panel1.TabIndex = 0
         '
         'GroupBox1
@@ -60,41 +60,14 @@ Partial Class frmOpcionesPresupuesto
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "OPCIONES"
         '
-        'Label1
+        'Button1
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(34, 31)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(38, 15)
-        Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Pago:"
-        '
-        'txtPago
-        '
-        Me.txtPago.Location = New System.Drawing.Point(78, 29)
-        Me.txtPago.Name = "txtPago"
-        Me.txtPago.Size = New System.Drawing.Size(144, 20)
-        Me.txtPago.TabIndex = 1
-        Me.txtPago.Text = "EFECTIVO"
-        '
-        'txtDto
-        '
-        Me.txtDto.Location = New System.Drawing.Point(78, 66)
-        Me.txtDto.Name = "txtDto"
-        Me.txtDto.Size = New System.Drawing.Size(144, 20)
-        Me.txtDto.TabIndex = 3
-        Me.txtDto.Text = "0"
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(10, 68)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(62, 15)
-        Me.Label2.TabIndex = 2
-        Me.Label2.Text = "Dto Extra:"
+        Me.Button1.Location = New System.Drawing.Point(13, 148)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(209, 23)
+        Me.Button1.TabIndex = 6
+        Me.Button1.Text = "PRESUPUESTAR"
+        Me.Button1.UseVisualStyleBackColor = True
         '
         'txtDias
         '
@@ -114,20 +87,47 @@ Partial Class frmOpcionesPresupuesto
         Me.Label3.TabIndex = 4
         Me.Label3.Text = "Dias de validez:"
         '
-        'Button1
+        'txtDto
         '
-        Me.Button1.Location = New System.Drawing.Point(13, 148)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(209, 23)
-        Me.Button1.TabIndex = 6
-        Me.Button1.Text = "PRESUPUESTAR"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.txtDto.Location = New System.Drawing.Point(78, 66)
+        Me.txtDto.Name = "txtDto"
+        Me.txtDto.Size = New System.Drawing.Size(144, 20)
+        Me.txtDto.TabIndex = 3
+        Me.txtDto.Text = "0"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(10, 68)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(62, 15)
+        Me.Label2.TabIndex = 2
+        Me.Label2.Text = "Dto Extra:"
+        '
+        'txtPago
+        '
+        Me.txtPago.Location = New System.Drawing.Point(78, 29)
+        Me.txtPago.Name = "txtPago"
+        Me.txtPago.Size = New System.Drawing.Size(144, 20)
+        Me.txtPago.TabIndex = 1
+        Me.txtPago.Text = "EFECTIVO"
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(34, 31)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(38, 15)
+        Me.Label1.TabIndex = 0
+        Me.Label1.Text = "Pago:"
         '
         'frmOpcionesPresupuesto
         '
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(257, 200)
+        Me.ClientSize = New System.Drawing.Size(265, 202)
         Me.Controls.Add(Me.Panel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
         Me.KeyPreview = True

@@ -37,3 +37,9 @@ C:\Users\alai\Source\Repos\FerERP.UI\Manager\obj\Debug\Manager.vbproj.GenerateRe
 C:\Users\alai\Source\Repos\FerERP.UI\Manager\obj\Debug\JO Manager.exe
 C:\Users\alai\Source\Repos\FerERP.UI\Manager\obj\Debug\JO Manager.xml
 C:\Users\alai\Source\Repos\FerERP.UI\Manager\obj\Debug\JO Manager.pdb
+C:\Users\alai\Source\Repos\FerERP.UI\Manager\obj\Debug\Manager.frmArticulos_Material.resources
+C:\Users\alai\Source\Repos\FerERP.UI\Manager\obj\Debug\Manager.frmMain_Material.resources
+C:\Users\alai\Source\Repos\FerERP.UI\Manager\obj\Debug\Manager.frmAddArticulo_Material.resources
+C:\Users\alai\Source\Repos\FerERP.UI\Manager\obj\Debug\Manager.frmUpArticulo_Material.resources
+C:\Users\alai\Source\Repos\FerERP.UI\Manager\obj\Debug\Manager.frmSuccess.resources
+C:\Users\alai\Source\Repos\FerERP.UI\Manager\obj\Debug\Manager.frmOpcionesPresupuestos_Material.resources

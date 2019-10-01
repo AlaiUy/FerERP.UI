@@ -5,7 +5,14 @@
             Application.SetCompatibleTextRenderingDefault(False)
             Application.EnableVisualStyles()
 
-            Dim main As Form = New frmMain()
+            Dim main As Form
+
+            If LeerIni.LeerDato("INTERFAZ", "MATERIAL", 0, ".\config.ini") = 0 Then
+                main = New frmMain()
+            Else
+                main = New frmMain_Material()
+            End If
+
 
             main.ShowDialog()
 
