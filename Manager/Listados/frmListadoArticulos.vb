@@ -64,10 +64,10 @@ Public Class frmListadoArticulos
     Private Sub btnExcel_Click(sender As Object, e As EventArgs) Handles btnExcel.Click
         Try
             If txtPath.Text.Trim().Length > 0 Then
-                GestionReporte.ExportExcel(Grid.DataSource, txtPath.Text.Trim())
+                GestionReporte.ExportExceVentasl(Grid.DataSource, txtPath.Text.Trim())
                 Return
             End If
-            GestionReporte.ExportExcel(Grid.DataSource, Nothing)
+            GestionReporte.ExportExceVentasl(Grid.DataSource, Nothing)
 
         Catch ex As Exception
             MsgBox(ex.Message)
@@ -85,5 +85,11 @@ Public Class frmListadoArticulos
 
     Private Sub btnMostrar_Click(sender As Object, e As EventArgs)
 
+    End Sub
+
+    Private Sub frmListadoArticulos_KeyDown(sender As Object, e As KeyEventArgs) Handles MyBase.KeyDown
+        If e.KeyCode = Keys.Escape Then
+            Close()
+        End If
     End Sub
 End Class

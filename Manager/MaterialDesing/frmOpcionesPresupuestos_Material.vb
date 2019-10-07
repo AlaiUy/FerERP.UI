@@ -70,6 +70,7 @@ Public Class frmOpcionesPresupuestos_Material
                 EsperaC.DirEnvio = txtDireccion.Text
                 GesDocumentos.getInstance().AddEspera(EsperaC)
             frmSuccess.FormCorrecto("Presupuesto guardado exitosamente")
+
         Catch ex As Exception
             MsgBox(ex.Message)
         End Try

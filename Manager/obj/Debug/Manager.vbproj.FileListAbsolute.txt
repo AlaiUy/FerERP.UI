@@ -6,6 +6,8 @@ C:\Users\alai\Source\Repos\FerERP.UI\Manager\obj\Debug\Manager.vbprojResolveAsse
 C:\Users\alai\Source\Repos\FerERP.UI\Manager\obj\Debug\Manager.frmDepartamentoNuevo.resources
 C:\Users\alai\Source\Repos\FerERP.UI\Manager\obj\Debug\Manager.frmNuevaSeccion.resources
 C:\Users\alai\Source\Repos\FerERP.UI\Manager\obj\Debug\Manager.frmArticulos.resources
+C:\Users\alai\Source\Repos\FerERP.UI\Manager\obj\Debug\Manager.frmAddArticulo_Material.resources
+C:\Users\alai\Source\Repos\FerERP.UI\Manager\obj\Debug\Manager.frmArticulos_Material.resources
 C:\Users\alai\Source\Repos\FerERP.UI\Manager\obj\Debug\Manager.frmNuevoArticulo.resources
 C:\Users\alai\Source\Repos\FerERP.UI\Manager\obj\Debug\Manager.frmPrintPrices.resources
 C:\Users\alai\Source\Repos\FerERP.UI\Manager\obj\Debug\Manager.frmUpdateArticulos.resources
@@ -20,6 +22,13 @@ C:\Users\alai\Source\Repos\FerERP.UI\Manager\obj\Debug\Manager.frmMain.resources
 C:\Users\alai\Source\Repos\FerERP.UI\Manager\obj\Debug\Manager.JJRecursos.resources
 C:\Users\alai\Source\Repos\FerERP.UI\Manager\obj\Debug\Manager.frmListadoArticulos.resources
 C:\Users\alai\Source\Repos\FerERP.UI\Manager\obj\Debug\Manager.frmListadoVentas.resources
+C:\Users\alai\Source\Repos\FerERP.UI\Manager\obj\Debug\Manager.frmMain_Material.resources
+C:\Users\alai\Source\Repos\FerERP.UI\Manager\obj\Debug\Manager.frmNuevaVenta_Material.resources
+C:\Users\alai\Source\Repos\FerERP.UI\Manager\obj\Debug\Manager.frmOpcionesPresupuestos_Material.resources
+C:\Users\alai\Source\Repos\FerERP.UI\Manager\obj\Debug\Manager.frmRecEspera_Material.resources
+C:\Users\alai\Source\Repos\FerERP.UI\Manager\obj\Debug\Manager.frmSuccess.resources
+C:\Users\alai\Source\Repos\FerERP.UI\Manager\obj\Debug\Manager.frmUpArticulo_Material.resources
+C:\Users\alai\Source\Repos\FerERP.UI\Manager\obj\Debug\Manager.frmVendedores_Material.resources
 C:\Users\alai\Source\Repos\FerERP.UI\Manager\obj\Debug\Manager.Resources.resources
 C:\Users\alai\Source\Repos\FerERP.UI\Manager\obj\Debug\Manager.frmDatosFactura.resources
 C:\Users\alai\Source\Repos\FerERP.UI\Manager\obj\Debug\Manager.frmFiltrosClientesContado.resources
@@ -37,9 +46,3 @@ C:\Users\alai\Source\Repos\FerERP.UI\Manager\obj\Debug\Manager.vbproj.GenerateRe
 C:\Users\alai\Source\Repos\FerERP.UI\Manager\obj\Debug\JO Manager.exe
 C:\Users\alai\Source\Repos\FerERP.UI\Manager\obj\Debug\JO Manager.xml
 C:\Users\alai\Source\Repos\FerERP.UI\Manager\obj\Debug\JO Manager.pdb
-C:\Users\alai\Source\Repos\FerERP.UI\Manager\obj\Debug\Manager.frmArticulos_Material.resources
-C:\Users\alai\Source\Repos\FerERP.UI\Manager\obj\Debug\Manager.frmMain_Material.resources
-C:\Users\alai\Source\Repos\FerERP.UI\Manager\obj\Debug\Manager.frmAddArticulo_Material.resources
-C:\Users\alai\Source\Repos\FerERP.UI\Manager\obj\Debug\Manager.frmUpArticulo_Material.resources
-C:\Users\alai\Source\Repos\FerERP.UI\Manager\obj\Debug\Manager.frmSuccess.resources
-C:\Users\alai\Source\Repos\FerERP.UI\Manager\obj\Debug\Manager.frmOpcionesPresupuestos_Material.resources

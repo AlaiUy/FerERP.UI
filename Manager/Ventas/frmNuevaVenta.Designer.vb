@@ -23,13 +23,14 @@ Partial Class frmNuevaVenta
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Panel6 = New System.Windows.Forms.Panel()
         Me.Panel9 = New System.Windows.Forms.Panel()
         Me.dgItemsView = New System.Windows.Forms.DataGridView()
         Me.Panel7 = New System.Windows.Forms.Panel()
+        Me.btnRecuperarPresupuesto = New System.Windows.Forms.Button()
         Me.btnPresupuesto = New System.Windows.Forms.Button()
         Me.btnRecuperarEspera = New System.Windows.Forms.Button()
         Me.btnNuevaVenta = New System.Windows.Forms.Button()
@@ -104,24 +105,24 @@ Partial Class frmNuevaVenta
         Me.dgItemsView.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.dgItemsView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.RaisedHorizontal
         Me.dgItemsView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
-        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.GradientActiveCaption
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgItemsView.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.GradientActiveCaption
+        DataGridViewCellStyle5.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgItemsView.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle5
         Me.dgItemsView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle2.Padding = New System.Windows.Forms.Padding(5)
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Transparent
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dgItemsView.DefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle6.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle6.Padding = New System.Windows.Forms.Padding(5)
+        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.Transparent
+        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgItemsView.DefaultCellStyle = DataGridViewCellStyle6
         Me.dgItemsView.Dock = System.Windows.Forms.DockStyle.Fill
         Me.dgItemsView.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter
         Me.dgItemsView.EnableHeadersVisualStyles = False
@@ -141,6 +142,7 @@ Partial Class frmNuevaVenta
         '
         Me.Panel7.BackColor = System.Drawing.SystemColors.GradientActiveCaption
         Me.Panel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel7.Controls.Add(Me.btnRecuperarPresupuesto)
         Me.Panel7.Controls.Add(Me.btnPresupuesto)
         Me.Panel7.Controls.Add(Me.btnRecuperarEspera)
         Me.Panel7.Controls.Add(Me.btnNuevaVenta)
@@ -149,6 +151,22 @@ Partial Class frmNuevaVenta
         Me.Panel7.Name = "Panel7"
         Me.Panel7.Size = New System.Drawing.Size(122, 598)
         Me.Panel7.TabIndex = 9
+        '
+        'btnRecuperarPresupuesto
+        '
+        Me.btnRecuperarPresupuesto.BackColor = System.Drawing.Color.Transparent
+        Me.btnRecuperarPresupuesto.FlatAppearance.BorderColor = System.Drawing.Color.Gray
+        Me.btnRecuperarPresupuesto.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnRecuperarPresupuesto.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnRecuperarPresupuesto.Image = Global.Manager.My.Resources.JJRecursos.icons8_cita_recurrente_32
+        Me.btnRecuperarPresupuesto.ImageAlign = System.Drawing.ContentAlignment.TopCenter
+        Me.btnRecuperarPresupuesto.Location = New System.Drawing.Point(5, 223)
+        Me.btnRecuperarPresupuesto.Name = "btnRecuperarPresupuesto"
+        Me.btnRecuperarPresupuesto.Size = New System.Drawing.Size(109, 77)
+        Me.btnRecuperarPresupuesto.TabIndex = 9
+        Me.btnRecuperarPresupuesto.Text = "Recuperar Presupuesto"
+        Me.btnRecuperarPresupuesto.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.btnRecuperarPresupuesto.UseVisualStyleBackColor = False
         '
         'btnPresupuesto
         '
@@ -429,4 +447,5 @@ Partial Class frmNuevaVenta
     Friend WithEvents btnBorrarLinea As Button
     Friend WithEvents txtImporteGral As TextBox
     Friend WithEvents Label2 As Label
+    Friend WithEvents btnRecuperarPresupuesto As Button
 End Class

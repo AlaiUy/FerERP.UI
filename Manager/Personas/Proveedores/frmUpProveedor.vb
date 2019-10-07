@@ -28,6 +28,7 @@ Public Class frmUpProveedor
 
     Private Sub btnSave_Click(sender As Object, e As EventArgs) Handles btnSave.Click
 
+        objProveedor.Comentarios = txtComentarios.Text
         objProveedor.Celular = txtCelular.Text
         objProveedor.Direccion = txtCalle.Text
         objProveedor.Dirnumero = txtNumero.Text
@@ -65,6 +66,7 @@ Public Class frmUpProveedor
         txtRz.Text = objProveedor.Rz
         txtTelefono.Text = objProveedor.Telefono
         cbCategoria.SelectedIndex = BuscarIndex(cbCategoria)
+        txtComentarios.Text = objProveedor.Comentarios
     End Sub
 
     Private Sub btnSearch_Click(sender As Object, e As EventArgs) Handles btnSearch.Click

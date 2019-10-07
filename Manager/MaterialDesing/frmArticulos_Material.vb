@@ -41,16 +41,16 @@ Public Class frmArticulos_Material
 
     Private Sub PopularGrilla()
         Dim SumaAnchos As Decimal = 1
-        dgArticulos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.None
-        dgArticulos.Columns("CODIGO").Visible = False
-        dgArticulos.Columns("MONEDA").Visible = LeerIni.LeerDato("VISTA_ARTICULOS", "MONEDA", 0, ".\config.ini")
-        dgArticulos.Columns("ACTIVO").Visible = LeerIni.LeerDato("VISTA_ARTICULOS", "ACTIVO", 0, ".\config.ini")
-        dgArticulos.Columns("MARCA").Visible = LeerIni.LeerDato("VISTA_ARTICULOS", "MARCA", 0, ".\config.ini")
-        dgArticulos.Columns("MODELO").Visible = LeerIni.LeerDato("VISTA_ARTICULOS", "MODELO", 0, ".\config.ini")
-        dgArticulos.Columns("STOCK").Visible = LeerIni.LeerDato("VISTA_ARTICULOS", "STOCK", 0, ".\config.ini")
-        dgArticulos.Columns("DESCRIPCION").Visible = LeerIni.LeerDato("VISTA_ARTICULOS", "DESCRIPCION", 0, ".\config.ini")
+        dgItemsView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.None
+        dgItemsView.Columns("CODIGO").Visible = False
+        dgItemsView.Columns("MONEDA").Visible = LeerIni.LeerDato("VISTA_ARTICULOS", "MONEDA", 0, ".\config.ini")
+        dgItemsView.Columns("ACTIVO").Visible = LeerIni.LeerDato("VISTA_ARTICULOS", "ACTIVO", 0, ".\config.ini")
+        dgItemsView.Columns("MARCA").Visible = LeerIni.LeerDato("VISTA_ARTICULOS", "MARCA", 0, ".\config.ini")
+        dgItemsView.Columns("MODELO").Visible = LeerIni.LeerDato("VISTA_ARTICULOS", "MODELO", 0, ".\config.ini")
+        dgItemsView.Columns("STOCK").Visible = LeerIni.LeerDato("VISTA_ARTICULOS", "STOCK", 0, ".\config.ini")
+        dgItemsView.Columns("DESCRIPCION").Visible = LeerIni.LeerDato("VISTA_ARTICULOS", "DESCRIPCION", 0, ".\config.ini")
 
-        For Each C As DataGridViewColumn In dgArticulos.Columns
+        For Each C As DataGridViewColumn In dgItemsView.Columns
             If C.Visible Then
                 Select Case C.Name
                     Case "REFERENCIA"
@@ -69,7 +69,7 @@ Public Class frmArticulos_Material
 
             End If
         Next
-        With dgArticulos
+        With dgItemsView
 
             For Each ObjCol As DataGridViewColumn In .Columns
                 ObjCol.SortMode = DataGridViewColumnSortMode.Programmatic
@@ -79,9 +79,9 @@ Public Class frmArticulos_Material
         End With
 
 
-        Dim Resto As Decimal = dgArticulos.Width - (SumaAnchos + 20)
+        Dim Resto As Decimal = dgItemsView.Width - (SumaAnchos + 20)
 
-        dgArticulos.Columns("NOMBRE").Width = Resto
+        dgItemsView.Columns("NOMBRE").Width = Resto
     End Sub
 
     Private Sub frmArticulos_Material_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -89,15 +89,15 @@ Public Class frmArticulos_Material
             _TablaArticulos = GesArticulos.getInstance().getVistaArticulos()
             _ListaFiltrada = _TablaArticulos.Copy()
 
-            dgArticulos.DataSource = _ListaFiltrada
-            Funciones.DoubleBuffered(dgArticulos, True)
+            dgItemsView.DataSource = _ListaFiltrada
+            Funciones.DoubleBuffered(dgItemsView, True)
             PopularGrilla()
         Catch ex As Exception
             MsgBox(ex.Message)
         End Try
     End Sub
 
-    Private Sub dgArticulos_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgArticulos.CellDoubleClick
+    Private Sub dgArticulos_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgItemsView.CellDoubleClick
         SeleccionarArticulo(e.RowIndex)
     End Sub
 
@@ -106,8 +106,8 @@ Public Class frmArticulos_Material
             Return
         End If
         Dim xCod As String
-        Dim xIndexColumn As Integer = dgArticulos.Columns("CODIGO").Index
-        xCod = dgArticulos.Item(xIndexColumn, xIndex).Value
+        Dim xIndexColumn As Integer = dgItemsView.Columns("CODIGO").Index
+        xCod = dgItemsView.Item(xIndexColumn, xIndex).Value
         Try
 
             _Articulo = GesArticulos.getInstance().getArticuloById(xCod)
@@ -153,12 +153,12 @@ Public Class frmArticulos_Material
             Case Keys.Escape
                 Me.Close()
             Case Keys.F2
-                dgArticulos.DataSource = _TablaArticulos
+                dgItemsView.DataSource = _TablaArticulos
         End Select
     End Sub
 
     Private Sub PictureBox3_Click(sender As Object, e As EventArgs) Handles PictureBox3.Click
-        Me.Close()
+        notifyObservers("CERRAR")
     End Sub
 
     Private Sub txtReferencia_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtReferencia.KeyPress
@@ -171,7 +171,7 @@ Public Class frmArticulos_Material
                 txtReferencia.Text = String.Empty
             End If
         ElseIf (txtReferencia.Text.Length > 2) Then
-            Me.dgArticulos.CurrentCell = dgArticulos.Item(1, posicionarvalor(txtReferencia.Text, txtReferencia.Text.Length))
+            Me.dgItemsView.CurrentCell = dgItemsView.Item(1, posicionarvalor(txtReferencia.Text, txtReferencia.Text.Length))
 
         End If
     End Sub
@@ -180,7 +180,7 @@ Public Class frmArticulos_Material
 
         Dim indice As Integer = 0
         Try
-            For Each dr As DataGridViewRow In dgArticulos.Rows
+            For Each dr As DataGridViewRow In dgItemsView.Rows
                 Dim Texto As String = dr.Cells("nombre").Value.ToString()
                 If Texto.Length >= xLetras Then
                     If Texto.Substring(0, xLetras) = Dato Then
@@ -197,10 +197,10 @@ Public Class frmArticulos_Material
         Return 1
     End Function
 
-    Private Sub dgArticulos_ColumnHeaderMouseClick(sender As Object, e As DataGridViewCellMouseEventArgs) Handles dgArticulos.ColumnHeaderMouseClick
+    Private Sub dgArticulos_ColumnHeaderMouseClick(sender As Object, e As DataGridViewCellMouseEventArgs) Handles dgItemsView.ColumnHeaderMouseClick
         mFiltro = ""
         mActiva = (sender.Columns(e.ColumnIndex).Name)
-        For Each C As DataGridViewColumn In dgArticulos.Columns
+        For Each C As DataGridViewColumn In dgItemsView.Columns
             If C.Visible Then
                 Select Case C.Name
                     Case "CONTADO"
@@ -226,7 +226,7 @@ Public Class frmArticulos_Material
                 _ListaFiltrada = (From Cliente In _ListaFiltrada.AsEnumerable()
                                   Where Cliente(mActiva).Contains(txtReferencia.Text.ToUpper())
                                   Select Cliente).CopyToDataTable()
-                dgArticulos.DataSource = _ListaFiltrada
+                dgItemsView.DataSource = _ListaFiltrada
                 txtReferencia.Clear()
             Catch ex As Exception
 
@@ -235,9 +235,9 @@ Public Class frmArticulos_Material
         End If
     End Sub
 
-    Private Sub dgArticulos_KeyDown(sender As Object, e As KeyEventArgs) Handles dgArticulos.KeyDown
+    Private Sub dgArticulos_KeyDown(sender As Object, e As KeyEventArgs) Handles dgItemsView.KeyDown
         If e.KeyCode = Keys.Enter Then
-            SeleccionarArticulo(dgArticulos.CurrentRow.Index)
+            SeleccionarArticulo(dgItemsView.CurrentRow.Index)
             'Dim xCod As String
             'Dim xIndexColumn As Integer = dgArticulos.Columns("CODIGO").Index
             'xCod = dgArticulos.Item(xIndexColumn, dgArticulos.CurrentRow.Index).Value
@@ -260,11 +260,11 @@ Public Class frmArticulos_Material
 
     Private Sub txtReferencia_KeyDown(sender As Object, e As KeyEventArgs) Handles txtReferencia.KeyDown
         If e.KeyCode = Keys.Down Or e.KeyCode = Keys.Up Then
-            dgArticulos.Focus()
+            dgItemsView.Focus()
         End If
 
         If e.KeyCode = Keys.Back And txtReferencia.Text.Length <= 2 Then
-            Me.dgArticulos.CurrentCell = dgArticulos.Item(1, 1)
+            Me.dgItemsView.CurrentCell = dgItemsView.Item(1, 1)
 
         End If
     End Sub
@@ -272,4 +272,10 @@ Public Class frmArticulos_Material
     Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs) Handles Panel1.Paint
 
     End Sub
+
+    Private Sub TimerTime_Tick(sender As Object, e As EventArgs) Handles TimerTime.Tick
+
+    End Sub
+
+
 End Class

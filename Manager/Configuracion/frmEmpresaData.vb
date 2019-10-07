@@ -374,4 +374,10 @@ Public Class frmEmpresaData
     Private Sub txtDescuentoContado_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtDescuentoContado.KeyPress
         e.Handled = ValidarImportes(e.KeyChar, TryCast(sender, TextBox).Text, TryCast(sender, TextBox).SelectionLength, TryCast(sender, TextBox).SelectionStart, 2)
     End Sub
+
+    Private Sub frmEmpresaData_KeyDown(sender As Object, e As KeyEventArgs) Handles MyBase.KeyDown
+        If e.KeyCode = Keys.Escape Then
+            Close()
+        End If
+    End Sub
 End Class

@@ -178,9 +178,15 @@ Public Class frmMain
     End Sub
 
     Private Sub NuevaVentaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles NuevaVentaToolStripMenuItem.Click
-        Dim frm As Form = New frmNuevaVenta()
+        'Dim frm As Form = New frmNuevaVenta()
+        'frm.Name = "Nueva Venta"
+        'TryCast(frm, frmNuevaVenta).Register(Me)
+        'CargarFormulario(frm)
+
+
+        Dim frm As Form = New frmNuevaVenta_Material()
         frm.Name = "Nueva Venta"
-        TryCast(frm, frmNuevaVenta).Register(Me)
+        TryCast(frm, frmNuevaVenta_Material).Register(Me)
         CargarFormulario(frm)
     End Sub
 
@@ -222,5 +228,9 @@ Public Class frmMain
     Private Sub VentasToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles VentasToolStripMenuItem.Click
         Dim Form As Form = New frmListadoVentas()
         Form.ShowDialog()
+    End Sub
+
+    Private Sub FicherosToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles FicherosToolStripMenuItem.Click
+
     End Sub
 End Class

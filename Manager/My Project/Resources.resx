@@ -118,34 +118,37 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="icons8-búsqueda-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Material_Img\Iconos\icons8-búsqueda-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icons8-comprobado-96" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Material_Img\Iconos\icons8-comprobado-96.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="printer" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\printer.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="JOLOGO" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\JOLOGO1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icons8-guardar-cerrar-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Material_Img\Iconos\icons8-guardar-cerrar-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Caja de busqueda" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Material_Img\Formularios\Caja de busqueda.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icons8-cerrar-ventana-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Material_Img\Iconos\icons8-cerrar-ventana-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icons8-reemplazar-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Material_Img\Iconos\icons8-reemplazar-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icons8-imprimir-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <data name="Caja_de_busqueda" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Material_Img\Formularios\Caja de busqueda.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icons8_búsqueda_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Material_Img\Iconos\icons8-búsqueda-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icons8_cerrar_ventana_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Material_Img\Iconos\icons8-cerrar-ventana-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icons8_cita_recurrente_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Material_Img\Iconos\icons8-cita-recurrente-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icons8_comprobado_96" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Material_Img\Iconos\icons8-comprobado-96.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icons8_de_acuerdo_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Material_Img\Iconos\icons8-de-acuerdo-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icons8_guardar_cerrar_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Material_Img\Iconos\icons8-guardar-cerrar-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icons8_imprimir_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Material_Img\Iconos\icons8-imprimir-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icons8_reemplazar_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Material_Img\Iconos\icons8-reemplazar-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

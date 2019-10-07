@@ -49,6 +49,8 @@ Partial Class frmNuevoProveedor
         Me.lblNombre = New System.Windows.Forms.Label()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.txtComentarios = New System.Windows.Forms.TextBox()
         Me.Panel1.SuspendLayout()
         Me.Panel4.SuspendLayout()
         Me.Panel5.SuspendLayout()
@@ -68,7 +70,7 @@ Partial Class frmNuevoProveedor
         Me.Panel1.Controls.Add(Me.Panel2)
         Me.Panel1.Location = New System.Drawing.Point(2, 2)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(675, 390)
+        Me.Panel1.Size = New System.Drawing.Size(914, 494)
         Me.Panel1.TabIndex = 0
         '
         'Panel4
@@ -76,16 +78,16 @@ Partial Class frmNuevoProveedor
         Me.Panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Panel4.Controls.Add(Me.Panel5)
         Me.Panel4.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.Panel4.Location = New System.Drawing.Point(0, 349)
+        Me.Panel4.Location = New System.Drawing.Point(0, 453)
         Me.Panel4.Name = "Panel4"
-        Me.Panel4.Size = New System.Drawing.Size(675, 41)
+        Me.Panel4.Size = New System.Drawing.Size(914, 41)
         Me.Panel4.TabIndex = 2
         '
         'Panel5
         '
         Me.Panel5.Controls.Add(Me.btnSave)
         Me.Panel5.Dock = System.Windows.Forms.DockStyle.Right
-        Me.Panel5.Location = New System.Drawing.Point(579, 0)
+        Me.Panel5.Location = New System.Drawing.Point(818, 0)
         Me.Panel5.Name = "Panel5"
         Me.Panel5.Size = New System.Drawing.Size(94, 39)
         Me.Panel5.TabIndex = 0
@@ -102,6 +104,8 @@ Partial Class frmNuevoProveedor
         'Panel3
         '
         Me.Panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel3.Controls.Add(Me.Label3)
+        Me.Panel3.Controls.Add(Me.txtComentarios)
         Me.Panel3.Controls.Add(Me.btnAddCategory)
         Me.Panel3.Controls.Add(Me.cbCategoria)
         Me.Panel3.Controls.Add(Me.lblCategoria)
@@ -122,7 +126,7 @@ Partial Class frmNuevoProveedor
         Me.Panel3.Font = New System.Drawing.Font("Times New Roman", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Panel3.Location = New System.Drawing.Point(0, 32)
         Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(675, 358)
+        Me.Panel3.Size = New System.Drawing.Size(914, 462)
         Me.Panel3.TabIndex = 1
         '
         'btnAddCategory
@@ -318,7 +322,7 @@ Partial Class frmNuevoProveedor
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel2.Location = New System.Drawing.Point(0, 0)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(675, 32)
+        Me.Panel2.Size = New System.Drawing.Size(914, 32)
         Me.Panel2.TabIndex = 0
         '
         'Label1
@@ -332,11 +336,29 @@ Partial Class frmNuevoProveedor
         Me.Label1.Text = "REGISTRO DE UN NUEVO PROVEEDOR"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(362, 137)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(70, 15)
+        Me.Label3.TabIndex = 57
+        Me.Label3.Text = "Otros Datos:"
+        '
+        'txtComentarios
+        '
+        Me.txtComentarios.Location = New System.Drawing.Point(438, 134)
+        Me.txtComentarios.MaxLength = 255
+        Me.txtComentarios.Multiline = True
+        Me.txtComentarios.Name = "txtComentarios"
+        Me.txtComentarios.Size = New System.Drawing.Size(185, 179)
+        Me.txtComentarios.TabIndex = 56
+        '
         'frmNuevoProveedor
         '
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(679, 395)
+        Me.ClientSize = New System.Drawing.Size(918, 499)
         Me.Controls.Add(Me.Panel1)
         Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
@@ -386,4 +408,6 @@ Partial Class frmNuevoProveedor
     Friend WithEvents btnAddCategory As Button
     Friend WithEvents Panel5 As Panel
     Friend WithEvents btnSave As Button
+    Friend WithEvents Label3 As Label
+    Friend WithEvents txtComentarios As TextBox
 End Class

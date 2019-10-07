@@ -122,6 +122,7 @@ Partial Class frmListadoArticulos
         Me.ClientSize = New System.Drawing.Size(1053, 526)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel1)
+        Me.KeyPreview = True
         Me.Name = "frmListadoArticulos"
         Me.Text = "frmListadoArticulos"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized

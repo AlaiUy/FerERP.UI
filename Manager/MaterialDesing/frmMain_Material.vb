@@ -108,11 +108,31 @@ Public Class frmMain_Material
         'Button1.BackColor = Color.FromArgb(12, 61, 92)
     End Sub
 
-    Private Sub PanelIzquierdo_Paint(sender As Object, e As PaintEventArgs) Handles PanelIzquierdo.Paint
 
+
+
+
+    Private Sub btnImprimirArticulos_Click(sender As Object, e As EventArgs) Handles btnImprimirArticulos.Click
+        AbrirFormEnPanel(Of frmPrintPrices)()
     End Sub
 
-    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
+    Private Sub btnUpArticulo_Click(sender As Object, e As EventArgs) Handles btnUpArticulo.Click
         AbrirFormEnPanel(Of frmUpArticulo_Material)()
+    End Sub
+
+    Private Sub btnVenta_Click(sender As Object, e As EventArgs) Handles btnVenta.Click
+        AbrirFormEnPanel(Of frmNuevaVenta_Material)()
+    End Sub
+
+    Private Sub btnInformes_Click(sender As Object, e As EventArgs) Handles btnInformes.Click
+        MostrarPanel(PanelInformes)
+    End Sub
+
+    Private Sub btnListadoArticulos_Click(sender As Object, e As EventArgs) Handles btnListadoArticulos.Click
+        AbrirFormEnPanel(Of frmListadoArticulos)()
+    End Sub
+
+    Private Sub btnListadoVentas_Click(sender As Object, e As EventArgs) Handles btnListadoVentas.Click
+        AbrirFormEnPanel(Of frmListadoVentas)()
     End Sub
 End Class

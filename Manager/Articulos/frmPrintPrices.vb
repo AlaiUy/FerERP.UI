@@ -8,24 +8,7 @@ Public Class frmPrintPrices
 
     End Sub
 
-    Private Sub btnAgregar_Click(sender As Object, e As EventArgs) Handles btnAgregar.Click
-        Dim objArticulo As Articulo = Nothing
 
-        Try
-            objArticulo = GesArticulos.getInstance().getArticuloByRef(txtArticulo.Text)
-        Catch ex As Exception
-            MsgBox(ex.Message)
-        End Try
-
-        If IsNothing(objArticulo) Then
-            txtArticulo.Text = ""
-            MsgBox("No existe el Articulo")
-            Return
-        End If
-        _Articulos.Add(objArticulo)
-
-        Me.GridArticulos.DataSource = MostrarTabla()
-    End Sub
 
     Public Function MostrarTabla() As DataTable
 
@@ -62,9 +45,40 @@ Public Class frmPrintPrices
 
     Private Sub txtArticulo_KeyDown(sender As Object, e As KeyEventArgs) Handles txtArticulo.KeyDown
         If e.KeyCode = Keys.Enter Then
-            btnAgregar.PerformClick()
+            Dim objArticulo As Articulo = Nothing
+
+            Try
+                objArticulo = GesArticulos.getInstance().getArticuloByRef(txtArticulo.Text)
+            Catch ex As Exception
+                MsgBox(ex.Message)
+            End Try
+
+            If IsNothing(objArticulo) Then
+                txtArticulo.Text = ""
+                MsgBox("No existe el Articulo")
+                Return
+            End If
+            _Articulos.Add(objArticulo)
+
+            Me.GridArticulos.DataSource = MostrarTabla()
         End If
     End Sub
 
+    Private Sub btnCerrar_Click(sender As Object, e As EventArgs) Handles btnCerrar.Click
+        Close()
+    End Sub
 
+    Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs) Handles Panel1.Paint
+
+    End Sub
+
+    Private Sub frmPrintPrices_KeyDown(sender As Object, e As KeyEventArgs) Handles Me.KeyDown
+        If e.KeyCode = Keys.Escape Then
+            Close()
+        End If
+    End Sub
+
+    Private Sub btnAgregar_Click_1(sender As Object, e As EventArgs)
+
+    End Sub
 End Class

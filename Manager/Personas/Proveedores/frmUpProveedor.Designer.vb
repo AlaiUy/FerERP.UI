@@ -50,6 +50,8 @@ Partial Class frmUpProveedor
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.btnSearch = New System.Windows.Forms.Button()
         Me.lbltitle = New System.Windows.Forms.Label()
+        Me.txtComentarios = New System.Windows.Forms.TextBox()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         Me.Panel4.SuspendLayout()
         Me.Panel5.SuspendLayout()
@@ -101,6 +103,8 @@ Partial Class frmUpProveedor
         'Panel3
         '
         Me.Panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel3.Controls.Add(Me.Label1)
+        Me.Panel3.Controls.Add(Me.txtComentarios)
         Me.Panel3.Controls.Add(Me.btnAddCategory)
         Me.Panel3.Controls.Add(Me.cbCategoria)
         Me.Panel3.Controls.Add(Me.lblCategoria)
@@ -345,6 +349,24 @@ Partial Class frmUpProveedor
         Me.lbltitle.Text = "ACTUALIZACION DE PROVEEDOR"
         Me.lbltitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
+        'txtComentarios
+        '
+        Me.txtComentarios.Location = New System.Drawing.Point(442, 147)
+        Me.txtComentarios.MaxLength = 255
+        Me.txtComentarios.Multiline = True
+        Me.txtComentarios.Name = "txtComentarios"
+        Me.txtComentarios.Size = New System.Drawing.Size(185, 179)
+        Me.txtComentarios.TabIndex = 54
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(366, 150)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(70, 15)
+        Me.Label1.TabIndex = 55
+        Me.Label1.Text = "Otros Datos:"
+        '
         'frmUpProveedor
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -394,4 +416,6 @@ Partial Class frmUpProveedor
     Friend WithEvents Panel2 As Panel
     Friend WithEvents lbltitle As Label
     Friend WithEvents btnSearch As Button
+    Friend WithEvents Label1 As Label
+    Friend WithEvents txtComentarios As TextBox
 End Class

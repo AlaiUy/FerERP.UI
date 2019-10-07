@@ -65,7 +65,7 @@ Namespace My.Resources
         '''</summary>
         Friend ReadOnly Property Caja_de_busqueda() As System.Drawing.Bitmap
             Get
-                Dim obj As Object = ResourceManager.GetObject("Caja de busqueda", resourceCulture)
+                Dim obj As Object = ResourceManager.GetObject("Caja_de_busqueda", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property
@@ -75,7 +75,7 @@ Namespace My.Resources
         '''</summary>
         Friend ReadOnly Property icons8_búsqueda_32() As System.Drawing.Bitmap
             Get
-                Dim obj As Object = ResourceManager.GetObject("icons8-búsqueda-32", resourceCulture)
+                Dim obj As Object = ResourceManager.GetObject("icons8_búsqueda_32", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property
@@ -85,7 +85,17 @@ Namespace My.Resources
         '''</summary>
         Friend ReadOnly Property icons8_cerrar_ventana_32() As System.Drawing.Bitmap
             Get
-                Dim obj As Object = ResourceManager.GetObject("icons8-cerrar-ventana-32", resourceCulture)
+                Dim obj As Object = ResourceManager.GetObject("icons8_cerrar_ventana_32", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property icons8_cita_recurrente_32() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("icons8_cita_recurrente_32", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property
@@ -95,7 +105,17 @@ Namespace My.Resources
         '''</summary>
         Friend ReadOnly Property icons8_comprobado_96() As System.Drawing.Bitmap
             Get
-                Dim obj As Object = ResourceManager.GetObject("icons8-comprobado-96", resourceCulture)
+                Dim obj As Object = ResourceManager.GetObject("icons8_comprobado_96", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property icons8_de_acuerdo_32() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("icons8_de_acuerdo_32", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property
@@ -105,7 +125,7 @@ Namespace My.Resources
         '''</summary>
         Friend ReadOnly Property icons8_guardar_cerrar_32() As System.Drawing.Bitmap
             Get
-                Dim obj As Object = ResourceManager.GetObject("icons8-guardar-cerrar-32", resourceCulture)
+                Dim obj As Object = ResourceManager.GetObject("icons8_guardar_cerrar_32", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property
@@ -115,7 +135,7 @@ Namespace My.Resources
         '''</summary>
         Friend ReadOnly Property icons8_imprimir_32() As System.Drawing.Bitmap
             Get
-                Dim obj As Object = ResourceManager.GetObject("icons8-imprimir-32", resourceCulture)
+                Dim obj As Object = ResourceManager.GetObject("icons8_imprimir_32", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property
@@ -125,17 +145,7 @@ Namespace My.Resources
         '''</summary>
         Friend ReadOnly Property icons8_reemplazar_32() As System.Drawing.Bitmap
             Get
-                Dim obj As Object = ResourceManager.GetObject("icons8-reemplazar-32", resourceCulture)
-                Return CType(obj,System.Drawing.Bitmap)
-            End Get
-        End Property
-        
-        '''<summary>
-        '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        '''</summary>
-        Friend ReadOnly Property JOLOGO() As System.Drawing.Bitmap
-            Get
-                Dim obj As Object = ResourceManager.GetObject("JOLOGO", resourceCulture)
+                Dim obj As Object = ResourceManager.GetObject("icons8_reemplazar_32", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property

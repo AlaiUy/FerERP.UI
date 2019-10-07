@@ -118,9 +118,7 @@ Public Class frmNuevaVenta
 
     Private Sub seleccionadVendedor()
         If IsNothing(_Vendedor) Then
-            Dim Form As frmVendedores = New frmVendedores()
-            Form.TopMost = True
-            Form.StartPosition = FormStartPosition.CenterScreen
+            Dim Form As frmVendedores_Material = New frmVendedores_Material()
             Form.Register(Me)
             Form.ShowDialog()
         End If
@@ -131,6 +129,7 @@ Public Class frmNuevaVenta
             seleccionadVendedor()
         End While
         esp.Codvendedor = _Vendedor.Codigo
+        MsgBox(esp.Codvendedor)
     End Sub
 
     Private Sub LnkSearchClient_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles LnkSearchItem.LinkClicked
@@ -437,28 +436,7 @@ Public Class frmNuevaVenta
 
     Private Sub dgItemsView_CellPainting(sender As Object, e As DataGridViewCellPaintingEventArgs) Handles dgItemsView.CellPainting
 
-        ''192, 192, 255
-        'Try
-        '    If e.RowIndex > -1 Then
-        '        e.Graphics.DrawLine(Pens.Black, e.CellBounds.Left, e.CellBounds.Top, e.CellBounds.Width, e.CellBounds.Top)
 
-        '    End If
-
-        '    ' e.Graphics.DrawLine(Pens.Black, e.CellBounds.Left, e.CellBounds.Bottom, e.CellBounds.Width, e.CellBounds.Bottom)
-
-
-
-        'Catch ex As Exception
-
-        'End Try
-
-
-
-
-
-        ' e.Graphics.DrawLine(Pens.Black,e.CellBounds.Left, e.CellBounds.Bottom - 1, e.CellBounds.Right, e.CellBounds.Bottom - 1)
-
-        ' e.Handled = True
 
     End Sub
 
@@ -471,7 +449,29 @@ Public Class frmNuevaVenta
         End If
 
         If Perder Then
-            Dim frmE As New frmEspera
+            Dim frmE As New frmRecEspera_Material(0)
+            frmE.ShowDialog()
+            If frmE.DialogResult = DialogResult.OK Then
+                esp = New UESPERA(GesPrecios.getInstance().getCotizacion(2))
+                esp.Adenda = frmE.objEspera.Adenda
+                esp.AgregarLineas(frmE.objEspera.Lineas)
+                esp.CodMoneda = 1
+                esp.Codvendedor = _Vendedor.Codigo
+                PopularGrilla()
+            End If
+        End If
+    End Sub
+
+    Private Sub btnRecuperarPresupuesto_Click(sender As Object, e As EventArgs) Handles btnRecuperarPresupuesto.Click
+        Dim Perder As Boolean = True
+        If esp.Lineas.Count > 0 Then
+            If MsgBox("Desea perder las lineas escritas hasta el momento", vbOKCancel, "Atencion!") = MsgBoxResult.Cancel Then
+                Perder = False
+            End If
+        End If
+
+        If Perder Then
+            Dim frmE As New frmRecEspera_Material(2)
             frmE.ShowDialog()
             If frmE.DialogResult = DialogResult.OK Then
                 esp = New UESPERA(GesPrecios.getInstance().getCotizacion(2))

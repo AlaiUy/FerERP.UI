@@ -27,16 +27,22 @@ Partial Class frmMain_Material
         Me.lblTime = New System.Windows.Forms.Label()
         Me.btnCerrar = New System.Windows.Forms.Button()
         Me.PanelIzquierdo = New System.Windows.Forms.Panel()
-        Me.btnArticulos = New System.Windows.Forms.Button()
+        Me.PanelInformes = New System.Windows.Forms.Panel()
+        Me.btnListadoVentas = New System.Windows.Forms.Button()
+        Me.btnListadoArticulos = New System.Windows.Forms.Button()
+        Me.btnInformes = New System.Windows.Forms.Button()
+        Me.btnVenta = New System.Windows.Forms.Button()
         Me.PanelArticulos = New System.Windows.Forms.Panel()
-        Me.Button4 = New System.Windows.Forms.Button()
+        Me.btnUpArticulo = New System.Windows.Forms.Button()
         Me.btnAddArticulo = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
+        Me.btnImprimirArticulos = New System.Windows.Forms.Button()
+        Me.btnArticulos = New System.Windows.Forms.Button()
         Me.PanelFormularios = New System.Windows.Forms.Panel()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.TimerTime = New System.Windows.Forms.Timer(Me.components)
         Me.PanelTop.SuspendLayout()
         Me.PanelIzquierdo.SuspendLayout()
+        Me.PanelInformes.SuspendLayout()
         Me.PanelArticulos.SuspendLayout()
         Me.PanelFormularios.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -80,9 +86,13 @@ Partial Class frmMain_Material
         '
         'PanelIzquierdo
         '
+        Me.PanelIzquierdo.AutoScroll = True
         Me.PanelIzquierdo.BackColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(39, Byte), Integer))
-        Me.PanelIzquierdo.Controls.Add(Me.btnArticulos)
+        Me.PanelIzquierdo.Controls.Add(Me.PanelInformes)
+        Me.PanelIzquierdo.Controls.Add(Me.btnInformes)
+        Me.PanelIzquierdo.Controls.Add(Me.btnVenta)
         Me.PanelIzquierdo.Controls.Add(Me.PanelArticulos)
+        Me.PanelIzquierdo.Controls.Add(Me.btnArticulos)
         Me.PanelIzquierdo.Dock = System.Windows.Forms.DockStyle.Left
         Me.PanelIzquierdo.Font = New System.Drawing.Font("Poppins", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.PanelIzquierdo.Location = New System.Drawing.Point(0, 43)
@@ -90,47 +100,102 @@ Partial Class frmMain_Material
         Me.PanelIzquierdo.Size = New System.Drawing.Size(186, 497)
         Me.PanelIzquierdo.TabIndex = 1
         '
-        'btnArticulos
+        'PanelInformes
         '
-        Me.btnArticulos.FlatAppearance.BorderSize = 0
-        Me.btnArticulos.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnArticulos.ForeColor = System.Drawing.Color.White
-        Me.btnArticulos.Location = New System.Drawing.Point(0, 0)
-        Me.btnArticulos.Name = "btnArticulos"
-        Me.btnArticulos.Size = New System.Drawing.Size(186, 37)
-        Me.btnArticulos.TabIndex = 0
-        Me.btnArticulos.Text = "ARTICULOS"
-        Me.btnArticulos.UseVisualStyleBackColor = True
+        Me.PanelInformes.Controls.Add(Me.btnListadoVentas)
+        Me.PanelInformes.Controls.Add(Me.btnListadoArticulos)
+        Me.PanelInformes.Dock = System.Windows.Forms.DockStyle.Top
+        Me.PanelInformes.ForeColor = System.Drawing.Color.White
+        Me.PanelInformes.Location = New System.Drawing.Point(0, 226)
+        Me.PanelInformes.Name = "PanelInformes"
+        Me.PanelInformes.Size = New System.Drawing.Size(186, 77)
+        Me.PanelInformes.TabIndex = 8
+        Me.PanelInformes.Visible = False
+        '
+        'btnListadoVentas
+        '
+        Me.btnListadoVentas.BackColor = System.Drawing.Color.FromArgb(CType(CType(11, Byte), Integer), CType(CType(7, Byte), Integer), CType(CType(17, Byte), Integer))
+        Me.btnListadoVentas.Dock = System.Windows.Forms.DockStyle.Top
+        Me.btnListadoVentas.FlatAppearance.BorderSize = 0
+        Me.btnListadoVentas.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnListadoVentas.ForeColor = System.Drawing.Color.DarkGray
+        Me.btnListadoVentas.Location = New System.Drawing.Point(0, 37)
+        Me.btnListadoVentas.Name = "btnListadoVentas"
+        Me.btnListadoVentas.Size = New System.Drawing.Size(186, 37)
+        Me.btnListadoVentas.TabIndex = 5
+        Me.btnListadoVentas.Text = "Ventas"
+        Me.btnListadoVentas.UseVisualStyleBackColor = False
+        '
+        'btnListadoArticulos
+        '
+        Me.btnListadoArticulos.BackColor = System.Drawing.Color.FromArgb(CType(CType(11, Byte), Integer), CType(CType(7, Byte), Integer), CType(CType(17, Byte), Integer))
+        Me.btnListadoArticulos.Dock = System.Windows.Forms.DockStyle.Top
+        Me.btnListadoArticulos.FlatAppearance.BorderSize = 0
+        Me.btnListadoArticulos.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnListadoArticulos.ForeColor = System.Drawing.Color.DarkGray
+        Me.btnListadoArticulos.Location = New System.Drawing.Point(0, 0)
+        Me.btnListadoArticulos.Name = "btnListadoArticulos"
+        Me.btnListadoArticulos.Size = New System.Drawing.Size(186, 37)
+        Me.btnListadoArticulos.TabIndex = 4
+        Me.btnListadoArticulos.Text = "Articulos"
+        Me.btnListadoArticulos.UseVisualStyleBackColor = False
+        '
+        'btnInformes
+        '
+        Me.btnInformes.Dock = System.Windows.Forms.DockStyle.Top
+        Me.btnInformes.FlatAppearance.BorderSize = 0
+        Me.btnInformes.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnInformes.ForeColor = System.Drawing.Color.White
+        Me.btnInformes.Location = New System.Drawing.Point(0, 189)
+        Me.btnInformes.Name = "btnInformes"
+        Me.btnInformes.Size = New System.Drawing.Size(186, 37)
+        Me.btnInformes.TabIndex = 7
+        Me.btnInformes.Text = "INFORMES"
+        Me.btnInformes.UseVisualStyleBackColor = True
+        '
+        'btnVenta
+        '
+        Me.btnVenta.Dock = System.Windows.Forms.DockStyle.Top
+        Me.btnVenta.FlatAppearance.BorderSize = 0
+        Me.btnVenta.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnVenta.ForeColor = System.Drawing.Color.White
+        Me.btnVenta.Location = New System.Drawing.Point(0, 152)
+        Me.btnVenta.Name = "btnVenta"
+        Me.btnVenta.Size = New System.Drawing.Size(186, 37)
+        Me.btnVenta.TabIndex = 6
+        Me.btnVenta.Text = "NUEVA VENTA"
+        Me.btnVenta.UseVisualStyleBackColor = True
         '
         'PanelArticulos
         '
-        Me.PanelArticulos.Controls.Add(Me.Button4)
+        Me.PanelArticulos.Controls.Add(Me.btnUpArticulo)
         Me.PanelArticulos.Controls.Add(Me.btnAddArticulo)
-        Me.PanelArticulos.Controls.Add(Me.Button2)
+        Me.PanelArticulos.Controls.Add(Me.btnImprimirArticulos)
         Me.PanelArticulos.Dock = System.Windows.Forms.DockStyle.Top
         Me.PanelArticulos.ForeColor = System.Drawing.Color.White
-        Me.PanelArticulos.Location = New System.Drawing.Point(0, 0)
+        Me.PanelArticulos.Location = New System.Drawing.Point(0, 37)
         Me.PanelArticulos.Name = "PanelArticulos"
-        Me.PanelArticulos.Size = New System.Drawing.Size(186, 150)
-        Me.PanelArticulos.TabIndex = 1
+        Me.PanelArticulos.Size = New System.Drawing.Size(186, 115)
+        Me.PanelArticulos.TabIndex = 5
         Me.PanelArticulos.Visible = False
         '
-        'Button4
+        'btnUpArticulo
         '
-        Me.Button4.BackColor = System.Drawing.Color.FromArgb(CType(CType(11, Byte), Integer), CType(CType(7, Byte), Integer), CType(CType(17, Byte), Integer))
-        Me.Button4.FlatAppearance.BorderSize = 0
-        Me.Button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button4.ForeColor = System.Drawing.Color.DarkGray
-        Me.Button4.Location = New System.Drawing.Point(0, 74)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(186, 37)
-        Me.Button4.TabIndex = 3
-        Me.Button4.Text = "Modificar Articulo"
-        Me.Button4.UseVisualStyleBackColor = False
+        Me.btnUpArticulo.BackColor = System.Drawing.Color.FromArgb(CType(CType(11, Byte), Integer), CType(CType(7, Byte), Integer), CType(CType(17, Byte), Integer))
+        Me.btnUpArticulo.FlatAppearance.BorderSize = 0
+        Me.btnUpArticulo.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnUpArticulo.ForeColor = System.Drawing.Color.DarkGray
+        Me.btnUpArticulo.Location = New System.Drawing.Point(0, 74)
+        Me.btnUpArticulo.Name = "btnUpArticulo"
+        Me.btnUpArticulo.Size = New System.Drawing.Size(186, 37)
+        Me.btnUpArticulo.TabIndex = 3
+        Me.btnUpArticulo.Text = "Modificar Articulo"
+        Me.btnUpArticulo.UseVisualStyleBackColor = False
         '
         'btnAddArticulo
         '
         Me.btnAddArticulo.BackColor = System.Drawing.Color.FromArgb(CType(CType(11, Byte), Integer), CType(CType(7, Byte), Integer), CType(CType(17, Byte), Integer))
+        Me.btnAddArticulo.Dock = System.Windows.Forms.DockStyle.Top
         Me.btnAddArticulo.FlatAppearance.BorderSize = 0
         Me.btnAddArticulo.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnAddArticulo.ForeColor = System.Drawing.Color.DarkGray
@@ -141,18 +206,32 @@ Partial Class frmMain_Material
         Me.btnAddArticulo.Text = "Agregar Articulo"
         Me.btnAddArticulo.UseVisualStyleBackColor = False
         '
-        'Button2
+        'btnImprimirArticulos
         '
-        Me.Button2.BackColor = System.Drawing.Color.FromArgb(CType(CType(11, Byte), Integer), CType(CType(7, Byte), Integer), CType(CType(17, Byte), Integer))
-        Me.Button2.FlatAppearance.BorderSize = 0
-        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button2.ForeColor = System.Drawing.Color.DarkGray
-        Me.Button2.Location = New System.Drawing.Point(0, 111)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(186, 37)
-        Me.Button2.TabIndex = 1
-        Me.Button2.Text = "Imprimir Precios"
-        Me.Button2.UseVisualStyleBackColor = False
+        Me.btnImprimirArticulos.BackColor = System.Drawing.Color.FromArgb(CType(CType(11, Byte), Integer), CType(CType(7, Byte), Integer), CType(CType(17, Byte), Integer))
+        Me.btnImprimirArticulos.Dock = System.Windows.Forms.DockStyle.Top
+        Me.btnImprimirArticulos.FlatAppearance.BorderSize = 0
+        Me.btnImprimirArticulos.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnImprimirArticulos.ForeColor = System.Drawing.Color.DarkGray
+        Me.btnImprimirArticulos.Location = New System.Drawing.Point(0, 0)
+        Me.btnImprimirArticulos.Name = "btnImprimirArticulos"
+        Me.btnImprimirArticulos.Size = New System.Drawing.Size(186, 37)
+        Me.btnImprimirArticulos.TabIndex = 1
+        Me.btnImprimirArticulos.Text = "Imprimir Precios"
+        Me.btnImprimirArticulos.UseVisualStyleBackColor = False
+        '
+        'btnArticulos
+        '
+        Me.btnArticulos.Dock = System.Windows.Forms.DockStyle.Top
+        Me.btnArticulos.FlatAppearance.BorderSize = 0
+        Me.btnArticulos.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnArticulos.ForeColor = System.Drawing.Color.White
+        Me.btnArticulos.Location = New System.Drawing.Point(0, 0)
+        Me.btnArticulos.Name = "btnArticulos"
+        Me.btnArticulos.Size = New System.Drawing.Size(186, 37)
+        Me.btnArticulos.TabIndex = 0
+        Me.btnArticulos.Text = "ARTICULOS"
+        Me.btnArticulos.UseVisualStyleBackColor = True
         '
         'PanelFormularios
         '
@@ -194,6 +273,7 @@ Partial Class frmMain_Material
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.PanelTop.ResumeLayout(False)
         Me.PanelIzquierdo.ResumeLayout(False)
+        Me.PanelInformes.ResumeLayout(False)
         Me.PanelArticulos.ResumeLayout(False)
         Me.PanelFormularios.ResumeLayout(False)
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -205,12 +285,17 @@ Partial Class frmMain_Material
     Friend WithEvents btnCerrar As Button
     Friend WithEvents PanelIzquierdo As Panel
     Friend WithEvents btnArticulos As Button
-    Friend WithEvents PanelArticulos As Panel
-    Friend WithEvents Button4 As Button
-    Friend WithEvents btnAddArticulo As Button
-    Friend WithEvents Button2 As Button
     Friend WithEvents PanelFormularios As Panel
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents lblTime As Label
     Friend WithEvents TimerTime As Timer
+    Friend WithEvents PanelInformes As Panel
+    Friend WithEvents btnListadoVentas As Button
+    Friend WithEvents btnListadoArticulos As Button
+    Friend WithEvents btnInformes As Button
+    Friend WithEvents btnVenta As Button
+    Friend WithEvents PanelArticulos As Panel
+    Friend WithEvents btnUpArticulo As Button
+    Friend WithEvents btnAddArticulo As Button
+    Friend WithEvents btnImprimirArticulos As Button
 End Class

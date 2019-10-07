@@ -26,6 +26,8 @@ Partial Class frmEmpresaData
         Me.TabEmpresa = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.GroupBox7 = New System.Windows.Forms.GroupBox()
+        Me.txtDescuentoContado = New System.Windows.Forms.TextBox()
+        Me.Label32 = New System.Windows.Forms.Label()
         Me.txtPais = New System.Windows.Forms.TextBox()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.txtEmail = New System.Windows.Forms.TextBox()
@@ -123,8 +125,6 @@ Partial Class frmEmpresaData
         Me.txtNombreVendedor = New System.Windows.Forms.TextBox()
         Me.Label27 = New System.Windows.Forms.Label()
         Me.FileOpen = New System.Windows.Forms.OpenFileDialog()
-        Me.txtDescuentoContado = New System.Windows.Forms.TextBox()
-        Me.Label32 = New System.Windows.Forms.Label()
         Me.Panel2.SuspendLayout()
         Me.TabEmpresa.SuspendLayout()
         Me.TabPage1.SuspendLayout()
@@ -221,6 +221,24 @@ Partial Class frmEmpresaData
         Me.GroupBox7.Size = New System.Drawing.Size(956, 381)
         Me.GroupBox7.TabIndex = 19
         Me.GroupBox7.TabStop = False
+        '
+        'txtDescuentoContado
+        '
+        Me.txtDescuentoContado.Font = New System.Drawing.Font("Tahoma", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtDescuentoContado.Location = New System.Drawing.Point(203, 285)
+        Me.txtDescuentoContado.Name = "txtDescuentoContado"
+        Me.txtDescuentoContado.Size = New System.Drawing.Size(265, 26)
+        Me.txtDescuentoContado.TabIndex = 35
+        '
+        'Label32
+        '
+        Me.Label32.AutoSize = True
+        Me.Label32.Font = New System.Drawing.Font("Tahoma", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label32.Location = New System.Drawing.Point(18, 289)
+        Me.Label32.Name = "Label32"
+        Me.Label32.Size = New System.Drawing.Size(167, 18)
+        Me.Label32.TabIndex = 34
+        Me.Label32.Text = "DESCUENTO CONTADO"
         '
         'txtPais
         '
@@ -1225,30 +1243,13 @@ Partial Class frmEmpresaData
         Me.FileOpen.FileName = "OpenFile"
         Me.FileOpen.Filter = "Image Files(*.BMP;*.JPG;*.GIF)|"
         '
-        'txtDescuentoContado
-        '
-        Me.txtDescuentoContado.Font = New System.Drawing.Font("Tahoma", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtDescuentoContado.Location = New System.Drawing.Point(203, 285)
-        Me.txtDescuentoContado.Name = "txtDescuentoContado"
-        Me.txtDescuentoContado.Size = New System.Drawing.Size(265, 26)
-        Me.txtDescuentoContado.TabIndex = 35
-        '
-        'Label32
-        '
-        Me.Label32.AutoSize = True
-        Me.Label32.Font = New System.Drawing.Font("Tahoma", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label32.Location = New System.Drawing.Point(18, 289)
-        Me.Label32.Name = "Label32"
-        Me.Label32.Size = New System.Drawing.Size(167, 18)
-        Me.Label32.TabIndex = 34
-        Me.Label32.Text = "DESCUENTO CONTADO"
-        '
         'frmEmpresaData
         '
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(979, 567)
         Me.Controls.Add(Me.Panel2)
+        Me.KeyPreview = True
         Me.Name = "frmEmpresaData"
         Me.Text = "Datos de la Empresa"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized

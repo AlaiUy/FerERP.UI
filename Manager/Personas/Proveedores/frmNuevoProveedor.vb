@@ -131,6 +131,7 @@ Public Class frmNuevoProveedor
         objProveedor.Rz = txtRz.Text
         objProveedor.Telefono = txtTelefono.Text
         objProveedor.Categoria = TryCast(cbCategoria.SelectedItem, CatProveedor).Codigo
+        objProveedor.Comentarios = txtComentarios.Text
         Try
             GesPersonas.getInstance().AddProveedor(objProveedor)
             MsgBox("Agregado correctamente")
