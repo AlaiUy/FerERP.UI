@@ -10,7 +10,6 @@ Public Class frmListadoVentas
                 Return
             End If
             GestionReporte.ExportExcelVentas(Grid.DataSource, Nothing)
-
         Catch ex As Exception
             MsgBox(ex.Message)
 

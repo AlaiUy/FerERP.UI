@@ -64,10 +64,10 @@ Public Class frmListadoArticulos
     Private Sub btnExcel_Click(sender As Object, e As EventArgs) Handles btnExcel.Click
         Try
             If txtPath.Text.Trim().Length > 0 Then
-                GestionReporte.ExportExceVentasl(Grid.DataSource, txtPath.Text.Trim())
+                GestionReporte.ExportExcelGral(Grid.DataSource, txtPath.Text.Trim())
                 Return
             End If
-            GestionReporte.ExportExceVentasl(Grid.DataSource, Nothing)
+            GestionReporte.ExportExcelGral(Grid.DataSource, Nothing)
 
         Catch ex As Exception
             MsgBox(ex.Message)
