@@ -96,6 +96,7 @@ Public Class frmDatosFactura
                     ClearData()
                 End Try
             Case "EsperaCuenta"
+                Dim eCredito As New EsperaCredito()
         End Select
 
 

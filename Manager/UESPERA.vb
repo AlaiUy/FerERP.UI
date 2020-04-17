@@ -124,11 +124,11 @@ Public Class UESPERA
         Next
     End Sub
 
-    Friend Sub AllDescuento(xDescuento As Decimal)
+    Friend Sub AllDescuento(xDescuento As Decimal, ByVal xPresupuesto As Boolean)
 
 
         For Each Linea As Esperalin In _Lineas
-            If AsignarDescuento(xDescuento, Linea.NumLinea) = False Then
+            If AsignarDescuento(xDescuento, Linea.NumLinea, xPresupuesto) = False Then
                 Return
             End If
         Next
@@ -136,9 +136,11 @@ Public Class UESPERA
 
     End Sub
 
-    Friend Function AsignarDescuento(xDescuento As Decimal, xLinea As Integer) As Boolean
+    Friend Function AsignarDescuento(xDescuento As Decimal, xLinea As Integer, ByVal xPresupuesto As Boolean) As Boolean
         If (xDescuento < 0) Then
-            Return False
+            If Not xPresupuesto Then
+                Return False
+            End If
         End If
 
         If (xDescuento >= 100) Then

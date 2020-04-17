@@ -1,4 +1,5 @@
-﻿Imports JJ.Interfaces.Observer
+﻿Imports System.Globalization
+Imports JJ.Interfaces.Observer
 
 Public Class frmPanelNumerico
     Private _FlagPrimerIngeso As Boolean = True
@@ -20,7 +21,10 @@ Public Class frmPanelNumerico
 
     Private Sub Enter_Click(sender As Object, e As EventArgs) Handles btnEnter.Click
         Try
-            _Numero = Convert.ToDecimal(txtNumero.Text)
+
+            If Not String.IsNullOrEmpty(txtNumero.Text) Then
+                _Numero = Convert.ToDecimal(txtNumero.Text)
+            End If
             Me.DialogResult = DialogResult.OK
         Catch ex As Exception
             MsgBox("El valor ingresado no es correcto", vbOK, "Revisar")
@@ -43,14 +47,14 @@ Public Class frmPanelNumerico
     End Sub
 
     Private Sub AgregarComa()
-
+        Dim Sep As Char = Threading.Thread.CurrentThread.CurrentCulture.NumberFormat.NumberDecimalSeparator.Chars(0)
         If _FlagPrimerIngeso Then
-            txtNumero.Text = "0" & ","
+            txtNumero.Text = "0" & Sep
             _FlagPrimerIngeso = False
-        ElseIf txtNumero.Text.Contains(",") Then
+        ElseIf txtNumero.Text.Contains(Sep) Then
             Return
         Else
-            txtNumero.Text = txtNumero.Text & ","
+            txtNumero.Text = txtNumero.Text & Sep
             Return
         End If
         txtNumero.Focus()

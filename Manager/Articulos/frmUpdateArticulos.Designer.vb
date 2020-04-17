@@ -113,7 +113,7 @@ Partial Class frmUpdateArticulos
         Me.LinFindArticulos.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LinFindArticulos.Location = New System.Drawing.Point(11, 11)
         Me.LinFindArticulos.Name = "LinFindArticulos"
-        Me.LinFindArticulos.Size = New System.Drawing.Size(73, 24)
+        Me.LinFindArticulos.Size = New System.Drawing.Size(113, 33)
         Me.LinFindArticulos.TabIndex = 40
         Me.LinFindArticulos.TabStop = True
         Me.LinFindArticulos.Text = "Articulo"
@@ -143,7 +143,7 @@ Partial Class frmUpdateArticulos
         Me.txtArticulo.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtArticulo.Location = New System.Drawing.Point(90, 8)
         Me.txtArticulo.Name = "txtArticulo"
-        Me.txtArticulo.Size = New System.Drawing.Size(299, 29)
+        Me.txtArticulo.Size = New System.Drawing.Size(299, 40)
         Me.txtArticulo.TabIndex = 37
         '
         'Panel2
@@ -192,10 +192,10 @@ Partial Class frmUpdateArticulos
         Me.tbDatos.Controls.Add(Me.GroupBox1)
         Me.tbDatos.Controls.Add(Me.GroupBox2)
         Me.tbDatos.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tbDatos.Location = New System.Drawing.Point(4, 25)
+        Me.tbDatos.Location = New System.Drawing.Point(4, 32)
         Me.tbDatos.Name = "tbDatos"
         Me.tbDatos.Padding = New System.Windows.Forms.Padding(3)
-        Me.tbDatos.Size = New System.Drawing.Size(841, 519)
+        Me.tbDatos.Size = New System.Drawing.Size(841, 512)
         Me.tbDatos.TabIndex = 0
         Me.tbDatos.Text = "DATOS"
         '
@@ -247,7 +247,7 @@ Partial Class frmUpdateArticulos
         '
         Me.txtImporteFinal.Location = New System.Drawing.Point(124, 101)
         Me.txtImporteFinal.Name = "txtImporteFinal"
-        Me.txtImporteFinal.Size = New System.Drawing.Size(208, 23)
+        Me.txtImporteFinal.Size = New System.Drawing.Size(208, 31)
         Me.txtImporteFinal.TabIndex = 36
         '
         'cbTiposIvaCalculo
@@ -256,7 +256,7 @@ Partial Class frmUpdateArticulos
         Me.cbTiposIvaCalculo.FormattingEnabled = True
         Me.cbTiposIvaCalculo.Location = New System.Drawing.Point(124, 65)
         Me.cbTiposIvaCalculo.Name = "cbTiposIvaCalculo"
-        Me.cbTiposIvaCalculo.Size = New System.Drawing.Size(208, 24)
+        Me.cbTiposIvaCalculo.Size = New System.Drawing.Size(208, 32)
         Me.cbTiposIvaCalculo.TabIndex = 35
         '
         'Label7
@@ -272,7 +272,7 @@ Partial Class frmUpdateArticulos
         '
         Me.txtCostoCalculo.Location = New System.Drawing.Point(124, 33)
         Me.txtCostoCalculo.Name = "txtCostoCalculo"
-        Me.txtCostoCalculo.Size = New System.Drawing.Size(208, 23)
+        Me.txtCostoCalculo.Size = New System.Drawing.Size(208, 31)
         Me.txtCostoCalculo.TabIndex = 35
         '
         'Label6
@@ -289,7 +289,7 @@ Partial Class frmUpdateArticulos
         Me.Label1.AutoSize = True
         Me.Label1.Location = New System.Drawing.Point(15, 104)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(103, 16)
+        Me.Label1.Size = New System.Drawing.Size(157, 24)
         Me.Label1.TabIndex = 33
         Me.Label1.Text = "IMPORTE FINAL:"
         '
@@ -299,7 +299,7 @@ Partial Class frmUpdateArticulos
         Me.cbTiposIva.FormattingEnabled = True
         Me.cbTiposIva.Location = New System.Drawing.Point(89, 136)
         Me.cbTiposIva.Name = "cbTiposIva"
-        Me.cbTiposIva.Size = New System.Drawing.Size(208, 24)
+        Me.cbTiposIva.Size = New System.Drawing.Size(208, 32)
         Me.cbTiposIva.TabIndex = 31
         '
         'Label8
@@ -317,7 +317,7 @@ Partial Class frmUpdateArticulos
         Me.cbMoneda.FormattingEnabled = True
         Me.cbMoneda.Location = New System.Drawing.Point(89, 98)
         Me.cbMoneda.Name = "cbMoneda"
-        Me.cbMoneda.Size = New System.Drawing.Size(208, 24)
+        Me.cbMoneda.Size = New System.Drawing.Size(208, 32)
         Me.cbMoneda.TabIndex = 25
         '
         'lblMoneda
@@ -333,7 +333,7 @@ Partial Class frmUpdateArticulos
         '
         Me.txtGanancia.Location = New System.Drawing.Point(89, 62)
         Me.txtGanancia.Name = "txtGanancia"
-        Me.txtGanancia.Size = New System.Drawing.Size(208, 23)
+        Me.txtGanancia.Size = New System.Drawing.Size(208, 31)
         Me.txtGanancia.TabIndex = 23
         '
         'lblGanancia
@@ -349,7 +349,7 @@ Partial Class frmUpdateArticulos
         '
         Me.txtCosto.Location = New System.Drawing.Point(89, 31)
         Me.txtCosto.Name = "txtCosto"
-        Me.txtCosto.Size = New System.Drawing.Size(208, 23)
+        Me.txtCosto.Size = New System.Drawing.Size(208, 31)
         Me.txtCosto.TabIndex = 21
         '
         'lblPrecio
@@ -397,7 +397,7 @@ Partial Class frmUpdateArticulos
         Me.chkDescatalogado.AutoSize = True
         Me.chkDescatalogado.Location = New System.Drawing.Point(143, 394)
         Me.chkDescatalogado.Name = "chkDescatalogado"
-        Me.chkDescatalogado.Size = New System.Drawing.Size(61, 20)
+        Me.chkDescatalogado.Size = New System.Drawing.Size(90, 28)
         Me.chkDescatalogado.TabIndex = 57
         Me.chkDescatalogado.Text = "Activo"
         Me.chkDescatalogado.UseVisualStyleBackColor = True
@@ -407,7 +407,7 @@ Partial Class frmUpdateArticulos
         Me.chkRecalcula.AutoSize = True
         Me.chkRecalcula.Location = New System.Drawing.Point(143, 356)
         Me.chkRecalcula.Name = "chkRecalcula"
-        Me.chkRecalcula.Size = New System.Drawing.Size(81, 20)
+        Me.chkRecalcula.Size = New System.Drawing.Size(120, 28)
         Me.chkRecalcula.TabIndex = 56
         Me.chkRecalcula.Text = "Recalcula"
         Me.chkRecalcula.UseVisualStyleBackColor = True
@@ -445,7 +445,7 @@ Partial Class frmUpdateArticulos
         Me.cbSeccion.FormattingEnabled = True
         Me.cbSeccion.Location = New System.Drawing.Point(143, 313)
         Me.cbSeccion.Name = "cbSeccion"
-        Me.cbSeccion.Size = New System.Drawing.Size(208, 24)
+        Me.cbSeccion.Size = New System.Drawing.Size(208, 32)
         Me.cbSeccion.TabIndex = 51
         '
         'cbDepartamento
@@ -454,7 +454,7 @@ Partial Class frmUpdateArticulos
         Me.cbDepartamento.FormattingEnabled = True
         Me.cbDepartamento.Location = New System.Drawing.Point(143, 275)
         Me.cbDepartamento.Name = "cbDepartamento"
-        Me.cbDepartamento.Size = New System.Drawing.Size(208, 24)
+        Me.cbDepartamento.Size = New System.Drawing.Size(208, 32)
         Me.cbDepartamento.TabIndex = 50
         '
         'cbMarca
@@ -463,7 +463,7 @@ Partial Class frmUpdateArticulos
         Me.cbMarca.FormattingEnabled = True
         Me.cbMarca.Location = New System.Drawing.Point(143, 239)
         Me.cbMarca.Name = "cbMarca"
-        Me.cbMarca.Size = New System.Drawing.Size(208, 24)
+        Me.cbMarca.Size = New System.Drawing.Size(208, 32)
         Me.cbMarca.TabIndex = 49
         '
         'Label4
@@ -471,7 +471,7 @@ Partial Class frmUpdateArticulos
         Me.Label4.AutoSize = True
         Me.Label4.Location = New System.Drawing.Point(72, 316)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(65, 16)
+        Me.Label4.Size = New System.Drawing.Size(97, 24)
         Me.Label4.TabIndex = 48
         Me.Label4.Text = "SECCION:"
         Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -481,7 +481,7 @@ Partial Class frmUpdateArticulos
         Me.Label3.AutoSize = True
         Me.Label3.Location = New System.Drawing.Point(28, 278)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(109, 16)
+        Me.Label3.Size = New System.Drawing.Size(166, 24)
         Me.Label3.TabIndex = 47
         Me.Label3.Text = "DEPARTAMENTO:"
         Me.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -491,7 +491,7 @@ Partial Class frmUpdateArticulos
         Me.Label2.AutoSize = True
         Me.Label2.Location = New System.Drawing.Point(82, 242)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(55, 16)
+        Me.Label2.Size = New System.Drawing.Size(80, 24)
         Me.Label2.TabIndex = 46
         Me.Label2.Text = "MARCA:"
         Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -500,7 +500,7 @@ Partial Class frmUpdateArticulos
         '
         Me.txtModelo.Location = New System.Drawing.Point(143, 201)
         Me.txtModelo.Name = "txtModelo"
-        Me.txtModelo.Size = New System.Drawing.Size(208, 23)
+        Me.txtModelo.Size = New System.Drawing.Size(208, 31)
         Me.txtModelo.TabIndex = 45
         '
         'lblModelo
@@ -508,7 +508,7 @@ Partial Class frmUpdateArticulos
         Me.lblModelo.AutoSize = True
         Me.lblModelo.Location = New System.Drawing.Point(75, 204)
         Me.lblModelo.Name = "lblModelo"
-        Me.lblModelo.Size = New System.Drawing.Size(62, 16)
+        Me.lblModelo.Size = New System.Drawing.Size(95, 24)
         Me.lblModelo.TabIndex = 44
         Me.lblModelo.Text = "MODELO:"
         Me.lblModelo.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -517,7 +517,7 @@ Partial Class frmUpdateArticulos
         '
         Me.txtCodBarras1.Location = New System.Drawing.Point(143, 166)
         Me.txtCodBarras1.Name = "txtCodBarras1"
-        Me.txtCodBarras1.Size = New System.Drawing.Size(208, 23)
+        Me.txtCodBarras1.Size = New System.Drawing.Size(208, 31)
         Me.txtCodBarras1.TabIndex = 43
         '
         'lblcodBarras1
@@ -525,7 +525,7 @@ Partial Class frmUpdateArticulos
         Me.lblcodBarras1.AutoSize = True
         Me.lblcodBarras1.Location = New System.Drawing.Point(8, 167)
         Me.lblcodBarras1.Name = "lblcodBarras1"
-        Me.lblcodBarras1.Size = New System.Drawing.Size(129, 16)
+        Me.lblcodBarras1.Size = New System.Drawing.Size(199, 24)
         Me.lblcodBarras1.TabIndex = 42
         Me.lblcodBarras1.Text = "CODIGO DE BARRAS:"
         Me.lblcodBarras1.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -534,7 +534,7 @@ Partial Class frmUpdateArticulos
         '
         Me.txtCodBarras.Location = New System.Drawing.Point(143, 131)
         Me.txtCodBarras.Name = "txtCodBarras"
-        Me.txtCodBarras.Size = New System.Drawing.Size(208, 23)
+        Me.txtCodBarras.Size = New System.Drawing.Size(208, 31)
         Me.txtCodBarras.TabIndex = 41
         '
         'lblCodBarras
@@ -542,7 +542,7 @@ Partial Class frmUpdateArticulos
         Me.lblCodBarras.AutoSize = True
         Me.lblCodBarras.Location = New System.Drawing.Point(8, 132)
         Me.lblCodBarras.Name = "lblCodBarras"
-        Me.lblCodBarras.Size = New System.Drawing.Size(129, 16)
+        Me.lblCodBarras.Size = New System.Drawing.Size(199, 24)
         Me.lblCodBarras.TabIndex = 40
         Me.lblCodBarras.Text = "CODIGO DE BARRAS:"
         Me.lblCodBarras.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -551,7 +551,7 @@ Partial Class frmUpdateArticulos
         '
         Me.txtReferencia.Location = New System.Drawing.Point(143, 99)
         Me.txtReferencia.Name = "txtReferencia"
-        Me.txtReferencia.Size = New System.Drawing.Size(208, 23)
+        Me.txtReferencia.Size = New System.Drawing.Size(208, 31)
         Me.txtReferencia.TabIndex = 39
         '
         'lblReferencia
@@ -559,7 +559,7 @@ Partial Class frmUpdateArticulos
         Me.lblReferencia.AutoSize = True
         Me.lblReferencia.Location = New System.Drawing.Point(52, 102)
         Me.lblReferencia.Name = "lblReferencia"
-        Me.lblReferencia.Size = New System.Drawing.Size(85, 16)
+        Me.lblReferencia.Size = New System.Drawing.Size(128, 24)
         Me.lblReferencia.TabIndex = 38
         Me.lblReferencia.Text = "REFERENCIA:"
         Me.lblReferencia.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -568,7 +568,7 @@ Partial Class frmUpdateArticulos
         '
         Me.txtDescripcion.Location = New System.Drawing.Point(143, 68)
         Me.txtDescripcion.Name = "txtDescripcion"
-        Me.txtDescripcion.Size = New System.Drawing.Size(208, 23)
+        Me.txtDescripcion.Size = New System.Drawing.Size(208, 31)
         Me.txtDescripcion.TabIndex = 37
         '
         'lblDescripcion
@@ -576,7 +576,7 @@ Partial Class frmUpdateArticulos
         Me.lblDescripcion.AutoSize = True
         Me.lblDescripcion.Location = New System.Drawing.Point(45, 71)
         Me.lblDescripcion.Name = "lblDescripcion"
-        Me.lblDescripcion.Size = New System.Drawing.Size(92, 16)
+        Me.lblDescripcion.Size = New System.Drawing.Size(141, 24)
         Me.lblDescripcion.TabIndex = 36
         Me.lblDescripcion.Text = "DESCRIPCION:"
         Me.lblDescripcion.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -585,7 +585,7 @@ Partial Class frmUpdateArticulos
         '
         Me.txtNombre.Location = New System.Drawing.Point(143, 34)
         Me.txtNombre.Name = "txtNombre"
-        Me.txtNombre.Size = New System.Drawing.Size(208, 23)
+        Me.txtNombre.Size = New System.Drawing.Size(208, 31)
         Me.txtNombre.TabIndex = 35
         '
         'lblNombre
@@ -593,7 +593,7 @@ Partial Class frmUpdateArticulos
         Me.lblNombre.AutoSize = True
         Me.lblNombre.Location = New System.Drawing.Point(75, 37)
         Me.lblNombre.Name = "lblNombre"
-        Me.lblNombre.Size = New System.Drawing.Size(62, 16)
+        Me.lblNombre.Size = New System.Drawing.Size(94, 24)
         Me.lblNombre.TabIndex = 34
         Me.lblNombre.Text = "NOMBRE:"
         Me.lblNombre.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -602,9 +602,9 @@ Partial Class frmUpdateArticulos
         '
         Me.TabPage1.BackColor = System.Drawing.Color.White
         Me.TabPage1.Controls.Add(Me.GroupBox4)
-        Me.TabPage1.Location = New System.Drawing.Point(4, 25)
+        Me.TabPage1.Location = New System.Drawing.Point(4, 32)
         Me.TabPage1.Name = "TabPage1"
-        Me.TabPage1.Size = New System.Drawing.Size(841, 519)
+        Me.TabPage1.Size = New System.Drawing.Size(841, 512)
         Me.TabPage1.TabIndex = 1
         Me.TabPage1.Text = "STOCKS"
         '
@@ -634,7 +634,7 @@ Partial Class frmUpdateArticulos
         '
         'Label11
         '
-        Me.Label11.Font = New System.Drawing.Font("Cooper Black", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label11.Location = New System.Drawing.Point(5, 120)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(235, 88)
@@ -648,7 +648,7 @@ Partial Class frmUpdateArticulos
         Me.txtStocktoAssing.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtStocktoAssing.Location = New System.Drawing.Point(93, 80)
         Me.txtStocktoAssing.Name = "txtStocktoAssing"
-        Me.txtStocktoAssing.Size = New System.Drawing.Size(148, 23)
+        Me.txtStocktoAssing.Size = New System.Drawing.Size(148, 31)
         Me.txtStocktoAssing.TabIndex = 3
         '
         'Label10
@@ -657,7 +657,7 @@ Partial Class frmUpdateArticulos
         Me.Label10.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label10.Location = New System.Drawing.Point(33, 83)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(56, 16)
+        Me.Label10.Size = New System.Drawing.Size(83, 24)
         Me.Label10.TabIndex = 2
         Me.Label10.Text = "Asignar:"
         '
@@ -667,7 +667,7 @@ Partial Class frmUpdateArticulos
         Me.txtStockActual.Location = New System.Drawing.Point(93, 37)
         Me.txtStockActual.Name = "txtStockActual"
         Me.txtStockActual.ReadOnly = True
-        Me.txtStockActual.Size = New System.Drawing.Size(148, 23)
+        Me.txtStockActual.Size = New System.Drawing.Size(148, 31)
         Me.txtStockActual.TabIndex = 1
         '
         'Label9
@@ -676,7 +676,7 @@ Partial Class frmUpdateArticulos
         Me.Label9.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label9.Location = New System.Drawing.Point(6, 40)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(83, 16)
+        Me.Label9.Size = New System.Drawing.Size(126, 24)
         Me.Label9.TabIndex = 0
         Me.Label9.Text = "Stock Actual:"
         '

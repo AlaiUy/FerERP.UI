@@ -22,6 +22,11 @@ JO Manager
   búsquedas de recursos mediante esta clase de recurso fuertemente tipado.
 </summary>
 </member>
+<member name="P:Manager.My.Resources.JJRecursos._1_">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:Manager.My.Resources.JJRecursos.add">
 <summary>
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
@@ -67,12 +72,7 @@ JO Manager
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
 </member>
-<member name="P:Manager.My.Resources.JJRecursos.JOLOGO">
-<summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-</summary>
-</member>
-<member name="P:Manager.My.Resources.JJRecursos.JOLOGO1">
+<member name="P:Manager.My.Resources.JJRecursos.icons8_cita_recurrente_32">
 <summary>
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
@@ -88,11 +88,6 @@ JO Manager
 </summary>
 </member>
 <member name="P:Manager.My.Resources.JJRecursos.Logo">
-<summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-</summary>
-</member>
-<member name="P:Manager.My.Resources.JJRecursos.Logo_2">
 <summary>
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
@@ -156,6 +151,56 @@ JO Manager
 <summary>
   Reemplaza la propiedad CurrentUICulture del subproceso actual para todas las
   búsquedas de recursos mediante esta clase de recurso fuertemente tipado.
+</summary>
+</member>
+<member name="P:Manager.My.Resources.Resources.Caja_de_busqueda">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Manager.My.Resources.Resources.icons8_búsqueda_32">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Manager.My.Resources.Resources.icons8_cerrar_ventana_32">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Manager.My.Resources.Resources.icons8_cita_recurrente_32">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Manager.My.Resources.Resources.icons8_comprobado_96">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Manager.My.Resources.Resources.icons8_de_acuerdo_32">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Manager.My.Resources.Resources.icons8_guardar_cerrar_32">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Manager.My.Resources.Resources.icons8_imprimir_32">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Manager.My.Resources.Resources.icons8_reemplazar_32">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Manager.My.Resources.Resources.Logo">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
 </member>
 <member name="P:Manager.My.Resources.Resources.printer">

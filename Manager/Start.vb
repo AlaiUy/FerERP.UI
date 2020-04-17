@@ -2,6 +2,8 @@
     <STAThread()>
     Shared Sub Main()
         Try
+            'SetRegion()
+
             Application.SetCompatibleTextRenderingDefault(False)
             Application.EnableVisualStyles()
 

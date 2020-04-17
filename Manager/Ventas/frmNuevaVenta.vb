@@ -245,7 +245,7 @@ Public Class frmNuevaVenta
         If frmNumber.DialogResult = DialogResult.OK Then
             xDescuento = frmNumber.Numero
         End If
-        esp.AsignarDescuento(xDescuento, dgItemsView.Item("LINEA", dgItemsView.CurrentRow.Index).Value)
+        esp.AsignarDescuento(xDescuento, dgItemsView.Item("LINEA", dgItemsView.CurrentRow.Index).Value, False)
         PopularGrilla()
     End Sub
 
@@ -256,7 +256,7 @@ Public Class frmNuevaVenta
         If frmNumber.DialogResult = DialogResult.OK Then
             xDescuento = frmNumber.Numero
         End If
-        esp.AllDescuento(xDescuento)
+        esp.AllDescuento(xDescuento, False)
         PopularGrilla()
     End Sub
 
@@ -419,9 +419,9 @@ Public Class frmNuevaVenta
                 xCantidad = frmNumber.Numero
             End If
             If (dgItemsView.CurrentRow Is Nothing) Then
-                esp.AsignarDescuento(0, 1)
+                esp.AsignarDescuento(0, 1, False)
             Else
-                esp.AsignarDescuento(xCantidad, dgItemsView.Item("LINEA", dgItemsView.CurrentRow.Index).Value)
+                esp.AsignarDescuento(xCantidad, dgItemsView.Item("LINEA", dgItemsView.CurrentRow.Index).Value, False)
             End If
             PopularGrilla()
         Catch ex As Exception

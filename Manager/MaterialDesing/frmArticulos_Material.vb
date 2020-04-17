@@ -151,9 +151,10 @@ Public Class frmArticulos_Material
     Private Sub frmArticulos_Material_KeyDown(sender As Object, e As KeyEventArgs) Handles MyBase.KeyDown
         Select Case e.KeyCode
             Case Keys.Escape
-                Me.Close()
+                notifyObservers("CERRAR")
             Case Keys.F2
                 dgItemsView.DataSource = _TablaArticulos
+                _ListaFiltrada = _TablaArticulos
         End Select
     End Sub
 
@@ -277,5 +278,8 @@ Public Class frmArticulos_Material
 
     End Sub
 
-
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        dgItemsView.DataSource = _TablaArticulos
+        _ListaFiltrada = _TablaArticulos
+    End Sub
 End Class

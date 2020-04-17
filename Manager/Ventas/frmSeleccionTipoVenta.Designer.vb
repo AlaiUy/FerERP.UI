@@ -24,7 +24,7 @@ Partial Class frmSeleccionTipoVenta
     Private Sub InitializeComponent()
         Me.FlowLayoutPanel1 = New System.Windows.Forms.FlowLayoutPanel()
         Me.btnContado = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
+        Me.btnCredito = New System.Windows.Forms.Button()
         Me.FlowLayoutPanel1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -32,7 +32,7 @@ Partial Class frmSeleccionTipoVenta
         '
         Me.FlowLayoutPanel1.BackColor = System.Drawing.SystemColors.GradientActiveCaption
         Me.FlowLayoutPanel1.Controls.Add(Me.btnContado)
-        Me.FlowLayoutPanel1.Controls.Add(Me.Button2)
+        Me.FlowLayoutPanel1.Controls.Add(Me.btnCredito)
         Me.FlowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.FlowLayoutPanel1.Location = New System.Drawing.Point(0, 0)
         Me.FlowLayoutPanel1.Name = "FlowLayoutPanel1"
@@ -50,17 +50,17 @@ Partial Class frmSeleccionTipoVenta
         Me.btnContado.Text = "CONTADO"
         Me.btnContado.UseVisualStyleBackColor = False
         '
-        'Button2
+        'btnCredito
         '
-        Me.Button2.BackColor = System.Drawing.Color.White
-        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button2.Location = New System.Drawing.Point(94, 3)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(91, 69)
-        Me.Button2.TabIndex = 1
-        Me.Button2.Text = "CREDITO"
-        Me.Button2.UseVisualStyleBackColor = False
-        Me.Button2.Visible = False
+        Me.btnCredito.BackColor = System.Drawing.Color.White
+        Me.btnCredito.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnCredito.Location = New System.Drawing.Point(94, 3)
+        Me.btnCredito.Name = "btnCredito"
+        Me.btnCredito.Size = New System.Drawing.Size(91, 69)
+        Me.btnCredito.TabIndex = 1
+        Me.btnCredito.Text = "CREDITO"
+        Me.btnCredito.UseVisualStyleBackColor = False
+        Me.btnCredito.Visible = False
         '
         'frmSeleccionTipoVenta
         '
@@ -80,5 +80,5 @@ Partial Class frmSeleccionTipoVenta
 
     Friend WithEvents FlowLayoutPanel1 As FlowLayoutPanel
     Friend WithEvents btnContado As Button
-    Friend WithEvents Button2 As Button
+    Friend WithEvents btnCredito As Button
 End Class

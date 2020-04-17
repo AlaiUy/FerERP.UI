@@ -1,4 +1,5 @@
-﻿Imports System.Configuration
+﻿Imports System.ComponentModel
+Imports System.Configuration
 Imports JJ.Entidades
 Imports JJ.Gestoras
 Imports JJ.Interfaces.Observer
@@ -43,7 +44,7 @@ Public Class frmArticulos
     Private Sub frmArticulos_KeyDown(sender As Object, e As KeyEventArgs) Handles Me.KeyDown
         Select Case e.KeyCode
             Case Keys.Escape
-                Me.Close()
+                notifyObservers("CERRAR")
             Case Keys.F2
                 dgArticulos.DataSource = _TablaArticulos
         End Select
@@ -280,5 +281,9 @@ Public Class frmArticulos
             Me.dgArticulos.CurrentCell = dgArticulos.Item(1, 1)
 
         End If
+    End Sub
+
+    Private Sub frmArticulos_Closing(sender As Object, e As CancelEventArgs) Handles Me.Closing
+
     End Sub
 End Class

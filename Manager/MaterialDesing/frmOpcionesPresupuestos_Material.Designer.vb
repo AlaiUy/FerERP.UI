@@ -38,6 +38,7 @@ Partial Class frmOpcionesPresupuestos_Material
         Me.btnGuardar = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.btnSearch = New System.Windows.Forms.Button()
+        Me.CheckBox1 = New System.Windows.Forms.CheckBox()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -73,104 +74,104 @@ Partial Class frmOpcionesPresupuestos_Material
         Me.Label1.ForeColor = System.Drawing.Color.White
         Me.Label1.Location = New System.Drawing.Point(120, 7)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(222, 28)
+        Me.Label1.Size = New System.Drawing.Size(244, 20)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "OPCIONES DE PRESUPUESTO"
         '
         'txtDireccion
         '
-        Me.txtDireccion.Font = New System.Drawing.Font("Poppins", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtDireccion.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtDireccion.Location = New System.Drawing.Point(187, 96)
         Me.txtDireccion.Name = "txtDireccion"
-        Me.txtDireccion.Size = New System.Drawing.Size(251, 36)
+        Me.txtDireccion.Size = New System.Drawing.Size(251, 26)
         Me.txtDireccion.TabIndex = 3
         '
         'lblDescripcion
         '
         Me.lblDescripcion.AutoSize = True
-        Me.lblDescripcion.Font = New System.Drawing.Font("Poppins", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblDescripcion.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblDescripcion.Location = New System.Drawing.Point(14, 99)
         Me.lblDescripcion.Name = "lblDescripcion"
-        Me.lblDescripcion.Size = New System.Drawing.Size(99, 28)
+        Me.lblDescripcion.Size = New System.Drawing.Size(103, 20)
         Me.lblDescripcion.TabIndex = 62
         Me.lblDescripcion.Text = "DIRECCION:"
         Me.lblDescripcion.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
         'txtNombre
         '
-        Me.txtNombre.Font = New System.Drawing.Font("Poppins", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtNombre.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtNombre.Location = New System.Drawing.Point(187, 55)
         Me.txtNombre.Name = "txtNombre"
-        Me.txtNombre.Size = New System.Drawing.Size(251, 36)
+        Me.txtNombre.Size = New System.Drawing.Size(251, 26)
         Me.txtNombre.TabIndex = 1
         '
         'lblNombre
         '
         Me.lblNombre.AutoSize = True
-        Me.lblNombre.Font = New System.Drawing.Font("Poppins", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblNombre.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblNombre.Location = New System.Drawing.Point(14, 58)
         Me.lblNombre.Name = "lblNombre"
-        Me.lblNombre.Size = New System.Drawing.Size(80, 28)
+        Me.lblNombre.Size = New System.Drawing.Size(83, 20)
         Me.lblNombre.TabIndex = 60
         Me.lblNombre.Text = "NOMBRE:"
         Me.lblNombre.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
         'txtDto
         '
-        Me.txtDto.Font = New System.Drawing.Font("Poppins", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtDto.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtDto.Location = New System.Drawing.Point(187, 216)
         Me.txtDto.Name = "txtDto"
-        Me.txtDto.Size = New System.Drawing.Size(251, 36)
+        Me.txtDto.Size = New System.Drawing.Size(251, 26)
         Me.txtDto.TabIndex = 5
         Me.txtDto.Text = "0"
         '
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Poppins", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.Location = New System.Drawing.Point(14, 219)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(97, 28)
+        Me.Label5.Size = New System.Drawing.Size(104, 20)
         Me.Label5.TabIndex = 127
         Me.Label5.Text = "DTO EXTRA:"
         Me.Label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
         'txtPago
         '
-        Me.txtPago.Font = New System.Drawing.Font("Poppins", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtPago.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtPago.Location = New System.Drawing.Point(187, 175)
         Me.txtPago.Name = "txtPago"
-        Me.txtPago.Size = New System.Drawing.Size(251, 36)
+        Me.txtPago.Size = New System.Drawing.Size(251, 26)
         Me.txtPago.TabIndex = 4
         Me.txtPago.Text = "EFECTIVO"
         '
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("Poppins", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.Location = New System.Drawing.Point(14, 178)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(60, 28)
+        Me.Label6.Size = New System.Drawing.Size(59, 20)
         Me.Label6.TabIndex = 125
         Me.Label6.Text = "PAGO:"
         Me.Label6.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
         'txtDias
         '
-        Me.txtDias.Font = New System.Drawing.Font("Poppins", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtDias.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtDias.Location = New System.Drawing.Point(187, 258)
         Me.txtDias.Name = "txtDias"
-        Me.txtDias.Size = New System.Drawing.Size(251, 36)
+        Me.txtDias.Size = New System.Drawing.Size(251, 26)
         Me.txtDias.TabIndex = 6
         Me.txtDias.Text = "10"
         '
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Font = New System.Drawing.Font("Poppins", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label7.Location = New System.Drawing.Point(14, 261)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(138, 28)
+        Me.Label7.Size = New System.Drawing.Size(152, 20)
         Me.Label7.TabIndex = 129
         Me.Label7.Text = "DIAS DE VALIDEZ:"
         Me.Label7.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -213,12 +214,23 @@ Partial Class frmOpcionesPresupuestos_Material
         Me.btnSearch.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.btnSearch.UseVisualStyleBackColor = False
         '
+        'CheckBox1
+        '
+        Me.CheckBox1.AutoSize = True
+        Me.CheckBox1.Location = New System.Drawing.Point(187, 295)
+        Me.CheckBox1.Name = "CheckBox1"
+        Me.CheckBox1.Size = New System.Drawing.Size(62, 24)
+        Me.CheckBox1.TabIndex = 130
+        Me.CheckBox1.Text = "Lista"
+        Me.CheckBox1.UseVisualStyleBackColor = True
+        '
         'frmOpcionesPresupuestos_Material
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 28.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
         Me.ClientSize = New System.Drawing.Size(482, 354)
+        Me.Controls.Add(Me.CheckBox1)
         Me.Controls.Add(Me.btnGuardar)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.txtDias)
@@ -233,7 +245,7 @@ Partial Class frmOpcionesPresupuestos_Material
         Me.Controls.Add(Me.lblDescripcion)
         Me.Controls.Add(Me.txtNombre)
         Me.Controls.Add(Me.lblNombre)
-        Me.Font = New System.Drawing.Font("Poppins", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Margin = New System.Windows.Forms.Padding(5, 6, 5, 6)
         Me.Name = "frmOpcionesPresupuestos_Material"
@@ -262,4 +274,5 @@ Partial Class frmOpcionesPresupuestos_Material
     Friend WithEvents Label7 As Label
     Friend WithEvents Button2 As Button
     Friend WithEvents btnGuardar As Button
+    Friend WithEvents CheckBox1 As CheckBox
 End Class

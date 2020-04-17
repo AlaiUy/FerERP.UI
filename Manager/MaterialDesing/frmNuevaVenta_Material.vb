@@ -211,7 +211,7 @@ Public Class frmNuevaVenta_Material
         If frmNumber.DialogResult = DialogResult.OK Then
             xDescuento = frmNumber.Numero
         End If
-        esp.AsignarDescuento(xDescuento, dgItemsView.Item("LINEA", dgItemsView.CurrentRow.Index).Value)
+        esp.AsignarDescuento(xDescuento, dgItemsView.Item("LINEA", dgItemsView.CurrentRow.Index).Value, False)
         PopularGrilla()
     End Sub
 
@@ -222,7 +222,7 @@ Public Class frmNuevaVenta_Material
         If frmNumber.DialogResult = DialogResult.OK Then
             xDescuento = frmNumber.Numero
         End If
-        esp.AllDescuento(xDescuento)
+        esp.AllDescuento(xDescuento, False)
         PopularGrilla()
     End Sub
 
@@ -248,9 +248,11 @@ Public Class frmNuevaVenta_Material
                 PopularGrilla()
             End If
             If DirectCast(Obj, String).ToString() = "CERRAR" Then
-                frmListArticulos.Close()
-                frmListArticulos.Dispose()
-                frmListArticulos = Nothing
+                If Not IsNothing(frmListArticulos) Then
+                    frmListArticulos.Close()
+                    frmListArticulos.Dispose()
+                    frmListArticulos = Nothing
+                End If
             End If
         End If
 
@@ -385,9 +387,9 @@ Public Class frmNuevaVenta_Material
                 xCantidad = frmNumber.Numero
             End If
             If (dgItemsView.CurrentRow Is Nothing) Then
-                esp.AsignarDescuento(0, 1)
+                esp.AsignarDescuento(0, 1, False)
             Else
-                esp.AsignarDescuento(xCantidad, dgItemsView.Item("LINEA", dgItemsView.CurrentRow.Index).Value)
+                esp.AsignarDescuento(xCantidad, dgItemsView.Item("LINEA", dgItemsView.CurrentRow.Index).Value, False)
             End If
             PopularGrilla()
         Catch ex As Exception
@@ -467,5 +469,9 @@ Public Class frmNuevaVenta_Material
 
     Private Sub PictureBox3_Click(sender As Object, e As EventArgs) Handles PictureBox3.Click
         Close()
+    End Sub
+
+    Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs) Handles Panel1.Paint
+
     End Sub
 End Class

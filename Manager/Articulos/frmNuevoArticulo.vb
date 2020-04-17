@@ -25,7 +25,7 @@ Public Class frmNuevoArticulo
 
 
     Private Sub frmNuevoArticulo_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        SetRegion()
+        'SetRegion()
         PopularFormulario()
         Try
 

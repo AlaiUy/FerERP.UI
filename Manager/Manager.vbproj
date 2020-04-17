@@ -263,6 +263,12 @@
     <Compile Include="Personas\frmDatosFactura.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Personas\frmFiltroCuentas.Designer.vb">
+      <DependentUpon>frmFiltroCuentas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Personas\frmFiltroCuentas.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Personas\frmFiltrosClientesContado.Designer.vb">
       <DependentUpon>frmFiltrosClientesContado.vb</DependentUpon>
     </Compile>
@@ -422,6 +428,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Personas\frmDatosFactura.resx">
       <DependentUpon>frmDatosFactura.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Personas\frmFiltroCuentas.resx">
+      <DependentUpon>frmFiltroCuentas.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Personas\frmFiltrosClientesContado.resx">
       <DependentUpon>frmFiltrosClientesContado.vb</DependentUpon>

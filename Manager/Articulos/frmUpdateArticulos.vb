@@ -281,11 +281,21 @@ Public Class frmUpdateArticulos
             _Departamentos = GesArticulos.getInstance().getDepartamentos()
             Popular()
         End If
+
+
         Select Case True
             Case TypeOf Obj Is Articulo
                 _articulo = TryCast(Obj, Articulo)
                 Popular()
-                _fArticulos.Close()
+                _fArticulos.Hide()
+            Case TypeOf Obj Is String
+                If TryCast(Obj, String).ToString() = "CERRAR" Then
+                    If Not IsNothing(_fArticulos) Then
+                        _fArticulos.Close()
+                        _fArticulos.Dispose()
+                        _fArticulos = Nothing
+                    End If
+                End If
 
         End Select
     End Sub
@@ -308,7 +318,9 @@ Public Class frmUpdateArticulos
     End Sub
 
     Private Sub LinFindArticulos_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles LinFindArticulos.LinkClicked
-        _fArticulos = New frmArticulos(Me)
+        If (_fArticulos Is Nothing) Then
+            _fArticulos = New frmArticulos(Me)
+        End If
         _fArticulos.Show()
     End Sub
 

@@ -27,6 +27,9 @@ Public Class frmOpcionesPresupuestos_Material
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         Try
+            If CheckBox1.Checked Then
+                Espera.AllDescuento(-10, True)
+            End If
             Dim DT As DataTable = Espera.MostrarTabla
             DT.TableName = "Presupuesto"
             GestionReporte.Presupuesto(DT, txtDias.Text, txtPago.Text, txtDto.Text, txtNombre.Text, txtDireccion.Text)

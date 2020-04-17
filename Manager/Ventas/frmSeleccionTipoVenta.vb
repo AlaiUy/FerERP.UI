@@ -24,4 +24,11 @@ Public Class frmSeleccionTipoVenta
         DatosVenta.ShowDialog()
         Me.Close()
     End Sub
+
+    Private Sub btnCredito_Click(sender As Object, e As EventArgs) Handles btnCredito.Click
+        Dim DatosVenta As New frmDatosFactura(GetType(EsperaCredito), Espera)
+        DatosVenta.Register(_Obs)
+        DatosVenta.ShowDialog()
+        Me.Close()
+    End Sub
 End Class

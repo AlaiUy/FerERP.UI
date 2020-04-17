@@ -167,6 +167,7 @@ Partial Class frmArticulos
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None
         Me.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.ClientSize = New System.Drawing.Size(1024, 768)
+        Me.ControlBox = False
         Me.Controls.Add(Me.PanelContainer)
         Me.DoubleBuffered = True
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
