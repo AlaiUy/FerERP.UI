@@ -42,6 +42,10 @@ C:\Users\alai\Source\Repos\FerERP.UI\Manager\obj\Debug\Manager.vbproj.GenerateRe
 C:\Users\alai\Source\Repos\FerERP.UI\Manager\obj\Debug\JO Manager.exe
 C:\Users\alai\Source\Repos\FerERP.UI\Manager\obj\Debug\JO Manager.xml
 C:\Users\alai\Source\Repos\FerERP.UI\Manager\obj\Debug\JO Manager.pdb
+C:\Users\Alai\Desktop\Soft\Desarrollo\Debug\JO Manager.exe.config
+C:\Users\Alai\Desktop\Soft\Desarrollo\Debug\JO Manager.exe
+C:\Users\Alai\Desktop\Soft\Desarrollo\Debug\JO Manager.pdb
+C:\Users\Alai\Desktop\Soft\Desarrollo\Debug\JO Manager.xml
 C:\Users\Alai\Documents\GitHub\FerERP.UI\Manager\obj\Debug\Manager.vbprojResolveAssemblyReference.cache
 C:\Users\Alai\Documents\GitHub\FerERP.UI\Manager\obj\Debug\Manager.frmDepartamentoNuevo.resources
 C:\Users\Alai\Documents\GitHub\FerERP.UI\Manager\obj\Debug\Manager.frmNuevaSeccion.resources
@@ -84,10 +88,6 @@ C:\Users\Alai\Documents\GitHub\FerERP.UI\Manager\obj\Debug\Manager.frmEspera.res
 C:\Users\Alai\Documents\GitHub\FerERP.UI\Manager\obj\Debug\Manager.frmNuevaVenta.resources
 C:\Users\Alai\Documents\GitHub\FerERP.UI\Manager\obj\Debug\Manager.frmSeleccionTipoVenta.resources
 C:\Users\Alai\Documents\GitHub\FerERP.UI\Manager\obj\Debug\Manager.vbproj.GenerateResource.Cache
-C:\Users\Alai\Documents\GitHub\FerERP.UI\Manager\obj\Debug\JO Manager.xml
-C:\Users\Alai\Desktop\Soft\Desarrollo\Debug\JO Manager.exe.config
-C:\Users\Alai\Desktop\Soft\Desarrollo\Debug\JO Manager.exe
-C:\Users\Alai\Desktop\Soft\Desarrollo\Debug\JO Manager.pdb
-C:\Users\Alai\Desktop\Soft\Desarrollo\Debug\JO Manager.xml
 C:\Users\Alai\Documents\GitHub\FerERP.UI\Manager\obj\Debug\JO Manager.exe
+C:\Users\Alai\Documents\GitHub\FerERP.UI\Manager\obj\Debug\JO Manager.xml
 C:\Users\Alai\Documents\GitHub\FerERP.UI\Manager\obj\Debug\JO Manager.pdb

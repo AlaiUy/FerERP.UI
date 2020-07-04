@@ -282,4 +282,20 @@ Public Class frmArticulos_Material
         dgItemsView.DataSource = _TablaArticulos
         _ListaFiltrada = _TablaArticulos
     End Sub
+
+    Private Sub chkDes_CheckedChanged(sender As Object, e As EventArgs) Handles chkDes.CheckedChanged
+        If chkDes.Checked Then
+            _TablaArticulos = GesArticulos.getInstance().getVistaArticulosOff()
+
+        Else
+            _TablaArticulos = GesArticulos.getInstance().getVistaArticulos()
+
+        End If
+        _ListaFiltrada = _TablaArticulos.Copy()
+        dgItemsView.DataSource = _ListaFiltrada
+        Funciones.DoubleBuffered(dgItemsView, True)
+        PopularGrilla()
+    End Sub
+
+
 End Class

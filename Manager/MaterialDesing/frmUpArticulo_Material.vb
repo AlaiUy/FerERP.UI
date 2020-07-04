@@ -11,6 +11,7 @@ Public Class frmUpArticulo_Material
     Private _Marcas As IList(Of Object)
     Private _Ivas As List(Of Iva) = New List(Of Iva)
     Private _Monedas As List(Of Object)
+    Private _frmArticulos As Form
 
     Private Sub Popular()
         Dim x As Integer = 0
@@ -183,15 +184,15 @@ Public Class frmUpArticulo_Material
 
         Try
             GesArticulos.getInstance().ActualizarArticulo(_articulo, xCosto, xGanancia)
-            frmSuccess.FormCorrecto("Articulo: " & _articulo.Referencia & "actualizado")
+            frmSuccess.FormCorrecto("Articulo: " & _articulo.Referencia & " actualizado")
         Catch ex As Exception
             MsgBox(ex.Message)
         End Try
     End Sub
 
     Private Sub btnSearch_Click(sender As Object, e As EventArgs) Handles btnSearch.Click
-        Dim frmArticulos As Form = New frmArticulos_Material(Me)
-        frmArticulos.Show()
+        _frmArticulos = New frmArticulos_Material(Me)
+        _frmArticulos.Show()
     End Sub
 
     Private Sub btnCalcular_Click(sender As Object, e As EventArgs) Handles btnCalcular.Click
@@ -261,6 +262,14 @@ Public Class frmUpArticulo_Material
             Case TypeOf Obj Is Articulo
                 _articulo = TryCast(Obj, Articulo)
                 Popular()
+            Case TypeOf Obj Is String
+                If TryCast(Obj, String).ToString() = "CERRAR" Then
+                    If Not IsNothing(_frmArticulos) Then
+                        _frmArticulos.Close()
+                        _frmArticulos.Dispose()
+                        _frmArticulos = Nothing
+                    End If
+                End If
         End Select
     End Sub
 
@@ -307,6 +316,18 @@ Public Class frmUpArticulo_Material
     End Sub
 
     Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs) Handles Panel1.Paint
+
+    End Sub
+
+
+
+    Private Sub frmUpArticulo_Material_KeyDown(sender As Object, e As KeyEventArgs) Handles MyBase.KeyDown
+        If e.KeyCode = Keys.Escape Then
+            Me.Close()
+        End If
+    End Sub
+
+    Private Sub GroupBox3_Enter(sender As Object, e As EventArgs) Handles GroupBox3.Enter
 
     End Sub
 End Class

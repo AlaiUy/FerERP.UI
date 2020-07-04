@@ -81,9 +81,9 @@ Partial Class frmUpArticulo_Material
         Me.GroupBox3.Controls.Add(Me.txtCostoCalculo)
         Me.GroupBox3.Controls.Add(Me.Label6)
         Me.GroupBox3.Controls.Add(Me.Label5)
-        Me.GroupBox3.Location = New System.Drawing.Point(460, 313)
+        Me.GroupBox3.Location = New System.Drawing.Point(460, 222)
         Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Size = New System.Drawing.Size(452, 201)
+        Me.GroupBox3.Size = New System.Drawing.Size(364, 201)
         Me.GroupBox3.TabIndex = 118
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "Calcular a partir de:"
@@ -91,8 +91,8 @@ Partial Class frmUpArticulo_Material
         'btnCalcular
         '
         Me.btnCalcular.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnCalcular.Font = New System.Drawing.Font("Poppins", 12.0!)
-        Me.btnCalcular.Location = New System.Drawing.Point(200, 150)
+        Me.btnCalcular.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
+        Me.btnCalcular.Location = New System.Drawing.Point(166, 152)
         Me.btnCalcular.Name = "btnCalcular"
         Me.btnCalcular.Size = New System.Drawing.Size(94, 36)
         Me.btnCalcular.TabIndex = 37
@@ -101,26 +101,26 @@ Partial Class frmUpArticulo_Material
         '
         'txtImporteFinal
         '
-        Me.txtImporteFinal.Font = New System.Drawing.Font("Poppins", 12.0!)
-        Me.txtImporteFinal.Location = New System.Drawing.Point(200, 103)
+        Me.txtImporteFinal.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
+        Me.txtImporteFinal.Location = New System.Drawing.Point(166, 104)
         Me.txtImporteFinal.Name = "txtImporteFinal"
-        Me.txtImporteFinal.Size = New System.Drawing.Size(245, 36)
+        Me.txtImporteFinal.Size = New System.Drawing.Size(192, 26)
         Me.txtImporteFinal.TabIndex = 36
         '
         'cbTiposIvaCalculo
         '
         Me.cbTiposIvaCalculo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cbTiposIvaCalculo.Font = New System.Drawing.Font("Poppins", 12.0!)
+        Me.cbTiposIvaCalculo.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
         Me.cbTiposIvaCalculo.FormattingEnabled = True
-        Me.cbTiposIvaCalculo.Location = New System.Drawing.Point(200, 61)
+        Me.cbTiposIvaCalculo.Location = New System.Drawing.Point(166, 61)
         Me.cbTiposIvaCalculo.Name = "cbTiposIvaCalculo"
-        Me.cbTiposIvaCalculo.Size = New System.Drawing.Size(245, 36)
+        Me.cbTiposIvaCalculo.Size = New System.Drawing.Size(192, 28)
         Me.cbTiposIvaCalculo.TabIndex = 35
         '
         'Label7
         '
-        Me.Label7.Font = New System.Drawing.Font("Poppins", 12.0!)
-        Me.Label7.Location = New System.Drawing.Point(67, 68)
+        Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
+        Me.Label7.Location = New System.Drawing.Point(33, 68)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(124, 20)
         Me.Label7.TabIndex = 34
@@ -129,16 +129,16 @@ Partial Class frmUpArticulo_Material
         '
         'txtCostoCalculo
         '
-        Me.txtCostoCalculo.Font = New System.Drawing.Font("Poppins", 12.0!)
-        Me.txtCostoCalculo.Location = New System.Drawing.Point(200, 19)
+        Me.txtCostoCalculo.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
+        Me.txtCostoCalculo.Location = New System.Drawing.Point(166, 19)
         Me.txtCostoCalculo.Name = "txtCostoCalculo"
-        Me.txtCostoCalculo.Size = New System.Drawing.Size(245, 36)
+        Me.txtCostoCalculo.Size = New System.Drawing.Size(192, 26)
         Me.txtCostoCalculo.TabIndex = 35
         '
         'Label6
         '
-        Me.Label6.Font = New System.Drawing.Font("Poppins", 12.0!)
-        Me.Label6.Location = New System.Drawing.Point(41, 26)
+        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
+        Me.Label6.Location = New System.Drawing.Point(7, 26)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(150, 20)
         Me.Label6.TabIndex = 34
@@ -147,8 +147,8 @@ Partial Class frmUpArticulo_Material
         '
         'Label5
         '
-        Me.Label5.Font = New System.Drawing.Font("Poppins", 12.0!)
-        Me.Label5.Location = New System.Drawing.Point(41, 108)
+        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
+        Me.Label5.Location = New System.Drawing.Point(7, 105)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(150, 24)
         Me.Label5.TabIndex = 33
@@ -158,17 +158,17 @@ Partial Class frmUpArticulo_Material
         'cbTiposIva
         '
         Me.cbTiposIva.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cbTiposIva.Font = New System.Drawing.Font("Poppins", 12.0!)
+        Me.cbTiposIva.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
         Me.cbTiposIva.FormattingEnabled = True
-        Me.cbTiposIva.Location = New System.Drawing.Point(660, 268)
+        Me.cbTiposIva.Location = New System.Drawing.Point(607, 167)
         Me.cbTiposIva.Name = "cbTiposIva"
-        Me.cbTiposIva.Size = New System.Drawing.Size(252, 36)
+        Me.cbTiposIva.Size = New System.Drawing.Size(217, 28)
         Me.cbTiposIva.TabIndex = 117
         '
         'Label1
         '
-        Me.Label1.Font = New System.Drawing.Font("Poppins", 12.0!)
-        Me.Label1.Location = New System.Drawing.Point(516, 275)
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
+        Me.Label1.Location = New System.Drawing.Point(463, 174)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(138, 20)
         Me.Label1.TabIndex = 116
@@ -178,17 +178,17 @@ Partial Class frmUpArticulo_Material
         'cbMoneda
         '
         Me.cbMoneda.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cbMoneda.Font = New System.Drawing.Font("Poppins", 12.0!)
+        Me.cbMoneda.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
         Me.cbMoneda.FormattingEnabled = True
-        Me.cbMoneda.Location = New System.Drawing.Point(660, 226)
+        Me.cbMoneda.Location = New System.Drawing.Point(607, 125)
         Me.cbMoneda.Name = "cbMoneda"
-        Me.cbMoneda.Size = New System.Drawing.Size(252, 36)
+        Me.cbMoneda.Size = New System.Drawing.Size(217, 28)
         Me.cbMoneda.TabIndex = 115
         '
         'lblMoneda
         '
-        Me.lblMoneda.Font = New System.Drawing.Font("Poppins", 12.0!)
-        Me.lblMoneda.Location = New System.Drawing.Point(519, 233)
+        Me.lblMoneda.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
+        Me.lblMoneda.Location = New System.Drawing.Point(466, 132)
         Me.lblMoneda.Name = "lblMoneda"
         Me.lblMoneda.Size = New System.Drawing.Size(135, 21)
         Me.lblMoneda.TabIndex = 114
@@ -197,16 +197,16 @@ Partial Class frmUpArticulo_Material
         '
         'txtGanancia
         '
-        Me.txtGanancia.Font = New System.Drawing.Font("Poppins", 12.0!)
-        Me.txtGanancia.Location = New System.Drawing.Point(660, 184)
+        Me.txtGanancia.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
+        Me.txtGanancia.Location = New System.Drawing.Point(607, 83)
         Me.txtGanancia.Name = "txtGanancia"
-        Me.txtGanancia.Size = New System.Drawing.Size(252, 36)
+        Me.txtGanancia.Size = New System.Drawing.Size(217, 26)
         Me.txtGanancia.TabIndex = 113
         '
         'lblGanancia
         '
-        Me.lblGanancia.Font = New System.Drawing.Font("Poppins", 12.0!)
-        Me.lblGanancia.Location = New System.Drawing.Point(516, 191)
+        Me.lblGanancia.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
+        Me.lblGanancia.Location = New System.Drawing.Point(463, 90)
         Me.lblGanancia.Name = "lblGanancia"
         Me.lblGanancia.Size = New System.Drawing.Size(138, 20)
         Me.lblGanancia.TabIndex = 112
@@ -215,16 +215,16 @@ Partial Class frmUpArticulo_Material
         '
         'txtCosto
         '
-        Me.txtCosto.Font = New System.Drawing.Font("Poppins", 12.0!)
-        Me.txtCosto.Location = New System.Drawing.Point(660, 143)
+        Me.txtCosto.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
+        Me.txtCosto.Location = New System.Drawing.Point(607, 42)
         Me.txtCosto.Name = "txtCosto"
-        Me.txtCosto.Size = New System.Drawing.Size(252, 36)
+        Me.txtCosto.Size = New System.Drawing.Size(217, 26)
         Me.txtCosto.TabIndex = 111
         '
         'lblPrecio
         '
-        Me.lblPrecio.Font = New System.Drawing.Font("Poppins", 12.0!)
-        Me.lblPrecio.Location = New System.Drawing.Point(525, 150)
+        Me.lblPrecio.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
+        Me.lblPrecio.Location = New System.Drawing.Point(472, 49)
         Me.lblPrecio.Name = "lblPrecio"
         Me.lblPrecio.Size = New System.Drawing.Size(129, 20)
         Me.lblPrecio.TabIndex = 110
@@ -236,17 +236,17 @@ Partial Class frmUpArticulo_Material
         Me.chkRecalcula.AutoSize = True
         Me.chkRecalcula.Checked = True
         Me.chkRecalcula.CheckState = System.Windows.Forms.CheckState.Checked
-        Me.chkRecalcula.Font = New System.Drawing.Font("Poppins", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.chkRecalcula.Location = New System.Drawing.Point(173, 517)
+        Me.chkRecalcula.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.chkRecalcula.Location = New System.Drawing.Point(173, 460)
         Me.chkRecalcula.Name = "chkRecalcula"
-        Me.chkRecalcula.Size = New System.Drawing.Size(110, 32)
+        Me.chkRecalcula.Size = New System.Drawing.Size(98, 24)
         Me.chkRecalcula.TabIndex = 109
         Me.chkRecalcula.Text = "Recalcula"
         Me.chkRecalcula.UseVisualStyleBackColor = True
         '
         'btnAddSeccion
         '
-        Me.btnAddSeccion.Location = New System.Drawing.Point(430, 483)
+        Me.btnAddSeccion.Location = New System.Drawing.Point(430, 426)
         Me.btnAddSeccion.Name = "btnAddSeccion"
         Me.btnAddSeccion.Size = New System.Drawing.Size(22, 23)
         Me.btnAddSeccion.TabIndex = 108
@@ -255,7 +255,7 @@ Partial Class frmUpArticulo_Material
         '
         'btnAddDepto
         '
-        Me.btnAddDepto.Location = New System.Drawing.Point(430, 441)
+        Me.btnAddDepto.Location = New System.Drawing.Point(430, 384)
         Me.btnAddDepto.Name = "btnAddDepto"
         Me.btnAddDepto.Size = New System.Drawing.Size(22, 23)
         Me.btnAddDepto.TabIndex = 107
@@ -264,7 +264,7 @@ Partial Class frmUpArticulo_Material
         '
         'btnAddMarca
         '
-        Me.btnAddMarca.Location = New System.Drawing.Point(430, 402)
+        Me.btnAddMarca.Location = New System.Drawing.Point(430, 345)
         Me.btnAddMarca.Name = "btnAddMarca"
         Me.btnAddMarca.Size = New System.Drawing.Size(22, 23)
         Me.btnAddMarca.TabIndex = 106
@@ -274,40 +274,40 @@ Partial Class frmUpArticulo_Material
         'cbSeccion
         '
         Me.cbSeccion.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cbSeccion.Font = New System.Drawing.Font("Poppins", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cbSeccion.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cbSeccion.FormattingEnabled = True
-        Me.cbSeccion.Location = New System.Drawing.Point(173, 478)
+        Me.cbSeccion.Location = New System.Drawing.Point(173, 421)
         Me.cbSeccion.Name = "cbSeccion"
-        Me.cbSeccion.Size = New System.Drawing.Size(251, 36)
+        Me.cbSeccion.Size = New System.Drawing.Size(251, 28)
         Me.cbSeccion.TabIndex = 105
         '
         'cbDepartamento
         '
         Me.cbDepartamento.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cbDepartamento.Font = New System.Drawing.Font("Poppins", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cbDepartamento.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cbDepartamento.FormattingEnabled = True
-        Me.cbDepartamento.Location = New System.Drawing.Point(173, 436)
+        Me.cbDepartamento.Location = New System.Drawing.Point(173, 379)
         Me.cbDepartamento.Name = "cbDepartamento"
-        Me.cbDepartamento.Size = New System.Drawing.Size(251, 36)
+        Me.cbDepartamento.Size = New System.Drawing.Size(251, 28)
         Me.cbDepartamento.TabIndex = 104
         '
         'cbMarca
         '
         Me.cbMarca.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cbMarca.Font = New System.Drawing.Font("Poppins", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cbMarca.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cbMarca.FormattingEnabled = True
-        Me.cbMarca.Location = New System.Drawing.Point(173, 394)
+        Me.cbMarca.Location = New System.Drawing.Point(173, 337)
         Me.cbMarca.Name = "cbMarca"
-        Me.cbMarca.Size = New System.Drawing.Size(251, 36)
+        Me.cbMarca.Size = New System.Drawing.Size(251, 28)
         Me.cbMarca.TabIndex = 103
         '
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Poppins", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(0, 481)
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Location = New System.Drawing.Point(0, 424)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(84, 28)
+        Me.Label4.Size = New System.Drawing.Size(85, 20)
         Me.Label4.TabIndex = 102
         Me.Label4.Text = "SECCION:"
         Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -315,10 +315,10 @@ Partial Class frmUpArticulo_Material
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Poppins", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(0, 439)
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(0, 382)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(136, 28)
+        Me.Label3.Size = New System.Drawing.Size(145, 20)
         Me.Label3.TabIndex = 101
         Me.Label3.Text = "DEPARTAMENTO:"
         Me.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -326,124 +326,124 @@ Partial Class frmUpArticulo_Material
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Poppins", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(0, 397)
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(0, 340)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(72, 28)
+        Me.Label2.Size = New System.Drawing.Size(71, 20)
         Me.Label2.TabIndex = 100
         Me.Label2.Text = "MARCA:"
         Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
         'txtModelo
         '
-        Me.txtModelo.Font = New System.Drawing.Font("Poppins", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtModelo.Location = New System.Drawing.Point(173, 352)
+        Me.txtModelo.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtModelo.Location = New System.Drawing.Point(173, 295)
         Me.txtModelo.Name = "txtModelo"
-        Me.txtModelo.Size = New System.Drawing.Size(251, 36)
+        Me.txtModelo.Size = New System.Drawing.Size(251, 26)
         Me.txtModelo.TabIndex = 99
         '
         'lblModelo
         '
         Me.lblModelo.AutoSize = True
-        Me.lblModelo.Font = New System.Drawing.Font("Poppins", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblModelo.Location = New System.Drawing.Point(0, 355)
+        Me.lblModelo.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblModelo.Location = New System.Drawing.Point(0, 298)
         Me.lblModelo.Name = "lblModelo"
-        Me.lblModelo.Size = New System.Drawing.Size(81, 28)
+        Me.lblModelo.Size = New System.Drawing.Size(82, 20)
         Me.lblModelo.TabIndex = 98
         Me.lblModelo.Text = "MODELO:"
         Me.lblModelo.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
         'txtCodBarras1
         '
-        Me.txtCodBarras1.Font = New System.Drawing.Font("Poppins", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtCodBarras1.Location = New System.Drawing.Point(173, 310)
+        Me.txtCodBarras1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtCodBarras1.Location = New System.Drawing.Point(173, 253)
         Me.txtCodBarras1.Name = "txtCodBarras1"
-        Me.txtCodBarras1.Size = New System.Drawing.Size(251, 36)
+        Me.txtCodBarras1.Size = New System.Drawing.Size(251, 26)
         Me.txtCodBarras1.TabIndex = 97
         '
         'lblcodBarras1
         '
         Me.lblcodBarras1.AutoSize = True
-        Me.lblcodBarras1.Font = New System.Drawing.Font("Poppins", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblcodBarras1.Location = New System.Drawing.Point(0, 313)
+        Me.lblcodBarras1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblcodBarras1.Location = New System.Drawing.Point(0, 256)
         Me.lblcodBarras1.Name = "lblcodBarras1"
-        Me.lblcodBarras1.Size = New System.Drawing.Size(166, 28)
+        Me.lblcodBarras1.Size = New System.Drawing.Size(177, 20)
         Me.lblcodBarras1.TabIndex = 96
         Me.lblcodBarras1.Text = "CODIGO DE BARRAS:"
         Me.lblcodBarras1.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
         'txtCodBarras
         '
-        Me.txtCodBarras.Font = New System.Drawing.Font("Poppins", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtCodBarras.Location = New System.Drawing.Point(173, 268)
+        Me.txtCodBarras.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtCodBarras.Location = New System.Drawing.Point(173, 211)
         Me.txtCodBarras.Name = "txtCodBarras"
-        Me.txtCodBarras.Size = New System.Drawing.Size(251, 36)
+        Me.txtCodBarras.Size = New System.Drawing.Size(251, 26)
         Me.txtCodBarras.TabIndex = 95
         '
         'lblCodBarras
         '
         Me.lblCodBarras.AutoSize = True
-        Me.lblCodBarras.Font = New System.Drawing.Font("Poppins", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblCodBarras.Location = New System.Drawing.Point(0, 271)
+        Me.lblCodBarras.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblCodBarras.Location = New System.Drawing.Point(0, 214)
         Me.lblCodBarras.Name = "lblCodBarras"
-        Me.lblCodBarras.Size = New System.Drawing.Size(166, 28)
+        Me.lblCodBarras.Size = New System.Drawing.Size(177, 20)
         Me.lblCodBarras.TabIndex = 94
         Me.lblCodBarras.Text = "CODIGO DE BARRAS:"
         Me.lblCodBarras.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
         'txtReferencia
         '
-        Me.txtReferencia.Font = New System.Drawing.Font("Poppins", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtReferencia.Location = New System.Drawing.Point(173, 226)
+        Me.txtReferencia.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtReferencia.Location = New System.Drawing.Point(173, 169)
         Me.txtReferencia.Name = "txtReferencia"
-        Me.txtReferencia.Size = New System.Drawing.Size(251, 36)
+        Me.txtReferencia.Size = New System.Drawing.Size(251, 26)
         Me.txtReferencia.TabIndex = 93
         '
         'lblReferencia
         '
         Me.lblReferencia.AutoSize = True
-        Me.lblReferencia.Font = New System.Drawing.Font("Poppins", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblReferencia.Location = New System.Drawing.Point(0, 229)
+        Me.lblReferencia.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblReferencia.Location = New System.Drawing.Point(0, 172)
         Me.lblReferencia.Name = "lblReferencia"
-        Me.lblReferencia.Size = New System.Drawing.Size(103, 28)
+        Me.lblReferencia.Size = New System.Drawing.Size(118, 20)
         Me.lblReferencia.TabIndex = 92
         Me.lblReferencia.Text = "REFERENCIA:"
         Me.lblReferencia.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
         'txtDescripcion
         '
-        Me.txtDescripcion.Font = New System.Drawing.Font("Poppins", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtDescripcion.Location = New System.Drawing.Point(173, 184)
+        Me.txtDescripcion.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtDescripcion.Location = New System.Drawing.Point(173, 127)
         Me.txtDescripcion.Name = "txtDescripcion"
-        Me.txtDescripcion.Size = New System.Drawing.Size(251, 36)
+        Me.txtDescripcion.Size = New System.Drawing.Size(251, 26)
         Me.txtDescripcion.TabIndex = 91
         '
         'lblDescripcion
         '
         Me.lblDescripcion.AutoSize = True
-        Me.lblDescripcion.Font = New System.Drawing.Font("Poppins", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblDescripcion.Location = New System.Drawing.Point(0, 187)
+        Me.lblDescripcion.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblDescripcion.Location = New System.Drawing.Point(0, 130)
         Me.lblDescripcion.Name = "lblDescripcion"
-        Me.lblDescripcion.Size = New System.Drawing.Size(117, 28)
+        Me.lblDescripcion.Size = New System.Drawing.Size(124, 20)
         Me.lblDescripcion.TabIndex = 90
         Me.lblDescripcion.Text = "DESCRIPCION:"
         Me.lblDescripcion.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
         'txtNombre
         '
-        Me.txtNombre.Font = New System.Drawing.Font("Poppins", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtNombre.Location = New System.Drawing.Point(173, 143)
+        Me.txtNombre.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtNombre.Location = New System.Drawing.Point(173, 86)
         Me.txtNombre.Name = "txtNombre"
-        Me.txtNombre.Size = New System.Drawing.Size(251, 36)
+        Me.txtNombre.Size = New System.Drawing.Size(251, 26)
         Me.txtNombre.TabIndex = 89
         '
         'lblNombre
         '
         Me.lblNombre.AutoSize = True
-        Me.lblNombre.Font = New System.Drawing.Font("Poppins", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblNombre.Location = New System.Drawing.Point(0, 146)
+        Me.lblNombre.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblNombre.Location = New System.Drawing.Point(0, 89)
         Me.lblNombre.Name = "lblNombre"
-        Me.lblNombre.Size = New System.Drawing.Size(80, 28)
+        Me.lblNombre.Size = New System.Drawing.Size(83, 20)
         Me.lblNombre.TabIndex = 88
         Me.lblNombre.Text = "NOMBRE:"
         Me.lblNombre.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -456,18 +456,18 @@ Partial Class frmUpArticulo_Material
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(913, 37)
+        Me.Panel1.Size = New System.Drawing.Size(836, 37)
         Me.Panel1.TabIndex = 120
         '
         'lblTime
         '
         Me.lblTime.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.lblTime.Font = New System.Drawing.Font("Poppins", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblTime.Font = New System.Drawing.Font("Microsoft Sans Serif", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblTime.ForeColor = System.Drawing.Color.White
-        Me.lblTime.Location = New System.Drawing.Point(266, 0)
+        Me.lblTime.Location = New System.Drawing.Point(228, 0)
         Me.lblTime.Margin = New System.Windows.Forms.Padding(0)
         Me.lblTime.Name = "lblTime"
-        Me.lblTime.Size = New System.Drawing.Size(404, 36)
+        Me.lblTime.Size = New System.Drawing.Size(432, 36)
         Me.lblTime.TabIndex = 2
         Me.lblTime.Text = "ACTUALIZAR UN ARTICULO"
         '
@@ -477,7 +477,7 @@ Partial Class frmUpArticulo_Material
         Me.btnCerrar.FlatAppearance.BorderSize = 0
         Me.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnCerrar.Image = Global.Manager.My.Resources.Resources.icons8_cerrar_ventana_32
-        Me.btnCerrar.Location = New System.Drawing.Point(878, 2)
+        Me.btnCerrar.Location = New System.Drawing.Point(801, 2)
         Me.btnCerrar.Name = "btnCerrar"
         Me.btnCerrar.Size = New System.Drawing.Size(30, 30)
         Me.btnCerrar.TabIndex = 1
@@ -490,7 +490,7 @@ Partial Class frmUpArticulo_Material
         Me.btnSave.FlatAppearance.BorderSize = 0
         Me.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnSave.Image = Global.Manager.My.Resources.Resources.icons8_reemplazar_32
-        Me.btnSave.Location = New System.Drawing.Point(876, 726)
+        Me.btnSave.Location = New System.Drawing.Point(799, 455)
         Me.btnSave.Name = "btnSave"
         Me.btnSave.Size = New System.Drawing.Size(30, 30)
         Me.btnSave.TabIndex = 119
@@ -500,10 +500,10 @@ Partial Class frmUpArticulo_Material
         'chkDescatalogado
         '
         Me.chkDescatalogado.AutoSize = True
-        Me.chkDescatalogado.Font = New System.Drawing.Font("Poppins", 12.0!)
-        Me.chkDescatalogado.Location = New System.Drawing.Point(306, 517)
+        Me.chkDescatalogado.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
+        Me.chkDescatalogado.Location = New System.Drawing.Point(306, 460)
         Me.chkDescatalogado.Name = "chkDescatalogado"
-        Me.chkDescatalogado.Size = New System.Drawing.Size(81, 32)
+        Me.chkDescatalogado.Size = New System.Drawing.Size(71, 24)
         Me.chkDescatalogado.TabIndex = 121
         Me.chkDescatalogado.Text = "Activo"
         Me.chkDescatalogado.UseVisualStyleBackColor = True
@@ -513,7 +513,7 @@ Partial Class frmUpArticulo_Material
         Me.btnSearch.FlatAppearance.BorderSize = 0
         Me.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnSearch.Image = Global.Manager.My.Resources.Resources.icons8_búsqueda_32
-        Me.btnSearch.Location = New System.Drawing.Point(430, 102)
+        Me.btnSearch.Location = New System.Drawing.Point(430, 45)
         Me.btnSearch.Name = "btnSearch"
         Me.btnSearch.Size = New System.Drawing.Size(30, 30)
         Me.btnSearch.TabIndex = 122
@@ -522,19 +522,19 @@ Partial Class frmUpArticulo_Material
         '
         'txtCodigo
         '
-        Me.txtCodigo.Font = New System.Drawing.Font("Poppins", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtCodigo.Location = New System.Drawing.Point(173, 101)
+        Me.txtCodigo.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtCodigo.Location = New System.Drawing.Point(173, 44)
         Me.txtCodigo.Name = "txtCodigo"
-        Me.txtCodigo.Size = New System.Drawing.Size(251, 36)
+        Me.txtCodigo.Size = New System.Drawing.Size(251, 26)
         Me.txtCodigo.TabIndex = 124
         '
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Font = New System.Drawing.Font("Poppins", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(0, 104)
+        Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.Location = New System.Drawing.Point(0, 47)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(80, 28)
+        Me.Label8.Size = New System.Drawing.Size(78, 20)
         Me.Label8.TabIndex = 123
         Me.Label8.Text = "CODIGO:"
         Me.Label8.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -544,7 +544,7 @@ Partial Class frmUpArticulo_Material
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(913, 768)
+        Me.ClientSize = New System.Drawing.Size(836, 497)
         Me.Controls.Add(Me.txtCodigo)
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.btnSearch)
@@ -583,8 +583,11 @@ Partial Class frmUpArticulo_Material
         Me.Controls.Add(Me.txtNombre)
         Me.Controls.Add(Me.lblNombre)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.KeyPreview = True
         Me.Name = "frmUpArticulo_Material"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "frmUpArticulo_Material"
+        Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.GroupBox3.ResumeLayout(False)
         Me.GroupBox3.PerformLayout()
         Me.Panel1.ResumeLayout(False)

@@ -42,4 +42,12 @@ Public Class frmListadoVentas
     Private Sub frmListadoVentas_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
     End Sub
+
+    Private Sub btnMostrarDev_Click(sender As Object, e As EventArgs) Handles btnMostrarDev.Click
+        Try
+            Grid.DataSource = GesDocumentos.getInstance().ListadoDevoluciones(DateInicio.Value, DateFinal.Value)
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
+    End Sub
 End Class

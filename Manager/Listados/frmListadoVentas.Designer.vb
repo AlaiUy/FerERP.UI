@@ -24,6 +24,7 @@ Partial Class frmListadoVentas
     Private Sub InitializeComponent()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.btnMostrarDev = New System.Windows.Forms.Button()
         Me.btnMostrar = New System.Windows.Forms.Button()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -53,11 +54,12 @@ Partial Class frmListadoVentas
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(1053, 60)
+        Me.Panel1.Size = New System.Drawing.Size(1053, 65)
         Me.Panel1.TabIndex = 1
         '
         'GroupBox2
         '
+        Me.GroupBox2.Controls.Add(Me.btnMostrarDev)
         Me.GroupBox2.Controls.Add(Me.btnMostrar)
         Me.GroupBox2.Controls.Add(Me.Label2)
         Me.GroupBox2.Controls.Add(Me.Label1)
@@ -65,18 +67,27 @@ Partial Class frmListadoVentas
         Me.GroupBox2.Controls.Add(Me.DateInicio)
         Me.GroupBox2.Location = New System.Drawing.Point(535, 3)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(399, 51)
+        Me.GroupBox2.Size = New System.Drawing.Size(411, 56)
         Me.GroupBox2.TabIndex = 5
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Parametros"
         '
+        'btnMostrarDev
+        '
+        Me.btnMostrarDev.Location = New System.Drawing.Point(316, 31)
+        Me.btnMostrarDev.Name = "btnMostrarDev"
+        Me.btnMostrarDev.Size = New System.Drawing.Size(89, 23)
+        Me.btnMostrarDev.TabIndex = 4
+        Me.btnMostrarDev.Text = "Devoluciones"
+        Me.btnMostrarDev.UseVisualStyleBackColor = True
+        '
         'btnMostrar
         '
-        Me.btnMostrar.Location = New System.Drawing.Point(316, 18)
+        Me.btnMostrar.Location = New System.Drawing.Point(316, 9)
         Me.btnMostrar.Name = "btnMostrar"
-        Me.btnMostrar.Size = New System.Drawing.Size(75, 23)
+        Me.btnMostrar.Size = New System.Drawing.Size(89, 23)
         Me.btnMostrar.TabIndex = 2
-        Me.btnMostrar.Text = "Mostrar"
+        Me.btnMostrar.Text = "Ventas"
         Me.btnMostrar.UseVisualStyleBackColor = True
         '
         'Label2
@@ -119,7 +130,7 @@ Partial Class frmListadoVentas
         Me.GroupBox1.Controls.Add(Me.txtPath)
         Me.GroupBox1.Location = New System.Drawing.Point(165, 3)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(364, 51)
+        Me.GroupBox1.Size = New System.Drawing.Size(364, 56)
         Me.GroupBox1.TabIndex = 3
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Guardado"
@@ -162,9 +173,9 @@ Partial Class frmListadoVentas
         '
         Me.Panel2.Controls.Add(Me.Grid)
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Panel2.Location = New System.Drawing.Point(0, 60)
+        Me.Panel2.Location = New System.Drawing.Point(0, 65)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(1053, 466)
+        Me.Panel2.Size = New System.Drawing.Size(1053, 461)
         Me.Panel2.TabIndex = 3
         '
         'Grid
@@ -177,7 +188,7 @@ Partial Class frmListadoVentas
         Me.Grid.Location = New System.Drawing.Point(0, 0)
         Me.Grid.Name = "Grid"
         Me.Grid.RowHeadersVisible = False
-        Me.Grid.Size = New System.Drawing.Size(1053, 466)
+        Me.Grid.Size = New System.Drawing.Size(1053, 461)
         Me.Grid.TabIndex = 1
         '
         'frmListadoVentas
@@ -215,4 +226,5 @@ Partial Class frmListadoVentas
     Friend WithEvents Label1 As Label
     Friend WithEvents DateFinal As DateTimePicker
     Friend WithEvents DateInicio As DateTimePicker
+    Friend WithEvents btnMostrarDev As Button
 End Class
