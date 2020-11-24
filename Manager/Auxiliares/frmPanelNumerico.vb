@@ -21,7 +21,6 @@ Public Class frmPanelNumerico
 
     Private Sub Enter_Click(sender As Object, e As EventArgs) Handles btnEnter.Click
         Try
-
             If Not String.IsNullOrEmpty(txtNumero.Text) Then
                 _Numero = Convert.ToDecimal(txtNumero.Text)
             End If
@@ -31,16 +30,6 @@ Public Class frmPanelNumerico
         End Try
     End Sub
 
-    Private Sub txtNumero_MouseDown(sender As Object, e As MouseEventArgs) Handles txtNumero.MouseDown
-
-    End Sub
-
-    Private Sub txtNumero_KeyDown(sender As Object, e As KeyEventArgs) Handles txtNumero.KeyDown
-
-
-
-
-    End Sub
 
     Private Sub btnUno_Click(sender As Object, e As EventArgs) Handles btnUno.Click
         AgregarValor("1")
@@ -63,9 +52,6 @@ Public Class frmPanelNumerico
 
 
     Private Sub AgregarValor(ByVal xIngreso As String)
-        If Convert.ToInt32(xIngreso) > 9 Then
-            Return
-        End If
 
         If _FlagPrimerIngeso Then
             txtNumero.Text = xIngreso
@@ -74,6 +60,12 @@ Public Class frmPanelNumerico
         Else
             txtNumero.Text = txtNumero.Text & xIngreso
         End If
+
+        If Convert.ToInt32(xIngreso) > 9 Then
+            Return
+        End If
+
+
 
         txtNumero.Focus()
         txtNumero.SelectionStart = txtNumero.Text.Length
@@ -115,9 +107,7 @@ Public Class frmPanelNumerico
         AgregarComa()
     End Sub
 
-    Private Sub txtNumero_TextChanged(sender As Object, e As EventArgs) Handles txtNumero.TextChanged
 
-    End Sub
 
     Private Sub txtNumero_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtNumero.KeyPress
         e.Handled = True
@@ -150,7 +140,8 @@ Public Class frmPanelNumerico
                 btnEnter.PerformClick()
             Case "."
                 AgregarComa()
-
+            Case "-"
+                AgregarValor("-")
                 'Case Keys.Back
                 '    e.Handled = True
                 'Case Keys.Enter
@@ -158,5 +149,7 @@ Public Class frmPanelNumerico
         End Select
     End Sub
 
-
+    Private Sub IconButton1_Click(sender As Object, e As EventArgs) Handles IconButton1.Click
+        Close()
+    End Sub
 End Class

@@ -98,7 +98,6 @@ Public Class frmNuevaVenta_Material
             End If
         Next
 
-
         dgItemsView.Columns("NOMBRE").Width += dgItemsView.Width - (SumaAnchos + 2)
     End Sub
 
@@ -452,22 +451,21 @@ Public Class frmNuevaVenta_Material
         End If
     End Sub
 
-    Private Sub PictureBox2_Click(sender As Object, e As EventArgs) Handles PictureBox2.Click
+    Private Sub PictureBox2_Click(sender As Object, e As EventArgs) Handles btnSearch.Click
         Try
             If Not IsNothing(frmListArticulos) Then
                 frmListArticulos.Show()
                 Return
             End If
-
             frmListArticulos = New frmArticulos_Material(Me)
-                frmListArticulos.Show()
+            frmListArticulos.Show()
 
         Catch ex As Exception
             MsgBox(ex.Message)
         End Try
     End Sub
 
-    Private Sub PictureBox3_Click(sender As Object, e As EventArgs) Handles PictureBox3.Click
+    Private Sub PictureBox3_Click(sender As Object, e As EventArgs) Handles IconButton1.Click
         Close()
     End Sub
 

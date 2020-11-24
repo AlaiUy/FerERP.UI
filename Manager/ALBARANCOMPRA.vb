@@ -5,6 +5,7 @@ Public Class _ALBARANCOMPRA
     Private _Lineas As List(Of CompraLin)
     Private _Subtotal As Decimal = 0
     Private _Total As Decimal = 0
+    Private _DPP As Decimal = 0
 
     Public ReadOnly Property Lineas As List(Of CompraLin)
         Get
@@ -14,6 +15,7 @@ Public Class _ALBARANCOMPRA
 
     Public ReadOnly Property Subtotal As Decimal
         Get
+            Totalizar()
             Return _Subtotal
         End Get
 
@@ -21,6 +23,7 @@ Public Class _ALBARANCOMPRA
 
     Public ReadOnly Property Total As Decimal
         Get
+            Totalizar()
             Return _Total
         End Get
 
@@ -32,6 +35,15 @@ Public Class _ALBARANCOMPRA
         End Get
         Set(value As Proveedor)
             _Proveedor = value
+        End Set
+    End Property
+
+    Public Property DPP As Decimal
+        Get
+            Return _DPP
+        End Get
+        Set(value As Decimal)
+            _DPP = value
         End Set
     End Property
 
@@ -47,7 +59,6 @@ Public Class _ALBARANCOMPRA
 
         If _Lineas.Count = 0 Then
             _Lineas.Add(xLinea)
-            Totalizar()
             Return
         End If
 
@@ -55,13 +66,12 @@ Public Class _ALBARANCOMPRA
             If (espLin.Articulo.CodArticulo = xLinea.Articulo.CodArticulo) Then
                 If espLin.Descripcion.Equals(xLinea.Descripcion) Then
                     espLin.Cantidad += xLinea.Cantidad
-                    Totalizar()
                     Return
                 End If
             End If
         Next
         _Lineas.Add(xLinea)
-        Totalizar()
+
     End Sub
 
 
@@ -89,7 +99,6 @@ Public Class _ALBARANCOMPRA
                 L.Cantidad = xCantidad
             End If
         Next
-        Totalizar()
         Return True
     End Function
 
@@ -99,7 +108,6 @@ Public Class _ALBARANCOMPRA
                 L.Costo = xPrecio
             End If
         Next
-        Totalizar()
         Return True
     End Function
 
@@ -121,30 +129,30 @@ Public Class _ALBARANCOMPRA
             L.NumLinea = IndexLin
             IndexLin += 1
         Next
-        Totalizar()
     End Sub
 
     Friend Sub AllDescuento(xDescuento As Decimal)
-        For Each Linea As CompraLin In _Lineas
-            If AsignarDescuento(xDescuento, Linea.NumLinea) = False Then
+        'For Each Linea As CompraLin In _Lineas
+        '    If AsignarDescuento(xDescuento, Linea.NumLinea) = False Then
 
-            End If
-        Next
-        Totalizar()
+        '    End If
+        'Next
+        'Totalizar()
 
     End Sub
 
-    Friend Function AsignarDescuento(xDescuento As Decimal, xLinea As Integer) As Boolean
-        If (xDescuento < 0) Then
-            Return False
-        End If
-
-        If (xDescuento >= 100) Then
-            Return False
-        End If
-
-        _Lineas.Find(Function(Linea As CompraLin) Linea.NumLinea = xLinea).Descuento = xDescuento
+    Friend Function AsignarDescuento(xDescuentos As List(Of Decimal), xLinea As Integer) As Boolean
+        For Each Valor As Decimal In xDescuentos
+            If Valor < 0 Then
+                Return False
+            End If
+        Next
+        _Lineas.Find(Function(Linea As CompraLin) Linea.NumLinea = xLinea).Descuentos = xDescuentos
         Return True
+    End Function
+
+    Public Function getLineaByID(ByVal xIndex As Integer) As CompraLin
+        Return _Lineas.Find(Function(Linea As CompraLin) Linea.NumLinea = xIndex)
     End Function
 
     Private Sub Totalizar()
@@ -153,7 +161,7 @@ Public Class _ALBARANCOMPRA
             _Total = 0
             For Each L As CompraLin In _Lineas
                 _Subtotal += L.SubTotal()
-                _Total += L.TotalConDescuento()
+                _Total += L.TotalconIva()
             Next
         End If
     End Sub
@@ -177,7 +185,6 @@ Public Class _ALBARANCOMPRA
         Dim COLCANTIDAD As DataColumn = New DataColumn("CANTIDAD", Type.GetType("System.String"))
         Dim COLPRECIO As DataColumn = New DataColumn("PRECIO", Type.GetType("System.String"))
         Dim COLIVA As DataColumn = New DataColumn("IVA", Type.GetType("System.String"))
-        Dim COLSUB As DataColumn = New DataColumn("SUBTOTAL", Type.GetType("System.String"))
         Dim COLDESCUENTO As DataColumn = New DataColumn("DESCUENTO", Type.GetType("System.String"))
         Dim COLFINAL As DataColumn = New DataColumn("FINAL", Type.GetType("System.String"))
 
@@ -188,7 +195,6 @@ Public Class _ALBARANCOMPRA
         T.Columns.Add(COLCANTIDAD)
         T.Columns.Add(COLPRECIO)
         T.Columns.Add(COLIVA)
-        T.Columns.Add(COLSUB)
         T.Columns.Add(COLDESCUENTO)
         T.Columns.Add(COLFINAL)
 
@@ -201,9 +207,8 @@ Public Class _ALBARANCOMPRA
             Row.Item("CANTIDAD") = FormatearImporte(Lin.Cantidad)
             Row.Item("PRECIO") = FormatearImporte(Lin.Costo)
             Row.Item("IVA") = Lin.Articulo.Iva
-            Row.Item("SUBTOTAL") = FormatearImporte(Lin.Precio)
-            Row.Item("DESCUENTO") = FormatearImporte(Lin.Descuento)
-            Row.Item("FINAL") = FormatearImporte(Lin.TotalConDescuento)
+            Row.Item("DESCUENTO") = Lin.stringDescuentos()
+            Row.Item("FINAL") = FormatearImporte(Lin.SubTotal())
             T.Rows.Add(Row)
         Next
         Return T

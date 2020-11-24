@@ -23,13 +23,11 @@ Partial Class frmNuevaVenta_Material
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.lblTime = New System.Windows.Forms.Label()
-        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.TimerTime = New System.Windows.Forms.Timer(Me.components)
         Me.dgItemsView = New System.Windows.Forms.DataGridView()
         Me.txtImporteGral = New System.Windows.Forms.TextBox()
@@ -44,10 +42,10 @@ Partial Class frmNuevaVenta_Material
         Me.btnRecuperarEspera = New System.Windows.Forms.Button()
         Me.btnBorrarLinea = New System.Windows.Forms.Button()
         Me.btnCantidad = New System.Windows.Forms.Button()
+        Me.IconButton1 = New FontAwesome.Sharp.IconButton()
+        Me.btnSearch = New FontAwesome.Sharp.IconButton()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
-        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dgItemsView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -55,7 +53,7 @@ Partial Class frmNuevaVenta_Material
         '
         Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
         Me.PictureBox1.Image = Global.Manager.My.Resources.Resources.Caja_de_busqueda
-        Me.PictureBox1.Location = New System.Drawing.Point(5, 37)
+        Me.PictureBox1.Location = New System.Drawing.Point(5, 26)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(359, 40)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -64,47 +62,27 @@ Partial Class frmNuevaVenta_Material
         '
         'Panel1
         '
-        Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(74, Byte), Integer), CType(CType(108, Byte), Integer), CType(CType(231, Byte), Integer))
+        Me.Panel1.BackColor = System.Drawing.Color.White
         Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel1.Controls.Add(Me.IconButton1)
         Me.Panel1.Controls.Add(Me.lblTime)
-        Me.Panel1.Controls.Add(Me.PictureBox3)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(1024, 33)
+        Me.Panel1.Size = New System.Drawing.Size(1024, 23)
         Me.Panel1.TabIndex = 5
         '
         'lblTime
         '
         Me.lblTime.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblTime.ForeColor = System.Drawing.Color.White
-        Me.lblTime.Location = New System.Drawing.Point(0, 2)
+        Me.lblTime.ForeColor = System.Drawing.Color.Black
+        Me.lblTime.Location = New System.Drawing.Point(0, 1)
         Me.lblTime.Margin = New System.Windows.Forms.Padding(0)
         Me.lblTime.Name = "lblTime"
-        Me.lblTime.Size = New System.Drawing.Size(226, 31)
+        Me.lblTime.Size = New System.Drawing.Size(226, 19)
         Me.lblTime.TabIndex = 7
         Me.lblTime.Text = "Label1"
         Me.lblTime.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'PictureBox3
-        '
-        Me.PictureBox3.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.PictureBox3.Image = Global.Manager.My.Resources.Resources.icons8_cerrar_ventana_32
-        Me.PictureBox3.Location = New System.Drawing.Point(985, 0)
-        Me.PictureBox3.Name = "PictureBox3"
-        Me.PictureBox3.Size = New System.Drawing.Size(32, 32)
-        Me.PictureBox3.TabIndex = 6
-        Me.PictureBox3.TabStop = False
-        '
-        'PictureBox2
-        '
-        Me.PictureBox2.BackColor = System.Drawing.Color.White
-        Me.PictureBox2.Image = Global.Manager.My.Resources.Resources.icons8_búsqueda_32
-        Me.PictureBox2.Location = New System.Drawing.Point(11, 41)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(34, 32)
-        Me.PictureBox2.TabIndex = 7
-        Me.PictureBox2.TabStop = False
         '
         'TimerTime
         '
@@ -122,33 +100,33 @@ Partial Class frmNuevaVenta_Material
         Me.dgItemsView.BackgroundColor = System.Drawing.Color.White
         Me.dgItemsView.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.dgItemsView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.RaisedHorizontal
-        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle1.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.999999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgItemsView.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle7.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle7.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.999999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgItemsView.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle7
         Me.dgItemsView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle2.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black
-        DataGridViewCellStyle2.Padding = New System.Windows.Forms.Padding(5)
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.ActiveCaption
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dgItemsView.DefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle8.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle8.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle8.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle8.Padding = New System.Windows.Forms.Padding(5)
+        DataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.ActiveCaption
+        DataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgItemsView.DefaultCellStyle = DataGridViewCellStyle8
         Me.dgItemsView.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically
         Me.dgItemsView.EnableHeadersVisualStyles = False
         Me.dgItemsView.GridColor = System.Drawing.Color.White
-        Me.dgItemsView.Location = New System.Drawing.Point(5, 83)
+        Me.dgItemsView.Location = New System.Drawing.Point(5, 72)
         Me.dgItemsView.Name = "dgItemsView"
         Me.dgItemsView.ReadOnly = True
         Me.dgItemsView.RowHeadersVisible = False
         Me.dgItemsView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgItemsView.Size = New System.Drawing.Size(912, 399)
+        Me.dgItemsView.Size = New System.Drawing.Size(912, 410)
         Me.dgItemsView.TabIndex = 8
         '
         'txtImporteGral
@@ -199,10 +177,11 @@ Partial Class frmNuevaVenta_Material
         '
         'txtCantidad
         '
-        Me.txtCantidad.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtCantidad.Location = New System.Drawing.Point(370, 39)
+        Me.txtCantidad.Font = New System.Drawing.Font("Roboto", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtCantidad.Location = New System.Drawing.Point(370, 28)
+        Me.txtCantidad.Multiline = True
         Me.txtCantidad.Name = "txtCantidad"
-        Me.txtCantidad.Size = New System.Drawing.Size(63, 26)
+        Me.txtCantidad.Size = New System.Drawing.Size(63, 33)
         Me.txtCantidad.TabIndex = 132
         Me.txtCantidad.Text = "1"
         Me.txtCantidad.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
@@ -211,9 +190,10 @@ Partial Class frmNuevaVenta_Material
         '
         Me.txtCodArticulo.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtCodArticulo.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtCodArticulo.Location = New System.Drawing.Point(50, 43)
+        Me.txtCodArticulo.Location = New System.Drawing.Point(50, 31)
+        Me.txtCodArticulo.Multiline = True
         Me.txtCodArticulo.Name = "txtCodArticulo"
-        Me.txtCodArticulo.Size = New System.Drawing.Size(305, 19)
+        Me.txtCodArticulo.Size = New System.Drawing.Size(305, 30)
         Me.txtCodArticulo.TabIndex = 133
         '
         'btnNuevaVenta
@@ -318,11 +298,46 @@ Partial Class frmNuevaVenta_Material
         Me.btnCantidad.TextAlign = System.Drawing.ContentAlignment.BottomCenter
         Me.btnCantidad.UseVisualStyleBackColor = False
         '
+        'IconButton1
+        '
+        Me.IconButton1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.IconButton1.FlatAppearance.BorderSize = 0
+        Me.IconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.IconButton1.Flip = FontAwesome.Sharp.FlipOrientation.Normal
+        Me.IconButton1.IconChar = FontAwesome.Sharp.IconChar.WindowClose
+        Me.IconButton1.IconColor = System.Drawing.Color.Red
+        Me.IconButton1.IconSize = 32
+        Me.IconButton1.Location = New System.Drawing.Point(999, -2)
+        Me.IconButton1.Name = "IconButton1"
+        Me.IconButton1.Rotation = 0R
+        Me.IconButton1.Size = New System.Drawing.Size(24, 27)
+        Me.IconButton1.TabIndex = 8
+        Me.IconButton1.UseVisualStyleBackColor = True
+        '
+        'btnSearch
+        '
+        Me.btnSearch.BackColor = System.Drawing.Color.White
+        Me.btnSearch.FlatAppearance.BorderSize = 0
+        Me.btnSearch.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
+        Me.btnSearch.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
+        Me.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnSearch.Flip = FontAwesome.Sharp.FlipOrientation.Normal
+        Me.btnSearch.IconChar = FontAwesome.Sharp.IconChar.Search
+        Me.btnSearch.IconColor = System.Drawing.Color.Black
+        Me.btnSearch.IconSize = 32
+        Me.btnSearch.Location = New System.Drawing.Point(11, 30)
+        Me.btnSearch.Name = "btnSearch"
+        Me.btnSearch.Rotation = 0R
+        Me.btnSearch.Size = New System.Drawing.Size(39, 32)
+        Me.btnSearch.TabIndex = 140
+        Me.btnSearch.UseVisualStyleBackColor = False
+        '
         'frmNuevaVenta_Material
         '
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None
         Me.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
         Me.ClientSize = New System.Drawing.Size(1024, 571)
+        Me.Controls.Add(Me.btnSearch)
         Me.Controls.Add(Me.btnCantidad)
         Me.Controls.Add(Me.btnBorrarLinea)
         Me.Controls.Add(Me.btnRecuperarPresupuesto)
@@ -336,7 +351,6 @@ Partial Class frmNuevaVenta_Material
         Me.Controls.Add(Me.txtImporte)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.dgItemsView)
-        Me.Controls.Add(Me.PictureBox2)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.Panel1)
         Me.DoubleBuffered = True
@@ -347,8 +361,6 @@ Partial Class frmNuevaVenta_Material
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
-        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.dgItemsView, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -357,8 +369,6 @@ Partial Class frmNuevaVenta_Material
 
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents Panel1 As Panel
-    Friend WithEvents PictureBox3 As PictureBox
-    Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents lblTime As Label
     Friend WithEvents TimerTime As Timer
     Friend WithEvents dgItemsView As DataGridView
@@ -374,4 +384,6 @@ Partial Class frmNuevaVenta_Material
     Friend WithEvents btnRecuperarEspera As Button
     Friend WithEvents btnBorrarLinea As Button
     Friend WithEvents btnCantidad As Button
+    Friend WithEvents IconButton1 As FontAwesome.Sharp.IconButton
+    Friend WithEvents btnSearch As FontAwesome.Sharp.IconButton
 End Class

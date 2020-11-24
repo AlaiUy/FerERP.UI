@@ -81,6 +81,7 @@ C:\Users\Alai\Documents\GitHub\FerERP.UI\Manager\obj\Release\Manager.vbprojResol
 C:\Users\Alai\Documents\GitHub\FerERP.UI\Manager\obj\Release\Manager.frmDepartamentoNuevo.resources
 C:\Users\Alai\Documents\GitHub\FerERP.UI\Manager\obj\Release\Manager.frmNuevaSeccion.resources
 C:\Users\Alai\Documents\GitHub\FerERP.UI\Manager\obj\Release\Manager.frmArticulos.resources
+C:\Users\Alai\Documents\GitHub\FerERP.UI\Manager\obj\Release\Manager.frmClientesContado_Material.resources
 C:\Users\Alai\Documents\GitHub\FerERP.UI\Manager\obj\Release\Manager.frmAddArticulo_Material.resources
 C:\Users\Alai\Documents\GitHub\FerERP.UI\Manager\obj\Release\Manager.frmArticulos_Material.resources
 C:\Users\Alai\Documents\GitHub\FerERP.UI\Manager\obj\Release\Manager.frmNuevoArticulo.resources
@@ -122,3 +123,4 @@ C:\Users\Alai\Documents\GitHub\FerERP.UI\Manager\obj\Release\Manager.vbproj.Gene
 C:\Users\Alai\Documents\GitHub\FerERP.UI\Manager\obj\Release\JO Manager.exe
 C:\Users\Alai\Documents\GitHub\FerERP.UI\Manager\obj\Release\JO Manager.xml
 C:\Users\Alai\Documents\GitHub\FerERP.UI\Manager\obj\Release\JO Manager.pdb
+C:\Users\Alai\Documents\GitHub\FerERP.UI\Manager\obj\Release\Manager.frmCompras_Material.resources

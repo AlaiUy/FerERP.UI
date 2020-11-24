@@ -74,8 +74,8 @@ Public Class frmCompras
         txtFinal.Text = FormatearImporte(0)
         txtSubTotal.Text = FormatearImporte(0)
         txtIva.Text = FormatearImporte(0)
-        Redondear(Panel7, 22) ' PANEL DE LOS BOTONES
-        Redondear(Panel8, 22) 'PANEL DE LOS IMPORTES
+        Redondear(Panel7, 3) ' PANEL DE LOS BOTONES
+        Redondear(Panel8, 3) 'PANEL DE LOS IMPORTES
 
 
         dgCompras.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.None
@@ -228,7 +228,7 @@ Public Class frmCompras
                 xDescuento = 0
             End If
         End If
-        _Compra.AsignarDescuento(xDescuento, dgCompras.Item("LINEA", dgCompras.CurrentRow.Index).Value)
+        '_Compra.AsignarDescuento(xDescuento, dgCompras.Item("LINEA", dgCompras.CurrentRow.Index).Value)
         Popular()
     End Sub
 
@@ -316,9 +316,7 @@ Public Class frmCompras
         Dim AC As AlbaranCompra
         Dim SCompra As Seriedoc = _Caja.getSerieByID(20)
         Dim _Moneda As Moneda = TryCast(cbMonedas.SelectedItem(), Moneda)
-        AC = New AlbaranCompra(SCompra.Serie, Date.Now, _Compra.Proveedor.Codigo, _Moneda.Codigo)
-        AC.Cotizacion = _Moneda.Coeficiente
-        AC.CodMoneda = _Moneda.Codigo
+        AC = New AlbaranCompra(SCompra.Serie, Date.Now, _Compra.Proveedor.Codigo, _Moneda)
         AC.SerieFacturaProveedor = txtSerieP.Text
         If txtNumeroP.Text.Length > 0 Then
             AC.NumFacturaProveedor = Convert.ToInt32(txtNumeroP.Text)
@@ -330,8 +328,6 @@ Public Class frmCompras
         Catch ex As Exception
             MsgBox(ex.Message)
         End Try
-
-
     End Sub
 
     Private Sub LinkProveedor_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles LinkProveedor.LinkClicked
@@ -395,7 +391,7 @@ Public Class frmCompras
                 Descuento = 99
 
             End If
-            _Compra.AsignarDescuento(Descuento, xLinea)
+            ' _Compra.AsignarDescuento(Descuento, xLinea)
 
 
             Popular()
@@ -415,4 +411,7 @@ Public Class frmCompras
 
     End Sub
 
+    Private Sub txtReferencia_TextChanged(sender As Object, e As EventArgs) Handles txtReferencia.TextChanged
+
+    End Sub
 End Class

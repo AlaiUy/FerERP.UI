@@ -40,7 +40,7 @@ Public Class frmListadoVentas
     End Sub
 
     Private Sub frmListadoVentas_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+        Estilos.Redondear(Panel1, 5)
     End Sub
 
     Private Sub btnMostrarDev_Click(sender As Object, e As EventArgs) Handles btnMostrarDev.Click
@@ -49,5 +49,9 @@ Public Class frmListadoVentas
         Catch ex As Exception
             MsgBox(ex.Message)
         End Try
+    End Sub
+
+    Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs) Handles Panel1.Paint
+
     End Sub
 End Class

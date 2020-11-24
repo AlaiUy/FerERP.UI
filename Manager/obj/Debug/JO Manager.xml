@@ -153,6 +153,16 @@ JO Manager
   búsquedas de recursos mediante esta clase de recurso fuertemente tipado.
 </summary>
 </member>
+<member name="P:Manager.My.Resources.Resources._1">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Manager.My.Resources.Resources._11">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:Manager.My.Resources.Resources.Caja_de_busqueda">
 <summary>
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
@@ -194,6 +204,11 @@ JO Manager
 </summary>
 </member>
 <member name="P:Manager.My.Resources.Resources.icons8_reemplazar_32">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Manager.My.Resources.Resources.icons8_shutdown_32">
 <summary>
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>

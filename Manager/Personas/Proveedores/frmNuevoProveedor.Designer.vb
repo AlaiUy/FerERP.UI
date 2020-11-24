@@ -27,6 +27,8 @@ Partial Class frmNuevoProveedor
         Me.Panel5 = New System.Windows.Forms.Panel()
         Me.btnSave = New System.Windows.Forms.Button()
         Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.txtComentarios = New System.Windows.Forms.TextBox()
         Me.btnAddCategory = New System.Windows.Forms.Button()
         Me.cbCategoria = New System.Windows.Forms.ComboBox()
         Me.lblCategoria = New System.Windows.Forms.Label()
@@ -49,8 +51,8 @@ Partial Class frmNuevoProveedor
         Me.lblNombre = New System.Windows.Forms.Label()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.txtComentarios = New System.Windows.Forms.TextBox()
+        Me.cbMonedas = New System.Windows.Forms.ComboBox()
+        Me.Label4 = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         Me.Panel4.SuspendLayout()
         Me.Panel5.SuspendLayout()
@@ -104,6 +106,8 @@ Partial Class frmNuevoProveedor
         'Panel3
         '
         Me.Panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel3.Controls.Add(Me.cbMonedas)
+        Me.Panel3.Controls.Add(Me.Label4)
         Me.Panel3.Controls.Add(Me.Label3)
         Me.Panel3.Controls.Add(Me.txtComentarios)
         Me.Panel3.Controls.Add(Me.btnAddCategory)
@@ -128,6 +132,24 @@ Partial Class frmNuevoProveedor
         Me.Panel3.Name = "Panel3"
         Me.Panel3.Size = New System.Drawing.Size(914, 462)
         Me.Panel3.TabIndex = 1
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(362, 137)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(70, 15)
+        Me.Label3.TabIndex = 57
+        Me.Label3.Text = "Otros Datos:"
+        '
+        'txtComentarios
+        '
+        Me.txtComentarios.Location = New System.Drawing.Point(438, 134)
+        Me.txtComentarios.MaxLength = 255
+        Me.txtComentarios.Multiline = True
+        Me.txtComentarios.Name = "txtComentarios"
+        Me.txtComentarios.Size = New System.Drawing.Size(185, 179)
+        Me.txtComentarios.TabIndex = 56
         '
         'btnAddCategory
         '
@@ -336,23 +358,25 @@ Partial Class frmNuevoProveedor
         Me.Label1.Text = "REGISTRO DE UN NUEVO PROVEEDOR"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'Label3
+        'cbMonedas
         '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(362, 137)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(70, 15)
-        Me.Label3.TabIndex = 57
-        Me.Label3.Text = "Otros Datos:"
+        Me.cbMonedas.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cbMonedas.FormattingEnabled = True
+        Me.cbMonedas.Location = New System.Drawing.Point(121, 290)
+        Me.cbMonedas.Name = "cbMonedas"
+        Me.cbMonedas.Size = New System.Drawing.Size(185, 23)
+        Me.cbMonedas.TabIndex = 58
         '
-        'txtComentarios
+        'Label4
         '
-        Me.txtComentarios.Location = New System.Drawing.Point(438, 134)
-        Me.txtComentarios.MaxLength = 255
-        Me.txtComentarios.Multiline = True
-        Me.txtComentarios.Name = "txtComentarios"
-        Me.txtComentarios.Size = New System.Drawing.Size(185, 179)
-        Me.txtComentarios.TabIndex = 56
+        Me.Label4.Font = New System.Drawing.Font("Times New Roman", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Location = New System.Drawing.Point(20, 285)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(85, 30)
+        Me.Label4.TabIndex = 59
+        Me.Label4.Text = "MONEDA:"
+        Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.Label4.UseCompatibleTextRendering = True
         '
         'frmNuevoProveedor
         '
@@ -410,4 +434,6 @@ Partial Class frmNuevoProveedor
     Friend WithEvents btnSave As Button
     Friend WithEvents Label3 As Label
     Friend WithEvents txtComentarios As TextBox
+    Friend WithEvents cbMonedas As ComboBox
+    Friend WithEvents Label4 As Label
 End Class

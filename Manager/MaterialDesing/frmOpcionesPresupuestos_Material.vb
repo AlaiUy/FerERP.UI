@@ -32,7 +32,7 @@ Public Class frmOpcionesPresupuestos_Material
             End If
             Dim DT As DataTable = Espera.MostrarTabla
             DT.TableName = "Presupuesto"
-            GestionReporte.Presupuesto(DT, txtDias.Text, txtPago.Text, txtDto.Text, txtNombre.Text, txtDireccion.Text)
+            GestionReporte.Presupuesto(DT, txtDias.Text, txtPago.Text, txtDto.Text, txtNombre.Text, txtDireccion.Text, "")
         Catch ex As Exception
             MsgBox(ex.Message)
         End Try

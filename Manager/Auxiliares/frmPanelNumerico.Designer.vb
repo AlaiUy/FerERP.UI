@@ -36,12 +36,16 @@ Partial Class frmPanelNumerico
         Me.btnSiete = New System.Windows.Forms.Button()
         Me.btnEnter = New System.Windows.Forms.Button()
         Me.txtNumero = New System.Windows.Forms.TextBox()
+        Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.IconButton1 = New FontAwesome.Sharp.IconButton()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
+        Me.Panel2.SuspendLayout()
         Me.SuspendLayout()
         '
         'Panel1
         '
-        Me.Panel1.BackColor = System.Drawing.SystemColors.Control
+        Me.Panel1.BackColor = System.Drawing.Color.White
         Me.Panel1.Controls.Add(Me.btnComa)
         Me.Panel1.Controls.Add(Me.btnZero)
         Me.Panel1.Controls.Add(Me.btnTres)
@@ -58,16 +62,17 @@ Partial Class frmPanelNumerico
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(240, 238)
+        Me.Panel1.Size = New System.Drawing.Size(220, 251)
         Me.Panel1.TabIndex = 0
         '
         'btnComa
         '
-        Me.btnComa.BackColor = System.Drawing.Color.White
+        Me.btnComa.BackColor = System.Drawing.Color.DimGray
+        Me.btnComa.FlatAppearance.BorderSize = 0
         Me.btnComa.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnComa.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnComa.ForeColor = System.Drawing.Color.Black
-        Me.btnComa.Location = New System.Drawing.Point(56, 187)
+        Me.btnComa.Font = New System.Drawing.Font("Roboto", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnComa.ForeColor = System.Drawing.Color.White
+        Me.btnComa.Location = New System.Drawing.Point(49, 205)
         Me.btnComa.Name = "btnComa"
         Me.btnComa.Size = New System.Drawing.Size(46, 44)
         Me.btnComa.TabIndex = 12
@@ -76,11 +81,12 @@ Partial Class frmPanelNumerico
         '
         'btnZero
         '
-        Me.btnZero.BackColor = System.Drawing.Color.White
+        Me.btnZero.BackColor = System.Drawing.Color.DimGray
+        Me.btnZero.FlatAppearance.BorderSize = 0
         Me.btnZero.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnZero.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnZero.ForeColor = System.Drawing.Color.Black
-        Me.btnZero.Location = New System.Drawing.Point(4, 187)
+        Me.btnZero.Font = New System.Drawing.Font("Roboto", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnZero.ForeColor = System.Drawing.Color.White
+        Me.btnZero.Location = New System.Drawing.Point(2, 205)
         Me.btnZero.Name = "btnZero"
         Me.btnZero.Size = New System.Drawing.Size(46, 44)
         Me.btnZero.TabIndex = 11
@@ -89,11 +95,12 @@ Partial Class frmPanelNumerico
         '
         'btnTres
         '
-        Me.btnTres.BackColor = System.Drawing.Color.White
+        Me.btnTres.BackColor = System.Drawing.Color.DimGray
+        Me.btnTres.FlatAppearance.BorderSize = 0
         Me.btnTres.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnTres.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnTres.ForeColor = System.Drawing.Color.Black
-        Me.btnTres.Location = New System.Drawing.Point(108, 137)
+        Me.btnTres.Font = New System.Drawing.Font("Roboto", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnTres.ForeColor = System.Drawing.Color.White
+        Me.btnTres.Location = New System.Drawing.Point(96, 159)
         Me.btnTres.Name = "btnTres"
         Me.btnTres.Size = New System.Drawing.Size(46, 44)
         Me.btnTres.TabIndex = 10
@@ -102,11 +109,12 @@ Partial Class frmPanelNumerico
         '
         'btnDos
         '
-        Me.btnDos.BackColor = System.Drawing.Color.White
+        Me.btnDos.BackColor = System.Drawing.Color.DimGray
+        Me.btnDos.FlatAppearance.BorderSize = 0
         Me.btnDos.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnDos.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnDos.ForeColor = System.Drawing.Color.Black
-        Me.btnDos.Location = New System.Drawing.Point(56, 137)
+        Me.btnDos.Font = New System.Drawing.Font("Roboto", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnDos.ForeColor = System.Drawing.Color.White
+        Me.btnDos.Location = New System.Drawing.Point(49, 159)
         Me.btnDos.Name = "btnDos"
         Me.btnDos.Size = New System.Drawing.Size(46, 44)
         Me.btnDos.TabIndex = 9
@@ -115,11 +123,12 @@ Partial Class frmPanelNumerico
         '
         'btnUno
         '
-        Me.btnUno.BackColor = System.Drawing.Color.White
+        Me.btnUno.BackColor = System.Drawing.Color.DimGray
+        Me.btnUno.FlatAppearance.BorderSize = 0
         Me.btnUno.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnUno.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnUno.ForeColor = System.Drawing.Color.Black
-        Me.btnUno.Location = New System.Drawing.Point(4, 137)
+        Me.btnUno.Font = New System.Drawing.Font("Roboto", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnUno.ForeColor = System.Drawing.Color.White
+        Me.btnUno.Location = New System.Drawing.Point(2, 159)
         Me.btnUno.Name = "btnUno"
         Me.btnUno.Size = New System.Drawing.Size(46, 44)
         Me.btnUno.TabIndex = 8
@@ -128,11 +137,12 @@ Partial Class frmPanelNumerico
         '
         'btnSeis
         '
-        Me.btnSeis.BackColor = System.Drawing.Color.White
+        Me.btnSeis.BackColor = System.Drawing.Color.DimGray
+        Me.btnSeis.FlatAppearance.BorderSize = 0
         Me.btnSeis.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnSeis.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnSeis.ForeColor = System.Drawing.Color.Black
-        Me.btnSeis.Location = New System.Drawing.Point(108, 87)
+        Me.btnSeis.Font = New System.Drawing.Font("Roboto", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnSeis.ForeColor = System.Drawing.Color.White
+        Me.btnSeis.Location = New System.Drawing.Point(96, 113)
         Me.btnSeis.Name = "btnSeis"
         Me.btnSeis.Size = New System.Drawing.Size(46, 44)
         Me.btnSeis.TabIndex = 7
@@ -141,11 +151,12 @@ Partial Class frmPanelNumerico
         '
         'btnCinco
         '
-        Me.btnCinco.BackColor = System.Drawing.Color.White
+        Me.btnCinco.BackColor = System.Drawing.Color.DimGray
+        Me.btnCinco.FlatAppearance.BorderSize = 0
         Me.btnCinco.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnCinco.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnCinco.ForeColor = System.Drawing.Color.Black
-        Me.btnCinco.Location = New System.Drawing.Point(56, 87)
+        Me.btnCinco.Font = New System.Drawing.Font("Roboto", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnCinco.ForeColor = System.Drawing.Color.White
+        Me.btnCinco.Location = New System.Drawing.Point(49, 113)
         Me.btnCinco.Name = "btnCinco"
         Me.btnCinco.Size = New System.Drawing.Size(46, 44)
         Me.btnCinco.TabIndex = 6
@@ -154,11 +165,12 @@ Partial Class frmPanelNumerico
         '
         'btnCuatro
         '
-        Me.btnCuatro.BackColor = System.Drawing.Color.White
+        Me.btnCuatro.BackColor = System.Drawing.Color.DimGray
+        Me.btnCuatro.FlatAppearance.BorderSize = 0
         Me.btnCuatro.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnCuatro.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnCuatro.ForeColor = System.Drawing.Color.Black
-        Me.btnCuatro.Location = New System.Drawing.Point(4, 87)
+        Me.btnCuatro.Font = New System.Drawing.Font("Roboto", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnCuatro.ForeColor = System.Drawing.Color.White
+        Me.btnCuatro.Location = New System.Drawing.Point(2, 113)
         Me.btnCuatro.Name = "btnCuatro"
         Me.btnCuatro.Size = New System.Drawing.Size(46, 44)
         Me.btnCuatro.TabIndex = 5
@@ -167,11 +179,12 @@ Partial Class frmPanelNumerico
         '
         'btnNueve
         '
-        Me.btnNueve.BackColor = System.Drawing.Color.White
+        Me.btnNueve.BackColor = System.Drawing.Color.DimGray
+        Me.btnNueve.FlatAppearance.BorderSize = 0
         Me.btnNueve.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnNueve.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnNueve.ForeColor = System.Drawing.Color.Black
-        Me.btnNueve.Location = New System.Drawing.Point(108, 37)
+        Me.btnNueve.Font = New System.Drawing.Font("Roboto", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnNueve.ForeColor = System.Drawing.Color.White
+        Me.btnNueve.Location = New System.Drawing.Point(96, 67)
         Me.btnNueve.Name = "btnNueve"
         Me.btnNueve.Size = New System.Drawing.Size(46, 44)
         Me.btnNueve.TabIndex = 4
@@ -180,11 +193,12 @@ Partial Class frmPanelNumerico
         '
         'btnOcho
         '
-        Me.btnOcho.BackColor = System.Drawing.Color.White
+        Me.btnOcho.BackColor = System.Drawing.Color.DimGray
+        Me.btnOcho.FlatAppearance.BorderSize = 0
         Me.btnOcho.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnOcho.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnOcho.ForeColor = System.Drawing.Color.Black
-        Me.btnOcho.Location = New System.Drawing.Point(56, 37)
+        Me.btnOcho.Font = New System.Drawing.Font("Roboto", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnOcho.ForeColor = System.Drawing.Color.White
+        Me.btnOcho.Location = New System.Drawing.Point(49, 67)
         Me.btnOcho.Name = "btnOcho"
         Me.btnOcho.Size = New System.Drawing.Size(46, 44)
         Me.btnOcho.TabIndex = 3
@@ -193,11 +207,12 @@ Partial Class frmPanelNumerico
         '
         'btnSiete
         '
-        Me.btnSiete.BackColor = System.Drawing.Color.White
+        Me.btnSiete.BackColor = System.Drawing.Color.DimGray
+        Me.btnSiete.FlatAppearance.BorderSize = 0
         Me.btnSiete.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnSiete.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnSiete.ForeColor = System.Drawing.Color.Black
-        Me.btnSiete.Location = New System.Drawing.Point(4, 37)
+        Me.btnSiete.Font = New System.Drawing.Font("Roboto", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnSiete.ForeColor = System.Drawing.Color.White
+        Me.btnSiete.Location = New System.Drawing.Point(2, 67)
         Me.btnSiete.Name = "btnSiete"
         Me.btnSiete.Size = New System.Drawing.Size(46, 44)
         Me.btnSiete.TabIndex = 2
@@ -206,36 +221,85 @@ Partial Class frmPanelNumerico
         '
         'btnEnter
         '
-        Me.btnEnter.BackColor = System.Drawing.Color.White
+        Me.btnEnter.BackColor = System.Drawing.Color.DimGray
+        Me.btnEnter.FlatAppearance.BorderSize = 0
         Me.btnEnter.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnEnter.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnEnter.ForeColor = System.Drawing.Color.Black
-        Me.btnEnter.Location = New System.Drawing.Point(160, 37)
+        Me.btnEnter.Font = New System.Drawing.Font("Roboto", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnEnter.ForeColor = System.Drawing.Color.White
+        Me.btnEnter.Location = New System.Drawing.Point(143, 67)
         Me.btnEnter.Name = "btnEnter"
-        Me.btnEnter.Size = New System.Drawing.Size(75, 194)
+        Me.btnEnter.Size = New System.Drawing.Size(75, 182)
         Me.btnEnter.TabIndex = 1
         Me.btnEnter.Text = "OK!"
         Me.btnEnter.UseVisualStyleBackColor = False
         '
         'txtNumero
         '
-        Me.txtNumero.Dock = System.Windows.Forms.DockStyle.Top
-        Me.txtNumero.Font = New System.Drawing.Font("Tahoma", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtNumero.Location = New System.Drawing.Point(0, 0)
+        Me.txtNumero.Font = New System.Drawing.Font("Roboto", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtNumero.Location = New System.Drawing.Point(1, 21)
+        Me.txtNumero.Multiline = True
         Me.txtNumero.Name = "txtNumero"
-        Me.txtNumero.Size = New System.Drawing.Size(240, 33)
+        Me.txtNumero.Size = New System.Drawing.Size(217, 46)
         Me.txtNumero.TabIndex = 0
+        Me.txtNumero.Text = "1"
         Me.txtNumero.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        '
+        'Panel2
+        '
+        Me.Panel2.BackColor = System.Drawing.Color.DimGray
+        Me.Panel2.Controls.Add(Me.Label1)
+        Me.Panel2.Controls.Add(Me.IconButton1)
+        Me.Panel2.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Panel2.Location = New System.Drawing.Point(0, 0)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(220, 21)
+        Me.Panel2.TabIndex = 1
+        '
+        'IconButton1
+        '
+        Me.IconButton1.BackColor = System.Drawing.Color.White
+        Me.IconButton1.Dock = System.Windows.Forms.DockStyle.Right
+        Me.IconButton1.FlatAppearance.BorderSize = 0
+        Me.IconButton1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
+        Me.IconButton1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
+        Me.IconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.IconButton1.Flip = FontAwesome.Sharp.FlipOrientation.Normal
+        Me.IconButton1.IconChar = FontAwesome.Sharp.IconChar.TimesCircle
+        Me.IconButton1.IconColor = System.Drawing.Color.DimGray
+        Me.IconButton1.IconSize = 16
+        Me.IconButton1.Location = New System.Drawing.Point(198, 0)
+        Me.IconButton1.Name = "IconButton1"
+        Me.IconButton1.Rotation = 0R
+        Me.IconButton1.Size = New System.Drawing.Size(22, 21)
+        Me.IconButton1.TabIndex = 0
+        Me.IconButton1.UseVisualStyleBackColor = False
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Roboto", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.Color.White
+        Me.Label1.Location = New System.Drawing.Point(5, 3)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(84, 15)
+        Me.Label1.TabIndex = 1
+        Me.Label1.Text = "Ingresar valor"
         '
         'frmPanelNumerico
         '
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None
-        Me.ClientSize = New System.Drawing.Size(240, 238)
+        Me.ClientSize = New System.Drawing.Size(220, 251)
+        Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel1)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.KeyPreview = True
         Me.Name = "frmPanelNumerico"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Panel Numerico"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
+        Me.Panel2.ResumeLayout(False)
+        Me.Panel2.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -254,4 +318,7 @@ Partial Class frmPanelNumerico
     Friend WithEvents btnSiete As Button
     Friend WithEvents btnComa As Button
     Friend WithEvents btnZero As Button
+    Friend WithEvents Panel2 As Panel
+    Friend WithEvents IconButton1 As FontAwesome.Sharp.IconButton
+    Friend WithEvents Label1 As Label
 End Class

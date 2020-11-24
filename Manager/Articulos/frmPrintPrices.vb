@@ -1,11 +1,15 @@
 ﻿Imports JJ.Entidades
 Imports JJ.Gestoras
+Imports JJ.Interfaces.Observer
 Imports JJ.Reportes
 
 Public Class frmPrintPrices
-    Private _Articulos As New List(Of Articulo)
-    Private Sub frmPrintPrices_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    Implements IObserver
 
+    Private _Articulos As New List(Of Articulo)
+    Private _frmArticulos As Form
+    Private Sub frmPrintPrices_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Estilos.Redondear(Imprimir, 3)
     End Sub
 
 
@@ -64,7 +68,7 @@ Public Class frmPrintPrices
         End If
     End Sub
 
-    Private Sub btnCerrar_Click(sender As Object, e As EventArgs) Handles btnCerrar.Click
+    Private Sub btnCerrar_Click(sender As Object, e As EventArgs)
         Close()
     End Sub
 
@@ -83,6 +87,14 @@ Public Class frmPrintPrices
     End Sub
 
     Private Sub PictureBox2_Click(sender As Object, e As EventArgs) Handles PictureBox2.Click
+        _frmArticulos = New frmArticulos_Material(Me)
+        _frmArticulos.Show()
+    End Sub
 
+    Public Sub Update(Obj As Object) Implements IObserver.Update
+        If TypeOf Obj Is Articulo Then
+            _Articulos.Add(TryCast(Obj, Articulo))
+            GridArticulos.DataSource = MostrarTabla()
+        End If
     End Sub
 End Class

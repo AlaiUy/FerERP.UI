@@ -1,4 +1,5 @@
-﻿Imports JJ.Entidades
+﻿Imports Bunifu.Framework.UI
+Imports JJ.Entidades
 Imports JJ.Gestoras
 
 Public Class frmAddArticulo_Material
@@ -23,7 +24,6 @@ Public Class frmAddArticulo_Material
     Private Sub frmNuevoArticulo_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         SetRegion()
         Try
-
             _Tarifas = GesPrecios.getInstance().getTarifas()
             _Monedas = GesPrecios.getInstance().getMonedas()
             _Departamentos = GesArticulos.getInstance().getDepartamentos()
@@ -35,7 +35,7 @@ Public Class frmAddArticulo_Material
         End Try
     End Sub
 
-    Private Sub cbDepartamento_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbDepartamento.SelectedIndexChanged
+    Private Sub cbDepartamento_SelectedIndexChanged(sender As Object, e As EventArgs)
         Dim Dpto As Departamento = cbDepartamento.SelectedItem()
         cbSeccion.DataSource = Dpto.Secciones()
     End Sub
@@ -56,17 +56,11 @@ Public Class frmAddArticulo_Material
         End Try
     End Sub
 
-    Private Sub txtPrecio_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtImporteFinal.KeyPress
-        e.Handled = ValidarImportes(e.KeyChar, TryCast(sender, TextBox).Text, TryCast(sender, TextBox).SelectionLength, TryCast(sender, TextBox).SelectionStart, 2)
-    End Sub
 
-    Private Sub txtGanancia_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtGanancia.KeyPress
-        e.Handled = ValidarImportes(e.KeyChar, TryCast(sender, TextBox).Text, TryCast(sender, TextBox).SelectionLength, TryCast(sender, TextBox).SelectionStart, 2)
-    End Sub
 
 
     Private Sub btnSave_Click(sender As Object, e As EventArgs) Handles btnSave.Click
-        Dim CodMoneda As Integer = TryCast(cbMoneda.SelectedItem, Moneda).Codigo
+        Dim CodMoneda As Integer = TryCast(cbMoneda.SelectedValue, Moneda).Codigo
         Dim Costo As Decimal = 0
         Dim Ganancia As Decimal = 0
         Try
@@ -82,7 +76,7 @@ Public Class frmAddArticulo_Material
         A.Codbarras = txtCodBarras.Text
         A.Codbarras1 = txtCodBarras1.Text
         A.Nombre = txtNombre.Text
-        If IsNothing(cbDepartamento.SelectedItem) Then
+        If IsNothing(cbDepartamento.SelectedValue) Then
             btnAddDepto.PerformClick()
             Return
         End If
@@ -108,7 +102,7 @@ Public Class frmAddArticulo_Material
 
         Try
             GesArticulos.getInstance().AddArticulo(A)
-            MsgBox("Agregado con exito")
+            frmSuccess.FormCorrecto("El articulo ha sido creado exitosamente.")
             ClearForm()
         Catch ex As Exception
             MsgBox(ex.Message)
@@ -193,14 +187,31 @@ Public Class frmAddArticulo_Material
 
 
     Private Sub txtCosto_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtCostoCalculo.KeyPress, txtCosto.KeyPress
-        e.Handled = ValidarImportes(e.KeyChar, TryCast(sender, TextBox).Text, TryCast(sender, TextBox).SelectionLength, TryCast(sender, TextBox).SelectionStart, 2)
+
+    End Sub
+
+    Private Sub txtPrecio_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtImporteFinal.KeyPress
+
+    End Sub
+
+    Private Sub txtGanancia_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtGanancia.KeyPress
+
     End Sub
 
     Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs) Handles Panel1.Paint
 
     End Sub
 
-    Private Sub btnCerrar_Click(sender As Object, e As EventArgs) Handles btnCerrar.Click
+    Private Sub btnCerrar_Click(sender As Object, e As EventArgs)
         Close()
+    End Sub
+
+    Private Sub txtCostoCalculo_KeyUp(sender As Object, e As KeyEventArgs) Handles txtCostoCalculo.KeyUp
+
+    End Sub
+
+    Private Sub txtCosto_KeyUp(sender As Object, e As KeyEventArgs) Handles txtCosto.KeyUp
+
+
     End Sub
 End Class

@@ -18,6 +18,7 @@ Public Class frmArticulos
     Private mFiltro As String = ""
     Private xDescuento As Decimal = GesEmpresa.getInstance().Empresa.DescuentoContado
     Private ColorContado As Color = Color.FromArgb(192, 255, 192)
+    Private ColorCredito As Color = Color.FromArgb(255, 87, 51)
 
     Public Sub New(ByVal xObserver As IObserver)
 
@@ -84,6 +85,8 @@ Public Class frmArticulos
         dgArticulos.Columns("MODELO").Visible = LeerIni.LeerDato("VISTA_ARTICULOS", "MODELO", 0, ".\config.ini")
         dgArticulos.Columns("STOCK").Visible = LeerIni.LeerDato("VISTA_ARTICULOS", "STOCK", 0, ".\config.ini")
         dgArticulos.Columns("DESCRIPCION").Visible = LeerIni.LeerDato("VISTA_ARTICULOS", "DESCRIPCION", 0, ".\config.ini")
+        dgArticulos.Columns("DESCRIPCION").Visible = LeerIni.LeerDato("VISTA_ARTICULOS", "CREDITO", 0, ".\config.ini")
+
 
         For Each C As DataGridViewColumn In dgArticulos.Columns
             If C.Visible Then
@@ -99,6 +102,11 @@ Public Class frmArticulos
                         C.Width += 43
                         SumaAnchos += C.Width
                         C.DefaultCellStyle.BackColor = ColorContado
+                        C.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight
+                    Case "CREDITO"
+                        C.Width += 20
+                        SumaAnchos += C.Width
+                        C.DefaultCellStyle.BackColor = ColorCredito
                         C.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight
                 End Select
 
@@ -284,6 +292,10 @@ Public Class frmArticulos
     End Sub
 
     Private Sub frmArticulos_Closing(sender As Object, e As CancelEventArgs) Handles Me.Closing
+
+    End Sub
+
+    Private Sub dgArticulos_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgArticulos.CellContentClick
 
     End Sub
 End Class

@@ -21,7 +21,7 @@ Public Class frmMain_Material
 
 
 
-    Private Sub btnCerrar_Click(sender As Object, e As EventArgs) Handles btnCerrar.Click
+    Private Sub btnCerrar_Click(sender As Object, e As EventArgs)
         If MsgBox("Desea cerrar la aplicacion", vbOKCancel, "Atencion") = MsgBoxResult.Ok Then
             Close()
         End If
@@ -31,6 +31,10 @@ Public Class frmMain_Material
 
     Private Sub OcultarMenu()
         PanelArticulos.Visible = False
+        PanelCompras.Visible = False
+        PanelFichero.Visible = False
+        PanelInformes.Visible = False
+        PanelVentas.Visible = False
     End Sub
 
     Private Sub MostrarPanel(ByVal xMenu As Panel)
@@ -42,13 +46,11 @@ Public Class frmMain_Material
         End If
     End Sub
 
-    Private Sub btnArticulos_Click(sender As Object, e As EventArgs) Handles btnArticulos.Click
+    Private Sub btnArticulos_Click(sender As Object, e As EventArgs)
         MostrarPanel(PanelArticulos)
     End Sub
 
-    Private Sub TimerTime_Tick(sender As Object, e As EventArgs) Handles TimerTime.Tick
-        lblTime.Text = DateTime.Now.ToString("hh:mm:ss")
-    End Sub
+
 
     Private Sub frmMain_Material_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
@@ -58,13 +60,13 @@ Public Class frmMain_Material
 
     End Sub
 
-    Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs) Handles PanelFormularios.Paint
+    Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs)
         Dim Pen As New Pen(Color.Black, 1)
         e.Graphics.DrawLine(Pen, 0, 0, PanelFormularios.Width, 0)
 
     End Sub
 
-    Private Sub PanelTop_MouseMove(sender As Object, e As MouseEventArgs) Handles PanelTop.MouseMove
+    Private Sub PanelTop_MouseMove(sender As Object, e As MouseEventArgs)
         ReleaseCapture()
         SendMessage(Me.Handle, &H112&, &HF012&, 0)
     End Sub
@@ -103,25 +105,14 @@ Public Class frmMain_Material
 
     End Sub
 
-    Private Sub btnAddArticulo_Click(sender As Object, e As EventArgs) Handles btnAddArticulo.Click
-        AbrirFormEnPanel(Of frmAddArticulo_Material)()
-        'Button1.BackColor = Color.FromArgb(12, 61, 92)
-    End Sub
 
 
 
 
 
-    Private Sub btnImprimirArticulos_Click(sender As Object, e As EventArgs) Handles btnImprimirArticulos.Click
-        AbrirFormEnPanel(Of frmPrintPrices)()
-    End Sub
-
-    Private Sub btnUpArticulo_Click(sender As Object, e As EventArgs) Handles btnUpArticulo.Click
-        AbrirFormEnPanel(Of frmUpArticulo_Material)()
-    End Sub
 
     Private Sub btnVenta_Click(sender As Object, e As EventArgs) Handles btnVenta.Click
-        AbrirFormEnPanel(Of frmNuevaVenta_Material)()
+        MostrarPanel(PanelVentas)
     End Sub
 
     Private Sub btnInformes_Click(sender As Object, e As EventArgs) Handles btnInformes.Click
@@ -135,4 +126,56 @@ Public Class frmMain_Material
     Private Sub btnListadoVentas_Click(sender As Object, e As EventArgs) Handles btnListadoVentas.Click
         AbrirFormEnPanel(Of frmListadoVentas)()
     End Sub
+
+    Private Sub btnFicheros_Click(sender As Object, e As EventArgs) Handles btnFicheros.Click
+        MostrarPanel(PanelFichero)
+    End Sub
+
+    Private Sub btnClientesContado_Click(sender As Object, e As EventArgs) Handles btnClientesContado.Click
+        AbrirFormEnPanel(Of frmClientesContado_Material)()
+    End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        AbrirFormEnPanel(Of frmCompras_Material)()
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        MostrarPanel(PanelCompras)
+    End Sub
+
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+        AbrirFormEnPanel(Of frmCompras_EstadoCuenta)()
+    End Sub
+
+    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
+        AbrirFormEnPanel(Of frmCobros_Material)()
+    End Sub
+
+    Private Sub Button7_Click(sender As Object, e As EventArgs) Handles Button7.Click
+        AbrirFormEnPanel(Of frmNuevaVenta_Material)()
+    End Sub
+
+    Private Sub TimerTime_Tick(sender As Object, e As EventArgs) Handles TimerTime.Tick
+        lblHora.Text = DateTime.Now.ToString("hh:mm:ss")
+    End Sub
+
+    Private Sub btnArticulos_Click_1(sender As Object, e As EventArgs) Handles btnArticulos.Click
+        MostrarPanel(PanelArticulos)
+    End Sub
+
+    Private Sub btnNewArticulo_Click(sender As Object, e As EventArgs) Handles btnNewArticulo.Click
+        AbrirFormEnPanel(Of frmAddArticulo_Material)()
+    End Sub
+
+    Private Sub btnPrintPrices_Click(sender As Object, e As EventArgs) Handles btnPrintPrices.Click
+        AbrirFormEnPanel(Of frmPrintPrices)()
+    End Sub
+
+    Private Sub btnUpArticulo_Click(sender As Object, e As EventArgs) Handles btnUpArticulo.Click
+        AbrirFormEnPanel(Of frmUpArticulo_Material)()
+    End Sub
+
+    ''
+    ''
+    '' 
 End Class

@@ -50,7 +50,7 @@ Partial Class frmArticulos
         Me.PanelContainer.Controls.Add(Me.Panel1)
         Me.PanelContainer.Location = New System.Drawing.Point(2, 2)
         Me.PanelContainer.Name = "PanelContainer"
-        Me.PanelContainer.Size = New System.Drawing.Size(1020, 764)
+        Me.PanelContainer.Size = New System.Drawing.Size(1020, 763)
         Me.PanelContainer.TabIndex = 0
         '
         'Panel3
@@ -59,7 +59,7 @@ Partial Class frmArticulos
         Me.Panel3.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel3.Location = New System.Drawing.Point(0, 47)
         Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(1020, 682)
+        Me.Panel3.Size = New System.Drawing.Size(1020, 681)
         Me.Panel3.TabIndex = 0
         '
         'dgArticulos
@@ -99,14 +99,14 @@ Partial Class frmArticulos
         Me.dgArticulos.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
         Me.dgArticulos.RowHeadersVisible = False
         Me.dgArticulos.RowTemplate.Height = 30
-        Me.dgArticulos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect
-        Me.dgArticulos.Size = New System.Drawing.Size(1020, 682)
+        Me.dgArticulos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.dgArticulos.Size = New System.Drawing.Size(1020, 681)
         Me.dgArticulos.TabIndex = 0
         '
         'Panel2
         '
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.Panel2.Location = New System.Drawing.Point(0, 729)
+        Me.Panel2.Location = New System.Drawing.Point(0, 728)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(1020, 35)
         Me.Panel2.TabIndex = 1
@@ -166,7 +166,7 @@ Partial Class frmArticulos
         '
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None
         Me.BackColor = System.Drawing.SystemColors.ActiveCaption
-        Me.ClientSize = New System.Drawing.Size(1024, 768)
+        Me.ClientSize = New System.Drawing.Size(1024, 767)
         Me.ControlBox = False
         Me.Controls.Add(Me.PanelContainer)
         Me.DoubleBuffered = True

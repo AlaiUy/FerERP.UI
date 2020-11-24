@@ -45,6 +45,7 @@ Public Class frmNuevoProveedor
         Try
             Lista = GesPersonas.getInstance().getCategoriasProveedor()
             cbCategoria.DataSource = Lista
+            cbMonedas.DataSource = GesPrecios.getInstance().getMonedas()
         Catch ex As Exception
             MsgBox(ex.Message)
         End Try
@@ -121,7 +122,13 @@ Public Class frmNuevoProveedor
     End Sub
 
     Private Sub btnSave_Click(sender As Object, e As EventArgs) Handles btnSave.Click
-        Dim objProveedor As New Proveedor()
+        Dim xCodmoneda As Integer
+        Try
+            xCodmoneda = TryCast(cbMonedas.SelectedItem, Moneda).Codigo
+        Catch ex As Exception
+
+        End Try
+        Dim objProveedor As New Proveedor(xCodmoneda)
         objProveedor.Celular = txtCelular.Text
         objProveedor.Direccion = txtCalle.Text
         objProveedor.Dirnumero = txtNumero.Text

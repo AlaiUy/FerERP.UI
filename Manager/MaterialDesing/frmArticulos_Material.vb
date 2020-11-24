@@ -14,8 +14,9 @@ Public Class frmArticulos_Material
     Private mIndex As Byte = 1 'Columna seleccionada
     Private mActiva As String = "CODIGO" ' Nombre columna activa
     Private mFiltro As String = ""
-    Private xDescuento As Decimal = GesEmpresa.getInstance().Empresa.DescuentoContado
+    'Private xDescuento As Decimal = GesEmpresa.getInstance().Empresa.DescuentoContado
     Private ColorContado As Color = Color.FromArgb(192, 255, 192)
+    Private ColorCredito As Color = Color.FromArgb(255, 87, 51)
 
     Public Sub New(ByVal xObserver As IObserver)
 
@@ -40,7 +41,7 @@ Public Class frmArticulos_Material
     End Property
 
     Private Sub PopularGrilla()
-        Dim SumaAnchos As Decimal = 1
+        Dim SumaAnchos As Decimal = 0
         dgItemsView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.None
         dgItemsView.Columns("CODIGO").Visible = False
         dgItemsView.Columns("MONEDA").Visible = LeerIni.LeerDato("VISTA_ARTICULOS", "MONEDA", 0, ".\config.ini")
@@ -48,40 +49,72 @@ Public Class frmArticulos_Material
         dgItemsView.Columns("MARCA").Visible = LeerIni.LeerDato("VISTA_ARTICULOS", "MARCA", 0, ".\config.ini")
         dgItemsView.Columns("MODELO").Visible = LeerIni.LeerDato("VISTA_ARTICULOS", "MODELO", 0, ".\config.ini")
         dgItemsView.Columns("STOCK").Visible = LeerIni.LeerDato("VISTA_ARTICULOS", "STOCK", 0, ".\config.ini")
-        dgItemsView.Columns("DESCRIPCION").Visible = LeerIni.LeerDato("VISTA_ARTICULOS", "DESCRIPCION", 0, ".\config.ini")
+        dgItemsView.Columns("CREDITO").Visible = LeerIni.LeerDato("VISTA_ARTICULOS", "CREDITO", 0, ".\config.ini")
+
+        dgItemsView.Columns("MONEDA").AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
+        dgItemsView.Columns("ACTIVO").AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
+        dgItemsView.Columns("MARCA").AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
+        dgItemsView.Columns("MODELO").AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
+        dgItemsView.Columns("STOCK").AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
+        dgItemsView.Columns("CREDITO").AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
+
+
+
+
+
+
+        'For Each C As DataGridViewColumn In dgItemsView.Columns
+        '    If C.Visible Then
+        '        Select Case C.Name
+        '            Case "REFERENCIA"
+        '                SumaAnchos += C.Width
+        '            Case "PRECIO"
+        '                C.Width += 20
+        '                SumaAnchos += C.Width
+        '                C.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight
+        '            Case "CONTADO"
+        '                C.Width += 20
+        '                SumaAnchos += C.Width
+        '                C.DefaultCellStyle.BackColor = ColorContado
+        '                C.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight
+        '            Case "CREDITO"
+        '                C.Width += 20
+        '                SumaAnchos += C.Width
+        '                C.DefaultCellStyle.BackColor = ColorCredito
+        '                C.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight
+        '        End Select
+
+        '    End If
+        'Next
+        'With dgItemsView
+
+        For Each ObjCol As DataGridViewColumn In dgItemsView.Columns
+            ObjCol.SortMode = DataGridViewColumnSortMode.Programmatic
+        Next
+
+
+
+        'dgItemsView.Columns("NOMBRE").Width += dgItemsView.Width - (SumaAnchos + 2)
 
         For Each C As DataGridViewColumn In dgItemsView.Columns
             If C.Visible Then
+                SumaAnchos += C.Width
                 Select Case C.Name
-                    Case "REFERENCIA"
-                        C.Width += 10
-                        SumaAnchos += C.Width
                     Case "PRECIO"
-                        C.Width += 43
-                        SumaAnchos += C.Width
                         C.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight
                     Case "CONTADO"
-                        C.Width += 43
-                        SumaAnchos += C.Width
                         C.DefaultCellStyle.BackColor = ColorContado
+                        C.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight
+                    Case "CREDITO"
+                        C.DefaultCellStyle.BackColor = ColorCredito
                         C.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight
                 End Select
 
             End If
         Next
-        With dgItemsView
 
-            For Each ObjCol As DataGridViewColumn In .Columns
-                ObjCol.SortMode = DataGridViewColumnSortMode.Programmatic
-            Next
-            .Columns(mIndex).DefaultCellStyle.BackColor = Color.Beige
+        dgItemsView.Columns("NOMBRE").Width += dgItemsView.Width - (SumaAnchos + 18)
 
-        End With
-
-
-        Dim Resto As Decimal = dgItemsView.Width - (SumaAnchos + 20)
-
-        dgItemsView.Columns("NOMBRE").Width = Resto
     End Sub
 
     Private Sub frmArticulos_Material_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -158,8 +191,10 @@ Public Class frmArticulos_Material
         End Select
     End Sub
 
-    Private Sub PictureBox3_Click(sender As Object, e As EventArgs) Handles PictureBox3.Click
-        notifyObservers("CERRAR")
+    Private Sub PictureBox3_Click(sender As Object, e As EventArgs)
+        'notifyObservers("CERRAR")
+        Dispose()
+        Close()
     End Sub
 
     Private Sub txtReferencia_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtReferencia.KeyPress
@@ -297,5 +332,11 @@ Public Class frmArticulos_Material
         PopularGrilla()
     End Sub
 
+    Private Sub dgItemsView_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgItemsView.CellContentClick
 
+    End Sub
+
+    Private Sub btnClose_Click(sender As Object, e As EventArgs) Handles btnClose.Click
+        notifyObservers("CERRAR")
+    End Sub
 End Class

@@ -4,6 +4,8 @@ Imports JJ.Interfaces.Observer
 
 Public Class frmUpArticulo_Material
     Implements IObserver, IObservable
+
+
     Private Observadores As List(Of IObserver) = New List(Of IObserver)
     Private _articulo As Articulo = Nothing
     Private _Departamentos As List(Of Object)
@@ -11,7 +13,25 @@ Public Class frmUpArticulo_Material
     Private _Marcas As IList(Of Object)
     Private _Ivas As List(Of Iva) = New List(Of Iva)
     Private _Monedas As List(Of Object)
-    Private _frmArticulos As Form
+    Private _frmArticulos As Form = Nothing
+
+    Public Sub New()
+
+        ' Esta llamada es exigida por el diseñador.
+        InitializeComponent()
+
+        ' Agregue cualquier inicialización después de la llamada a InitializeComponent().
+
+    End Sub
+
+    Public Sub New(ByVal xArticulo As Articulo)
+
+        ' Esta llamada es exigida por el diseñador.
+        InitializeComponent()
+        _articulo = xArticulo
+        ' Agregue cualquier inicialización después de la llamada a InitializeComponent().
+
+    End Sub
 
     Private Sub Popular()
         Dim x As Integer = 0
@@ -184,6 +204,7 @@ Public Class frmUpArticulo_Material
 
         Try
             GesArticulos.getInstance().ActualizarArticulo(_articulo, xCosto, xGanancia)
+            notifyObservers()
             frmSuccess.FormCorrecto("Articulo: " & _articulo.Referencia & " actualizado")
         Catch ex As Exception
             MsgBox(ex.Message)
@@ -191,7 +212,9 @@ Public Class frmUpArticulo_Material
     End Sub
 
     Private Sub btnSearch_Click(sender As Object, e As EventArgs) Handles btnSearch.Click
-        _frmArticulos = New frmArticulos_Material(Me)
+        If IsNothing(_frmArticulos) Then
+            _frmArticulos = New frmArticulos_Material(Me)
+        End If
         _frmArticulos.Show()
     End Sub
 
@@ -228,6 +251,9 @@ Public Class frmUpArticulo_Material
         cbMoneda.DataSource = _Monedas
         cbTiposIva.DataSource = _Ivas
         cbTiposIvaCalculo.DataSource = _Ivas
+        If Not IsNothing(_articulo) Then
+            Popular()
+        End If
     End Sub
 
     Private Sub btnAddMarca_Click(sender As Object, e As EventArgs) Handles btnAddMarca.Click
@@ -278,7 +304,7 @@ Public Class frmUpArticulo_Material
         cbSeccion.DataSource = Dpto.Secciones()
     End Sub
 
-    Private Sub txtCosto_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtCosto.KeyPress, txtCostoCalculo.KeyPress
+    Private Sub txtCosto_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtCosto.KeyPress
         e.Handled = ValidarImportes(e.KeyChar, TryCast(sender, TextBox).Text, TryCast(sender, TextBox).SelectionLength, TryCast(sender, TextBox).SelectionStart, 2)
     End Sub
 
@@ -286,7 +312,7 @@ Public Class frmUpArticulo_Material
         e.Handled = ValidarImportes(e.KeyChar, TryCast(sender, TextBox).Text, TryCast(sender, TextBox).SelectionLength, TryCast(sender, TextBox).SelectionStart, 2)
     End Sub
 
-    Private Sub txtImporteFinal_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtImporteFinal.KeyPress
+    Private Sub txtImporteFinal_KeyPress(sender As Object, e As KeyPressEventArgs)
         e.Handled = ValidarImportes(e.KeyChar, TryCast(sender, TextBox).Text, TryCast(sender, TextBox).SelectionLength, TryCast(sender, TextBox).SelectionStart, 2)
     End Sub
 
@@ -311,13 +337,11 @@ Public Class frmUpArticulo_Material
         Next
     End Sub
 
-    Private Sub btnCerrar_Click(sender As Object, e As EventArgs) Handles btnCerrar.Click
+    Private Sub btnCerrar_Click(sender As Object, e As EventArgs)
         Close()
     End Sub
 
-    Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs) Handles Panel1.Paint
 
-    End Sub
 
 
 
@@ -327,7 +351,5 @@ Public Class frmUpArticulo_Material
         End If
     End Sub
 
-    Private Sub GroupBox3_Enter(sender As Object, e As EventArgs) Handles GroupBox3.Enter
 
-    End Sub
 End Class
