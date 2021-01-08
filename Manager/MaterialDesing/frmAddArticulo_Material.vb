@@ -1,8 +1,11 @@
 ﻿Imports Bunifu.Framework.UI
 Imports JJ.Entidades
 Imports JJ.Gestoras
+Imports JJ.Interfaces.Observer
 
 Public Class frmAddArticulo_Material
+    Implements IObservable
+    Private _Observadores As List(Of IObserver)
     Private _Tarifas As List(Of Object)
     Private _Monedas As List(Of Object)
     Private _Departamentos As List(Of Object)
@@ -35,7 +38,7 @@ Public Class frmAddArticulo_Material
         End Try
     End Sub
 
-    Private Sub cbDepartamento_SelectedIndexChanged(sender As Object, e As EventArgs)
+    Private Sub cbDepartamento_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbDepartamento.SelectedIndexChanged
         Dim Dpto As Departamento = cbDepartamento.SelectedItem()
         cbSeccion.DataSource = Dpto.Secciones()
     End Sub
@@ -110,16 +113,16 @@ Public Class frmAddArticulo_Material
     End Sub
 
     Private Sub ClearForm()
-        txtNombre.Text = ""
-        txtDescripcion.Text = ""
-        txtReferencia.Text = ""
-        txtCodBarras.Text = ""
-        txtCodBarras1.Text = ""
-        txtModelo.Text = ""
-        txtCosto.Text = ""
-        txtGanancia.Text = ""
-        txtCostoCalculo.Text = ""
-        txtImporteFinal.Text = ""
+        txtNombre.Text = String.Empty
+        txtDescripcion.Text = String.Empty
+        txtReferencia.Text = String.Empty
+        txtCodBarras.Text = String.Empty
+        txtCodBarras1.Text = String.Empty
+        txtModelo.Text = String.Empty
+        txtCosto.Text = String.Empty
+        txtGanancia.Text = String.Empty
+        txtCostoCalculo.Text = String.Empty
+        txtImporteFinal.Text = String.Empty
         txtNombre.Focus()
     End Sub
 
@@ -132,7 +135,8 @@ Public Class frmAddArticulo_Material
 
     Private Sub frmNuevoArticulo_KeyDown(sender As Object, e As KeyEventArgs) Handles MyBase.KeyDown
         If e.KeyCode = Keys.Escape Then
-            Me.Close()
+            Me.DialogResult = DialogResult.Abort
+            notifyObservers()
         End If
     End Sub
 
@@ -186,32 +190,27 @@ Public Class frmAddArticulo_Material
     End Sub
 
 
-    Private Sub txtCosto_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtCostoCalculo.KeyPress, txtCosto.KeyPress
-
-    End Sub
-
-    Private Sub txtPrecio_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtImporteFinal.KeyPress
-
-    End Sub
-
-    Private Sub txtGanancia_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtGanancia.KeyPress
-
-    End Sub
-
-    Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs) Handles Panel1.Paint
-
-    End Sub
 
     Private Sub btnCerrar_Click(sender As Object, e As EventArgs)
         Close()
     End Sub
 
-    Private Sub txtCostoCalculo_KeyUp(sender As Object, e As KeyEventArgs) Handles txtCostoCalculo.KeyUp
 
+
+    Public Sub Register(xObserver As IObserver) Implements IObservable.Register
+        If IsNothing(_Observadores) Then
+            _Observadores = New List(Of IObserver)
+        End If
+        _Observadores.Add(xObserver)
     End Sub
 
-    Private Sub txtCosto_KeyUp(sender As Object, e As KeyEventArgs) Handles txtCosto.KeyUp
+    Public Sub UnRegister(xObserver As IObserver) Implements IObservable.UnRegister
+        Throw New NotImplementedException()
+    End Sub
 
-
+    Public Sub notifyObservers() Implements IObservable.notifyObservers
+        For Each O As IObserver In _Observadores
+            O.Update(Me)
+        Next
     End Sub
 End Class

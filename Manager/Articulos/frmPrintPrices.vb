@@ -4,8 +4,9 @@ Imports JJ.Interfaces.Observer
 Imports JJ.Reportes
 
 Public Class frmPrintPrices
-    Implements IObserver
+    Implements IObserver, IObservable
 
+    Private _observadores As List(Of IObserver)
     Private _Articulos As New List(Of Articulo)
     Private _frmArticulos As Form
     Private Sub frmPrintPrices_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -78,7 +79,8 @@ Public Class frmPrintPrices
 
     Private Sub frmPrintPrices_KeyDown(sender As Object, e As KeyEventArgs) Handles Me.KeyDown
         If e.KeyCode = Keys.Escape Then
-            Close()
+            Me.DialogResult = DialogResult.Abort
+            notifyObservers()
         End If
     End Sub
 
@@ -87,7 +89,9 @@ Public Class frmPrintPrices
     End Sub
 
     Private Sub PictureBox2_Click(sender As Object, e As EventArgs) Handles PictureBox2.Click
-        _frmArticulos = New frmArticulos_Material(Me)
+        If IsNothing(_frmArticulos) Then
+            _frmArticulos = New frmArticulos_Material(Me)
+        End If
         _frmArticulos.Show()
     End Sub
 
@@ -96,5 +100,26 @@ Public Class frmPrintPrices
             _Articulos.Add(TryCast(Obj, Articulo))
             GridArticulos.DataSource = MostrarTabla()
         End If
+        If TypeOf Obj Is String Then
+            _frmArticulos.Close()
+            _frmArticulos.Dispose()
+        End If
+    End Sub
+
+    Public Sub Register(xObserver As IObserver) Implements IObservable.Register
+        If IsNothing(_observadores) Then
+            _observadores = New List(Of IObserver)
+        End If
+        _observadores.Add(xObserver)
+    End Sub
+
+    Public Sub UnRegister(xObserver As IObserver) Implements IObservable.UnRegister
+        Throw New NotImplementedException()
+    End Sub
+
+    Public Sub notifyObservers() Implements IObservable.notifyObservers
+        For Each O As IObserver In _observadores
+            O.Update(Me)
+        Next
     End Sub
 End Class

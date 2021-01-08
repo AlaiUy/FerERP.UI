@@ -3,7 +3,27 @@ Imports JJ.Gestoras
 Imports JJ.Interfaces.Observer
 
 Public Class frmCobros_Material
-    Implements IObserver
+    Implements IObserver, IObservable
+
+
+    Private _observadores As List(Of IObserver)
+
+    Public Sub Register(xObserver As IObserver) Implements IObservable.Register
+        If IsNothing(_observadores) Then
+            _observadores = New List(Of IObserver)
+        End If
+        _observadores.Add(xObserver)
+    End Sub
+
+    Public Sub UnRegister(xObserver As IObserver) Implements IObservable.UnRegister
+        Throw New NotImplementedException()
+    End Sub
+
+    Public Sub notifyObservers() Implements IObservable.notifyObservers
+        For Each O As IObserver In _observadores
+            O.Update(Me)
+        Next
+    End Sub
 
     Private _Caja As Caja
     Private _Recibo As PreRecibo
@@ -284,5 +304,12 @@ Public Class frmCobros_Material
 
     Private Sub dgCompras_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgCompras.CellContentClick
 
+    End Sub
+
+    Private Sub frmCobros_Material_KeyDown(sender As Object, e As KeyEventArgs) Handles MyBase.KeyDown
+        If e.KeyCode = Keys.Escape Then
+            Me.DialogResult = DialogResult.Abort
+            notifyObservers()
+        End If
     End Sub
 End Class

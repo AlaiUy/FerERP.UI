@@ -29,11 +29,11 @@ Partial Class frmArticulos_Material
         Me.btnClose = New FontAwesome.Sharp.IconButton()
         Me.txtReferencia = New System.Windows.Forms.TextBox()
         Me.dgItemsView = New System.Windows.Forms.DataGridView()
+        Me.TimerTime = New System.Windows.Forms.Timer(Me.components)
+        Me.chkDes = New System.Windows.Forms.CheckBox()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.TimerTime = New System.Windows.Forms.Timer(Me.components)
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.chkDes = New System.Windows.Forms.CheckBox()
         Me.Panel1.SuspendLayout()
         CType(Me.dgItemsView, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -56,15 +56,14 @@ Partial Class frmArticulos_Material
         Me.btnClose.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btnClose.FlatAppearance.BorderSize = 0
         Me.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnClose.Flip = FontAwesome.Sharp.FlipOrientation.Normal
         Me.btnClose.IconChar = FontAwesome.Sharp.IconChar.PowerOff
         Me.btnClose.IconColor = System.Drawing.Color.White
+        Me.btnClose.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.btnClose.IconSize = 19
         Me.btnClose.ImageAlign = System.Drawing.ContentAlignment.BottomLeft
         Me.btnClose.Location = New System.Drawing.Point(825, 2)
         Me.btnClose.Margin = New System.Windows.Forms.Padding(0)
         Me.btnClose.Name = "btnClose"
-        Me.btnClose.Rotation = 0R
         Me.btnClose.Size = New System.Drawing.Size(28, 25)
         Me.btnClose.TabIndex = 0
         Me.btnClose.UseVisualStyleBackColor = True
@@ -121,6 +120,28 @@ Partial Class frmArticulos_Material
         Me.dgItemsView.Size = New System.Drawing.Size(847, 235)
         Me.dgItemsView.TabIndex = 7
         '
+        'chkDes
+        '
+        Me.chkDes.AutoSize = True
+        Me.chkDes.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!)
+        Me.chkDes.Location = New System.Drawing.Point(416, 47)
+        Me.chkDes.Name = "chkDes"
+        Me.chkDes.Size = New System.Drawing.Size(196, 28)
+        Me.chkDes.TabIndex = 9
+        Me.chkDes.Text = "Ver descatalogados"
+        Me.chkDes.UseVisualStyleBackColor = True
+        '
+        'Button1
+        '
+        Me.Button1.FlatAppearance.BorderSize = 0
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button1.Image = Global.Manager.My.Resources.Resources.icons8_cita_recurrente_32
+        Me.Button1.Location = New System.Drawing.Point(371, 37)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(39, 41)
+        Me.Button1.TabIndex = 8
+        Me.Button1.UseVisualStyleBackColor = True
+        '
         'PictureBox2
         '
         Me.PictureBox2.Image = Global.Manager.My.Resources.Resources.icons8_búsqueda_32
@@ -140,31 +161,6 @@ Partial Class frmArticulos_Material
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox1.TabIndex = 4
         Me.PictureBox1.TabStop = False
-        '
-        'TimerTime
-        '
-        '
-        'Button1
-        '
-        Me.Button1.FlatAppearance.BorderSize = 0
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.Image = Global.Manager.My.Resources.Resources.icons8_cita_recurrente_32
-        Me.Button1.Location = New System.Drawing.Point(371, 37)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(39, 41)
-        Me.Button1.TabIndex = 8
-        Me.Button1.UseVisualStyleBackColor = True
-        '
-        'chkDes
-        '
-        Me.chkDes.AutoSize = True
-        Me.chkDes.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!)
-        Me.chkDes.Location = New System.Drawing.Point(416, 47)
-        Me.chkDes.Name = "chkDes"
-        Me.chkDes.Size = New System.Drawing.Size(196, 28)
-        Me.chkDes.TabIndex = 9
-        Me.chkDes.Text = "Ver descatalogados"
-        Me.chkDes.UseVisualStyleBackColor = True
         '
         'frmArticulos_Material
         '

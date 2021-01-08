@@ -397,15 +397,7 @@ Public Class frmNuevaVenta_Material
 
     End Sub
 
-    Private Sub dgItemsView_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgItemsView.CellContentClick
 
-    End Sub
-
-    Private Sub dgItemsView_CellPainting(sender As Object, e As DataGridViewCellPaintingEventArgs) Handles dgItemsView.CellPainting
-
-
-
-    End Sub
 
     Private Sub btnRecuperarEspera_Click(sender As Object, e As EventArgs) Handles btnRecuperarEspera.Click
         Dim Perder As Boolean = True
@@ -465,11 +457,18 @@ Public Class frmNuevaVenta_Material
         End Try
     End Sub
 
-    Private Sub PictureBox3_Click(sender As Object, e As EventArgs) Handles IconButton1.Click
+    Private Sub PictureBox3_Click(sender As Object, e As EventArgs)
         Close()
     End Sub
 
     Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs) Handles Panel1.Paint
 
+    End Sub
+
+    Private Sub btnRecuperarEspera_KeyDown(sender As Object, e As KeyEventArgs) Handles btnRecuperarEspera.KeyDown
+        If e.KeyCode = Keys.Escape Then
+            Me.DialogResult = DialogResult.Abort
+            notifyObservers()
+        End If
     End Sub
 End Class

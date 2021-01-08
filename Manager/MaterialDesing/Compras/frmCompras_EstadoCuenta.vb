@@ -4,10 +4,10 @@ Imports JJ.Interfaces.Observer
 Imports JJ.Reportes
 
 Public Class frmCompras_EstadoCuenta
-    Implements IObserver
+    Implements IObserver, IObservable
 
     Private _Caja As Caja
-
+    Private _observadores As List(Of IObserver)
     'formularios banderas
     Private _fProveedores As frmListaProveedores = Nothing
     Private _Proveedor As Proveedor = Nothing
@@ -131,33 +131,6 @@ Public Class frmCompras_EstadoCuenta
         End Try
     End Sub
 
-    Private Sub btnExportExcel_MouseEnter(sender As Object, e As EventArgs) Handles btnExportExcel.MouseEnter
-
-    End Sub
-
-    Private Sub btnExportExcel_MouseLeave(sender As Object, e As EventArgs) Handles btnExportExcel.MouseLeave
-
-    End Sub
-
-    Private Sub btnExportExcel_MouseHover(sender As Object, e As EventArgs) Handles btnExportExcel.MouseHover
-
-    End Sub
-
-    Private Sub btnAnularRecibo_MouseEnter(sender As Object, e As EventArgs) Handles btnAnularRecibo.MouseEnter
-
-    End Sub
-
-    Private Sub btnAnularRecibo_MouseLeave(sender As Object, e As EventArgs) Handles btnAnularRecibo.MouseLeave
-
-    End Sub
-
-    Private Sub btnAnularRecibo_MouseHover(sender As Object, e As EventArgs) Handles btnAnularRecibo.MouseHover
-
-    End Sub
-
-    Private Sub Panel5_Paint(sender As Object, e As PaintEventArgs) Handles Panel5.Paint
-
-    End Sub
 
     Private Sub frmCompras_EstadoCuenta_Load(sender As Object, e As EventArgs) Handles Me.Load
         Estilos.Redondear(Panel5, 5)
@@ -168,5 +141,29 @@ Public Class frmCompras_EstadoCuenta
 
     Private Sub lblTime_Click(sender As Object, e As EventArgs) Handles lblTime.Click
 
+    End Sub
+
+    Public Sub Register(xObserver As IObserver) Implements IObservable.Register
+        If IsNothing(_observadores) Then
+            _observadores = New List(Of IObserver)
+        End If
+        _observadores.Add(xObserver)
+    End Sub
+
+    Public Sub UnRegister(xObserver As IObserver) Implements IObservable.UnRegister
+        Throw New NotImplementedException()
+    End Sub
+
+    Public Sub notifyObservers() Implements IObservable.notifyObservers
+        For Each O As IObserver In _observadores
+            O.Update(Me)
+        Next
+    End Sub
+
+    Private Sub frmCompras_EstadoCuenta_KeyDown(sender As Object, e As KeyEventArgs) Handles MyBase.KeyDown
+        If e.KeyCode = Keys.Escape Then
+            Me.DialogResult = DialogResult.Abort
+            notifyObservers()
+        End If
     End Sub
 End Class

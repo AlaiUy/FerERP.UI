@@ -1,8 +1,30 @@
 ﻿Imports JJ.Entidades
 Imports JJ.Gestoras
+Imports JJ.Interfaces.Observer
 Imports JJ.Reportes
 
 Public Class frmListadoArticulos
+    Implements IObservable
+
+
+    Private _observadores As List(Of IObserver)
+
+    Public Sub Register(xObserver As IObserver) Implements IObservable.Register
+        If IsNothing(_observadores) Then
+            _observadores = New List(Of IObserver)
+        End If
+        _observadores.Add(xObserver)
+    End Sub
+
+    Public Sub UnRegister(xObserver As IObserver) Implements IObservable.UnRegister
+        Throw New NotImplementedException()
+    End Sub
+
+    Public Sub notifyObservers() Implements IObservable.notifyObservers
+        For Each O As IObserver In _observadores
+            O.Update(Me)
+        Next
+    End Sub
 
     Private list As List(Of Articulo)
 
@@ -21,7 +43,8 @@ Public Class frmListadoArticulos
 
     Private Sub frmListadoArticulos_KeyDown(sender As Object, e As KeyEventArgs) Handles MyBase.KeyDown
         If e.KeyCode = Keys.Escape Then
-            Close()
+            Me.DialogResult = DialogResult.Abort
+            notifyObservers()
         End If
     End Sub
 
@@ -42,6 +65,10 @@ Public Class frmListadoArticulos
     End Sub
 
     Private Sub Grid_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles Grid.CellContentClick
+
+    End Sub
+
+    Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs) Handles Panel1.Paint
 
     End Sub
 End Class

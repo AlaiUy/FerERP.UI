@@ -241,4 +241,12 @@ Public Class frmNuevoArticulo
     Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs) Handles Panel1.Paint
 
     End Sub
+
+    Private Sub cbMarca_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbMarca.SelectedIndexChanged
+
+    End Sub
+
+    Private Sub cbSeccion_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbSeccion.SelectedIndexChanged
+
+    End Sub
 End Class

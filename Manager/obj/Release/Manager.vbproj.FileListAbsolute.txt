@@ -124,3 +124,60 @@ C:\Users\Alai\Documents\GitHub\FerERP.UI\Manager\obj\Release\JO Manager.exe
 C:\Users\Alai\Documents\GitHub\FerERP.UI\Manager\obj\Release\JO Manager.xml
 C:\Users\Alai\Documents\GitHub\FerERP.UI\Manager\obj\Release\JO Manager.pdb
 C:\Users\Alai\Documents\GitHub\FerERP.UI\Manager\obj\Release\Manager.frmCompras_Material.resources
+D:\Jose\P_sonal\GitHub\FerERP.UI\Manager\obj\Release\Manager.vbprojAssemblyReference.cache
+D:\Jose\P_sonal\GitHub\FerERP.UI\Manager\obj\Release\Manager.frmDepartamentoNuevo.resources
+D:\Jose\P_sonal\GitHub\FerERP.UI\Manager\obj\Release\Manager.frmNuevaSeccion.resources
+D:\Jose\P_sonal\GitHub\FerERP.UI\Manager\obj\Release\Manager.frmArticulos.resources
+D:\Jose\P_sonal\GitHub\FerERP.UI\Manager\obj\Release\Manager.frmClientesContado_Material.resources
+D:\Jose\P_sonal\GitHub\FerERP.UI\Manager\obj\Release\Manager.frmCobros_Material.resources
+D:\Jose\P_sonal\GitHub\FerERP.UI\Manager\obj\Release\Manager.frmCompras_EstadoCuenta.resources
+D:\Jose\P_sonal\GitHub\FerERP.UI\Manager\obj\Release\Manager.frmCompras_Material.resources
+D:\Jose\P_sonal\GitHub\FerERP.UI\Manager\obj\Release\Manager.frmDescuentosCompra.resources
+D:\Jose\P_sonal\GitHub\FerERP.UI\Manager\obj\Release\Manager.frmDPP_material.resources
+D:\Jose\P_sonal\GitHub\FerERP.UI\Manager\obj\Release\Manager.frmAddArticulo_Material.resources
+D:\Jose\P_sonal\GitHub\FerERP.UI\Manager\obj\Release\Manager.frmArticulos_Material.resources
+D:\Jose\P_sonal\GitHub\FerERP.UI\Manager\obj\Release\Manager.frmNuevoArticulo.resources
+D:\Jose\P_sonal\GitHub\FerERP.UI\Manager\obj\Release\Manager.frmPrintPrices.resources
+D:\Jose\P_sonal\GitHub\FerERP.UI\Manager\obj\Release\Manager.frmUpdateArticulos.resources
+D:\Jose\P_sonal\GitHub\FerERP.UI\Manager\obj\Release\Manager.frmNuevaMarca.resources
+D:\Jose\P_sonal\GitHub\FerERP.UI\Manager\obj\Release\Manager.frmPanelNumerico.resources
+D:\Jose\P_sonal\GitHub\FerERP.UI\Manager\obj\Release\Manager.frmNuevaCaja.resources
+D:\Jose\P_sonal\GitHub\FerERP.UI\Manager\obj\Release\Manager.frmCompras.resources
+D:\Jose\P_sonal\GitHub\FerERP.UI\Manager\obj\Release\Manager.frmEmpresaData.resources
+D:\Jose\P_sonal\GitHub\FerERP.UI\Manager\obj\Release\Manager.frmNuevaCuenta.resources
+D:\Jose\P_sonal\GitHub\FerERP.UI\Manager\obj\Release\Manager.frmCotizaciones.resources
+D:\Jose\P_sonal\GitHub\FerERP.UI\Manager\obj\Release\Manager.frmMain.resources
+D:\Jose\P_sonal\GitHub\FerERP.UI\Manager\obj\Release\Manager.JJRecursos.resources
+D:\Jose\P_sonal\GitHub\FerERP.UI\Manager\obj\Release\Manager.frmListadoArticulos.resources
+D:\Jose\P_sonal\GitHub\FerERP.UI\Manager\obj\Release\Manager.frmListadoVentas.resources
+D:\Jose\P_sonal\GitHub\FerERP.UI\Manager\obj\Release\Manager.frmMainMaterial.resources
+D:\Jose\P_sonal\GitHub\FerERP.UI\Manager\obj\Release\Manager.frmMain_Material.resources
+D:\Jose\P_sonal\GitHub\FerERP.UI\Manager\obj\Release\Manager.frmNuevaVenta_Material.resources
+D:\Jose\P_sonal\GitHub\FerERP.UI\Manager\obj\Release\Manager.frmOpcionesPresupuestos_Material.resources
+D:\Jose\P_sonal\GitHub\FerERP.UI\Manager\obj\Release\Manager.frmRecEspera_Material.resources
+D:\Jose\P_sonal\GitHub\FerERP.UI\Manager\obj\Release\Manager.frmSuccess.resources
+D:\Jose\P_sonal\GitHub\FerERP.UI\Manager\obj\Release\Manager.frmUpArticulo_Material.resources
+D:\Jose\P_sonal\GitHub\FerERP.UI\Manager\obj\Release\Manager.frmVendedores_Material.resources
+D:\Jose\P_sonal\GitHub\FerERP.UI\Manager\obj\Release\Manager.frmPresupuestos_Material.resources
+D:\Jose\P_sonal\GitHub\FerERP.UI\Manager\obj\Release\Manager.frmFiltroProveedores_Material.resources
+D:\Jose\P_sonal\GitHub\FerERP.UI\Manager\obj\Release\Manager.frmNuevoProveedor_Material.resources
+D:\Jose\P_sonal\GitHub\FerERP.UI\Manager\obj\Release\Manager.frmUpProveedor_Material.resources
+D:\Jose\P_sonal\GitHub\FerERP.UI\Manager\obj\Release\Manager.Resources.resources
+D:\Jose\P_sonal\GitHub\FerERP.UI\Manager\obj\Release\Manager.frmDatosFactura.resources
+D:\Jose\P_sonal\GitHub\FerERP.UI\Manager\obj\Release\Manager.frmFiltroCuentas.resources
+D:\Jose\P_sonal\GitHub\FerERP.UI\Manager\obj\Release\Manager.frmFiltrosClientesContado.resources
+D:\Jose\P_sonal\GitHub\FerERP.UI\Manager\obj\Release\Manager.frmNuevaPersona.resources
+D:\Jose\P_sonal\GitHub\FerERP.UI\Manager\obj\Release\Manager.frmListaProveedores.resources
+D:\Jose\P_sonal\GitHub\FerERP.UI\Manager\obj\Release\Manager.frmNuevaCategoriaProveedor.resources
+D:\Jose\P_sonal\GitHub\FerERP.UI\Manager\obj\Release\Manager.frmNuevoProveedor.resources
+D:\Jose\P_sonal\GitHub\FerERP.UI\Manager\obj\Release\Manager.frmUpProveedor.resources
+D:\Jose\P_sonal\GitHub\FerERP.UI\Manager\obj\Release\Manager.frmOpcionesPresupuesto.resources
+D:\Jose\P_sonal\GitHub\FerERP.UI\Manager\obj\Release\Manager.frmVendedores.resources
+D:\Jose\P_sonal\GitHub\FerERP.UI\Manager\obj\Release\Manager.frmEspera.resources
+D:\Jose\P_sonal\GitHub\FerERP.UI\Manager\obj\Release\Manager.frmNuevaVenta.resources
+D:\Jose\P_sonal\GitHub\FerERP.UI\Manager\obj\Release\Manager.frmSeleccionTipoVenta.resources
+D:\Jose\P_sonal\GitHub\FerERP.UI\Manager\obj\Release\Manager.vbproj.GenerateResource.cache
+D:\Jose\P_sonal\GitHub\FerERP.UI\Manager\obj\Release\Manager.vbproj.CoreCompileInputs.cache
+D:\Jose\P_sonal\GitHub\FerERP.UI\Manager\obj\Release\JO Manager.exe
+D:\Jose\P_sonal\GitHub\FerERP.UI\Manager\obj\Release\JO Manager.xml
+D:\Jose\P_sonal\GitHub\FerERP.UI\Manager\obj\Release\JO Manager.pdb

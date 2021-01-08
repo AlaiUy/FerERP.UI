@@ -10,7 +10,7 @@
 
     Public Shared Sub FormCorrecto(ByVal xMensaje As String)
         Dim Form As frmSuccess = New frmSuccess(xMensaje)
-        Form.Show()
+        Form.ShowDialog()
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click

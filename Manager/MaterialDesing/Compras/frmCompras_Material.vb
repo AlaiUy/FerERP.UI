@@ -262,7 +262,8 @@ Public Class frmCompras_Material
 
     Private Sub frmCompras_Material_KeyDown(sender As Object, e As KeyEventArgs) Handles Me.KeyDown
         If e.KeyCode = Keys.Escape Then
-            Close()
+            Me.DialogResult = DialogResult.Abort
+            notifyObservers()
         End If
     End Sub
 
