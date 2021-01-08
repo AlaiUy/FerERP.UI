@@ -24,6 +24,7 @@ C:\Users\Alai\Documents\GitHub\FerERP.UI\Manager\obj\Debug\Manager.frmMain.resou
 C:\Users\Alai\Documents\GitHub\FerERP.UI\Manager\obj\Debug\Manager.JJRecursos.resources
 C:\Users\Alai\Documents\GitHub\FerERP.UI\Manager\obj\Debug\Manager.frmListadoArticulos.resources
 C:\Users\Alai\Documents\GitHub\FerERP.UI\Manager\obj\Debug\Manager.frmListadoVentas.resources
+C:\Users\Alai\Documents\GitHub\FerERP.UI\Manager\obj\Debug\Manager.frmMainMaterial.resources
 C:\Users\Alai\Documents\GitHub\FerERP.UI\Manager\obj\Debug\Manager.frmMain_Material.resources
 C:\Users\Alai\Documents\GitHub\FerERP.UI\Manager\obj\Debug\Manager.frmNuevaVenta_Material.resources
 C:\Users\Alai\Documents\GitHub\FerERP.UI\Manager\obj\Debug\Manager.frmOpcionesPresupuestos_Material.resources
@@ -31,6 +32,8 @@ C:\Users\Alai\Documents\GitHub\FerERP.UI\Manager\obj\Debug\Manager.frmRecEspera_
 C:\Users\Alai\Documents\GitHub\FerERP.UI\Manager\obj\Debug\Manager.frmSuccess.resources
 C:\Users\Alai\Documents\GitHub\FerERP.UI\Manager\obj\Debug\Manager.frmUpArticulo_Material.resources
 C:\Users\Alai\Documents\GitHub\FerERP.UI\Manager\obj\Debug\Manager.frmVendedores_Material.resources
+C:\Users\Alai\Documents\GitHub\FerERP.UI\Manager\obj\Debug\Manager.frmPresupuestos_Material.resources
+C:\Users\Alai\Documents\GitHub\FerERP.UI\Manager\obj\Debug\Manager.frmNuevoProveedor_Material.resources
 C:\Users\Alai\Documents\GitHub\FerERP.UI\Manager\obj\Debug\Manager.Resources.resources
 C:\Users\Alai\Documents\GitHub\FerERP.UI\Manager\obj\Debug\Manager.frmDatosFactura.resources
 C:\Users\Alai\Documents\GitHub\FerERP.UI\Manager\obj\Debug\Manager.frmFiltroCuentas.resources
@@ -46,12 +49,10 @@ C:\Users\Alai\Documents\GitHub\FerERP.UI\Manager\obj\Debug\Manager.frmEspera.res
 C:\Users\Alai\Documents\GitHub\FerERP.UI\Manager\obj\Debug\Manager.frmNuevaVenta.resources
 C:\Users\Alai\Documents\GitHub\FerERP.UI\Manager\obj\Debug\Manager.frmSeleccionTipoVenta.resources
 C:\Users\Alai\Documents\GitHub\FerERP.UI\Manager\obj\Debug\Manager.vbproj.GenerateResource.Cache
+C:\Users\Alai\Documents\GitHub\FerERP.UI\Manager\obj\Debug\JO Manager.xml
 C:\Users\Alai\Desktop\Soft\Desarrollo\Debug\JO Manager.exe.config
 C:\Users\Alai\Desktop\Soft\Desarrollo\Debug\JO Manager.exe
 C:\Users\Alai\Desktop\Soft\Desarrollo\Debug\JO Manager.pdb
 C:\Users\Alai\Desktop\Soft\Desarrollo\Debug\JO Manager.xml
 C:\Users\Alai\Documents\GitHub\FerERP.UI\Manager\obj\Debug\JO Manager.exe
-C:\Users\Alai\Documents\GitHub\FerERP.UI\Manager\obj\Debug\JO Manager.xml
 C:\Users\Alai\Documents\GitHub\FerERP.UI\Manager\obj\Debug\JO Manager.pdb
-C:\Users\Alai\Documents\GitHub\FerERP.UI\Manager\obj\Debug\Manager.frmMainMaterial.resources
-C:\Users\Alai\Documents\GitHub\FerERP.UI\Manager\obj\Debug\Manager.frmPresupuestos_Material.resources

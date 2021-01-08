@@ -275,7 +275,7 @@ Partial Class frmUpArticulo_Material
         'lblModelo
         '
         Me.lblModelo.Font = New System.Drawing.Font("Roboto", 9.75!)
-        Me.lblModelo.Location = New System.Drawing.Point(65, 295)
+        Me.lblModelo.Location = New System.Drawing.Point(65, 292)
         Me.lblModelo.Name = "lblModelo"
         Me.lblModelo.Size = New System.Drawing.Size(66, 20)
         Me.lblModelo.TabIndex = 98
@@ -294,7 +294,7 @@ Partial Class frmUpArticulo_Material
         'lblcodBarras1
         '
         Me.lblcodBarras1.Font = New System.Drawing.Font("Roboto", 9.75!)
-        Me.lblcodBarras1.Location = New System.Drawing.Point(0, 256)
+        Me.lblcodBarras1.Location = New System.Drawing.Point(2, 250)
         Me.lblcodBarras1.Name = "lblcodBarras1"
         Me.lblcodBarras1.Size = New System.Drawing.Size(131, 20)
         Me.lblcodBarras1.TabIndex = 96
@@ -313,7 +313,7 @@ Partial Class frmUpArticulo_Material
         'lblCodBarras
         '
         Me.lblCodBarras.Font = New System.Drawing.Font("Roboto", 9.75!)
-        Me.lblCodBarras.Location = New System.Drawing.Point(0, 214)
+        Me.lblCodBarras.Location = New System.Drawing.Point(2, 208)
         Me.lblCodBarras.Name = "lblCodBarras"
         Me.lblCodBarras.Size = New System.Drawing.Size(131, 20)
         Me.lblCodBarras.TabIndex = 94
@@ -351,7 +351,7 @@ Partial Class frmUpArticulo_Material
         'lblDescripcion
         '
         Me.lblDescripcion.Font = New System.Drawing.Font("Roboto", 9.75!)
-        Me.lblDescripcion.Location = New System.Drawing.Point(37, 127)
+        Me.lblDescripcion.Location = New System.Drawing.Point(37, 123)
         Me.lblDescripcion.Name = "lblDescripcion"
         Me.lblDescripcion.Size = New System.Drawing.Size(94, 20)
         Me.lblDescripcion.TabIndex = 90
@@ -449,7 +449,7 @@ Partial Class frmUpArticulo_Material
         'Label8
         '
         Me.Label8.Font = New System.Drawing.Font("Roboto", 9.75!)
-        Me.Label8.Location = New System.Drawing.Point(69, 42)
+        Me.Label8.Location = New System.Drawing.Point(69, 41)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(62, 20)
         Me.Label8.TabIndex = 123

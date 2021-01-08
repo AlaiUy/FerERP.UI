@@ -33,11 +33,27 @@ Public Class frmUpArticulo_Material
 
     End Sub
 
+    Private Sub ClearForm()
+        txtCodigo.Text = String.Empty
+        txtCodigo.BackColor = Color.White
+        txtNombre.Text = String.Empty
+        txtDescripcion.Text = String.Empty
+        txtReferencia.Text = String.Empty
+        txtCodBarras.Text = String.Empty
+        txtCodBarras1.Text = String.Empty
+        txtModelo.Text = String.Empty
+        chkDescatalogado.Checked = True
+        chkRecalcula.Checked = True
+        txtCosto.Text = String.Empty
+        txtGanancia.Text = String.Empty
+    End Sub
+
+
+
     Private Sub Popular()
         Dim x As Integer = 0
         If Not IsNothing(_articulo) Then
-            txtCodigo.Text = _articulo.CodArticulo
-            txtCodigo.Enabled = False
+            txtCodigo.Text = _articulo.Referencia
             txtCodigo.BackColor = Color.White
             txtNombre.Text = _articulo.Nombre
             txtDescripcion.Text = _articulo.Descripcion
@@ -204,8 +220,8 @@ Public Class frmUpArticulo_Material
 
         Try
             GesArticulos.getInstance().ActualizarArticulo(_articulo, xCosto, xGanancia)
-            notifyObservers()
             frmSuccess.FormCorrecto("Articulo: " & _articulo.Referencia & " actualizado")
+            ClearForm()
         Catch ex As Exception
             MsgBox(ex.Message)
         End Try
@@ -347,9 +363,8 @@ Public Class frmUpArticulo_Material
 
     Private Sub frmUpArticulo_Material_KeyDown(sender As Object, e As KeyEventArgs) Handles MyBase.KeyDown
         If e.KeyCode = Keys.Escape Then
-            Me.Close()
+            Me.DialogResult = DialogResult.Abort
+            notifyObservers()
         End If
     End Sub
-
-
 End Class

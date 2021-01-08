@@ -23,8 +23,8 @@ Partial Class frmNuevaVenta_Material
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.lblTime = New System.Windows.Forms.Label()
@@ -42,7 +42,6 @@ Partial Class frmNuevaVenta_Material
         Me.btnRecuperarEspera = New System.Windows.Forms.Button()
         Me.btnBorrarLinea = New System.Windows.Forms.Button()
         Me.btnCantidad = New System.Windows.Forms.Button()
-        Me.IconButton1 = New FontAwesome.Sharp.IconButton()
         Me.btnSearch = New FontAwesome.Sharp.IconButton()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
@@ -64,7 +63,6 @@ Partial Class frmNuevaVenta_Material
         '
         Me.Panel1.BackColor = System.Drawing.Color.White
         Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel1.Controls.Add(Me.IconButton1)
         Me.Panel1.Controls.Add(Me.lblTime)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
@@ -100,24 +98,24 @@ Partial Class frmNuevaVenta_Material
         Me.dgItemsView.BackgroundColor = System.Drawing.Color.White
         Me.dgItemsView.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.dgItemsView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.RaisedHorizontal
-        DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle7.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle7.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.999999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgItemsView.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle7
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.999999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgItemsView.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.dgItemsView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle8.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle8.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle8.ForeColor = System.Drawing.Color.Black
-        DataGridViewCellStyle8.Padding = New System.Windows.Forms.Padding(5)
-        DataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.ActiveCaption
-        DataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dgItemsView.DefaultCellStyle = DataGridViewCellStyle8
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle2.Padding = New System.Windows.Forms.Padding(5)
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.ActiveCaption
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgItemsView.DefaultCellStyle = DataGridViewCellStyle2
         Me.dgItemsView.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically
         Me.dgItemsView.EnableHeadersVisualStyles = False
         Me.dgItemsView.GridColor = System.Drawing.Color.White
@@ -298,22 +296,6 @@ Partial Class frmNuevaVenta_Material
         Me.btnCantidad.TextAlign = System.Drawing.ContentAlignment.BottomCenter
         Me.btnCantidad.UseVisualStyleBackColor = False
         '
-        'IconButton1
-        '
-        Me.IconButton1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.IconButton1.FlatAppearance.BorderSize = 0
-        Me.IconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.IconButton1.Flip = FontAwesome.Sharp.FlipOrientation.Normal
-        Me.IconButton1.IconChar = FontAwesome.Sharp.IconChar.WindowClose
-        Me.IconButton1.IconColor = System.Drawing.Color.Red
-        Me.IconButton1.IconSize = 32
-        Me.IconButton1.Location = New System.Drawing.Point(999, -2)
-        Me.IconButton1.Name = "IconButton1"
-        Me.IconButton1.Rotation = 0R
-        Me.IconButton1.Size = New System.Drawing.Size(24, 27)
-        Me.IconButton1.TabIndex = 8
-        Me.IconButton1.UseVisualStyleBackColor = True
-        '
         'btnSearch
         '
         Me.btnSearch.BackColor = System.Drawing.Color.White
@@ -321,13 +303,12 @@ Partial Class frmNuevaVenta_Material
         Me.btnSearch.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
         Me.btnSearch.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
         Me.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnSearch.Flip = FontAwesome.Sharp.FlipOrientation.Normal
         Me.btnSearch.IconChar = FontAwesome.Sharp.IconChar.Search
         Me.btnSearch.IconColor = System.Drawing.Color.Black
+        Me.btnSearch.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.btnSearch.IconSize = 32
         Me.btnSearch.Location = New System.Drawing.Point(11, 30)
         Me.btnSearch.Name = "btnSearch"
-        Me.btnSearch.Rotation = 0R
         Me.btnSearch.Size = New System.Drawing.Size(39, 32)
         Me.btnSearch.TabIndex = 140
         Me.btnSearch.UseVisualStyleBackColor = False
@@ -384,6 +365,5 @@ Partial Class frmNuevaVenta_Material
     Friend WithEvents btnRecuperarEspera As Button
     Friend WithEvents btnBorrarLinea As Button
     Friend WithEvents btnCantidad As Button
-    Friend WithEvents IconButton1 As FontAwesome.Sharp.IconButton
     Friend WithEvents btnSearch As FontAwesome.Sharp.IconButton
 End Class

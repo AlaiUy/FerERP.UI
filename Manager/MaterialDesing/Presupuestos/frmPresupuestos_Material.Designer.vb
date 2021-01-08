@@ -22,8 +22,8 @@ Partial Class frmPresupuestos_Material
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.dgCompras = New System.Windows.Forms.DataGridView()
         Me.Panel2 = New System.Windows.Forms.Panel()
@@ -85,24 +85,24 @@ Partial Class frmPresupuestos_Material
         Me.dgCompras.BackgroundColor = System.Drawing.Color.White
         Me.dgCompras.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.dgCompras.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.RaisedHorizontal
-        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle1.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.999999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgCompras.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle3.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.999999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgCompras.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle3
         Me.dgCompras.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle2.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black
-        DataGridViewCellStyle2.Padding = New System.Windows.Forms.Padding(5)
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.ActiveCaption
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dgCompras.DefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle4.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle4.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle4.Padding = New System.Windows.Forms.Padding(5)
+        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.ActiveCaption
+        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgCompras.DefaultCellStyle = DataGridViewCellStyle4
         Me.dgCompras.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically
         Me.dgCompras.EnableHeadersVisualStyles = False
         Me.dgCompras.GridColor = System.Drawing.Color.White
@@ -280,13 +280,12 @@ Partial Class frmPresupuestos_Material
         Me.btnSearch.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White
         Me.btnSearch.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White
         Me.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnSearch.Flip = FontAwesome.Sharp.FlipOrientation.Normal
         Me.btnSearch.IconChar = FontAwesome.Sharp.IconChar.Search
         Me.btnSearch.IconColor = System.Drawing.SystemColors.ActiveCaption
+        Me.btnSearch.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.btnSearch.IconSize = 32
         Me.btnSearch.Location = New System.Drawing.Point(8, 8)
         Me.btnSearch.Name = "btnSearch"
-        Me.btnSearch.Rotation = 0R
         Me.btnSearch.Size = New System.Drawing.Size(39, 32)
         Me.btnSearch.TabIndex = 10
         Me.btnSearch.UseVisualStyleBackColor = False
@@ -348,16 +347,15 @@ Partial Class frmPresupuestos_Material
         Me.IconButton1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
         Me.IconButton1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
         Me.IconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.IconButton1.Flip = FontAwesome.Sharp.FlipOrientation.Normal
         Me.IconButton1.Font = New System.Drawing.Font("Roboto", 9.75!, System.Drawing.FontStyle.Bold)
         Me.IconButton1.ForeColor = System.Drawing.Color.White
         Me.IconButton1.IconChar = FontAwesome.Sharp.IconChar.Print
         Me.IconButton1.IconColor = System.Drawing.Color.DeepSkyBlue
+        Me.IconButton1.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.IconButton1.IconSize = 32
         Me.IconButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.IconButton1.Location = New System.Drawing.Point(3, 280)
         Me.IconButton1.Name = "IconButton1"
-        Me.IconButton1.Rotation = 0R
         Me.IconButton1.Size = New System.Drawing.Size(107, 40)
         Me.IconButton1.TabIndex = 5
         Me.IconButton1.Text = "Imprimir"
@@ -371,16 +369,15 @@ Partial Class frmPresupuestos_Material
         Me.btnDescuento.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
         Me.btnDescuento.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
         Me.btnDescuento.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnDescuento.Flip = FontAwesome.Sharp.FlipOrientation.Normal
         Me.btnDescuento.Font = New System.Drawing.Font("Roboto", 9.75!, System.Drawing.FontStyle.Bold)
         Me.btnDescuento.ForeColor = System.Drawing.Color.White
         Me.btnDescuento.IconChar = FontAwesome.Sharp.IconChar.Percent
         Me.btnDescuento.IconColor = System.Drawing.Color.DeepSkyBlue
+        Me.btnDescuento.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.btnDescuento.IconSize = 32
         Me.btnDescuento.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnDescuento.Location = New System.Drawing.Point(2, 139)
         Me.btnDescuento.Name = "btnDescuento"
-        Me.btnDescuento.Rotation = 0R
         Me.btnDescuento.Size = New System.Drawing.Size(107, 40)
         Me.btnDescuento.TabIndex = 4
         Me.btnDescuento.Text = "Asignar descuento"
@@ -394,16 +391,15 @@ Partial Class frmPresupuestos_Material
         Me.btnBorrarLinea.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
         Me.btnBorrarLinea.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
         Me.btnBorrarLinea.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnBorrarLinea.Flip = FontAwesome.Sharp.FlipOrientation.Normal
         Me.btnBorrarLinea.Font = New System.Drawing.Font("Roboto", 9.75!, System.Drawing.FontStyle.Bold)
         Me.btnBorrarLinea.ForeColor = System.Drawing.Color.White
         Me.btnBorrarLinea.IconChar = FontAwesome.Sharp.IconChar.MinusCircle
         Me.btnBorrarLinea.IconColor = System.Drawing.Color.DeepSkyBlue
+        Me.btnBorrarLinea.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.btnBorrarLinea.IconSize = 32
         Me.btnBorrarLinea.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnBorrarLinea.Location = New System.Drawing.Point(2, 93)
         Me.btnBorrarLinea.Name = "btnBorrarLinea"
-        Me.btnBorrarLinea.Rotation = 0R
         Me.btnBorrarLinea.Size = New System.Drawing.Size(107, 40)
         Me.btnBorrarLinea.TabIndex = 3
         Me.btnBorrarLinea.Text = "  Borrar linea"
@@ -417,16 +413,15 @@ Partial Class frmPresupuestos_Material
         Me.btnFacturar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
         Me.btnFacturar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
         Me.btnFacturar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnFacturar.Flip = FontAwesome.Sharp.FlipOrientation.Normal
         Me.btnFacturar.Font = New System.Drawing.Font("Roboto", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnFacturar.ForeColor = System.Drawing.Color.White
         Me.btnFacturar.IconChar = FontAwesome.Sharp.IconChar.Coins
         Me.btnFacturar.IconColor = System.Drawing.Color.DeepSkyBlue
+        Me.btnFacturar.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.btnFacturar.IconSize = 32
         Me.btnFacturar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnFacturar.Location = New System.Drawing.Point(2, 49)
         Me.btnFacturar.Name = "btnFacturar"
-        Me.btnFacturar.Rotation = 0R
         Me.btnFacturar.Size = New System.Drawing.Size(107, 38)
         Me.btnFacturar.TabIndex = 0
         Me.btnFacturar.Text = "Guardar"
@@ -460,10 +455,10 @@ Partial Class frmPresupuestos_Material
         '
         'frmPresupuestos_Material
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
-        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None
         Me.ClientSize = New System.Drawing.Size(793, 685)
         Me.Controls.Add(Me.Panel3)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "frmPresupuestos_Material"
         Me.Text = "frmPresupuestos_Material"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized

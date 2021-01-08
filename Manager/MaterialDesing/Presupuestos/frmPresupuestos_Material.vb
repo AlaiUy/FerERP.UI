@@ -4,7 +4,8 @@ Imports JJ.Interfaces.Observer
 Imports JJ.Reportes
 
 Public Class frmPresupuestos_Material
-    Implements IObserver
+    Implements IObserver, IObservable
+
     Private _Obs As IList(Of IObserver)
     Private frmListArticulos As Form = Nothing
     Private _presupuesto As Presupuesto = New Presupuesto()
@@ -164,9 +165,37 @@ Public Class frmPresupuestos_Material
 
     Private Sub btnFacturar_Click(sender As Object, e As EventArgs) Handles btnFacturar.Click
         Try
-            GesDocumentos.getInstance().GesFacturar()
+            'GesDocumentos.getInstance().GesFacturar()
         Catch ex As Exception
 
         End Try
+    End Sub
+
+    Public Sub Register(xObserver As IObserver) Implements IObservable.Register
+        If IsNothing(_Obs) Then
+            _Obs = New List(Of IObserver)
+        End If
+        _Obs.Add(xObserver)
+    End Sub
+
+    Public Sub UnRegister(xObserver As IObserver) Implements IObservable.UnRegister
+        For Each O As IObserver In _Obs
+            If (O.Equals(xObserver)) Then
+                _Obs.Remove(O)
+            End If
+        Next
+    End Sub
+
+    Public Sub notifyObservers() Implements IObservable.notifyObservers
+        For Each O As IObserver In _Obs
+            O.Update(Me)
+        Next
+    End Sub
+
+    Private Sub frmPresupuestos_Material_KeyDown(sender As Object, e As KeyEventArgs) Handles MyBase.KeyDown
+        If e.KeyCode = Keys.Escape Then
+            Me.DialogResult = DialogResult.Abort
+            notifyObservers()
+        End If
     End Sub
 End Class

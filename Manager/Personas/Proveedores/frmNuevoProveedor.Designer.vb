@@ -27,6 +27,8 @@ Partial Class frmNuevoProveedor
         Me.Panel5 = New System.Windows.Forms.Panel()
         Me.btnSave = New System.Windows.Forms.Button()
         Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.cbMonedas = New System.Windows.Forms.ComboBox()
+        Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.txtComentarios = New System.Windows.Forms.TextBox()
         Me.btnAddCategory = New System.Windows.Forms.Button()
@@ -51,8 +53,6 @@ Partial Class frmNuevoProveedor
         Me.lblNombre = New System.Windows.Forms.Label()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.cbMonedas = New System.Windows.Forms.ComboBox()
-        Me.Label4 = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         Me.Panel4.SuspendLayout()
         Me.Panel5.SuspendLayout()
@@ -132,6 +132,26 @@ Partial Class frmNuevoProveedor
         Me.Panel3.Name = "Panel3"
         Me.Panel3.Size = New System.Drawing.Size(914, 462)
         Me.Panel3.TabIndex = 1
+        '
+        'cbMonedas
+        '
+        Me.cbMonedas.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cbMonedas.FormattingEnabled = True
+        Me.cbMonedas.Location = New System.Drawing.Point(121, 290)
+        Me.cbMonedas.Name = "cbMonedas"
+        Me.cbMonedas.Size = New System.Drawing.Size(185, 23)
+        Me.cbMonedas.TabIndex = 58
+        '
+        'Label4
+        '
+        Me.Label4.Font = New System.Drawing.Font("Times New Roman", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Location = New System.Drawing.Point(20, 285)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(85, 30)
+        Me.Label4.TabIndex = 59
+        Me.Label4.Text = "MONEDA:"
+        Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.Label4.UseCompatibleTextRendering = True
         '
         'Label3
         '
@@ -357,26 +377,6 @@ Partial Class frmNuevoProveedor
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "REGISTRO DE UN NUEVO PROVEEDOR"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'cbMonedas
-        '
-        Me.cbMonedas.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cbMonedas.FormattingEnabled = True
-        Me.cbMonedas.Location = New System.Drawing.Point(121, 290)
-        Me.cbMonedas.Name = "cbMonedas"
-        Me.cbMonedas.Size = New System.Drawing.Size(185, 23)
-        Me.cbMonedas.TabIndex = 58
-        '
-        'Label4
-        '
-        Me.Label4.Font = New System.Drawing.Font("Times New Roman", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(20, 285)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(85, 30)
-        Me.Label4.TabIndex = 59
-        Me.Label4.Text = "MONEDA:"
-        Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.Label4.UseCompatibleTextRendering = True
         '
         'frmNuevoProveedor
         '

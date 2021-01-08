@@ -1,4 +1,5 @@
-﻿Imports JJ.Entidades
+﻿Imports JJ
+Imports JJ.Entidades
 Imports JJ.Gestoras
 Imports JJ.Interfaces.Observer
 
@@ -57,13 +58,10 @@ Public Class frmNuevoProveedor
         End If
     End Sub
 
-    Private Sub txtNombre_TextChanged(sender As Object, e As EventArgs) Handles txtNombre.TextChanged
 
-    End Sub
 
     Private Sub txtNombre_Leave(sender As Object, e As EventArgs) Handles txtNombre.Leave
         TryCast(sender, TextBox).BackColor = BackTextBox(Tools.Texto.isLarge(TryCast(sender, TextBox).Text, 1, 50))
-
     End Sub
 
 
@@ -72,50 +70,36 @@ Public Class frmNuevoProveedor
         TryCast(sender, TextBox).BackColor = BackTextBox(Tools.Texto.isLarge(TryCast(sender, TextBox).Text, 1, 50))
     End Sub
 
-    Private Sub txtRut_TextChanged(sender As Object, e As EventArgs) Handles txtRut.TextChanged
-
-    End Sub
 
     Private Sub txtRut_Leave(sender As Object, e As EventArgs) Handles txtRut.Leave
         TryCast(sender, TextBox).BackColor = BackTextBox(((Tools.Texto.isLarge(TryCast(sender, TextBox).Text, 11, 12) And Tools.Numeros.isNumeric(TryCast(sender, TextBox).Text)) Or TryCast(sender, TextBox).Text.Length < 1))
-
     End Sub
 
-    Private Sub txtTelefono_TextChanged(sender As Object, e As EventArgs) Handles txtTelefono.TextChanged
 
-    End Sub
 
     Private Sub txtTelefono_Leave(sender As Object, e As EventArgs) Handles txtTelefono.Leave
         TryCast(sender, TextBox).BackColor = BackTextBox((Tools.Numeros.isNumeric(TryCast(sender, TextBox).Text)) Or TryCast(sender, TextBox).Text.Length < 1)
     End Sub
 
-    Private Sub txtCelular_TextChanged(sender As Object, e As EventArgs) Handles txtCelular.TextChanged
 
-    End Sub
 
     Private Sub txtCelular_Leave(sender As Object, e As EventArgs) Handles txtCelular.Leave
         TryCast(sender, TextBox).BackColor = BackTextBox((Tools.Numeros.isNumeric(TryCast(sender, TextBox).Text)) Or TryCast(sender, TextBox).Text.Length < 1)
     End Sub
 
-    Private Sub txtEmail_TextChanged(sender As Object, e As EventArgs) Handles txtEmail.TextChanged
 
-    End Sub
 
     Private Sub txtEmail_Leave(sender As Object, e As EventArgs) Handles txtEmail.Leave
         TryCast(sender, TextBox).BackColor = BackTextBox(Tools.Texto.AcceptEmail(TryCast(sender, TextBox).Text) Or TryCast(sender, TextBox).Text.Length < 1)
     End Sub
 
-    Private Sub txtCalle_TextChanged(sender As Object, e As EventArgs) Handles txtCalle.TextChanged
 
-    End Sub
 
     Private Sub txtCalle_Leave(sender As Object, e As EventArgs) Handles txtCalle.Leave
         TryCast(sender, TextBox).BackColor = BackTextBox(Tools.Texto.isLarge(TryCast(sender, TextBox).Text, 0, 50))
     End Sub
 
-    Private Sub txtNumero_TextChanged(sender As Object, e As EventArgs) Handles txtNumero.TextChanged
 
-    End Sub
 
     Private Sub txtNumero_Leave(sender As Object, e As EventArgs) Handles txtNumero.Leave
         TryCast(sender, TextBox).BackColor = BackTextBox(Tools.Texto.isLarge(TryCast(sender, TextBox).Text, 0, 10))
@@ -158,6 +142,10 @@ Public Class frmNuevoProveedor
     End Sub
 
     Private Sub Panel3_Paint(sender As Object, e As PaintEventArgs) Handles Panel3.Paint
+
+    End Sub
+
+    Private Sub btnSave_KeyUp(sender As Object, e As KeyEventArgs) Handles btnSave.KeyUp
 
     End Sub
 End Class

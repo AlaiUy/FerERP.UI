@@ -305,14 +305,6 @@ Public Class frmArticulos_Material
         End If
     End Sub
 
-    Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs) Handles Panel1.Paint
-
-    End Sub
-
-    Private Sub TimerTime_Tick(sender As Object, e As EventArgs) Handles TimerTime.Tick
-
-    End Sub
-
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         dgItemsView.DataSource = _TablaArticulos
         _ListaFiltrada = _TablaArticulos
@@ -332,11 +324,11 @@ Public Class frmArticulos_Material
         PopularGrilla()
     End Sub
 
-    Private Sub dgItemsView_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgItemsView.CellContentClick
-
-    End Sub
-
     Private Sub btnClose_Click(sender As Object, e As EventArgs) Handles btnClose.Click
         notifyObservers("CERRAR")
+    End Sub
+
+    Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs) Handles Panel1.Paint
+
     End Sub
 End Class
